@@ -161,9 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- Right Side -->
         <div class="flex items-center gap-sm">
 
-            <button id="theme-toggle" type="button" class="theme-toggle flex items-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-3 py-2 text-on-surface transition duration-300 hover:bg-white/10 active:scale-95 shadow-[0_12px_35px_rgba(0,0,0,0.15)]">
-                <span class="material-symbols-outlined text-2xl" id="theme-toggle-icon">dark_mode</span>
-                <span class="sr-only">Toggle dark mode</span>
+            <button id="theme-toggle" type="button" class="theme-toggle relative inline-flex items-center justify-between rounded-full border border-white/18 bg-[rgba(255,255,255,0.08)] px-4 py-2 text-on-surface transition duration-300 hover:bg-[rgba(255,255,255,0.14)] focus:outline-none focus:ring-2 focus:ring-secondary/40" aria-pressed="false">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-2xl" id="theme-toggle-icon">dark_mode</span>
+                    <span class="theme-toggle-label">Dark</span>
+                </div>
+                <span class="theme-toggle-knob"></span>
             </button>
 
             <a href="/start" class="hidden md:block">
@@ -242,9 +245,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const useDark = theme !== 'light';
         document.documentElement.classList.toggle('dark', useDark);
         document.documentElement.classList.toggle('light', !useDark);
+        themeToggle?.classList.toggle('light-mode', !useDark);
+        themeToggle?.classList.toggle('dark-mode', useDark);
         localStorage.setItem('site-theme', useDark ? 'dark' : 'light');
         themeIcon.textContent = useDark ? 'dark_mode' : 'light_mode';
         themeToggle?.setAttribute('aria-label', useDark ? 'Switch to light mode' : 'Switch to dark mode');
+        themeToggle?.setAttribute('aria-pressed', String(!useDark));
+        const label = themeToggle?.querySelector('.theme-toggle-label');
+        if (label) {
+            label.textContent = useDark ? 'Dark' : 'Light';
+        }
     };
 
     const savedTheme = localStorage.getItem('site-theme');
