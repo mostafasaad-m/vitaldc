@@ -313,3 +313,131 @@ html.light .glass-card {
     border-color: rgba(15, 23, 42, 0.08);
     box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
 }
+
+/* Unified site theme colors */
+html.dark,
+html.dark body {
+    --bg: #050814;
+    --text: #e5e7eb;
+    --surface-panel: rgba(15, 18, 32, 0.78);
+    --surface-border: rgba(255, 255, 255, 0.12);
+    --control-bg: rgba(255, 255, 255, 0.08);
+    --control-text: #e5e7eb;
+    --muted-text: #94a3b8;
+}
+
+html.light,
+html.light body {
+    --bg: #f7f9fc;
+    --text: #0f172a;
+    --surface-panel: rgba(255, 255, 255, 0.88);
+    --surface-border: rgba(15, 23, 42, 0.08);
+    --control-bg: rgba(255, 255, 255, 0.88);
+    --control-text: #0f172a;
+    --muted-text: #64748b;
+}
+
+html.dark body,
+html.light body,
+html.dark .bg-background,
+html.light .bg-background {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+html.dark .text-white,
+html.dark .text-on-surface,
+html.dark .text-on-surface-variant,
+html.dark .text-secondary,
+html.dark .text-secondary-fixed-dim,
+html.dark .text-tertiary,
+html.dark .text-tertiary-container,
+html.dark .text-secondary-container,
+html.dark .text-on-secondary-container,
+html.dark .text-on-tertiary-container,
+html.dark .text-primary,
+html.dark .text-on-primary,
+html.dark .text-on-primary-container,
+html.dark .text-code-snippet,
+html.dark .text-label-caps,
+html.dark .text-title-sm,
+html.dark .text-display-lg,
+html.dark .font-body-md,
+html.dark .text-body-md,
+html.dark .text-body-sm,
+html.dark .text-on-secondary-container {
+    color: var(--text) !important;
+}
+
+html.light .text-white,
+html.light .text-on-surface,
+html.light .text-on-surface-variant,
+html.light .text-secondary,
+html.light .text-secondary-fixed-dim,
+html.light .text-tertiary,
+html.light .text-tertiary-container,
+html.light .text-secondary-container,
+html.light .text-on-secondary-container,
+html.light .text-on-tertiary-container,
+html.light .text-primary,
+html.light .text-on-primary,
+html.light .text-on-primary-container,
+html.light .text-code-snippet,
+html.light .text-label-caps,
+html.light .text-title-sm,
+html.light .text-display-lg,
+html.light .font-body-md,
+html.light .text-body-md,
+html.light .text-body-sm {
+    color: var(--text) !important;
+}
+
+html.dark .bg-surface,
+html.dark .bg-surface\/95,
+html.dark .glass-panel,
+html.dark .glass-card,
+html.light .bg-surface,
+html.light .bg-surface\/95,
+html.light .glass-panel,
+html.light .glass-card,
+html.light .bg-secondary-container,
+html.light .bg-secondary,
+html.light .bg-tertiary-container,
+html.light .bg-primary-container,
+html.light .bg-surface-variant,
+html.light .bg-surface-container-low,
+html.light .bg-surface-container,
+html.light .bg-surface-container-high,
+html.light .bg-surface-container-highest,
+html.light .bg-surface-container-lowest,
+html.light .bg-tertiary,
+html.light .bg-tertiary\/10,
+html.light .bg-secondary\/10,
+html.light .bg-secondary-container\/10,
+html.light .bg-primary-container\/40,
+html.light .bg-surface-container-lowest\/50,
+html.light .bg-tertiary-container\/20 {
+    background-color: var(--surface-panel) !important;
+}
+
+html.dark .border-white\/5,
+html.dark .border-white\/10,
+html.dark .border-secondary\/20,
+html.dark .border-secondary\/30,
+html.dark .border-secondary\/40,
+html.dark .border-secondary\/60,
+html.dark .border-secondary,
+html.light .border-white\/5,
+html.light .border-white\/10,
+html.light .border-secondary\/20,
+html.light .border-secondary\/30,
+html.light .border-secondary\/40,
+html.light .border-secondary\/60,
+html.light .border-secondary {
+    border-color: var(--surface-border) !important;
+}
+
+html.light .text-on-surface-variant,
+html.dark .text-on-surface-variant {
+    color: var(--muted-text) !important;
+}
