@@ -268,29 +268,34 @@ add_action('woocommerce_admin_order_data_after_order_details', function ($order)
 });
 
 /**
- * Register page templates located inside a custom subdirectory.
+ * Register page templates located inside custom subdirectories.
  */
-add_filter('theme_page_templates', 'register_jana_form_templates', 10, 4);
-function register_jana_form_templates($post_templates, $theme, $post, $post_type) {
-    // Path to your custom folder relative to the theme root
-    $dir = 'jana-form'; 
-    $absolute_path = get_stylesheet_directory() . '/' . $dir;
+add_filter('theme_page_templates', 'register_custom_directory_page_templates', 10, 4);
+function register_custom_directory_page_templates($post_templates, $theme, $post, $post_type) {
+    // List of directories relative to the stylesheet directory
+    $dirs = array('jana-form', 'main-pages');
 
-    // Check if the directory actually exists to prevent errors
-    if (is_dir($absolute_path)) {
-        // Scan the directory for .php files
+    foreach ($dirs as $dir) {
+        $absolute_path = get_stylesheet_directory() . '/' . $dir;
+
+        // Check if the directory exists
+        if (!is_dir($absolute_path)) {
+            continue;
+        }
+
+        // Scan directory for .php files
         $files = scandir($absolute_path);
-        
+
         foreach ($files as $file) {
-            // Skip folders and non-PHP files
+            // Skip non-PHP files and parent pointers
             if ($file === '.' || $file === '..' || pathinfo($file, PATHINFO_EXTENSION) !== 'php') {
                 continue;
             }
 
-            // Read the template file data to extract the "Template Name" header
+            // Extract the "Template Name" header
             $headers = get_file_data($absolute_path . '/' . $file, array('Name' => 'Template Name'));
 
-            // If a Template Name is defined, register it with WordPress
+            // Register template path relative to theme root
             if (!empty($headers['Name'])) {
                 $post_templates[$dir . '/' . $file] = $headers['Name'];
             }
