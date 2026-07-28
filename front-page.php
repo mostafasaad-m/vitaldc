@@ -740,7 +740,7 @@ window.addEventListener("scroll", () => {
             const y = e.clientY / window.innerHeight;
             
             // Subtle parallax for floating elements
-            const floaters = document.querySelectorAll('.glass-panel');
+            const floaters = document.querySelectorAll('.glass-panels2');
             floaters.forEach((el, i) => {
                 const speed = (i + 1) * 20;
                 const shiftX = (x - 0.5) * speed;
