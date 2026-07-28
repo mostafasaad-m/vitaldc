@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <!-- Mobile Menu -->
     <div id="mobile-menu"
-        class="hidden md:hidden bg-surface/95 backdrop-blur-md border-t border-white/10">
+        class="hidden absolute left-0 top-full w-full z-40 bg-surface/95 backdrop-blur-md border-t border-white/10">
 
         <div class="flex flex-col px-gutter py-md gap-md">
 
@@ -243,8 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const applyTheme = (theme) => {
         const useDark = theme !== 'light';
-        document.documentElement.classList.toggle('dark', useDark);
-        document.documentElement.classList.toggle('light', !useDark);
+        document.documentElement.classList.remove('dark', 'light');
+        document.documentElement.classList.add(useDark ? 'dark' : 'light');
         themeToggle?.classList.toggle('light-mode', !useDark);
         themeToggle?.classList.toggle('dark-mode', useDark);
         localStorage.setItem('site-theme', useDark ? 'dark' : 'light');

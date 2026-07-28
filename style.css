@@ -51,6 +51,11 @@ html.light {
     color: var(--page-text);
 }
 
+html.light body {
+    background: var(--page-bg) !important;
+    color: var(--page-text) !important;
+}
+
 nav.glass-panel {
     background: var(--surface-panel) !important;
     border-color: var(--surface-border) !important;
@@ -115,6 +120,58 @@ html.light .theme-toggle:hover {
     background: rgba(248, 250, 252, 0.96) !important;
 }
 
+html.light .text-white {
+    color: #0f172a !important;
+}
+
+html.light .text-on-surface,
+html.light .text-on-surface-variant,
+html.light .text-secondary,
+html.light .text-on-secondary-container,
+html.light .text-on-tertiary-container,
+html.light .text-on-tertiary,
+html.light .text-secondary-container,
+html.light .text-primary,
+html.light .text-on-primary,
+html.light .text-on-primary-container,
+html.light .font-body-md,
+html.light .text-body-md,
+html.light .text-display-lg {
+    color: #0f172a !important;
+}
+
+html.light body,
+html.light .bg-background,
+html.light .bg-surface,
+html.light .bg-surface-variant,
+html.light .bg-surface-container-low,
+html.light .bg-surface-container,
+html.light .bg-surface-container-high,
+html.light .bg-surface-container-highest,
+html.light .bg-surface-container-lowest,
+html.light .bg-secondary-container,
+html.light .bg-secondary,
+html.light .bg-primary-container,
+html.light .bg-primary {
+    background-color: rgba(247, 249, 252, 0.96) !important;
+}
+
+html.light .border-white\/5,
+html.light .border-white\/10,
+html.light .border-secondary\/20,
+html.light .border-secondary\/30,
+html.light .border-secondary {
+    border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+html.light .bg-surface-variant {
+    background-color: rgba(241, 245, 249, 0.95) !important;
+}
+
+html.light .text-on-surface-variant {
+    color: #475569 !important;
+}
+
 html.dark .text-on-surface,
 html.dark .text-on-surface-variant,
 html.dark .text-secondary,
@@ -147,6 +204,59 @@ html.light .bg-surface\/95,
 html.light .glass-panel,
 html.light .glass-card {
     background: var(--surface-panel) !important;
+}
+
+html.light .bg-background {
+    background-color: #f7f9fc !important;
+}
+
+html.light .bg-secondary-container\/10,
+html.light .bg-secondary\/10,
+html.light .bg-tertiary-container\/20,
+html.light .bg-primary-container\/40,
+html.light .bg-surface-container-lowest\/50,
+html.light .bg-tertiary\/10 {
+    background-color: rgba(255, 255, 255, 0.92) !important;
+}
+
+html.light .text-on-surface,
+html.light .text-on-surface-variant,
+html.light .text-secondary,
+html.light .text-secondary-fixed-dim,
+html.light .text-tertiary,
+html.light .text-tertiary-container,
+html.light .text-secondary-container,
+html.light .text-on-primary,
+html.light .text-on-primary-container,
+html.light .text-code-snippet,
+html.light .text-label-caps,
+html.light .text-title-sm,
+html.light .text-display-lg,
+html.light .text-body-md,
+html.light .text-body-sm {
+    color: #0f172a !important;
+}
+
+html.light .text-white {
+    color: #0f172a !important;
+}
+
+html.light .text-on-surface-variant {
+    color: #475569 !important;
+}
+
+html.light .border-white\/5,
+html.light .border-white\/10,
+html.light .border-secondary\/20,
+html.light .border-secondary\/30,
+html.light .border-secondary\/40,
+html.light .border-secondary\/60,
+html.light .border-secondary {
+    border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+html.light .bg-surface-variant {
+    background-color: rgba(241, 245, 249, 0.95) !important;
 }
 
 html.dark .border-white\/10,
