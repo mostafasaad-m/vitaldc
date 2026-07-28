@@ -6,41 +6,6 @@
  ?>
  <?php get_header(); ?>
 
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            background-color: #0B1020;
-            color: #e5e2e3;
-            overflow-x: hidden;
-        }
-        .glass-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-        }
-        .glow-accent {
-            box-shadow: 0 0 15px rgba(193, 197, 220, 0.1);
-        }
-        .bento-inner-glow {
-            border-top: 0.5px solid rgba(255, 255, 255, 0.2);
-        }
-        .mono-label {
-            font-family: 'Geist', monospace;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-        @keyframes pulse-slow {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.6; }
-        }
-        .animate-pulse-slow {
-            animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-    </style>
-
 <body class="bg-surface text-on-surface selection:bg-primary selection:text-primary-container">
 
 <main class="pt-20">

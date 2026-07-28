@@ -7,36 +7,6 @@
  ?>
  <?php get_header(); ?>
 
-<style>
-    /* .body{} */
-        .material-symbols-outlined {
-           
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: inset 0 0.5px 0 0 rgba(255, 255, 255, 0.1);
-        }
-        .glow-hover:hover {
-            box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
-            border-color: rgba(6, 182, 212, 0.4);
-        }
-        .scanline {
-            background: linear-gradient(to bottom, transparent 50%, rgba(193, 197, 220, 0.02) 50%);
-            background-size: 100% 4px;
-        }
-        @keyframes subtle-pulse {
-            0% { opacity: 0.8; }
-            50% { opacity: 1; }
-            100% { opacity: 0.8; }
-        }
-        .status-pulse {
-            animation: subtle-pulse 2s infinite ease-in-out;
-        }
-    </style>
-
 <body class="bg-surface text-on-surface font-body-md selection:bg-secondary/30">
 <!-- TopNavBar -->
 <main class="pt-32 pb-xl px-gutter max-w-container-max mx-auto overflow-hidden">

@@ -3,31 +3,6 @@
  * Template Name: additional start
  */
  get_header();?>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
-        }
-        .neon-glow:focus-within {
-            box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
-        }
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 16px;
-            height: 16px;
-            background: #c1c5dc;
-            border-radius: 2px;
-            cursor: pointer;
-            box-shadow: 0 0 10px rgba(193, 197, 220, 0.5);
-        }
-    </style>
-
 
 <body class="bg-background text-on-background font-body-md min-h-screen selection:bg-primary/30">
 <!-- TopNavBar -->

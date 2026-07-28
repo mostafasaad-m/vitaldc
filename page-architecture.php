@@ -5,45 +5,6 @@
 
  ?>
  <?php get_header(); ?>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glass-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-        .glass-card.selected {
-            border-color: #c1c5dc;
-            background: rgba(193, 197, 220, 0.05);
-            box-shadow: 0 0 20px rgba(193, 197, 220, 0.1);
-        }
-        .step-line {
-            height: 2px;
-            background: rgba(255, 255, 255, 0.1);
-            position: relative;
-        }
-        .step-line-active {
-            height: 4px;
-            background: #c1c5dc;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 66.33%;
-            transition: width 0.5s ease;
-        }
-        .glow-dot {
-            box-shadow: 0 0 30px #c1c5dc;
-        }
-    </style>
 
 <body class="bg-background text-on-background font-body-md selection:bg-primary/30">
 <!-- TopNavBar (Shared Component) -->
