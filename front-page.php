@@ -694,7 +694,7 @@ We help Egyptian manufacturers and exporters build the digital infrastructure ne
     });
 </script>
 <script>
-const navbar = document.getElementById("navbar");
+const navbar = document.getElementById("navbarz");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 40) {
