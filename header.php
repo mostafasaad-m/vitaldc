@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 </head>
-<nav class="fixed top-0 w-full backdrop-blur-md bg-surface/80 border-b border-white/10 shadow-xl shadow-background/50 z-50" >
+<nav class="glass-panel fixed top-0 w-full backdrop-blur-md bg-surface/80 border-b border-white/10 shadow-xl shadow-background/50 z-50" >
     <div class="flex justify-between items-center px-gutter py-md max-w-container-max mx-auto">
 
         <!-- Logo -->
@@ -160,6 +160,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <!-- Right Side -->
         <div class="flex items-center gap-sm">
+
+            <button id="theme-toggle" type="button" class="theme-toggle flex items-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-3 py-2 text-on-surface transition duration-300 hover:bg-white/10 active:scale-95 shadow-[0_12px_35px_rgba(0,0,0,0.15)]">
+                <span class="material-symbols-outlined text-2xl" id="theme-toggle-icon">dark_mode</span>
+                <span class="sr-only">Toggle dark mode</span>
+            </button>
 
             <a href="/start" class="hidden md:block">
                 <button
@@ -224,6 +229,29 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.textContent = menu.classList.contains('hidden')
             ? 'menu'
             : 'close';
+    });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-toggle-icon');
+
+    const applyTheme = (theme) => {
+        const useDark = theme !== 'light';
+        document.documentElement.classList.toggle('dark', useDark);
+        document.documentElement.classList.toggle('light', !useDark);
+        localStorage.setItem('site-theme', useDark ? 'dark' : 'light');
+        themeIcon.textContent = useDark ? 'dark_mode' : 'light_mode';
+        themeToggle?.setAttribute('aria-label', useDark ? 'Switch to light mode' : 'Switch to dark mode');
+    };
+
+    const savedTheme = localStorage.getItem('site-theme');
+    applyTheme(savedTheme || 'dark');
+
+    themeToggle?.addEventListener('click', () => {
+        applyTheme(document.documentElement.classList.contains('dark') ? 'light' : 'dark');
     });
 });
 </script>

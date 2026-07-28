@@ -7,3 +7,68 @@
  Version:      1.0.0
  Text Domain:  woodmart
 */
+
+:root {
+    color-scheme: dark;
+}
+
+html,
+body {
+    min-height: 100%;
+    transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease;
+}
+
+html.dark {
+    background: radial-gradient(circle at top, rgba(99, 102, 241, 0.16), transparent 24%), linear-gradient(180deg, #050814 0%, #0b1020 100%);
+    color: #e5e7eb;
+}
+
+html.light {
+    color-scheme: light;
+    background: radial-gradient(circle at top, rgba(59, 130, 246, 0.14), transparent 24%), linear-gradient(180deg, #f7f9fc 0%, #e9eef7 100%);
+    color: #111827;
+}
+
+html.light body {
+    background: transparent;
+}
+
+nav.glass-panel {
+    background: rgba(15, 18, 32, 0.76) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.light nav.glass-panel {
+    background: rgba(255, 255, 255, 0.82) !important;
+    border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+.theme-toggle {
+    backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+html.light .theme-toggle {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+html.light .theme-toggle:hover {
+    background: rgba(248, 250, 252, 0.96);
+}
+
+.glass-card {
+    background: rgba(15, 18, 32, 0.58);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(24px);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+}
+
+html.light .glass-card {
+    background: rgba(255, 255, 255, 0.82);
+    border-color: rgba(15, 23, 42, 0.08);
+    box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+}
