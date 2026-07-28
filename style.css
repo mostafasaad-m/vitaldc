@@ -19,7 +19,8 @@
     --muted-text: #94a3b8;
 }
 
-html.light {
+html.light,
+body.light {
     color-scheme: light;
     --page-bg: #f7f9fc;
     --page-text: #0f172a;
@@ -36,7 +37,8 @@ body {
     transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
 }
 
-body {
+body,
+body.light {
     background: var(--page-bg);
     color: var(--page-text);
 }
