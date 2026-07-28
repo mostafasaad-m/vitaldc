@@ -69,7 +69,12 @@ add_action('woocommerce_admin_order_data_after_billing_address', function($order
 }, 10, 1);
 
 function woodmart_child_enqueue_styles() {
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'woodmart-style' ), woodmart_get_theme_info( 'Version' ) );
+	wp_enqueue_style(
+		'woodmart-child-style',
+		get_stylesheet_uri(),
+		array( 'woodmart-style' ),
+		filemtime( get_stylesheet_directory() . '/style.css' )
+	);
 }
 add_action( 'wp_enqueue_scripts', 'woodmart_child_enqueue_styles', 10010 );
 

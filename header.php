@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
+<?php wp_head(); ?>
 </head>
 <nav class="glass-panel fixed top-0 w-full backdrop-blur-md bg-surface/80 border-b border-white/10 shadow-xl shadow-background/50 z-50" >
     <div class="flex justify-between items-center px-gutter py-md max-w-container-max mx-auto">
