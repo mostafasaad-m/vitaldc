@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -243,14 +243,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const applyTheme = (theme) => {
         const useDark = theme !== 'light';
-        document.documentElement.classList.remove('dark', 'light');
-        document.documentElement.classList.add(useDark ? 'dark' : 'light');
-        document.body.classList.remove('dark', 'light');
-        document.body.classList.add(useDark ? 'dark' : 'light');
-        document.documentElement.dataset.theme = useDark ? 'dark' : 'light';
+        const themeName = useDark ? 'dark' : 'light';
+        document.documentElement.dataset.theme = themeName;
+        document.documentElement.classList.toggle('dark', useDark);
+        document.documentElement.classList.toggle('light', !useDark);
+        document.body.dataset.theme = themeName;
         themeToggle?.classList.toggle('light-mode', !useDark);
         themeToggle?.classList.toggle('dark-mode', useDark);
-        localStorage.setItem('site-theme', useDark ? 'dark' : 'light');
+        localStorage.setItem('site-theme', themeName);
         themeIcon.textContent = useDark ? 'dark_mode' : 'light_mode';
         themeToggle?.setAttribute('aria-label', useDark ? 'Switch to light mode' : 'Switch to dark mode');
         themeToggle?.setAttribute('aria-pressed', String(!useDark));
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTheme(savedTheme || 'dark');
 
     themeToggle?.addEventListener('click', () => {
-        applyTheme(document.documentElement.classList.contains('dark') ? 'light' : 'dark');
+        applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
     });
 });
 </script>
