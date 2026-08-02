@@ -1,67 +1,115 @@
 <!DOCTYPE html>
 
-<html lang="en" data-theme="dark">
-<head>
+<html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>VitalDC | Digital Infrastructure</title>
+<title>VitalDC | Digital Infrastructure for Egyptian Exporters</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(1, 27, 41, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(142, 202, 230, 0.15);
+        }
+        .light-glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 31, 42, 0.1);
+        }
+        .grid-mesh {
+            background-image: 
+                linear-gradient(to right, rgba(142, 202, 230, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(142, 202, 230, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .grid-mesh-light {
+            background-image: 
+                linear-gradient(to right, rgba(0, 31, 42, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 31, 42, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glow-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #219EBC, transparent);
+        }
+        .glow-line-dark {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #023047, transparent);
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
           theme: {
             extend: {
               "colors": {
-                      "primary-fixed": "#d8e2ff",
-"primary-container": "#4d8eff",
-"surface-container-high": "#f1f5f9",
-"surface-tint": "#005ac2",
-"surface-bright": "#ffffff",
-"secondary-fixed-dim": "#d0bcff",
-"outline-variant": "#e2e8f0",
-"on-primary-fixed": "#001a42",
-"on-primary-fixed-variant": "#004395",
-"surface-container-low": "#f8fafc",
-"error-container": "#ffdad6",
-"surface-container-highest": "#e2e8f0",
-"secondary-fixed": "#e9ddff",
-"on-secondary-fixed": "#23005c",
-"inverse-primary": "#adc6ff",
-"on-tertiary-fixed": "#1c1b1c",
-"primary-fixed-dim": "#adc6ff",
-"on-secondary-fixed-variant": "#5516be",
-"on-surface": "#0f172a",
-"surface-variant": "#f1f5f9",
-"primary": "#005ac2",
-"on-tertiary-fixed-variant": "#474647",
-"background": "#f8fafc",
-"tertiary-container": "#e2e2e2",
-"error": "#ba1a1a",
-"inverse-surface": "#101415",
-"on-surface-variant": "#475569",
-"surface-dim": "#cbd5e1",
-"on-error": "#ffffff",
-"on-tertiary": "#ffffff",
-"outline": "#94a3b8",
-"on-error-container": "#410002",
-"inverse-on-surface": "#f8fafc",
-"on-background": "#0f172a",
-"surface": "#f8fafc",
-"on-secondary-container": "#21005d",
-"surface-container": "#f1f5f9",
-"secondary-container": "#d0bcff",
-"tertiary-fixed": "#e5e2e3",
-"secondary": "#6750a4",
-"on-primary-container": "#ffffff",
-"tertiary": "#5d5e5f",
-"on-tertiary-container": "#1a1c1e",
-"surface-container-lowest": "#ffffff",
-"on-secondary": "#ffffff",
-"tertiary-fixed-dim": "#c8c6c7",
-"on-primary": "#ffffff"
+                      "tertiary-fixed": "#ffdea9",
+                      "border-glass": "rgba(142, 202, 230, 0.15)",
+                      "on-tertiary-container": "#c18a00",
+                      "on-tertiary-fixed": "#271900",
+                      "surface-container": "#00232f",
+                      "on-primary-fixed-variant": "#254a63",
+                      "on-secondary-fixed-variant": "#004e5f",
+                      "on-tertiary": "#422c00",
+                      "surface-container-low": "#001f2a",
+                      "primary": "#a6cbe8",
+                      "surface-bright": "#003e52",
+                      "outline-variant": "#42474d",
+                      "error-container": "#93000a",
+                      "on-primary-container": "#7498b4",
+                      "surface-container-lowest": "#001018",
+                      "secondary": "#69d4f4",
+                      "on-secondary-container": "#002e39",
+                      "surface": "#00161f",
+                      "inverse-on-surface": "#003546",
+                      "secondary-container": "#209dbb",
+                      "on-surface": "#bde9ff",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed-variant": "#5e4100",
+                      "primary-fixed": "#c8e6ff",
+                      "on-error-container": "#ffdad6",
+                      "error": "#ffb4ab",
+                      "surface-variant": "#003a4c",
+                      "tertiary": "#ffba27",
+                      "on-secondary": "#003642",
+                      "export-orange": "#FB8500",
+                      "surface-dim": "#00161f",
+                      "inverse-primary": "#3e627b",
+                      "on-secondary-fixed": "#001f27",
+                      "primary-container": "#023047",
+                      "on-primary-fixed": "#001e2f",
+                      "surface-deep": "#011B29",
+                      "on-surface-variant": "#c2c7cd",
+                      "tertiary-fixed-dim": "#ffba27",
+                      "secondary-fixed": "#b2ebff",
+                      "surface-container-highest": "#003a4c",
+                      "tertiary-container": "#3d2900",
+                      "on-primary": "#07344b",
+                      "surface-container-high": "#002e3d",
+                      "outline": "#8c9197",
+                      "background": "#00161f",
+                      "secondary-fixed-dim": "#69d4f4",
+                      "on-background": "#bde9ff",
+                      "surface-tint": "#a6cbe8",
+                      "inverse-surface": "#bde9ff",
+                      "primary-fixed-dim": "#a6cbe8",
+                      "light-surface": "#F5F9FC",
+                      "light-on-surface": "#001F2A",
+                      "light-on-surface-variant": "#42474D",
+                      "light-border": "rgba(0, 31, 42, 0.1)"
               },
               "borderRadius": {
                       "DEFAULT": "0.125rem",
@@ -70,69 +118,31 @@
                       "full": "0.75rem"
               },
               "spacing": {
-                      "xl": "4rem",
-                      "gutter": "24px",
-                      "base": "4px",
-                      "md": "1.5rem",
-                      "lg": "2rem",
-                      "sm": "1rem",
-                      "xs": "0.5rem",
-                      "container-max": "1440px"
+                      "container-max": "1280px",
+                      "section-gap": "120px",
+                      "margin-mobile": "16px",
+                      "stack-lg": "48px",
+                      "margin-desktop": "64px",
+                      "stack-sm": "8px",
+                      "stack-md": "24px",
+                      "gutter": "24px"
               },
               "fontFamily": {
-                      "body-md": ["Inter"],
-                      "body-sm": ["Inter"],
-                      "label-caps": ["Geist"],
-                      "code-snippet": ["Geist"],
-                      "headline-md": ["Geist"],
                       "display-lg": ["Geist"],
-                      "title-sm": ["Geist"],
-                      "display-lg-mobile": ["Geist"]
-              },
-              "fontSize": {
-                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                      "code-snippet": ["14px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                      "title-sm": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}],
-                      "display-lg-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                      "headline-lg": ["Geist"],
+                      "headline-md": ["Geist"],
+                      "label-caps": ["JetBrains Mono"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"]
               }
-            },
-          },
+            }
+          }
         }
-      </script>
+    </script>
 
 
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
-
-    document.querySelectorAll('#main-menu a').forEach(link => {
-        const linkPath = new URL(link.href).pathname.replace(/\/$/, '') || '/';
-
-        if (linkPath === currentPath) {
-            link.classList.remove('text-on-surface-variant');
-            link.classList.add(
-                'text-secondary',
-                'border-b-2',
-                'border-secondary',
-                'pb-1'
-            );
-        } else {
-            link.classList.remove(
-                'text-secondary',
-                'border-b-2',
-                'border-secondary',
-                'pb-1'
-            );
-            link.classList.add('text-on-surface-variant');
-        }
-    });
-});
-</script>
+<?php wp_head(); ?>
 
 </head>
 <nav class="glass-panel fixed top-0 w-full backdrop-blur-md bg-surface/80 border-b border-white/10 shadow-xl shadow-background/50 z-50" >

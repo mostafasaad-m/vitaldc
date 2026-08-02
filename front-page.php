@@ -1,606 +1,552 @@
-<?php get_header(); ?>
-<div class="bg-background text-on-surface overflow-hidden">
-<!-- Hero Section Canvas -->
-<div class="total-content" style="display:flex flex-direction:row;">
+<!DOCTYPE html>
 
-
-<div class="relative min-h-screen flex items-center justify-center mesh-bg px-gutter">
-<!-- Ambient Background Elements -->
-<div class="absolute inset-0 z-0 pointer-events-none">
-<div class="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-secondary/5 blur-[120px] rounded-full"></div>
-<div class="absolute bottom-[10%] right-[5%] w-[500px] h-[500px] bg-tertiary-container/20 blur-[150px] rounded-full"></div>
-</div>
-<div class="max-w-container-max w-full grid grid-cols-1 lg:grid-cols-12 gap-xl relative z-10 pt-[180px] lg:pt-[180px]">
-<!-- Content Column -->
-<div class="lg:col-span-6 flex flex-col justify-center">
-<div class="mb-md">
-<span class="font-label-caps text-label-caps text-secondary-fixed-dim border border-secondary/20 px-sm py-xs rounded-full inline-flex items-center gap-xs bg-secondary-container/10">
-<span class="material-symbols-outlined !text-[14px]">settings_input_component</span>
-                        DIGITAL INFRASTRUCTURE FOR EGYPTIAN EXPORTERS
-                    </span>
-</div>
-<h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg text-on-surface mb-md max-w-2xl">
-                    Build Faster. <span class="text-secondary">Scale Smarter.</span> <br/>
-<span class="animate-gradient bg-gradient-to-r from-secondary via-tertiary to-primary bg-clip-text text-transparent">Get Your Company Export-Ready Online</span>
-</h1>
-<p class="font-body-md text-body-md text-on-surface-variant mb-lg max-w-xl">
-We help Egyptian manufacturers and exporters build the digital infrastructure needed to earn trust, attract international buyers, and manage inquiries professionally.                </p>
-<div class="flex flex-wrap gap-md">
-	<a href="/start">
-<button class="bg-secondary text-on-secondary px-lg py-md rounded-lg font-title-sm text-title-sm hover:shadow-[0_0_20px_rgba(176,198,255,0.4)] transition-all duration-300 active:scale-95">
-                        Start Your Assessment
-                    </button></a>
-<a href=#services-section><button class="border border-outline/30 text-on-surface px-lg py-md rounded-lg font-title-sm text-title-sm hover:bg-surface-variant/30 transition-all duration-300">
-                        See How It Works
-    
-                </button>
-</a>
-</div>
-<!-- Trusted/Metrics Row -->
-<div class="mt-xl pt-lg border-t border-white/5 flex gap-lg opacity-60">
-<div>
-<div class="font-title-sm text-title-sm text-on-surface">99.9%</div>
-<div class="font-label-caps text-label-caps">Uptime SLA</div>
-</div>
-<div class="w-px h-10 bg-white/10"></div>
-<div>
-<div class="font-title-sm text-title-sm text-on-surface">250ms</div>
-<div class="font-label-caps text-label-caps">Avg Latency</div>
-</div>
-<div class="w-px h-10 bg-white/10"></div>
-<div>
-<div class="font-title-sm text-title-sm text-on-surface">15+</div>
-<div class="font-label-caps text-label-caps">Core Techs</div>
-</div>
-</div>
-</div>
-<!-- Visualization Column (The "Engine Room") -->
-<div class="lg:col-span-6 relative hidden lg:block">
-<!-- Dashboard Micro-Panel -->
-<div class="glass-panel rounded-xl p-sm absolute bottom-0 left-0 w-[320px] z-30 translate-x-[-10%] translate-y-[10%]">
-<div class="flex items-center gap-sm mb-sm">
-<div class="p-xs bg-secondary/20 rounded-lg">
-<span class="material-symbols-outlined text-secondary">monitoring</span>
-</div>
-<div>
-<div class="font-label-caps text-label-caps text-on-surface">Network Throughput</div>
-<div class="font-code-snippet text-code-snippet text-secondary">4.2 GB/s <span class="text-[10px] text-outline">↑ 12%</span></div>
-</div>
-</div>
-<div class="h-16 flex items-end gap-1">
-<div class="flex-1 bg-secondary/10 rounded-t-sm h-[60%] transition-all duration-500 hover:bg-secondary/40"></div>
-<div class="flex-1 bg-secondary/10 rounded-t-sm h-[80%] transition-all duration-500 hover:bg-secondary/40"></div>
-<div class="flex-1 bg-secondary/20 rounded-t-sm h-[40%] transition-all duration-500 hover:bg-secondary/40"></div>
-<div class="flex-1 bg-secondary/40 rounded-t-sm h-[90%] transition-all duration-500 hover:bg-secondary/40"></div>
-<div class="flex-1 bg-secondary/10 rounded-t-sm h-[70%] transition-all duration-500 hover:bg-secondary/40"></div>
-<div class="flex-1 bg-secondary/60 rounded-t-sm h-[55%] transition-all duration-500 hover:bg-secondary/40"></div>
-<div class="flex-1 bg-secondary/20 rounded-t-sm h-[85%] transition-all duration-500 hover:bg-secondary/40"></div>
-</div>
-</div>
-<!-- Abstract Engine Piece -->
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-40 z-10 pointer-events-none">
-<div class="w-full h-full border border-white/5 rounded-full animate-[spin_60s_linear_infinite]"></div>
-<div class="absolute inset-10 border border-secondary/10 rounded-full animate-[spin_40s_linear_infinite_reverse]"></div>
-</div>
-<!-- Floating Interactive Chip -->
-<div class="absolute top-[40%] right-[10%] z-40">
-<div class="glass-panel px-sm py-xs rounded-full flex items-center gap-sm animate-bounce cursor-pointer">
-<div class="w-2 h-2 bg-secondary rounded-full"></div>
-<span class="font-label-caps text-label-caps">System Healthy</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Interactive micro-interactions script -->
-
-</div>
-
-
-<div class="font-body-md text-body-md tech-gradient min-h-screen section-2-body">
-<div class="max-w-container-max mx-auto px-lg py-xl">
-<!-- Section Header -->
-
-<header class="mb-xl text-center md:text-left">
-<div class="inline-flex items-center gap-sm mb-md px-sm py-xs bg-secondary/10 border border-secondary/20 rounded-full">
-<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse shadow-[0_0_8px_rgba(176,198,255,0.8)]"></span>
-<span class="font-label-caps text-[11px] text-secondary uppercase tracking-[0.2em]">Deployment Protocol v4.2</span>
-</div>
-<h1 id="services-section" class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-md">
-           Everything You Need To Compete Globally
-        </h1>
-<p class="max-w-2xl text-on-surface-variant/80 font-body-md text-body-md leading-relaxed">
-            Precision-engineered digital infrastructure and creative solutions designed to accelerate growth in the modern technological landscape.
-        </p>
-</header>
-<!-- Services Bento Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
-<!-- Service Card 1: Web Development -->
-<section class="glass-card rounded-xl p-lg overflow-hidden group">
-<div class="card-inner-glow"></div>
-<div class="flex justify-between items-start mb-lg">
-<div class="w-14 h-14 flex items-center justify-center rounded-xl bg-secondary/10 border border-secondary/20 text-secondary group-hover:bg-secondary/20 group-hover:scale-105 transition-all duration-300">
-<span class="material-symbols-outlined text-[32px]">terminal</span>
-</div>
-<span class="font-code-snippet text-[12px] text-on-surface-variant/40 tracking-wider uppercase">SRVC_01</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-white mb-sm">Digital Presence</h3>
-<p class="text-on-surface-variant font-body-sm text-body-sm mb-lg leading-relaxed">
-                Modern websites and platforms engineered for speed, scalability, and user experience.
-            </p>
-<ul class="space-y-md">
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-secondary/80">check_circle</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Corporate Websites</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-secondary/80">check_circle</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Custom Frontend Development</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-secondary/80">check_circle</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">WordPress &amp; WooCommerce</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-secondary/80">check_circle</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">API Integrations</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-secondary/80">check_circle</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Performance Optimization</span>
-</li>
-</ul>
-<div class="absolute -bottom-12 -right-12 w-48 h-48 bg-secondary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-</section>
-<!-- Service Card 2: Marketing & Automation -->
-<section class="glass-card rounded-xl p-lg overflow-hidden group">
-<div class="card-inner-glow"></div>
-<div class="flex justify-between items-start mb-lg">
-<div class="w-14 h-14 flex items-center justify-center rounded-xl bg-tertiary-container/20 border border-tertiary/20 text-tertiary group-hover:bg-tertiary/30 group-hover:scale-105 transition-all duration-300">
-<span class="material-symbols-outlined text-[32px]">hub</span>
-</div>
-<span class="font-code-snippet text-[12px] text-on-surface-variant/40 tracking-wider uppercase">SRVC_02</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-white mb-sm">Marketing &amp; Automation</h3>
-<p class="text-on-surface-variant font-body-sm text-body-sm mb-lg leading-relaxed">
-                Automated systems that streamline communication, lead generation, and customer engagement.
-            </p>
-<ul class="space-y-md">
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-tertiary/80">autorenew</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">CRM Automation</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-tertiary/80">autorenew</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Email Workflows</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-tertiary/80">autorenew</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Lead Funnels</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-tertiary/80">autorenew</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">AI Integrations</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-tertiary/80">autorenew</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Analytics &amp; Tracking</span>
-</li>
-</ul>
-<div class="absolute -bottom-12 -right-12 w-48 h-48 bg-tertiary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-</section>
-<!-- Service Card 3: eCommerce Solutions -->
-<section class="glass-card rounded-xl p-lg overflow-hidden group">
-<div class="card-inner-glow"></div>
-<div class="flex justify-between items-start mb-lg">
-<div class="w-14 h-14 flex items-center justify-center rounded-xl bg-secondary/10 border border-secondary/20 text-secondary group-hover:bg-secondary/20 group-hover:scale-105 transition-all duration-300">
-<span class="material-symbols-outlined text-[32px]">shopping_cart</span>
-</div>
-<span class="font-code-snippet text-[12px] text-on-surface-variant/40 tracking-wider uppercase">SRVC_03</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-white mb-sm">eCommerce Solutions</h3>
-<p class="text-on-surface-variant font-body-sm text-body-sm mb-lg leading-relaxed">
-                Conversion-focused eCommerce experiences tailored for growing brands.
-            </p>
-<ul class="space-y-md">
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-secondary/80">payments</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">WooCommerce Development</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-secondary/80">payments</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Shopify Integrations</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-secondary/80">payments</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Checkout Optimization</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-secondary/80">payments</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Product Infrastructure</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-secondary/80">payments</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Subscription Systems</span>
-</li>
-</ul>
-<div class="absolute -bottom-12 -right-12 w-48 h-48 bg-secondary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-</section>
-<!-- Service Card 4: Custom Software -->
-<section class="glass-card rounded-xl p-lg overflow-hidden group">
-<div class="card-inner-glow"></div>
-<div class="flex justify-between items-start mb-lg">
-<div class="w-14 h-14 flex items-center justify-center rounded-xl bg-tertiary-container/20 border border-tertiary/20 text-tertiary group-hover:bg-tertiary/30 group-hover:scale-105 transition-all duration-300">
-<span class="material-symbols-outlined text-[32px]">developer_board</span>
-</div>
-<span class="font-code-snippet text-[12px] text-on-surface-variant/40 tracking-wider uppercase">SRVC_04</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-white mb-sm">Custom Software</h3>
-<p class="text-on-surface-variant font-body-sm text-body-sm mb-lg leading-relaxed">
-                Tailored digital systems built around your operational needs and business goals.
-            </p>
-<ul class="space-y-md">
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-tertiary/80">settings_input_component</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Dashboards &amp; Visualization</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-tertiary/80">settings_input_component</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Internal Systems</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-tertiary/80">settings_input_component</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">SaaS Platforms</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-tertiary/80">settings_input_component</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">API Architecture</span>
-</li>
-<li class="flex items-center gap-sm group/item">
-<span class="material-symbols-outlined text-[20px] text-tertiary/80">settings_input_component</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant group-hover/item:text-white transition-colors">Business Automation Tools</span>
-</li>
-</ul>
-<div class="absolute -bottom-12 -right-12 w-48 h-48 bg-tertiary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-</section>
-</div>
-<!-- Call to Action / Micro-data Footer -->
-<div class="mt-xl flex flex-col md:flex-row items-center justify-between gap-md border-t border-white/5 pt-lg">
-<div class="flex items-center gap-lg">
-<div class="flex flex-col">
-<span class="font-label-caps text-[10px] text-on-surface-variant/40 mb-1">LATENCY</span>
-<span class="font-code-snippet text-code-snippet text-secondary">24ms</span>
-</div>
-<div class="flex flex-col border-l border-white/10 pl-lg">
-<span class="font-label-caps text-[10px] text-on-surface-variant/40 mb-1">SYSTEM_STATUS</span>
-<span class="font-code-snippet text-code-snippet text-tertiary">OPERATIONAL</span>
-</div>
-</div>
-<a href="/start"><button class="px-lg py-md bg-secondary text-on-secondary rounded-lg font-label-caps tracking-widest hover:bg-secondary/90 transition-all active:scale-95 shadow-[0_0_20px_rgba(176,198,255,0.4)]">
-            REQUEST ARCHITECTURE QUOTE
-        </button></a>
-    </div>
-</div>
-
-</div>
-
-<div class="bg-background text-on-surface selection:bg-secondary/30 selection:text-white">
-<div class="py-xl">
-<!-- The Deployment Protocol Section -->
-<section class="relative py-xl px-gutter max-w-container-max mx-auto overflow-hidden">
-<!-- Background Atmospheric Glows -->
-<div class="absolute top-0 left-1/4 -translate-x-1/2 w-[800px] h-[800px] bg-secondary-container/10 rounded-full blur-[160px] pointer-events-none"></div>
-<div class="absolute bottom-0 right-1/4 translate-x-1/2 w-[600px] h-[600px] bg-on-tertiary-fixed-variant/5 rounded-full blur-[140px] pointer-events-none"></div>
-<!-- System Status Header -->
-<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-md mb-xl relative z-10">
-<div>
-<div class="flex items-center gap-sm mb-xs">
-<div class="flex items-center gap-xs px-sm py-1 bg-secondary-container/10 border border-secondary/20 rounded-full">
-<span class="w-2 h-2 rounded-full bg-secondary animate-pulse shadow-[0_0_8px_#568dff]"></span>
-<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Live Pipeline Active</span>
-</div>
-<span class="font-code-snippet text-code-snippet text-on-surface-variant/40">SYS_V4.2.0_STABLE</span>
-</div>
-<h2 class="font-display-lg text-display-lg md:text-display-lg text-on-surface tracking-tight">Most Export Companies Are Invisible Online</h2>
-</div>
-<div class="glass-card px-md py-sm rounded-xl flex items-center gap-lg border-white/5">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-on-surface-variant/70 uppercase">Network Latency</span>
-<span class="font-code-snippet text-title-sm text-secondary">1.2ms</span>
-</div>
-<div class="flex flex-col border-l border-white/10 pl-lg">
-<span class="font-label-caps text-label-caps text-on-surface-variant/70 uppercase">Node Availability</span>
-<span class="font-code-snippet text-title-sm text-secondary">99.99%</span>
-</div>
-</div>
-</div>
-<!-- Sequential Flow Grid -->
-<div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg lg:gap-gutter mt-xl">
-<!-- Horizontal Connecting Line (Desktop Only) -->
-<div class="hidden lg:block absolute top-12 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-secondary/20 to-transparent z-0"></div>
-<!-- STEP 01: Audit & Discovery -->
-<div class="relative group">
-<div class="absolute -top-12 left-0 font-code-snippet text-code-snippet text-secondary/30 tracking-[0.2em] uppercase">PROTOCOL_INIT</div>
-<div class="glass-card p-lg rounded-xl flex flex-col h-full relative z-10 hover:border-secondary/40 transition-all duration-500 hover:-translate-y-2 group-hover:bg-primary-container/40">
-<div class="flex justify-between items-start mb-lg">
-<div class="w-12 h-12 flex items-center justify-center bg-secondary-container/20 rounded-lg text-secondary border border-secondary/30 group-hover:border-secondary/60 transition-colors">
-<span class="material-symbols-outlined text-headline-md">search_insights</span>
-</div>
-<span class="font-display-lg text-headline-md text-on-surface-variant/10 group-hover:text-secondary/20 transition-colors">01</span>
-</div>
-<h3 class="font-title-sm text-title-sm text-on-surface mb-sm">No Professional Website</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant/80 flex-grow">
-                       Buyers search your company and find little or nothing.
-                    </p>
-<div class="mt-lg pt-md border-t border-white/5">
-<div class="flex items-center gap-xs font-code-snippet text-code-snippet text-on-tertiary-container group-hover:text-secondary transition-colors">
-<span class="material-symbols-outlined text-[14px]">terminal</span>
-<span>$ analyze --stack all</span>
-</div>
-</div>
-</div>
-</div>
-<!-- STEP 02: Architecture Design -->
-<div class="relative group">
-<div class="absolute -top-12 left-0 font-code-snippet text-code-snippet text-secondary/30 tracking-[0.2em] uppercase">LOGIC_ENGINEER</div>
-<div class="glass-card p-lg rounded-xl flex flex-col h-full relative z-10 hover:border-secondary/40 transition-all duration-500 hover:-translate-y-2 group-hover:bg-primary-container/40">
-<div class="flex justify-between items-start mb-lg">
-<div class="w-12 h-12 flex items-center justify-center bg-secondary-container/20 rounded-lg text-secondary border border-secondary/30 group-hover:border-secondary/60 transition-colors">
-<span class="material-symbols-outlined text-headline-md">architecture</span>
-</div>
-<span class="font-display-lg text-headline-md text-on-surface-variant/10 group-hover:text-secondary/20 transition-colors">02</span>
-</div>
-<h3 class="font-title-sm text-title-sm text-on-surface mb-sm">No Business Emails</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant/80 flex-grow">
-                        Using Gmail instead of a professional company email damages credibility.
-                    </p>
-<div class="mt-lg pt-md border-t border-white/5">
-<div class="flex items-center gap-xs font-code-snippet text-code-snippet text-on-tertiary-container group-hover:text-secondary transition-colors">
-<span class="material-symbols-outlined text-[14px]">schema</span>
-<span>NODE_CLUSTER_V2</span>
-</div>
-</div>
-</div>
-</div>
-<!-- STEP 03: Rapid Implementation -->
-<div class="relative group">
-<div class="absolute -top-12 left-0 font-code-snippet text-code-snippet text-secondary/30 tracking-[0.2em] uppercase">AGILE_DEPLOY</div>
-<div class="glass-card p-lg rounded-xl flex flex-col h-full relative z-10 hover:border-secondary/40 transition-all duration-500 hover:-translate-y-2 group-hover:bg-primary-container/40">
-<div class="flex justify-between items-start mb-lg">
-<div class="w-12 h-12 flex items-center justify-center bg-secondary-container/20 rounded-lg text-secondary border border-secondary/30 group-hover:border-secondary/60 transition-colors">
-<span class="material-symbols-outlined text-headline-md">rocket_launch</span>
-</div>
-<span class="font-display-lg text-headline-md text-on-surface-variant/10 group-hover:text-secondary/20 transition-colors">03</span>
-</div>
-<h3 class="font-title-sm text-title-sm text-on-surface mb-sm">No Company Profiles or Catalogs.</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant/80 flex-grow">
-                        International buyers can't easily download your product specs or company profile, killing the deal before it starts.
-                    </p>
-<div class="mt-lg pt-md border-t border-white/5">
-<div class="flex items-center gap-xs font-code-snippet text-code-snippet text-on-tertiary-container group-hover:text-secondary transition-colors">
-<span class="material-symbols-outlined text-[14px]">settings_suggest</span>
-<span>STATUS: ROLLING_OUT</span>
-</div>
-</div>
-</div>
-</div>
-<!-- STEP 04: Scale & Support -->
-<div class="relative group">
-<div class="absolute -top-12 left-0 font-code-snippet text-code-snippet text-secondary/30 tracking-[0.2em] uppercase">SYSTEM_EVOLVE</div>
-<div class="glass-card p-lg rounded-xl flex flex-col h-full relative z-10 hover:border-secondary/40 transition-all duration-500 hover:-translate-y-2 group-hover:bg-primary-container/40">
-<div class="flex justify-between items-start mb-lg">
-<div class="w-12 h-12 flex items-center justify-center bg-secondary-container/20 rounded-lg text-secondary border border-secondary/30 group-hover:border-secondary/60 transition-colors">
-<span class="material-symbols-outlined text-headline-md">query_stats</span>
-</div>
-<span class="font-display-lg text-headline-md text-on-surface-variant/10 group-hover:text-secondary/20 transition-colors">04</span>
-</div>
-<h3 class="font-title-sm text-title-sm text-on-surface mb-sm">No Lead Management</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant/80 flex-grow">
-                      Inquiries arrive through scattered channels and get lost.
-                    </p>
-<div class="mt-lg pt-md border-t border-white/5">
-<div class="flex items-center gap-xs font-code-snippet text-code-snippet text-on-tertiary-container group-hover:text-secondary transition-colors">
-<span class="material-symbols-outlined text-[14px]">auto_graph</span>
-<span>OPTIMIZATION: ACTIVE</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Visual Decorative Element -->
-<div class="mt-xl grid grid-cols-1 md:grid-cols-3 gap-lg">
-<div class="md:col-span-2 glass-card rounded-xl overflow-hidden relative group border-white/10">
-<div class="absolute inset-0 bg-gradient-to-r from-primary-container/80 to-transparent z-10"></div>
-<img alt="Infrastructure Visualization" class="w-full h-56 object-cover opacity-30 group-hover:opacity-50 transition-all duration-1000 scale-105 group-hover:scale-100" data-alt="A cinematic, high-contrast shot of a futuristic data center server rack glowing with intense electric blue and soft violet LEDs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvFVmNafE0iZ1GHqArVt1RZVFmgycWUbOQIhK9X2hzhjD9VCvQZS-QXJijDdhnYiWyrIA1FcOmhxAnJhJZ6mOZrYcIhmhRrxh6aKDip6DkhDhW6AXYX-9xSFdz8Ai49tcZWZ0WxbSuZRwE15QbW5Kb_mA_UmK3ZrTrzjvrceSsOANAt1y_kF3Ml8ZKon-gseaH7_rFA6NbbQwQ5Fo6ufLlwDRpBtCdM5PPT37ecdJeYkY0TURfUFDQ2_4eR_PJWltV6_DvZpGcO7Y"/>
-<div class="absolute bottom-6 left-6 flex flex-col z-20">
-<span class="font-label-caps text-label-caps text-secondary tracking-widest mb-1">CLUSTER_PREVIEW</span>
-<span class="font-body-sm text-body-sm text-on-surface">Active Visualization of Layer 7 Routing</span>
-</div>
-</div>
-<div class="glass-card rounded-xl p-md flex flex-col justify-center border-l-4 border-secondary/60">
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-xs opacity-70">Optimization Phase</span>
-<div class="flex items-center gap-md">
-<div class="flex-grow h-2 bg-white/5 rounded-full overflow-hidden">
-<div class="w-2/3 h-full bg-gradient-to-r from-on-tertiary-fixed-variant to-secondary shadow-[0_0_15px_rgba(86,141,255,0.4)]"></div>
-</div>
-<span class="font-code-snippet text-code-snippet text-secondary font-bold">64%</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant/70 mt-sm italic">Protocol efficiency across 42 global nodes.</p>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VitalDC | Digital Infrastructure for Egyptian Exporters</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(1, 27, 41, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(142, 202, 230, 0.15);
+        }
+        .light-glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 31, 42, 0.1);
+        }
+        .grid-mesh {
+            background-image: 
+                linear-gradient(to right, rgba(142, 202, 230, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(142, 202, 230, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .grid-mesh-light {
+            background-image: 
+                linear-gradient(to right, rgba(0, 31, 42, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 31, 42, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glow-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #219EBC, transparent);
+        }
+        .glow-line-dark {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #023047, transparent);
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#ffdea9",
+                      "border-glass": "rgba(142, 202, 230, 0.15)",
+                      "on-tertiary-container": "#c18a00",
+                      "on-tertiary-fixed": "#271900",
+                      "surface-container": "#00232f",
+                      "on-primary-fixed-variant": "#254a63",
+                      "on-secondary-fixed-variant": "#004e5f",
+                      "on-tertiary": "#422c00",
+                      "surface-container-low": "#001f2a",
+                      "primary": "#a6cbe8",
+                      "surface-bright": "#003e52",
+                      "outline-variant": "#42474d",
+                      "error-container": "#93000a",
+                      "on-primary-container": "#7498b4",
+                      "surface-container-lowest": "#001018",
+                      "secondary": "#69d4f4",
+                      "on-secondary-container": "#002e39",
+                      "surface": "#00161f",
+                      "inverse-on-surface": "#003546",
+                      "secondary-container": "#209dbb",
+                      "on-surface": "#bde9ff",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed-variant": "#5e4100",
+                      "primary-fixed": "#c8e6ff",
+                      "on-error-container": "#ffdad6",
+                      "error": "#ffb4ab",
+                      "surface-variant": "#003a4c",
+                      "tertiary": "#ffba27",
+                      "on-secondary": "#003642",
+                      "export-orange": "#FB8500",
+                      "surface-dim": "#00161f",
+                      "inverse-primary": "#3e627b",
+                      "on-secondary-fixed": "#001f27",
+                      "primary-container": "#023047",
+                      "on-primary-fixed": "#001e2f",
+                      "surface-deep": "#011B29",
+                      "on-surface-variant": "#c2c7cd",
+                      "tertiary-fixed-dim": "#ffba27",
+                      "secondary-fixed": "#b2ebff",
+                      "surface-container-highest": "#003a4c",
+                      "tertiary-container": "#3d2900",
+                      "on-primary": "#07344b",
+                      "surface-container-high": "#002e3d",
+                      "outline": "#8c9197",
+                      "background": "#00161f",
+                      "secondary-fixed-dim": "#69d4f4",
+                      "on-background": "#bde9ff",
+                      "surface-tint": "#a6cbe8",
+                      "inverse-surface": "#bde9ff",
+                      "primary-fixed-dim": "#a6cbe8",
+                      "light-surface": "#F5F9FC",
+                      "light-on-surface": "#001F2A",
+                      "light-on-surface-variant": "#42474D",
+                      "light-border": "rgba(0, 31, 42, 0.1)"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "section-gap": "120px",
+                      "margin-mobile": "16px",
+                      "stack-lg": "48px",
+                      "margin-desktop": "64px",
+                      "stack-sm": "8px",
+                      "stack-md": "24px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Geist"],
+                      "headline-lg": ["Geist"],
+                      "headline-md": ["Geist"],
+                      "label-caps": ["JetBrains Mono"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary/30">
+<!-- TOP NAVIGATION BAR -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-glass flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-full">
+<div class="flex items-center gap-stack-lg">
+<span class="font-display-lg text-headline-md font-bold tracking-tighter text-on-surface">VitalDC</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Digital Assets</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Marketing</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Automation &amp; AI</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Protocol</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Careers</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="hidden md:inline font-label-caps text-label-caps text-on-surface-variant cursor-pointer">EN/AR</span>
+<button class="bg-tertiary text-on-tertiary px-6 py-2 font-label-caps text-label-caps font-bold transition-all hover:brightness-110 active:opacity-80">Start Project</button>
+</div>
+</nav>
+<main class="relative">
+<!-- HERO SECTION: DARK -->
+<section class="relative min-h-screen flex flex-col justify-center overflow-hidden grid-mesh">
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-32">
+<div class="inline-flex items-center gap-2 mb-8 px-3 py-1 glass-card rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">System Status: Operational</span>
+</div>
+<h1 class="font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md">
+                    DIGITAL INFRASTRUCTURE FOR EGYPTIAN EXPORTERS
+                </h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">
+                    Build Faster. Scale Smarter. We provide the foundational technology layers that empower Egyptian businesses to dominate global markets through high-performance digital architecture.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-3xl mb-stack-lg">
+<div class="p-6 glass-card">
+<div class="text-secondary font-display-lg text-headline-lg mb-1">99.9%</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Uptime Commitment</div>
+</div>
+<div class="p-6 glass-card">
+<div class="text-secondary font-display-lg text-headline-lg mb-1">250ms</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Edge Latency</div>
+</div>
+<div class="p-6 glass-card">
+<div class="text-secondary font-display-lg text-headline-lg mb-1">15+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Core Tech Stacks</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="bg-tertiary text-on-tertiary px-8 py-4 font-label-caps text-label-caps font-bold transition-all hover:scale-[1.02]">Initialize Growth</button>
+<button class="border border-secondary text-secondary px-8 py-4 font-label-caps text-label-caps font-bold transition-all hover:bg-secondary/10">View Capabilities</button>
 </div>
 </div>
 </section>
+<!-- SERVICES SECTION: LIGHT -->
+<section class="py-section-gap relative bg-light-surface text-light-on-surface grid-mesh-light border-y border-light-border">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-6">
+<div>
+<span class="font-label-caps text-primary-container text-label-caps tracking-[0.2em] uppercase mb-4 block">Core Infrastructure</span>
+<h2 class="font-headline-lg text-headline-lg max-w-xl text-light-on-surface">SERVICES DESIGNED FOR GLOBAL SCALE</h2>
 </div>
-
+<div class="text-light-on-surface-variant font-label-caps text-label-sm border-l border-light-border pl-6">
+                        ROOT_DIRECTORY: /VITALDC/SERVICES
+                    </div>
 </div>
-
-<div class="bg-background overflow-x-hidden section-4-body">
-<!-- Intro Statement Section -->
-<section class="relative min-h-[716px] flex flex-col items-center justify-center px-gutter py-xl selection:bg-secondary/30 mesh-accents">
-<!-- Atmospheric Background Layer -->
-<div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-<div class="atmospheric-glow absolute inset-0"></div>
-<div class="grid-subtle absolute inset-0 opacity-40"></div>
-<!-- Dynamic Light Streak -->
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[1px] bg-gradient-to-r from-transparent via-secondary/30 to-transparent blur-xl transform -rotate-12"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- SRVC_01 -->
+<div class="md:col-span-8 group relative overflow-hidden bg-white p-8 border border-light-border transition-all hover:border-primary-container/30 hover:shadow-xl">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="terminal">terminal</span>
+<span class="font-label-caps text-light-on-surface-variant/20 text-headline-lg">01</span>
 </div>
-<!-- Content Container -->
-<div class="relative z-10 max-w-[900px] mx-auto text-center space-y-lg animate-fade-in">
-<!-- Technical Tagline -->
-<div class="inline-flex items-center gap-xs px-sm py-1 rounded-full bg-secondary-container/5 border border-secondary/10 shadow-sm mb-md">
-<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse shadow-[0_0_8px_#b0c6ff]"></span>
-<span class="font-label-caps text-label-caps text-secondary-fixed-dim tracking-widest">SYSTEM INTEGRITY 02</span>
-</div>
-<!-- Primary Statement -->
-<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-gradient-primary leading-tight tracking-tighter">
-                We help businesses transform operations into scalable digital systems.
-            </h2>
-<!-- Supporting Text -->
-<p class="font-body-md text-body-md text-on-surface-variant max-w-[640px] mx-auto leading-relaxed opacity-80">
-                From custom web platforms to automated workflows and enterprise-grade eCommerce solutions, <span class="text-secondary font-medium">VitalDC</span> focuses on building systems that improve performance, efficiency, and long-term scalability.
-            </p>
-<!-- Decorative Visual Marker -->
-<div class="flex justify-center pt-md">
-<button class="group relative px-lg py-sm rounded-full font-label-caps text-label-caps tracking-widest text-on-secondary transition-all duration-300 hover:scale-105">
-<!-- Glowing Background -->
-<div class="absolute inset-0 rounded-full bg-gradient-to-r from-secondary via-tertiary to-secondary opacity-90 group-hover:opacity-100 blur-[2px] transition-opacity"></div>
-<!-- Inner Button -->
-<div class="absolute inset-[1px] rounded-full bg-secondary-container flex items-center justify-center">
-<div class="absolute inset-0 rounded-full bg-gradient-to-r from-secondary/20 via-tertiary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<!-- Text Content -->
-<a href="/start"> <span class="relative z-10 flex items-center gap-xs text-on-secondary-fixed">
-            START BUILDING
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</span></a>
-<!-- High-contrast electric glow -->
-<div class="absolute -inset-1 rounded-full bg-secondary/30 blur-xl group-hover:bg-tertiary/40 transition-all duration-500 -z-10 animate-pulse"></div>
-</button>
-</div><div class="pt-xl flex flex-col items-center gap-sm">
-<div class="w-px h-16 bg-gradient-to-b from-secondary to-transparent"></div>
-<div class="font-label-caps text-label-caps text-secondary-fixed-dim/60 uppercase tracking-[0.3em]">Foundation Protocol</div>
+<h3 class="font-headline-md text-headline-md mb-4">Enterprise Architecture</h3>
+<p class="font-body-md text-light-on-surface-variant max-w-lg">Custom-built digital foundations optimized for Egyptian manufacturing and export logic. We don't just build sites; we deploy systems.</p>
+<div class="mt-8 opacity-0 group-hover:opacity-100 transition-opacity flex gap-4">
+<span class="text-primary-container font-label-caps text-[10px]">#REACT</span>
+<span class="text-primary-container font-label-caps text-[10px]">#NEXTJS</span>
+<span class="text-primary-container font-label-caps text-[10px]">#AWS</span>
 </div>
 </div>
-<!-- Decorative UI Element (Asymmetric Data Micro-Point) -->
-<div class="hidden lg:block absolute bottom-12 right-12 opacity-40 select-none">
-<div class="p-md rounded-lg border border-secondary/10 bg-surface-container-lowest/50 backdrop-blur-md">
-<div class="flex items-center gap-sm mb-xs">
-<span class="material-symbols-outlined text-[16px] text-secondary">monitoring</span>
-<span class="font-code-snippet text-code-snippet text-on-surface">CORE_METRIC_SCALABILITY</span>
+<!-- SRVC_02 -->
+<div class="md:col-span-4 bg-white p-8 border border-light-border transition-all hover:border-primary-container/30 hover:shadow-xl">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="hub">hub</span>
+<span class="font-label-caps text-light-on-surface-variant/20 text-headline-lg">02</span>
 </div>
-<div class="h-1.5 w-48 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="h-full bg-secondary w-4/5 shadow-[0_0_12px_rgba(176,198,255,0.6)]"></div>
+<h3 class="font-headline-md text-headline-md mb-4">Global Trade Hubs</h3>
+<p class="font-body-md text-light-on-surface-variant">Omnichannel platforms that bridge the gap between local production and international buyers.</p>
+</div>
+<!-- SRVC_03 -->
+<div class="md:col-span-4 bg-white p-8 border border-light-border transition-all hover:border-primary-container/30 hover:shadow-xl">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-label-caps text-light-on-surface-variant/20 text-headline-lg">03</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">E-Export Engines</h3>
+<p class="font-body-md text-light-on-surface-variant">High-conversion B2B marketplaces designed for the specific complexities of international shipping.</p>
+</div>
+<!-- SRVC_04 -->
+<div class="md:col-span-8 bg-white p-8 border border-light-border transition-all hover:border-primary-container/30 hover:shadow-xl flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="developer_board">developer_board</span>
+<span class="font-label-caps text-light-on-surface-variant/20 text-headline-lg">04</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Market Automation &amp; AI</h3>
+<p class="font-body-md text-light-on-surface-variant">Predictive analytics and automated marketing pipelines that find your customers before they find you.</p>
+</div>
+<div class="w-full md:w-64 h-48 bg-light-surface border border-light-border p-4 overflow-hidden">
+<div class="font-label-caps text-[10px] text-primary-container/50 mb-2">LIVE_DEPLOYMENT_STREAM</div>
+<div class="space-y-1 font-label-caps text-[9px] text-primary-container/60">
+<div class="flex justify-between"><span>BUILD_SEQ:</span> <span class="text-primary-container font-bold">OK</span></div>
+<div class="flex justify-between"><span>CDN_PURGE:</span> <span class="text-primary-container font-bold">COMPLETE</span></div>
+<div class="flex justify-between"><span>SSL_CERT:</span> <span class="text-primary-container font-bold">VALID</span></div>
+<div class="mt-4 h-1 w-full bg-primary-container/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-2/3"></div>
 </div>
 </div>
 </div>
-<div class="hidden lg:block absolute top-12 left-12 opacity-40 select-none">
-<div class="p-md border-l border-secondary/20 space-y-xs">
-<div class="font-label-caps text-label-caps text-secondary/70">LOC_ID</div>
-<div class="font-code-snippet text-code-snippet text-on-surface-variant">0xDC_SYS_V2</div>
+</div>
 </div>
 </div>
 </section>
-
-</div>
-
-<div class="text-on-surface font-body-md section-5-body">
-<!-- TopNavBar -->
-<div class="pt-xl scanline">
-<!-- Business Oriented -->
-<div class="md:col-span-4 glass-card rounded-xl p-lg flex flex-col justify-between hover:border-tertiary/40 transition-all duration-500">
+<!-- MARKETING & ADS SECTION: DARK -->
+<section class="py-section-gap bg-surface-dim relative overflow-hidden grid-mesh">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
 <div>
-<span class="font-code-snippet text-code-snippet text-tertiary/60 mb-xs block">VAL_02</span>
-<h3 class="font-headline-md text-headline-md mb-sm text-tertiary">Business-Oriented</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-                            Every solution is aligned with measurable business objectives. We bridge the gap between engineering complexity and stakeholder value.
+<span class="font-label-caps text-secondary text-label-caps tracking-[0.2em] uppercase mb-4 block">Demand Generation</span>
+<h2 class="font-display-lg text-headline-lg mb-stack-md leading-tight">GLOBAL REACH VIA <span class="text-primary">PRECISION ADS</span></h2>
+<p class="font-body-lg text-on-surface-variant mb-stack-lg max-w-md">
+                            Don't wait for the world to find you. Our surgical advertising protocols target high-intent B2B buyers across LinkedIn, Google Search, and industry networks.
                         </p>
-</div>
-<div class="mt-md bg-tertiary-container/20 rounded-lg p-sm border border-tertiary/10">
-<div class="flex items-center justify-between mb-xs">
-<span class="font-label-caps text-label-caps">ROI PROJECTION</span>
-<span class="text-tertiary font-code-snippet">+214%</span>
-</div>
-<div class="w-full bg-white/5 h-1 rounded-full overflow-hidden">
-<div class="bg-tertiary h-full w-[75%] glow-blue"></div>
+<div class="space-y-6">
+<div class="flex items-center gap-4 p-4 glass-card group hover:bg-secondary/5 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="ads_click">ads_click</span>
+<div>
+<h4 class="font-label-caps text-on-surface">Targeted LinkedIn Funnels</h4>
+<p class="text-on-surface-variant text-label-sm">Reaching Decision Makers in GCC &amp; Europe markets.</p>
 </div>
 </div>
+<div class="flex items-center gap-4 p-4 glass-card group hover:bg-secondary/5 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="troubleshoot">troubleshoot</span>
+<div>
+<h4 class="font-label-caps text-on-surface">Search Intent Architecture</h4>
+<p class="text-on-surface-variant text-label-sm">Capturing 100% of relevant global search volume.</p>
 </div>
-<!-- Automation Driven -->
-<div class="md:col-span-5 glass-card rounded-xl p-lg group hover:border-secondary/40 transition-all duration-500">
-<span class="font-code-snippet text-code-snippet text-secondary/60 mb-xs block">VAL_03</span>
-<h3 class="font-headline-md text-headline-md mb-sm text-secondary">Automation-Driven</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-lg">
-                        Reduce manual operations through smart digital workflows. Our autonomous orchestration handles the repetitive, so your team focuses on the revolutionary.
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container p-8 border border-glass flex flex-col items-center text-center">
+<div class="text-primary font-display-lg text-headline-lg mb-2">4.2x</div>
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Average ROAS</div>
+</div>
+<div class="bg-surface-container p-8 border border-glass flex flex-col items-center text-center mt-12">
+<div class="text-primary font-display-lg text-headline-lg mb-2">&lt; $12</div>
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">CPA Benchmark</div>
+</div>
+<div class="bg-surface-container p-8 border border-glass flex flex-col items-center text-center -mt-6">
+<div class="text-primary font-display-lg text-headline-lg mb-2">85%</div>
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Lead Qualification</div>
+</div>
+<div class="bg-surface-container p-8 border border-glass flex flex-col items-center text-center mt-6">
+<div class="text-primary font-display-lg text-headline-lg mb-2">24/7</div>
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Optimized Bidding</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AUTOMATION & AI SOLUTIONS: LIGHT -->
+<section class="py-section-gap bg-white text-light-on-surface grid-mesh-light border-y border-light-border">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-stack-lg">
+<span class="font-label-caps text-primary-container text-label-caps tracking-[0.2em] uppercase mb-4 block">Operational Efficiency</span>
+<h2 class="font-display-lg text-display-lg text-light-on-surface mb-stack-md">AUTONOMOUS GROWTH</h2>
+<p class="font-body-lg text-light-on-surface-variant max-w-2xl mx-auto">
+                        Automate the friction out of your sales cycle. Our AI layers handle lead scoring, CRM workflows, and predictive analytics so your team focuses on closing.
                     </p>
-<div class="space-y-sm">
-<div class="flex items-center gap-sm p-xs rounded border border-white/5 bg-white/2 hover:bg-white/5 transition-colors">
-<span class="material-symbols-outlined text-secondary text-sm">terminal</span>
-<span class="font-code-snippet text-[12px]">CI/CD_PIPELINE_INIT.SH</span>
 </div>
-<div class="flex items-center gap-sm p-xs rounded border border-white/5 bg-white/2 hover:bg-white/5 transition-colors">
-<span class="material-symbols-outlined text-secondary text-sm">settings_suggest</span>
-<span class="font-code-snippet text-[12px]">AUTO_SCALING_THRESHOLD.CFG</span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-8 bg-light-surface border border-light-border group hover:bg-primary-container/5 transition-all">
+<div class="w-12 h-12 bg-primary-container text-white flex items-center justify-center mb-6">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">AI Lead Scoring</h3>
+<p class="font-body-md text-light-on-surface-variant">Automatically rank and route incoming export inquiries based on company size, region, and intent signals.</p>
+</div>
+<div class="p-8 bg-light-surface border border-light-border group hover:bg-primary-container/5 transition-all">
+<div class="w-12 h-12 bg-primary-container text-white flex items-center justify-center mb-6">
+<span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">CRM Automation</h3>
+<p class="font-body-md text-light-on-surface-variant">Zero-touch data entry. Synchronize your digital storefront with your internal ERP and CRM pipelines instantly.</p>
+</div>
+<div class="p-8 bg-light-surface border border-light-border group hover:bg-primary-container/5 transition-all">
+<div class="w-12 h-12 bg-primary-container text-white flex items-center justify-center mb-6">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Predictive Analytics</h3>
+<p class="font-body-md text-light-on-surface-variant">Forecast global demand spikes for specific product lines using our proprietary market-sensing engine.</p>
 </div>
 </div>
 </div>
-<!-- Long Term Support -->
-<div class="md:col-span-7 glass-card rounded-xl p-lg relative overflow-hidden flex items-end group hover:border-on-tertiary-fixed-variant/40 transition-all duration-500">
-<img alt="Server Architecture" class="absolute inset-0 w-full h-full object-cover opacity-10 grayscale group-hover:scale-105 transition-transform duration-700" data-alt="A futuristic dark server room with infinite rows of racks emitting soft neon violet and blue light. The camera angle is low, looking up at the high-tech machinery, suggesting scale and power. The overall aesthetic is clean, technical, and high-performance, with a deep navy and black color palette, reflecting a cyber-tech engine room vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1SINKQzOy3AS1sCn6GFtaECZEupnj1HQbR8KAs7C06ke3doKI4QWyN1NJfRzyNKjPZOUIBsGb0Fv5x5N592g50zPNtajCAMAHU0lzJ2VIDDYj9nX6iuwpyMY9weNsMd8qNejiAWH7bOH-QGe0pwymZ3qkF1LdW8IhmU50DYa_ZoM-7MB4fNQ5JrekvYkjrU06G0AKqiy5dxQe6jI4YTpqN0Wn44LsUfEJE_-NgdTmfzocNFrLH07Z9Db6yWBosO9MJOMaq2n3B-E"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
-<div class="relative z-10 w-full">
-<span class="font-code-snippet text-code-snippet text-on-tertiary-container/60 mb-xs block">VAL_04</span>
-<div class="flex justify-between items-end">
+</section>
+<!-- THE 7-STEP PROTOCOL: DARK -->
+<section class="py-section-gap bg-surface-deep relative grid-mesh overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-stack-lg border-l-4 border-secondary pl-8">
+<span class="font-label-caps text-secondary text-label-caps tracking-[0.2em] uppercase mb-2 block">Methodology</span>
+<h2 class="font-display-lg text-headline-lg">THE 7-STEP PROTOCOL</h2>
+<p class="font-body-md text-on-surface-variant">Our immutable pathway from local concept to global dominance.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="p-6 glass-card border-l-2 border-l-secondary/30">
+<div class="font-label-caps text-secondary text-headline-md mb-2">01</div>
+<h4 class="font-label-caps text-on-surface mb-2">Inspection</h4>
+<p class="text-on-surface-variant text-label-sm">Deep audit of existing tech debt and market potential.</p>
+</div>
+<div class="p-6 glass-card border-l-2 border-l-secondary/30">
+<div class="font-label-caps text-secondary text-headline-md mb-2">02</div>
+<h4 class="font-label-caps text-on-surface mb-2">Architecture</h4>
+<p class="text-on-surface-variant text-label-sm">Mapping the data flow and system requirements.</p>
+</div>
+<div class="p-6 glass-card border-l-2 border-l-secondary/30">
+<div class="font-label-caps text-secondary text-headline-md mb-2">03</div>
+<h4 class="font-label-caps text-on-surface mb-2">Engineering</h4>
+<h4 class="font-label-caps text-on-surface mb-2">Engineering</h4>
+<p class="text-on-surface-variant text-label-sm">Clean-slate code development and system build.</p>
+</div>
+<div class="p-6 glass-card border-l-2 border-l-secondary/30">
+<div class="font-label-caps text-secondary text-headline-md mb-2">04</div>
+<h4 class="font-label-caps text-on-surface mb-2">QA/Testing</h4>
+<p class="text-on-surface-variant text-label-sm">Rigorous load testing and cross-border latency checks.</p>
+</div>
+<div class="p-6 glass-card border-l-2 border-l-secondary/30">
+<div class="font-label-caps text-secondary text-headline-md mb-2">05</div>
+<h4 class="font-label-caps text-on-surface mb-2">Deployment</h4>
+<p class="text-on-surface-variant text-label-sm">CI/CD pipeline activation to global edge servers.</p>
+</div>
+<div class="p-6 glass-card border-l-2 border-l-secondary/30">
+<div class="font-label-caps text-secondary text-headline-md mb-2">06</div>
+<h4 class="font-label-caps text-on-surface mb-2">Optimization</h4>
+<p class="text-on-surface-variant text-label-sm">Continuous AI-driven performance tuning.</p>
+</div>
+<div class="p-6 glass-card border-l-2 border-l-secondary/30 col-span-1 lg:col-span-2 bg-secondary/10">
+<div class="font-label-caps text-secondary text-headline-md mb-2">07</div>
+<h4 class="font-label-caps text-on-surface mb-2">Global Delivery</h4>
+<p class="text-on-surface-variant text-label-sm">Full-scale market activation and scaling operations.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- BUILT BEYOND TEMPLATES SECTION: LIGHT -->
+<section class="py-section-gap bg-light-surface text-light-on-surface relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-stack-lg items-center">
+<div class="flex-1">
+<span class="font-label-caps text-primary-container text-label-caps tracking-[0.2em] uppercase mb-4 block">Engineering Quality</span>
+<h2 class="font-display-lg text-headline-lg text-light-on-surface mb-stack-md">BUILT BEYOND TEMPLATES</h2>
+<p class="font-body-lg text-light-on-surface-variant mb-stack-md">
+                            Most agencies sell you a modified WordPress theme. We build bespoke engines. Zero technical debt. Zero unnecessary plugins. 100% unique codebase.
+                        </p>
+<ul class="space-y-4 mb-stack-lg">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Optimized Performance Scores (99+ Lighthouse)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Hardened Security Architecture</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Full Data Ownership &amp; IP Rights</span>
+</li>
+</ul>
+</div>
+<div class="flex-1 w-full bg-white border border-light-border p-8 shadow-2xl relative overflow-hidden">
+<div class="font-label-caps text-[11px] text-primary-container/30 mb-4">SYSTEM_BENCHMARK_v2.0</div>
+<div class="space-y-6">
 <div>
-<h3 class="font-headline-md text-headline-md mb-sm text-on-tertiary-container">Long-Term Support</h3>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
-                                    Infrastructure designed for continuous growth and evolution. We don't just build for today; we build for the legacy you intend to leave.
-                                </p>
+<div class="flex justify-between font-label-caps text-[10px] mb-2"><span>TEMPLATED_SOLUTION</span> <span class="text-error">42/100</span></div>
+<div class="h-2 bg-light-surface rounded-full overflow-hidden">
+<div class="h-full bg-error w-[42%]"></div>
 </div>
-<span class="material-symbols-outlined text-on-tertiary-container text-6xl opacity-30">history_edu</span>
+</div>
+<div>
+<div class="flex justify-between font-label-caps text-[10px] mb-2"><span>VITALDC_ENGINE</span> <span class="text-primary-container font-bold">99/100</span></div>
+<div class="h-2 bg-light-surface rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[99%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-light-border text-center">
+<p class="font-label-caps text-[12px] text-light-on-surface-variant italic">"Performance is not a feature; it's the foundation."</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- CTA Section -->
-<section class="max-w-container-max mx-auto px-gutter py-xl">
-<div class="glass-card rounded-xl p-xl flex flex-col md:flex-row justify-between items-center gap-lg border-secondary/20">
+<!-- PAIN POINTS SECTION: DARK -->
+<section class="py-section-gap bg-surface-deep border-y border-glass">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
 <div>
-<h2 class="font-headline-md text-headline-md mb-xs">Ready to optimize your core?</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Scale your enterprise infrastructure with VitalDC logic today.</p>
+<h2 class="font-display-lg text-headline-lg mb-stack-md leading-tight">
+                        MOST EXPORT COMPANIES ARE <span class="text-export-orange">INVISIBLE</span> ONLINE.
+                    </h2>
+<p class="font-body-lg text-on-surface-variant mb-stack-lg max-w-md">
+                        The world is searching for high-quality Egyptian products, but legacy digital presence is holding back your potential. We fix the infrastructure gap.
+                    </p>
+<div class="space-y-stack-md">
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-glass bg-surface text-secondary font-label-caps">01</div>
+<div>
+<h4 class="font-label-caps text-on-surface mb-1">Search Insights</h4>
+<p class="text-on-surface-variant text-body-md">We analyze global demand patterns for your specific product category.</p>
 </div>
-<div class="flex gap-md">
-<button class="bg-secondary text-on-secondary px-xl py-md font-label-caps text-label-caps rounded-lg hover:bg-secondary-fixed transition-all active:scale-95 shadow-lg shadow-secondary/10">
-                        View Documentation
-                    </button>
-<button class="border border-white/20 text-on-surface px-xl py-md font-label-caps text-label-caps rounded-lg hover:bg-white/5 transition-all">
-                        Talk to Architect
+</div>
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-glass bg-surface text-secondary font-label-caps">02</div>
+<div>
+<h4 class="font-label-caps text-on-surface mb-1">Protocol Terminal</h4>
+<p class="text-on-surface-variant text-body-md">Engineering a site architecture that loads instantly across any continent.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square glass-card p-1">
+<div class="w-full h-full bg-surface overflow-hidden relative">
+<div class="absolute inset-0 grid-mesh opacity-30"></div>
+<div class="w-full h-full bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7VMha2PeePG1WcwsLcyZT2eKab3Plx6huPgfKNtQ6m_g8q8gXwzFwNBHsn50MekPuFm9-3Mx_fpuRLXCrGqP5xuyVi3CrMk5fh1G-AdPQZYPK-pleF8a7Csi5a2bpChGLFBzFxrPjSCRGX1qLL1QYE0U4OHDEKRlALrLNW1nxh7JzSiP_DSmtnEN1gflT4tHYlc83TuTeuHz0teKzYUzsss6IFNhgz4mY8mpQv4zjMpYRu4IO5XG3')"></div>
+</div>
+</div>
+<!-- Secondary Floating Items -->
+<div class="absolute -bottom-10 -left-10 glass-card p-6 hidden md:block">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="rocket_launch">rocket_launch</span>
+<div>
+<div class="font-label-caps text-label-sm text-secondary">DEPLOYMENT</div>
+<div class="font-headline-md text-headline-md">READY</div>
+</div>
+</div>
+</div>
+<div class="absolute -top-10 -right-5 glass-card p-4 hidden md:block">
+<span class="material-symbols-outlined text-export-orange" data-icon="query_stats">query_stats</span>
+<div class="font-label-caps text-[9px] mt-1 text-on-surface-variant">NETWORK_ANALYTICS</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA SECTION: LIGHT -->
+<section class="py-section-gap overflow-hidden relative bg-white text-light-on-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
+<div class="glow-line-dark mb-16"></div>
+<h2 class="font-display-lg text-display-lg mb-stack-md tracking-tighter text-light-on-surface">READY TO OPTIMIZE YOUR CORE?</h2>
+<p class="font-body-lg text-light-on-surface-variant max-w-2xl mx-auto mb-stack-lg">
+                    Join the elite network of Egyptian exporters who have digitized their entire international pipeline. Secure your infrastructure today.
+                </p>
+<div class="flex justify-center">
+<button class="bg-primary-container text-white px-12 py-5 font-label-caps text-headline-md font-bold transition-all hover:scale-105 hover:bg-primary-container/90 active:opacity-80">
+                        Initiate Connection
                     </button>
 </div>
 </div>
 </section>
+</main>
+<!-- FOOTER: DARK -->
+<footer class="bg-surface-deep border-t border-glass">
+<div class="max-w-container-max mx-auto py-section-gap px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-stack-lg">
+<div class="max-w-sm">
+<span class="font-display-lg text-headline-md font-bold text-on-surface block mb-4">VitalDC</span>
+<p class="font-body-md text-on-surface-variant mb-6">Building the digital foundations for Egypt's next generation of global market leaders.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-glass hover:text-export-orange transition-all" href="#"><span class="material-symbols-outlined text-sm" data-icon="language">language</span></a>
+<a class="w-10 h-10 flex items-center justify-center border border-glass hover:text-export-orange transition-all" href="#"><span class="material-symbols-outlined text-sm" data-icon="security">security</span></a>
 </div>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest border-t border-white/10 w-full py-xl">
-<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-md">
-<div class="flex flex-col items-center md:items-start">
-<div class="font-display-lg text-display-lg text-on-surface mb-xs">VitalDC</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant opacity-80">© 2024 VitalDC Infrastructure. Built Beyond Templates.</p>
 </div>
-<div class="flex gap-lg">
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Architecture</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Privacy</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Security</a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Changelog</a>
+<div class="grid grid-cols-2 gap-stack-lg">
+<div class="space-y-4">
+<h5 class="font-label-caps text-primary text-label-caps">NAVIGATE</h5>
+<ul class="space-y-2 font-body-md text-on-surface-variant">
+<li><a class="hover:text-export-orange transition-all" href="#">Digital Assets</a></li>
+<li><a class="hover:text-export-orange transition-all" href="#">Global Trade Network</a></li>
+<li><a class="hover:text-export-orange transition-all" href="#">Automation Systems</a></li>
+</ul>
 </div>
+<div class="space-y-4">
+<h5 class="font-label-caps text-primary text-label-caps">LEGAL</h5>
+<ul class="space-y-2 font-body-md text-on-surface-variant">
+<li><a class="hover:text-export-orange transition-all" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-export-orange transition-all" href="#">Terms of Service</a></li>
+<li><a class="hover:text-export-orange transition-all" href="#">LinkedIn</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-glass/30 text-on-surface-variant/50 font-label-caps text-[10px] flex justify-between">
+<span>© 2024 VitalDC. DIGITAL INFRASTRUCTURE FOR EGYPTIAN EXPORTERS.</span>
+<span class="hidden md:inline">SYSTEM_STATUS: SECURE_ENCRYPTION_ACTIVE</span>
 </div>
 </footer>
-
-</div>
-
-</div>
-
 <script>
-        // Micro-interaction for hover effects on cards
-        document.querySelectorAll('.glass-card').forEach(card => {
+        // Micro-interaction for cards
+        document.querySelectorAll('.glass-card, .bg-surface-container, .bg-white, .bg-light-surface').forEach(card => {
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
@@ -610,257 +556,4 @@ We help Egyptian manufacturers and exporters build the digital infrastructure ne
             });
         });
     </script>
-
-
-<script>
-        // Simple micro-interaction for entry animation
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.querySelector('.animate-fade-in');
-            container.style.opacity = '0';
-            container.style.transform = 'translateY(20px)';
-            container.style.transition = 'opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1)';
-            
-            setTimeout(() => {
-                container.style.opacity = '1';
-                container.style.transform = 'translateY(0)';
-            }, 100);
-        });
-
-        // Background subtle parallax effect
-        window.addEventListener('mousemove', (e) => {
-            const glow = document.querySelector('.atmospheric-glow');
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            glow.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(86, 141, 255, 0.1) 0%, rgba(19, 19, 21, 0) 70%)`;
-        });
-    </script>
-
-    <script>
-    // Micro-interactions for the protocol steps
-    document.querySelectorAll('.glass-card').forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            const icon = card.querySelector('.material-symbols-outlined');
-            if (icon) {
-                icon.style.transform = 'scale(1.1) translateY(-2px)';
-                icon.style.color = '#b0c6ff';
-                icon.style.transition = 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
-            }
-        });
-        card.addEventListener('mouseleave', () => {
-            const icon = card.querySelector('.material-symbols-outlined');
-            if (icon) {
-                icon.style.transform = 'scale(1) translateY(0px)';
-                icon.style.color = '';
-            }
-        });
-    });
-</script> 
- <script>
-const navbar = document.getElementById("navbarz");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 40) {
-    navbar.classList.remove("opacity-0", "-translate-y-full");
-    navbar.classList.add("opacity-100", "translate-y-0");
-  } else {
-    navbar.classList.add("opacity-0", "-translate-y-full");
-    navbar.classList.remove("opacity-100", "translate-y-0");
-  }
-});
-</script> 
-
- <script>
-    // Hover interaction for depth effects
-    document.querySelectorAll('.glass-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            // Dynamic shadow shift and subtle tilt based on mouse position
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / 30;
-            const rotateY = (centerX - x) / 30;
-            
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
-            
-            // Mouse-following highlight
-            const highlight = `radial-gradient(circle at ${x}px ${y}px, rgba(176, 198, 255, 0.08) 0%, transparent 70%)`;
-            card.style.backgroundImage = highlight;
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
-            card.style.backgroundImage = 'none';
-        });
-    });
-</script> 
- <script>
-        document.addEventListener('mousemove', (e) => {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            // Subtle parallax for floating elements
-            const floaters = document.querySelectorAll('.glass-panels2');
-            floaters.forEach((el, i) => {
-                const speed = (i + 1) * 20;
-                const shiftX = (x - 0.5) * speed;
-                const shiftY = (y - 0.5) * speed;
-                el.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
-            });
-        });
-
-        // Simple random text "glimmer" effect for code snippets
-        setInterval(() => {
-            const codeLines = document.querySelectorAll('.font-code-snippet span');
-            const randomLine = codeLines[Math.floor(Math.random() * codeLines.length)];
-            randomLine.classList.add('code-glow');
-            setTimeout(() => randomLine.classList.remove('code-glow'), 1000);
-        }, 3000);
-    </script> 
-
-    <style>
-        @keyframes flow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .animate-gradient {
-            background-size: 200% 200%;
-            animation: flow 8s ease infinite;
-        }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
-        }
-        .mesh-bg {
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(86, 141, 255, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(140, 94, 248, 0.15) 0px, transparent 50%);
-        }
-        .code-glow {
-            text-shadow: 0 0 10px rgba(176, 198, 255, 0.3);
-        }
-    </style> 
-
-<style> 
-         @keyframes float-slow {
-            0%, 100% { transform: translateY(-20%) translateX(0px); }
-            50% { transform: translateY(-22%) translateX(10px); }
-        }
-        .animate-float-slow {
-            animation: float-slow 6s ease-in-out infinite;
-        }
-    </style>
- 
-    <style>
-        .section-2-body {
-            background-color: #131315;
-            color: #E5E2E3;
-            -webkit-font-smoothing: antialiased;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-        .glass-card:hover {
-            border-color: rgba(176, 198, 255, 0.25);
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateY(-4px);
-            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
-        }
-        .card-inner-glow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
-            pointer-events: none;
-        }
-        .tech-gradient {
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(86, 141, 255, 0.1) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(140, 94, 248, 0.1) 0px, transparent 50%),
-                linear-gradient(to bottom, #131315, #0B1020);
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
-    
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-card {
-            background: rgba(11, 16, 32, 0.6);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(176, 198, 255, 0.1);
-            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.02);
-        }
-        .step-connector {
-            background: linear-gradient(to right, transparent, #568dff 50%, transparent);
-        }
-        @keyframes pulse-glow {
-            0%, 100% { opacity: 0.3; text-shadow: 0 0 10px rgba(86, 141, 255, 0); }
-            50% { opacity: 1; text-shadow: 0 0 15px rgba(86, 141, 255, 0.5); }
-        }
-        .animate-pulse-glow {
-            animation: pulse-glow 3s ease-in-out infinite;
-        }
-    </style>
-  
-    <style>
-        .section-4-body {
-            background-color: #131315;
-            color: #e5e2e3;
-            -webkit-font-smoothing: antialiased;
-        }
-        .atmospheric-glow {
-            background: radial-gradient(circle at 50% 50%, rgba(86, 141, 255, 0.08) 0%, rgba(19, 19, 21, 0) 70%);
-        }
-        .grid-subtle {
-            background-image: linear-gradient(rgba(176, 198, 255, 0.03) 1px, transparent 1px), 
-                              linear-gradient(90deg, rgba(176, 198, 255, 0.03) 1px, transparent 1px);
-            background-size: 80px 80px;
-        }
-        .text-gradient-primary {
-            background: linear-gradient(135deg, #e5e2e3 0%, #b0c6ff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .mesh-accents {
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(86, 141, 255, 0.1) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(140, 94, 248, 0.1) 0px, transparent 50%);
-        }
-    </style>
- 
-    <style>
-        .glass-card {
-            background: rgba(17, 24, 39, 0.4);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: inset 0 0.5px 0 0 rgba(255, 255, 255, 0.1);
-        }
-        .glow-blue {
-            box-shadow: 0 0 20px rgba(86, 141, 255, 0.15);
-        }
-        .scanline {
-            background: linear-gradient(to bottom, transparent 50%, rgba(6, 182, 212, 0.02) 50%);
-            background-size: 100% 4px;
-        }
-        .section-5-body {
-            background-color: #0B1020;
-        }
-    </style>
-
-</html>
+</body></html>
