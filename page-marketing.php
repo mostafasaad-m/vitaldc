@@ -5,7 +5,104 @@
 
  ?>
 
-
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-lowest": "#001018",
+                "secondary-fixed": "#b2ebff",
+                "on-tertiary": "#422c00",
+                "on-error-container": "#ffdad6",
+                "tertiary": "#ffba27",
+                "surface-container-low": "#001f2a",
+                "surface": "#00161f",
+                "on-surface-variant": "#c2c7cd",
+                "surface-container-high": "#002e3d",
+                "tertiary-container": "#3d2900",
+                "surface-bright": "#003e52",
+                "on-primary-fixed-variant": "#254a63",
+                "secondary-container": "#209dbb",
+                "on-secondary-container": "#002e39",
+                "primary-fixed-dim": "#a6cbe8",
+                "inverse-primary": "#3e627b",
+                "secondary": "#69d4f4",
+                "surface-deep": "#011B29",
+                "tertiary-fixed-dim": "#ffba27",
+                "export-orange": "#FB8500",
+                "on-secondary": "#003642",
+                "surface-container": "#00232f",
+                "border-glass": "rgba(142, 202, 230, 0.15)",
+                "secondary-fixed-dim": "#69d4f4",
+                "on-background": "#bde9ff",
+                "background": "#00161f",
+                "on-primary-fixed": "#001e2f",
+                "surface-tint": "#a6cbe8",
+                "on-tertiary-fixed-variant": "#5e4100",
+                "primary": "#a6cbe8",
+                "on-error": "#690005",
+                "inverse-surface": "#bde9ff",
+                "outline-variant": "#42474d",
+                "primary-container": "#023047",
+                "on-primary-container": "#7498b4",
+                "primary-fixed": "#c8e6ff",
+                "on-tertiary-fixed": "#271900",
+                "surface-container-highest": "#003a4c",
+                "inverse-on-surface": "#003546",
+                "error-container": "#93000a",
+                "surface-dim": "#00161f",
+                "error": "#ffb4ab",
+                "on-primary": "#07344b",
+                "on-surface": "#bde9ff",
+                "tertiary-fixed": "#ffdea9",
+                "outline": "#8c9197",
+                "on-secondary-fixed": "#001f27",
+                "on-secondary-fixed-variant": "#004e5f",
+                "surface-variant": "#003a4c",
+                "on-tertiary-container": "#c18a00"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "section-gap": "120px",
+                "gutter": "24px",
+                "stack-sm": "8px",
+                "stack-md": "24px",
+                "margin-mobile": "16px",
+                "container-max": "1280px",
+                "margin-desktop": "64px",
+                "stack-lg": "48px"
+            },
+            "fontFamily": {
+                "display-lg": ["Geist"],
+                "headline-lg-mobile": ["Geist"],
+                "headline-lg": ["Geist"],
+                "body-lg": ["Inter"],
+                "label-sm": ["Inter"],
+                "label-caps": ["JetBrains Mono"],
+                "headline-md": ["Geist"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
 <style>
         body {
             background-color: #00161f;
