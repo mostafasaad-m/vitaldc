@@ -747,8 +747,8 @@ window.addEventListener("scroll", () => {
         }
     </style> 
 
-<!-- <style> -->
-        <!-- @keyframes float-slow {
+<style> 
+         @keyframes float-slow {
             0%, 100% { transform: translateY(-20%) translateX(0px); }
             50% { transform: translateY(-22%) translateX(10px); }
         }
