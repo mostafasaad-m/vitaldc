@@ -153,10 +153,10 @@
             <span class="text-export-orange">Vital</span>DC
         </a>
         <div class="hidden md:flex gap-6 items-center">
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="#">Digital Foundation</a>
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="#">Modern Marketing</a>
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="#">Growth Path</a>
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="#">The Protocol</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/">Digital Foundation</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/marketing">Modern Marketing</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/automation-and-ai">Growth Path</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/careers">Careers</a>
         </div>
     </div>
     <div class="flex items-center gap-4">
