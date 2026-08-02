@@ -597,7 +597,7 @@ We help Egyptian manufacturers and exporters build the digital infrastructure ne
 </div>
 
 </div>
-<!-- 
+
 <script>
         // Micro-interaction for hover effects on cards
         document.querySelectorAll('.glass-card').forEach(card => {
@@ -655,8 +655,8 @@ We help Egyptian manufacturers and exporters build the digital infrastructure ne
             }
         });
     });
-</script> -->
-<!-- <script>
+</script> 
+ <script>
 const navbar = document.getElementById("navbarz");
 
 window.addEventListener("scroll", () => {
@@ -668,9 +668,9 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("opacity-100", "translate-y-0");
   }
 });
-</script> -->
+</script> 
 
-<!-- <script>
+ <script>
     // Hover interaction for depth effects
     document.querySelectorAll('.glass-card').forEach(card => {
         card.addEventListener('mousemove', e => {
@@ -696,8 +696,8 @@ window.addEventListener("scroll", () => {
             card.style.backgroundImage = 'none';
         });
     });
-</script> -->
-<!-- <script>
+</script> 
+ <script>
         document.addEventListener('mousemove', (e) => {
             const x = e.clientX / window.innerWidth;
             const y = e.clientY / window.innerHeight;
@@ -719,8 +719,8 @@ window.addEventListener("scroll", () => {
             randomLine.classList.add('code-glow');
             setTimeout(() => randomLine.classList.remove('code-glow'), 1000);
         }, 3000);
-    </script> -->
-<!-- 
+    </script> 
+
     <style>
         @keyframes flow {
             0% { background-position: 0% 50%; }
@@ -745,7 +745,7 @@ window.addEventListener("scroll", () => {
         .code-glow {
             text-shadow: 0 0 10px rgba(176, 198, 255, 0.3);
         }
-    </style> -->
+    </style> 
 
 <!-- <style> -->
         <!-- @keyframes float-slow {
@@ -861,6 +861,6 @@ window.addEventListener("scroll", () => {
         .section-5-body {
             background-color: #0B1020;
         }
-    </style> -->
+    </style>
 
 </html>
