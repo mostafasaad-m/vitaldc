@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
 </nav>
 
-<script>
+<!-- <script>
 document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
@@ -234,9 +234,9 @@ document.addEventListener('DOMContentLoaded', () => {
             : 'close';
     });
 });
-</script>
+</script> -->
 
-<script>
+<!-- <script>
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-toggle-icon');
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
     });
 });
-</script>
+</script> -->
 
 <style>
 .required-field::after {
