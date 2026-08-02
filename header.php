@@ -1,4 +1,4 @@
-<?php echo wp_head(); ?>
+<?php echo "<div>".wp_head()."</div>"; ?>
 <!DOCTYPE html>
 
 <html lang="en" data-theme="dark">
