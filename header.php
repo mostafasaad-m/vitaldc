@@ -219,8 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
 </nav>
-
-<!-- <script>
+<script>
 document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
@@ -235,6 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
+<!-- 
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -268,12 +268,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
+ -->
 <style>
 .required-field::after {
     content: " *";
     color: #ef4444; /* Tailwind red-500 */
     font-weight: 700;
-} -->
+}
 
 </style>
