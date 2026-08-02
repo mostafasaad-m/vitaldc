@@ -4,6 +4,13 @@
  */
 
  ?>
+
+ <?php 
+
+ get_header(); 
+
+ ?> 
+ 
 <style>
         .grid-pattern {
             background-image: linear-gradient(to right, rgba(142, 202, 230, 0.05) 1px, transparent 1px),
