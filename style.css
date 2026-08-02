@@ -114,6 +114,10 @@ html.light .theme-toggle-knob {
     transform: translateX(4.75rem);
 }
 
+.theme-toggle.dark-mode .theme-toggle-knob {
+    transform: translateX(0);
+}
+
 .theme-toggle:hover {
     background: rgba(255, 255, 255, 0.18) !important;
 }
