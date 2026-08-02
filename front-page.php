@@ -720,7 +720,7 @@ window.addEventListener("scroll", () => {
             setTimeout(() => randomLine.classList.remove('code-glow'), 1000);
         }, 3000);
     </script> -->
-
+<!-- 
     <style>
         @keyframes flow {
             0% { background-position: 0% 50%; }
@@ -745,10 +745,10 @@ window.addEventListener("scroll", () => {
         .code-glow {
             text-shadow: 0 0 10px rgba(176, 198, 255, 0.3);
         }
-    </style>
+    </style> -->
 
-<style>
-        @keyframes float-slow {
+<!-- <style> -->
+        <!-- @keyframes float-slow {
             0%, 100% { transform: translateY(-20%) translateX(0px); }
             50% { transform: translateY(-22%) translateX(10px); }
         }
@@ -861,5 +861,6 @@ window.addEventListener("scroll", () => {
         .section-5-body {
             background-color: #0B1020;
         }
-    </style>
+    </style> -->
+
 </html>
