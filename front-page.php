@@ -504,43 +504,6 @@ We help Egyptian manufacturers and exporters build the digital infrastructure ne
 <div class="text-on-surface font-body-md section-5-body">
 <!-- TopNavBar -->
 <div class="pt-xl scanline">
-<!-- Hero Section -->
-<section class="max-w-container-max mx-auto px-gutter py-xl mt-lg">
-<div class="flex flex-col items-center text-center mb-xl">
-<span class="font-label-caps text-label-caps text-secondary mb-sm uppercase tracking-[0.3em]">Operational Philosophy</span>
-<h1 class="font-display-lg text-display-lg md:text-[64px] mb-md max-w-3xl">Built Beyond Templates</h1>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
-                    High-performance infrastructure logic engineered for the next era of digital scale. No presets, just precision.
-                </p>
-</div>
-<!-- Bento Grid - Value Propositions -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-md">
-<!-- Performance First -->
-<div class="md:col-span-8 glass-card rounded-xl p-lg relative overflow-hidden group hover:border-secondary/40 transition-all duration-500">
-<div class="absolute top-0 right-0 p-md opacity-20 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-[120px] text-secondary">speed</span>
-</div>
-<div class="relative z-10">
-<span class="font-code-snippet text-code-snippet text-secondary/60 mb-xs block">VAL_01</span>
-<h3 class="font-headline-md text-headline-md mb-sm flex items-center gap-xs text-secondary">
-                            Performance First
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
-</h3>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
-                            Fast-loading, optimized systems designed for real-world scalability. We eliminate latency through architectural purity and kernel-level optimizations.
-                        </p>
-<div class="mt-xl flex gap-md">
-<div class="border-l border-white/10 pl-sm">
-<div class="font-code-snippet text-code-snippet text-secondary">0.02ms</div>
-<div class="font-label-caps text-label-caps text-on-surface-variant opacity-60">AVG LATENCY</div>
-</div>
-<div class="border-l border-white/10 pl-sm">
-<div class="font-code-snippet text-code-snippet text-secondary">99.99%</div>
-<div class="font-label-caps text-label-caps text-on-surface-variant opacity-60">UPTIME LOGIC</div>
-</div>
-</div>
-</div>
-</div>
 <!-- Business Oriented -->
 <div class="md:col-span-4 glass-card rounded-xl p-lg flex flex-col justify-between hover:border-tertiary/40 transition-all duration-500">
 <div>
