@@ -1,4 +1,3 @@
-<?php echo "<div>".wp_head()."</div>"; ?>
 <!DOCTYPE html>
 
 <html lang="en" data-theme="dark">
@@ -106,7 +105,7 @@
       </script>
 
 
-<?php wp_head(); ?>
+<?php echo "<div>".wp_head()."</div>"; ?>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
