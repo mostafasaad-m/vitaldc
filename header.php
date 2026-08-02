@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-<!-- 
+ 
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
- -->
+ 
 <style>
 .required-field::after {
     content: " *";
