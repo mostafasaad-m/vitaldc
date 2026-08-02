@@ -1,3 +1,4 @@
+<?php echo wp_head(); ?>
 <!DOCTYPE html>
 
 <html lang="en" data-theme="dark">
