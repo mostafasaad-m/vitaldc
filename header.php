@@ -105,7 +105,6 @@
       </script>
 
 
-<?php echo "<div>".wp_head()."</div>"; ?>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
