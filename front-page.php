@@ -6,7 +6,7 @@
             <span class="w-2 h-2 rounded-full bg-export-yellow animate-pulse"></span>
             <span class="font-label-caps text-[10px] text-export-yellow tracking-widest uppercase">Now Launching Egyptian Brands Globally</span>
         </div>
-        <h1 class="font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1]">
+        <h1 class=" text-on-surface font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1]">
             LAUNCH YOUR GLOBAL <span class="text-export-orange">DIGITAL PRESENCE.</span>
         </h1>
         <p class="font-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">
