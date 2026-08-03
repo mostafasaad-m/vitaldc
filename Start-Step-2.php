@@ -5,6 +5,35 @@
 
  ?>
  <?php get_header('start'); ?>
+ 
+<script>
+        // Micro-interaction for package selection
+        const cards = document.querySelectorAll('.package-card');
+        const selectButtons = document.querySelectorAll('.select-btn');
+
+        cards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                // Clear all active states
+                cards.forEach(c => {
+                    c.classList.remove('active-package');
+                    const btn = c.querySelector('.select-btn');
+                    btn.classList.remove('bg-export-orange', 'text-black', 'font-bold');
+                    btn.classList.add('border-2', 'border-export-orange', 'text-export-orange');
+                    btn.textContent = 'SELECT PACKAGE';
+                });
+
+                // Set active state
+                card.classList.add('active-package');
+                const activeBtn = card.querySelector('.select-btn');
+                activeBtn.classList.remove('border-2', 'border-export-orange', 'text-export-orange');
+                activeBtn.classList.add('bg-export-orange', 'text-black', 'font-bold');
+                activeBtn.textContent = 'PACKAGE SELECTED';
+                
+                // Audio feedback (optional/conceptual)
+                console.log(`Package ${['S', 'M', 'L'][index]} committed to memory.`);
+            });
+        });
+    </script>
 <style>
         body {
             background-color: #00161f;
@@ -210,46 +239,19 @@
 
 <!-- Global Action Bar (Dark Context) -->
 
-<script>
-        // Micro-interaction for package selection
-        const cards = document.querySelectorAll('.package-card');
-        const selectButtons = document.querySelectorAll('.select-btn');
-
-        cards.forEach((card, index) => {
-            card.addEventListener('click', () => {
-                // Clear all active states
-                cards.forEach(c => {
-                    c.classList.remove('active-package');
-                    const btn = c.querySelector('.select-btn');
-                    btn.classList.remove('bg-export-orange', 'text-black', 'font-bold');
-                    btn.classList.add('border-2', 'border-export-orange', 'text-export-orange');
-                    btn.textContent = 'SELECT PACKAGE';
-                });
-
-                // Set active state
-                card.classList.add('active-package');
-                const activeBtn = card.querySelector('.select-btn');
-                activeBtn.classList.remove('border-2', 'border-export-orange', 'text-export-orange');
-                activeBtn.classList.add('bg-export-orange', 'text-black', 'font-bold');
-                activeBtn.textContent = 'PACKAGE SELECTED';
-                
-                // Audio feedback (optional/conceptual)
-                console.log(`Package ${['S', 'M', 'L'][index]} committed to memory.`);
-            });
-        });
-    </script>
 	</section>
 
 	<!-- Technical Metadata Footer -->
 <div class="w-full max-w-4xl mt-stack-md flex justify-between items-center px-4">
-<div class="flex gap-6 opacity-30">
+	<div class="flex gap-6 opacity-30">
 <span class="font-label-caps text-[10px]">AUTH_MODE: SECURE</span>
 <span class="font-label-caps text-[10px]">ENCRYPTION: AES-256</span>
 <span class="font-label-caps text-[10px]">SERVER: CAIRO_NORTH_01</span>
-</div>
+	</div>
 <div class="font-label-caps text-[10px] text-tertiary">
                 VITALDC INFRASTRUCTURE V.2.4.0
             </div>
+</div>
 </div>
 
 </main>
