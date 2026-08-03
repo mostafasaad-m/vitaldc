@@ -4,266 +4,331 @@
  */
  get_header();?>
 
-<body class="bg-background text-on-background font-body-md min-h-screen selection:bg-primary/30">
-<!-- TopNavBar -->
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>VitalDC Onboarding - Step 3: Infrastructure Add-ons</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grid-line-overlay {
+            background-image: linear-gradient(to right, rgba(142, 202, 230, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(142, 202, 230, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+<!-- Tailwind Config Injection -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#3e627b",
+                    "outline-variant": "#42474d",
+                    "on-background": "#bde9ff",
+                    "secondary-fixed": "#b2ebff",
+                    "on-primary-fixed-variant": "#254a63",
+                    "surface-variant": "#003a4c",
+                    "surface-container-lowest": "#001018",
+                    "tertiary-container": "#3d2900",
+                    "surface-bright": "#003e52",
+                    "secondary": "#69d4f4",
+                    "background": "#00161f",
+                    "tertiary-fixed": "#ffdea9",
+                    "primary-container": "#023047",
+                    "surface-container": "#00232f",
+                    "on-surface-variant": "#c2c7cd",
+                    "tertiary-fixed-dim": "#ffba27",
+                    "on-tertiary-fixed-variant": "#5e4100",
+                    "export-orange": "#FB8500",
+                    "inverse-on-surface": "#003546",
+                    "surface-deep": "#011B29",
+                    "inverse-surface": "#bde9ff",
+                    "error-container": "#93000a",
+                    "border-glass": "rgba(142, 202, 230, 0.15)",
+                    "surface-dim": "#00161f",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-low": "#001f2a",
+                    "on-primary-fixed": "#001e2f",
+                    "error": "#ffb4ab",
+                    "tertiary": "#ffba27",
+                    "surface-container-high": "#002e3d",
+                    "outline": "#8c9197",
+                    "secondary-fixed-dim": "#69d4f4",
+                    "on-error": "#690005",
+                    "primary-fixed": "#c8e6ff",
+                    "on-primary-container": "#7498b4",
+                    "on-tertiary-fixed": "#271900",
+                    "on-surface": "#bde9ff",
+                    "primary": "#a6cbe8",
+                    "on-tertiary-container": "#c18a00",
+                    "primary-fixed-dim": "#a6cbe8",
+                    "on-tertiary": "#422c00",
+                    "surface-tint": "#a6cbe8",
+                    "on-secondary": "#003642",
+                    "on-secondary-fixed": "#001f27",
+                    "on-secondary-container": "#002e39",
+                    "secondary-container": "#209dbb",
+                    "on-secondary-fixed-variant": "#004e5f",
+                    "surface-container-highest": "#003a4c",
+                    "surface": "#00161f",
+                    "on-primary": "#07344b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "margin-mobile": "16px",
+                    "section-gap": "120px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "stack-md": "24px",
+                    "stack-lg": "48px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Geist"],
+                    "headline-lg": ["Geist"],
+                    "label-caps": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Geist"],
+                    "display-lg": ["Geist"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden">
+<!-- Top Header Navigation Shell (Shared Component: TopNavBar) -->
+<header class="fixed top-0 w-full z-50 bg-surface-deep/80 backdrop-blur-xl border-b border-glass h-20 md:h-24">
 
-<main class="pt-32 pb-xl px-md max-w-container-max mx-auto">
-<!-- Progress Indicator -->
-<section class="mb-xl">
-<div class="flex justify-between max-w-3xl mx-auto relative">
-<div class="absolute top-1/2 left-0 w-full h-[2px] bg-white/5 -translate-y-1/2 z-0"></div>
-<div class="absolute top-1/2 left-0 w-2/3 h-[2px] bg-primary -translate-y-1/2 z-0 transition-all duration-700"></div>
-<div class="relative z-10 flex flex-col items-center gap-xs">
-<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm">1</div>
-<span class="font-label-caps text-label-caps text-on-surface-variant">PLAN</span>
-</div>
-<div class="relative z-10 flex flex-col items-center gap-xs">
-<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm">2</div>
-<span class="font-label-caps text-label-caps text-on-surface-variant">RESOURCE</span>
-</div>
-<div class="relative z-10 flex flex-col items-center gap-xs">
-<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm">3</div>
-<span class="font-label-caps text-label-caps text-primary">SERVICES</span>
-</div>
-<div class="relative z-10 flex flex-col items-center gap-xs">
-<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-white/10 text-on-surface-variant flex items-center justify-center font-bold text-sm">4</div>
-<span class="font-label-caps text-label-caps text-on-surface-variant">DEPLOY</span>
-</div>
-</div>
-</section>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-start">
-<!-- Service Configuration Main Panel -->
-<div class="lg:col-span-8 flex flex-col gap-lg">
-<header>
-<h1 class="font-display-lg text-display-lg text-on-background mb-xs">Service Configuration</h1>
-<p class="text-on-surface-variant max-w-2xl">Toggle specialized modules and configure performance parameters for your digital infrastructure stack.</p>
 </header>
-<!-- Configuration Cards Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
-<!-- AI Integrations -->
-<div class="glass-card p-md rounded-xl flex flex-col gap-md transition-all hover:border-primary/40 group">
-<div class="flex justify-between items-start">
-<div class="flex flex-col gap-xs">
-<span class="material-symbols-outlined text-secondary text-3xl" data-weight="fill">psychology</span>
-<h3 class="font-title-sm text-title-sm text-on-surface">AI Integrations</h3>
+<!-- Main Content Canvas (High Contrast White Background for Content Area) -->
+<main class="flex-grow pt-24 pb-32 bg-white relative">
+<div class="absolute inset-0 grid-line-overlay opacity-40 pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-gutter py-stack-lg relative z-10">
+<!-- Section Header -->
+<div class="mb-stack-lg max-w-3xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-8 h-[2px] bg-export-orange"></span>
+<span class="font-label-caps text-label-caps text-surface-deep uppercase font-bold">PROTOCOL_EXTENSIONS</span>
 </div>
-<label class="relative inline-flex items-center cursor-pointer">
-<input checked="" class="sr-only peer" type="checkbox">
-<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-</label>
+<h2 class="font-headline-lg text-headline-lg text-surface-deep mb-4">ENHANCE YOUR INFRASTRUCTURE</h2>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-2xl">
+                    Select modular protocol extensions to optimize your global trade throughput. Add-ons are hot-swappable and billable per-node.
+                </p>
 </div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Deploy LLM-optimized clusters and vector databases for real-time inference.</p>
-<div class="mt-auto pt-md border-t border-white/5">
-<div class="flex justify-between mb-xs">
-<span class="font-label-caps text-label-caps text-on-surface-variant">INFERENCE PRIORITY</span>
-<span class="font-code-snippet text-code-snippet text-primary">LOW LATENCY</span>
+<!-- Bento-Style Grid of Add-on Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1: Security+ Protocol -->
+<div class="group border border-surface-container text-surface-deep p-6 hover:border-export-orange transition-all duration-300 bg-surface-container-lowest/50 backdrop-blur-sm flex flex-col justify-between min-h-[320px]">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-surface-deep text-export-orange">
+<span class="material-symbols-outlined">security</span>
 </div>
-<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" type="range">
+<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5">TYPE: CRYPTO_VAULT</span>
 </div>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold">Security+ Protocol</h3>
+<p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
+                            End-to-end hardware encryption, biometric hardware keys, and SOC2 compliance vault for sensitive trade data.
+                        </p>
 </div>
-<!-- Automated CI/CD -->
-<div class="glass-card p-md rounded-xl flex flex-col gap-md transition-all hover:border-primary/40 group">
-<div class="flex justify-between items-start">
-<div class="flex flex-col gap-xs">
-<span class="material-symbols-outlined text-secondary text-3xl" data-weight="fill">cycle</span>
-<h3 class="font-title-sm text-title-sm text-on-surface">Automated CI/CD</h3>
-</div>
-<label class="relative inline-flex items-center cursor-pointer">
-<input class="sr-only peer" type="checkbox">
-<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-</label>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Enable zero-downtime deployment pipelines with integrated testing suites.</p>
-<div class="mt-auto pt-md border-t border-white/5">
-<div class="flex justify-between mb-xs">
-<span class="font-label-caps text-label-caps text-on-surface-variant">PIPELINE CONCURRENCY</span>
-<span class="font-code-snippet text-code-snippet text-primary">4 THREADS</span>
-</div>
-<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" type="range">
-</div>
-</div>
-<!-- Advanced Analytics -->
-<div class="glass-card p-md rounded-xl flex flex-col gap-md transition-all hover:border-primary/40 group">
-<div class="flex justify-between items-start">
-<div class="flex flex-col gap-xs">
-<span class="material-symbols-outlined text-secondary text-3xl" data-weight="fill">monitoring</span>
-<h3 class="font-title-sm text-title-sm text-on-surface">Advanced Analytics</h3>
-</div>
-<label class="relative inline-flex items-center cursor-pointer">
-<input checked="" class="sr-only peer" type="checkbox">
-<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-</label>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Full-stack observability with eBPF tracing and custom dashboarding.</p>
-<div class="mt-auto pt-md border-t border-white/5">
-<div class="flex justify-between mb-xs">
-<span class="font-label-caps text-label-caps text-on-surface-variant">RETENTION DEPTH</span>
-<span class="font-code-snippet text-code-snippet text-primary">90 DAYS</span>
-</div>
-<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" type="range">
-</div>
-</div>
-<!-- Edge Acceleration -->
-<div class="glass-card p-md rounded-xl flex flex-col gap-md transition-all hover:border-primary/40 group">
-<div class="flex justify-between items-start">
-<div class="flex flex-col gap-xs">
-<span class="material-symbols-outlined text-secondary text-3xl" data-weight="fill">bolt</span>
-<h3 class="font-title-sm text-title-sm text-on-surface">Edge Acceleration</h3>
-</div>
-<label class="relative inline-flex items-center cursor-pointer">
-<input class="sr-only peer" type="checkbox">
-<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-</label>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Global CDN integration with edge-side rendering capabilities.</p>
-<div class="mt-auto pt-md border-t border-white/5">
-<div class="flex justify-between mb-xs">
-<span class="font-label-caps text-label-caps text-on-surface-variant">POP DENSITY</span>
-<span class="font-code-snippet text-code-snippet text-primary">OPTIMIZED</span>
-</div>
-<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" type="range">
-</div>
-</div>
-</div>
-<div class="flex justify-between mt-md">
-<button class="flex items-center gap-xs px-lg py-md border border-white/10 hover:bg-white/5 transition-all text-on-surface font-label-caps text-label-caps uppercase">
-<span class="material-symbols-outlined">chevron_left</span>
-                        Resource Selection
-                    </button>
-<button class="bg-primary text-on-primary px-xl py-md font-label-caps text-label-caps uppercase rounded-DEFAULT hover:opacity-90 active:scale-95 transition-all flex items-center gap-xs">
-                        Finalize Deployment
-                        <span class="material-symbols-outlined">chevron_right</span>
+<div class="mt-8">
+<button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
+<span class="">Enable Module</span>
+<span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
 </div>
-<!-- Performance Widget Sidebar -->
-<aside class="lg:col-span-4 sticky top-32">
-<div class="glass-card p-lg rounded-xl flex flex-col gap-lg border-primary/20">
-<div class="flex flex-col gap-xs">
-<h2 class="font-headline-md text-headline-md text-on-surface">System Forecast</h2>
-<p class="text-on-surface-variant font-body-sm">Real-time performance estimation based on current configurations.</p>
+<!-- Card 2: Regional Accelerator -->
+<div class="group border border-surface-container text-surface-deep p-6 hover:border-export-orange transition-all duration-300 bg-surface-container-lowest/50 backdrop-blur-sm flex flex-col justify-between min-h-[320px]">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-surface-deep text-export-orange">
+<span class="material-symbols-outlined">language</span>
 </div>
-<!-- Performance Gauges -->
-<div class="flex flex-col gap-md">
-<div class="space-y-2">
-<div class="flex justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant">THROUGHPUT</span>
-<span class="font-code-snippet text-code-snippet text-secondary">92.4 Gb/s</span>
+<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5">TYPE: EDGE_NODE</span>
 </div>
-<div class="w-full h-2 bg-surface-container-highest overflow-hidden">
-<div class="bg-primary h-full w-[92%] relative overflow-hidden" style="width: 91.1612%;">
-<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[pulse_2s_infinite]"></div>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold">Regional Accelerator</h3>
+<p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
+                            Localized CDN nodes in MENA &amp; GCC, sub-50ms latency routing, and guaranteed local data residency.
+                        </p>
 </div>
-</div>
-</div>
-<div class="space-y-2">
-<div class="flex justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant">LATENCY</span>
-<span class="font-code-snippet text-code-snippet text-primary">12ms (P99)</span>
-</div>
-<div class="w-full h-2 bg-surface-container-highest overflow-hidden">
-<div class="bg-secondary h-full w-[15%]" style="width: 15.7243%;"></div>
+<div class="mt-8">
+<button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
+<span class="">Enable Module</span>
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
 </div>
 </div>
-<div class="space-y-2">
-<div class="flex justify-between">
-<span class="font-label-caps text-label-caps text-on-surface-variant">AI INFERENCE SPEED</span>
-<span class="font-code-snippet text-code-snippet text-on-tertiary-container">450 t/sec</span>
+<!-- Card 3: Advanced Analytics -->
+<div class="group border border-surface-container text-surface-deep p-6 hover:border-export-orange transition-all duration-300 bg-surface-container-lowest/50 backdrop-blur-sm flex flex-col justify-between min-h-[320px]">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-surface-deep text-export-orange">
+<span class="material-symbols-outlined">leaderboard</span>
 </div>
-<div class="w-full h-2 bg-surface-container-highest overflow-hidden">
-<div class="bg-tertiary h-full w-[78%]" style="width: 77.4078%;"></div>
+<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5">TYPE: DATA_VIZ</span>
 </div>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold">Advanced Analytics</h3>
+<p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
+                            Real-time trade flow visualization, predictive supply chain alerts, and custom SQL reporting tools.
+                        </p>
 </div>
-</div>
-<!-- Visual Representation -->
-<div class="relative h-48 w-full bg-surface-container-lowest rounded-lg border border-white/5 overflow-hidden group">
-<div class="absolute inset-0 flex items-center justify-center">
-<!-- Simulated Data Center Abstract Visual -->
-<div class="grid grid-cols-8 grid-rows-4 gap-1 w-full h-full p-4">
-<div class="bg-primary/20 animate-pulse transition-all duration-500 rounded-sm"></div>
-<div class="bg-secondary/10 rounded-sm"></div>
-<div class="bg-primary/40 rounded-sm"></div>
-<div class="bg-primary/10 rounded-sm"></div>
-<div class="bg-primary/20 rounded-sm"></div>
-<div class="bg-secondary/30 animate-pulse rounded-sm"></div>
-<div class="bg-primary/10 rounded-sm"></div>
-<div class="bg-primary/5 rounded-sm"></div>
-<div class="bg-primary/5 rounded-sm"></div>
-<div class="bg-secondary/20 rounded-sm"></div>
-<div class="bg-primary/10 rounded-sm"></div>
-<div class="bg-primary/30 rounded-sm"></div>
-<div class="bg-secondary/10 rounded-sm"></div>
-<div class="bg-primary/40 rounded-sm"></div>
-<div class="bg-primary/10 rounded-sm"></div>
-<div class="bg-secondary/20 rounded-sm"></div>
-<div class="bg-primary/20 rounded-sm"></div>
-<div class="bg-primary/10 rounded-sm"></div>
-<div class="bg-secondary/40 rounded-sm"></div>
-<div class="bg-primary/10 rounded-sm"></div>
-<div class="bg-primary/5 rounded-sm"></div>
-<div class="bg-secondary/10 rounded-sm"></div>
-<div class="bg-primary/30 rounded-sm"></div>
-<div class="bg-primary/10 rounded-sm"></div>
-<div class="bg-primary/10 rounded-sm"></div>
-<div class="bg-secondary/20 rounded-sm"></div>
-<div class="bg-primary/30 rounded-sm"></div>
-<div class="bg-primary/10 rounded-sm"></div>
-<div class="bg-secondary/10 rounded-sm"></div>
-<div class="bg-primary/5 rounded-sm"></div>
-<div class="bg-primary/40 rounded-sm"></div>
-<div class="bg-secondary/20 rounded-sm"></div>
+<div class="mt-8">
+<button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
+<span class="">Enable Module</span>
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
 </div>
 </div>
-<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
-<div class="absolute bottom-4 left-4 flex flex-col">
-<span class="font-code-snippet text-[10px] text-primary">VDC_NODE_CLUSTER_BRAVO</span>
-<span class="font-code-snippet text-[10px] text-on-surface-variant">Uptime: 99.9992%</span>
+<!-- Card 4: API Bridge -->
+<div class="group border border-surface-container text-surface-deep p-6 hover:border-export-orange transition-all duration-300 bg-surface-container-lowest/50 backdrop-blur-sm flex flex-col justify-between min-h-[320px]">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-surface-deep text-export-orange">
+<span class="material-symbols-outlined">integration_instructions</span>
+</div>
+<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5">TYPE: MIDDLEWARE</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold">API Bridge</h3>
+<p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
+                            Native ERP integrations, programmable webhook triggers, and custom endpoint provisioning for developers.
+                        </p>
+</div>
+<div class="mt-8">
+<button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
+<span class="">Enable Module</span>
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
 </div>
 </div>
-<div class="flex flex-col gap-xs pt-md border-t border-white/5">
-<div class="flex justify-between items-center">
-<span class="text-on-surface-variant font-body-sm">Est. Monthly Cost</span>
-<span class="font-headline-md text-headline-md text-on-surface">$1,420.00</span>
 </div>
-<p class="text-[10px] text-on-surface-variant leading-tight">Billing is calculated per minute based on actual resource consumption and service overhead.</p>
+<!-- Visual Asset Section (Technical Detail) -->
+<div class="mt-section-gap grid grid-cols-1 lg:grid-cols-3 gap-gutter items-center">
+<div class="col-span-1 lg:col-span-2 relative h-[300px] bg-surface-deep overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<div class="h-full w-full" style="background-image: radial-gradient(circle at 2px 2px, #219EBC 1px, transparent 0); background-size: 24px 24px;"></div>
+</div>
+<!-- Mock Shipping Tracker / Data Viz -->
+<div class="absolute inset-0 flex items-center justify-center p-gutter">
+<div class="w-full h-full border border-glass p-6 flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<div class="flex gap-2">
+<div class="w-3 h-3 bg-export-orange animate-pulse"></div>
+<span class="font-label-caps text-[10px] text-primary">LIVE_THROUGHPUT_MONITOR</span>
+</div>
+<span class="font-label-caps text-[10px] text-outline">UPTIME: 99.999%</span>
+</div>
+<div class="flex-grow flex items-end gap-1 overflow-hidden">
+<div class="w-full bg-secondary/20 h-1/4"></div>
+<div class="w-full bg-secondary/30 h-2/4"></div>
+<div class="w-full bg-secondary/40 h-3/4"></div>
+<div class="w-full bg-export-orange h-1/2"></div>
+<div class="w-full bg-secondary/20 h-1/3"></div>
+<div class="w-full bg-secondary/50 h-5/6"></div>
+<div class="w-full bg-secondary/20 h-1/2"></div>
+<div class="w-full bg-export-orange h-full"></div>
+<div class="w-full bg-secondary/30 h-2/3"></div>
+<div class="w-full bg-secondary/40 h-1/4"></div>
 </div>
 </div>
-</aside>
+</div>
+</div>
+<div class="col-span-1 border-l-0 lg:border-l border-glass lg:pl-gutter">
+<h4 class="font-label-caps text-label-caps text-surface-deep mb-4 uppercase">System Metadata</h4>
+<ul class="space-y-4 font-label-caps text-[12px] text-surface-variant">
+<li class="flex justify-between border-b border-surface-container-low pb-2">
+<span class="">NETWORK_STATUS</span>
+<span class="text-green-600 font-bold">OPTIMAL</span>
+</li>
+<li class="flex justify-between border-b border-surface-container-low pb-2">
+<span class="">ENCRYPTION</span>
+<span class="text-surface-deep">AES-256-GCM</span>
+</li>
+<li class="flex justify-between border-b border-surface-container-low pb-2">
+<span class="">PROTOCOL_VERSION</span>
+<span class="text-surface-deep">v4.0.2-STABLE</span>
+</li>
+<li class="flex justify-between border-b border-surface-container-low pb-2">
+<span class="">GATEWAY_LATENCY</span>
+<span class="text-surface-deep">12ms</span>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </main>
-<!-- Footer -->
-<footer class="w-full py-xl border-t border-white/5 bg-surface-container-lowest mt-xl">
-<div class="flex flex-col md:flex-row justify-between items-center w-full px-xl max-w-container-max mx-auto gap-md">
-<div class="font-headline-md text-headline-md font-bold text-on-surface">VitalDC</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant md:order-last">© 2024 VitalDC Digital Infrastructure. Engineered for the Digital Age.</p>
-<div class="flex gap-md">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 uppercase" href="#">Privacy Policy</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 uppercase" href="#">Terms of Service</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 uppercase" href="#">Security</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 uppercase" href="#">System Status</a>
+<!-- Bottom Action Bar (Shared Component: BottomNavBar Logic) -->
+<footer class="fixed bottom-0 w-full z-50 bg-surface-deep shadow-2xl">
+<div class="max-w-container-max mx-auto h-20 px-gutter flex justify-between items-center">
+<button class="flex items-center gap-3 group">
+<div class="w-10 h-10 border border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary">arrow_back</span>
 </div>
+<div class="flex flex-col items-start">
+<span class="font-label-caps text-[10px] text-outline uppercase">Previous Stage</span>
+<span class="font-label-caps text-label-caps text-white group-hover:text-primary transition-colors uppercase">PACKAGE_SELECTION</span>
+</div>
+</button>
+<div class="hidden md:flex items-center gap-stack-lg border-x border-glass px-12 h-full">
+<div class="text-center">
+<span class="font-label-caps text-[10px] text-outline uppercase block mb-1">Estimated Provision Time</span>
+<span class="font-label-caps text-label-caps text-white">00:04:32</span>
+</div>
+</div>
+<button class="bg-export-orange hover:bg-white text-on-primary-fixed font-label-caps text-label-caps font-bold px-8 py-3 flex items-center gap-4 transition-all active:scale-95">
+<span class="uppercase tracking-widest">Continue to Step 04</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
 </div>
 </footer>
+<!-- Interactive Layer: Hover states and selection logic -->
 <script>
-        // Micro-interactions for slider updates
-        const ranges = document.querySelectorAll('input[type="range"]');
-        ranges.forEach(range => {
-            range.addEventListener('input', (e) => {
-                const valueDisplay = e.target.parentElement.querySelector('.text-primary');
-                // Logic to simulate dynamic value change if needed
-            });
-        });
-
-        // Toggle interaction animation for sidebar gauges
-        setInterval(() => {
-            const bars = document.querySelectorAll('.bg-primary, .bg-secondary, .bg-tertiary');
-            bars.forEach(bar => {
-                if(bar.parentElement.classList.contains('w-full')) {
-                   const currentWidth = parseInt(bar.style.width) || (bar.classList.contains('w-[92%]') ? 92 : bar.classList.contains('w-[15%]') ? 15 : 78);
-                   const flicker = Math.random() * 2 - 1;
-                   bar.style.width = `${Math.min(100, Math.max(5, currentWidth + flicker))}%`;
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('click', () => {
+                const button = card.querySelector('button');
+                const label = button.querySelector('span:first-child');
+                const icon = button.querySelector('.material-symbols-outlined');
+                
+                if (card.getAttribute('data-selected') === 'true') {
+                    card.setAttribute('data-selected', 'false');
+                    card.classList.remove('ring-2', 'ring-export-orange', 'bg-export-orange/5');
+                    label.textContent = 'Enable Module';
+                    icon.textContent = 'add';
+                } else {
+                    card.setAttribute('data-selected', 'true');
+                    card.classList.add('ring-2', 'ring-export-orange', 'bg-export-orange/5');
+                    label.textContent = 'Module Active';
+                    icon.textContent = 'check';
                 }
             });
-        }, 1500);
+        });
     </script>
+
+<?php get_footer(); ?>  
 </body></html>
