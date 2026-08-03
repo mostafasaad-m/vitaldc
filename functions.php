@@ -17,6 +17,10 @@ function vitaldc_enforce_onboarding_flow() {
         '/start/review' => 'step-4',
     );
 
+    if ( '/start' === $request_path ) {
+        return;
+    }
+
     $target_step = $flow_map[ $request_path ] ?? null;
     if ( ! $target_step ) {
         return;

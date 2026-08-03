@@ -5,6 +5,13 @@
 
 get_header('start');
 
+if ( session_id() === '' ) {
+    session_start();
+}
+
+unset( $_SESSION['vitaldc_onboarding_order_id'] );
+unset( $_SESSION['vitaldc_onboarding_current_step'] );
+
 $order_id = isset( $_GET['order_id'] ) ? absint( wp_unslash( $_GET['order_id'] ) ) : 0;
 $order = $order_id ? wc_get_order( $order_id ) : false;
 
