@@ -175,6 +175,8 @@
 </div>
 </div>
 </div>
+<?php get_footer('start'); ?>  
+
 </main>
 
 <!-- Interactive Layer: Hover states and selection logic -->
@@ -200,5 +202,3 @@
         });
     </script>
 
-<?php get_footer('start'); ?>  
-</body></html>
