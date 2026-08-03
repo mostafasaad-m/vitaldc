@@ -149,7 +149,7 @@
 <?php wp_body_open(); ?>
 <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-glass flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-full">
     <div class="flex items-center gap-stack-lg">
-        <a class="font-display-lg text-headline-md font-bold tracking-tighter text-on-surface flex items-center" href="<?php echo esc_url(home_url('/')); ?>">
+        <a class="font-display-lg text-headline-md font-bold tracking-tighter text-on-surface flex items-center" style="font-size:50px;" href="<?php echo esc_url(home_url('/')); ?>">
             <span class="text-export-orange">Vital</span>DC
         </a>
         <div class="hidden md:flex gap-6 items-center">
