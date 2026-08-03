@@ -241,7 +241,7 @@
             Join the digital elite. Launch your professional global presence today and start capturing the international demand your business deserves.
         </p>
         <div class="flex justify-center">
-            <a class="bg-export-orange text-white px-12 py-5 font-label-caps text-headline-md font-bold transition-all hover:scale-105 hover:bg-export-orange/90 active:opacity-80 shadow-[0_10px_40px_rgba(251,133,0,0.4)]" href="#">
+            <a href="/start" class="bg-export-orange text-white px-12 py-5 font-label-caps text-headline-md font-bold transition-all hover:scale-105 hover:bg-export-orange/90 active:opacity-80 shadow-[0_10px_40px_rgba(251,133,0,0.4)]" >
                 Initiate My Launch
             </a>
         </div>
