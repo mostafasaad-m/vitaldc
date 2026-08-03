@@ -4,114 +4,7 @@
  */
 
  ?>
- <?php get_header(); ?>
-<!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>VitalDC | Infrastructure Package Selection</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Geist:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary-fixed": "#ffdea9",
-                    "surface-tint": "#a6cbe8",
-                    "inverse-primary": "#3e627b",
-                    "on-tertiary-fixed": "#271900",
-                    "tertiary": "#ffba27",
-                    "surface-container-low": "#001f2a",
-                    "secondary-fixed": "#b2ebff",
-                    "outline": "#8c9197",
-                    "inverse-surface": "#bde9ff",
-                    "border-glass": "rgba(142, 202, 230, 0.15)",
-                    "on-secondary-fixed-variant": "#004e5f",
-                    "background": "#00161f",
-                    "on-secondary-fixed": "#001f27",
-                    "surface-container-high": "#002e3d",
-                    "outline-variant": "#42474d",
-                    "secondary": "#69d4f4",
-                    "surface-bright": "#003e52",
-                    "on-secondary-container": "#002e39",
-                    "export-orange": "#FB8500",
-                    "error": "#ffb4ab",
-                    "on-tertiary-fixed-variant": "#5e4100",
-                    "on-primary-container": "#7498b4",
-                    "on-tertiary": "#422c00",
-                    "on-background": "#bde9ff",
-                    "surface-variant": "#003a4c",
-                    "surface-container-lowest": "#001018",
-                    "on-secondary": "#003642",
-                    "tertiary-container": "#3d2900",
-                    "on-tertiary-container": "#c18a00",
-                    "on-surface-variant": "#c2c7cd",
-                    "surface-container": "#00232f",
-                    "surface-dim": "#00161f",
-                    "on-primary": "#07344b",
-                    "primary-container": "#023047",
-                    "on-primary-fixed": "#001e2f",
-                    "on-error": "#690005",
-                    "on-primary-fixed-variant": "#254a63",
-                    "primary-fixed-dim": "#a6cbe8",
-                    "on-surface": "#bde9ff",
-                    "surface-deep": "#011B29",
-                    "secondary-container": "#209dbb",
-                    "error-container": "#93000a",
-                    "on-error-container": "#ffdad6",
-                    "surface-container-highest": "#003a4c",
-                    "primary-fixed": "#c8e6ff",
-                    "surface": "#00161f",
-                    "secondary-fixed-dim": "#69d4f4",
-                    "inverse-on-surface": "#003546",
-                    "tertiary-fixed-dim": "#ffba27",
-                    "primary": "#a6cbe8"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "stack-lg": "48px",
-                    "gutter": "24px",
-                    "section-gap": "120px",
-                    "stack-md": "24px",
-                    "margin-mobile": "16px",
-                    "stack-sm": "8px",
-                    "margin-desktop": "64px",
-                    "container-max": "1280px"
-            },
-            "fontFamily": {
-                    "display-lg": ["Geist"],
-                    "body-md": ["Inter"],
-                    "body-lg": ["Inter"],
-                    "headline-md": ["Geist"],
-                    "headline-lg-mobile": ["Geist"],
-                    "label-sm": ["Inter"],
-                    "label-caps": ["JetBrains Mono"],
-                    "headline-lg": ["Geist"]
-            },
-            "fontSize": {
-                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
-                    "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500"}],
-                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}]
-            }
-          },
-        },
-      }
-    </script>
+ <?php get_header('start'); ?>
 <style>
         body {
             background-color: #00161f;
@@ -138,7 +31,7 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased overflow-x-hidden">
+<body class="min-h-screen flex flex-col antialiased overflow-x-hidden ">
 <!-- Progress Navigation (Dark Context) -->
 <nav class="relative z-10 w-full bg-surface-deep border-b border-border-glass px-margin-desktop py-6">
 <div class="max-w-container-max mx-auto flex items-center justify-between">
@@ -158,7 +51,7 @@
 </div>
 </div>
 </nav>
-<main class="flex-grow flex flex-col bg-surface">
+<main class="items-center flex-grow flex flex-col bg-surface">
 <!-- Content Canvas (Light/Technical Transition) -->
 <section class="relative bg-white text-surface-deep flex-grow py-section-gap px-margin-mobile md:px-margin-desktop grid-pattern">
 <div class="max-w-container-max mx-auto relative z-10">
