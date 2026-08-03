@@ -7,43 +7,7 @@
 get_header('start');?>
 
 
-<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-export-orange selection:text-white">
-<!-- Background Layer -->
-<div class="fixed inset-0 grid-pattern pointer-events-none opacity-40"></div>
-<div class="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-surface-deep via-surface to-surface-dim -z-10"></div>
-<main class="relative min-h-screen flex flex-col items-center justify-center py-stack-lg px-margin-mobile md:px-margin-desktop">
-<!-- Top Identity & Progress Indicator -->
-<div class="w-full max-w-4xl mb-stack-lg">
-<div class="flex flex-col md:flex-row justify-between items-baseline mb-stack-md gap-4">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-secondary mb-1">ONBOARDING_PROTOCOL // STEP_01</span>
-<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white tracking-tight">
-                        Initialize Your Digital Infrastructure
-                    </h1>
-</div>
-<div class="flex items-center gap-2">
-<span class="font-label-caps text-label-sm text-on-surface-variant">VITALDC_SYSTEMS</span>
-<div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div>
-</div>
-</div>
-<!-- Progress Bar Tracker -->
-<div class="w-full grid grid-cols-4 gap-2 h-1 mb-2">
-<div class="bg-export-orange rounded-full"></div>
-<div class="bg-surface-container-highest rounded-full"></div>
-<div class="bg-surface-container-highest rounded-full"></div>
-<div class="bg-surface-container-highest rounded-full"></div>
-</div>
-<div class="flex justify-between items-center">
-<span class="font-label-caps text-xs text-export-orange font-bold uppercase">Step 01: Core Identity</span>
-<span class="font-label-caps text-xs text-on-surface-variant uppercase">Infrastructure Path: 25%</span>
-</div>
-</div>
-<!-- Main Form Section -->
-<section class="w-full max-w-4xl bg-white text-surface-deep rounded-lg overflow-hidden border border-white/10 shadow-2xl relative">
-<!-- Form Grid Lines Decoration -->
-<div class="absolute top-0 right-0 p-stack-md opacity-10 pointer-events-none">
-<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 0;">database</span>
-</div>
+
 <div class="flex flex-col md:flex-row min-h-[600px]">
 <!-- Left Sidebar (Contextual Info) -->
 <div class="md:w-1/3 bg-surface-container-low text-white p-stack-lg flex flex-col justify-between border-r border-glass">
