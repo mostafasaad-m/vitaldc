@@ -30,7 +30,7 @@
             box-shadow: 0 0 20px rgba(251, 133, 0, 0.1);
         }
     </style>
-</head>
+
 <!-- Progress Navigation (Dark Context) -->
 
 <main class="items-center flex-grow flex flex-col bg-surface">
