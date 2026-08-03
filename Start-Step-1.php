@@ -8,7 +8,7 @@ get_header('start');?>
 
 <style>
 
-input{color:#fff;}
+input{color:#fff!important;}
 
 </style>
 
@@ -92,12 +92,7 @@ input{color:#fff;}
 </div>
 <!-- Action Buttons -->
 <div class="pt-stack-lg flex flex-col-reverse md:flex-row gap-4 items-center justify-between">
-<button class="text-on-surface-variant font-label-caps text-xs hover:text-surface-deep transition-colors uppercase tracking-widest flex items-center gap-2" type="button">
-<span class="material-symbols-outlined text-sm">close</span> Cancel Session
-                            </button>
-<a href="/start/tiers" ><button class="w-full md:w-auto bg-export-orange text-white font-label-caps text-sm font-bold px-12 py-4 rounded-sm hover:brightness-110 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-3" type="submit">
-                                Continue to Step 02 <span class="material-symbols-outlined text-base">arrow_forward</span>
-</button></a>
+
 </div>
 </form>
 </div>
@@ -132,6 +127,6 @@ input{color:#fff;}
         });
     </script>
 
-    	<?php get_footer(); ?>
+    	<?php get_footer('start'); ?>
 
 </body></html>
