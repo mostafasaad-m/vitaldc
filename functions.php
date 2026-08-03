@@ -38,6 +38,14 @@ function vitaldc_enforce_onboarding_flow() {
         return;
     }
 
+    if ( 'step-3' === $current_step && 'step-4' === $target_step ) {
+        return;
+    }
+
+    if ( 'step-4' === $current_step && 'step-3' === $target_step ) {
+        return;
+    }
+
     $redirect_path = '/start';
     if ( 'step-2' === $current_step ) {
         $redirect_path = '/start/tiers';
