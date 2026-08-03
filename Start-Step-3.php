@@ -175,9 +175,11 @@
 </div>
 </div>
 </div>
-<?php get_footer('start'); ?>  
 
 </main>
+<?php get_footer('start'); ?>  
+
+
 
 <!-- Interactive Layer: Hover states and selection logic -->
 <script>
