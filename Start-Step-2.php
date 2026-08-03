@@ -253,7 +253,8 @@
             </div>
 </div>
 </main>
+</body>
 
     	<?php get_footer('start'); ?>
 
-</body></html>
+</html>
