@@ -6,446 +6,278 @@
 
 get_header();?>
 
+
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VitalDC | Initialize Infrastructure</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        .grid-pattern {
+            background-image: linear-gradient(to right, rgba(142, 202, 230, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(142, 202, 230, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
         }
-        body {
-            background-color: #131315;
-            color: #e5e2e3;
-            -webkit-font-smoothing: antialiased;
-        }
-        .glass-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
-        }
-        .glow-input:focus {
-            outline: none;
-            border-color: #06B6D4;
-            box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
-        }
-        .step-active {
-            color: #b0c6ff;
-            text-shadow: 0 0 10px rgba(176, 198, 255, 0.5);
+        .form-glow:focus-within {
+            box-shadow: 0 0 20px rgba(33, 158, 188, 0.15);
         }
     </style>
-
-<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
-<!-- TopAppBar -->
-
-<!-- Main Content Area -->
-<main class="flex-grow pt-[120px] pb-xl px-md max-w-container-max mx-auto w-full">
-<!-- Progress Indicator -->
-<div class="max-w-3xl mx-auto mb-xl">
-<div class="flex justify-between items-center relative">
-<div class="absolute top-1/2 left-0 w-full h-[1px] bg-outline-variant -z-10"></div>
-<!-- Step 1: Audit -->
-<div class="flex flex-col items-center gap-xs bg-background px-xs">
-<div class="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center bg-primary-container">
-<span class="material-symbols-outlined text-primary text-[18px]">search</span>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#5e4100",
+                      "on-tertiary-fixed": "#271900",
+                      "surface-deep": "#011B29",
+                      "surface-container-highest": "#003a4c",
+                      "secondary-container": "#209dbb",
+                      "tertiary": "#ffba27",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-low": "#001f2a",
+                      "secondary": "#69d4f4",
+                      "surface-dim": "#00161f",
+                      "error": "#ffb4ab",
+                      "inverse-on-surface": "#003546",
+                      "tertiary-container": "#3d2900",
+                      "primary-fixed": "#c8e6ff",
+                      "error-container": "#93000a",
+                      "on-primary": "#07344b",
+                      "secondary-fixed-dim": "#69d4f4",
+                      "outline-variant": "#42474d",
+                      "on-primary-fixed": "#001e2f",
+                      "inverse-primary": "#3e627b",
+                      "on-secondary-fixed": "#001f27",
+                      "on-secondary-fixed-variant": "#004e5f",
+                      "on-background": "#bde9ff",
+                      "on-surface": "#bde9ff",
+                      "on-primary-container": "#7498b4",
+                      "surface-container": "#00232f",
+                      "primary": "#a6cbe8",
+                      "inverse-surface": "#bde9ff",
+                      "on-surface-variant": "#c2c7cd",
+                      "surface-tint": "#a6cbe8",
+                      "on-primary-fixed-variant": "#254a63",
+                      "primary-container": "#023047",
+                      "surface-container-lowest": "#001018",
+                      "on-tertiary": "#422c00",
+                      "on-error": "#690005",
+                      "on-secondary": "#003642",
+                      "tertiary-fixed-dim": "#ffba27",
+                      "primary-fixed-dim": "#a6cbe8",
+                      "surface-container-high": "#002e3d",
+                      "on-tertiary-container": "#c18a00",
+                      "background": "#00161f",
+                      "outline": "#8c9197",
+                      "surface": "#00161f",
+                      "on-secondary-container": "#002e39",
+                      "export-orange": "#FB8500",
+                      "surface-bright": "#003e52",
+                      "secondary-fixed": "#b2ebff",
+                      "tertiary-fixed": "#ffdea9",
+                      "border-glass": "rgba(142, 202, 230, 0.15)",
+                      "surface-variant": "#003a4c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "margin-desktop": "64px",
+                      "stack-md": "24px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "stack-sm": "8px",
+                      "stack-lg": "48px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Geist"],
+                      "label-sm": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-caps": ["JetBrains Mono"],
+                      "body-lg": ["Inter"],
+                      "headline-lg": ["Geist"],
+                      "headline-lg-mobile": ["Geist"],
+                      "display-lg": ["Geist"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-export-orange selection:text-white">
+<!-- Background Layer -->
+<div class="fixed inset-0 grid-pattern pointer-events-none opacity-40"></div>
+<div class="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-surface-deep via-surface to-surface-dim -z-10"></div>
+<main class="relative min-h-screen flex flex-col items-center justify-center py-stack-lg px-margin-mobile md:px-margin-desktop">
+<!-- Top Identity & Progress Indicator -->
+<div class="w-full max-w-4xl mb-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-stack-md gap-4">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary mb-1">ONBOARDING_PROTOCOL // STEP_01</span>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white tracking-tight">
+                        Initialize Your Digital Infrastructure
+                    </h1>
 </div>
-<span class="font-label-caps text-label-caps text-primary">Audit</span>
-</div>
-<!-- Step 2: Architecture -->
-<div class="flex flex-col items-center gap-xs bg-background px-xs">
-<div class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center bg-surface-container">
-<span class="material-symbols-outlined text-on-surface-variant text-[18px]">architecture</span>
-</div>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Architecture</span>
-</div>
-<!-- Step 3: Services -->
-<div class="flex flex-col items-center gap-xs bg-background px-xs">
-<div class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center bg-surface-container">
-<span class="material-symbols-outlined text-on-surface-variant text-[18px]">settings_input_component</span>
-</div>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Services</span>
-</div>
-<!-- Step 4: Deploy -->
-<div class="flex flex-col items-center gap-xs bg-background px-xs">
-<div class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center bg-surface-container">
-<span class="material-symbols-outlined text-on-surface-variant text-[18px]">rocket_launch</span>
-</div>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Deploy</span>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-sm text-on-surface-variant">VITALDC_SYSTEMS</span>
+<div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div>
 </div>
 </div>
+<!-- Progress Bar Tracker -->
+<div class="w-full grid grid-cols-4 gap-2 h-1 mb-2">
+<div class="bg-export-orange rounded-full"></div>
+<div class="bg-surface-container-highest rounded-full"></div>
+<div class="bg-surface-container-highest rounded-full"></div>
+<div class="bg-surface-container-highest rounded-full"></div>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
-<!-- Sidebar / Context -->
-<div class="lg:col-span-4 space-y-lg">
-<div class="space-y-sm">
-<h1 class="font-display-lg text-display-lg text-on-background leading-none">Audit &amp; <br><span class="text-secondary">Discovery</span></h1>
-<p class="font-body-md text-on-surface-variant max-w-sm">
-                        Initialize your digital footprint assessment. Provide your current technical stack details to let our engine calculate optimal infrastructure paths.
-                    </p>
-</div>
-<div class="glass-card p-md rounded-xl space-y-md">
-<div class="flex items-center gap-sm">
-<span class="material-symbols-outlined text-secondary">info</span>
-<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Why an Audit?</span>
-</div>
-<p class="font-body-sm text-on-surface-variant">
-                        Our discovery phase analyzes latency bottlenecks and cost inefficiencies within your current environment to suggest immediate high-impact optimizations.
-                    </p>
-<div class="pt-sm border-t border-white/5">
-<div class="flex justify-between items-center text-on-surface-variant">
-<span class="font-code-snippet text-code-snippet">Estimated Time</span>
-<span class="font-code-snippet text-code-snippet text-on-surface">~4 mins</span>
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-xs text-export-orange font-bold uppercase">Step 01: Core Identity</span>
+<span class="font-label-caps text-xs text-on-surface-variant uppercase">Infrastructure Path: 25%</span>
 </div>
 </div>
+<!-- Main Form Section -->
+<section class="w-full max-w-4xl bg-white text-surface-deep rounded-lg overflow-hidden border border-white/10 shadow-2xl relative">
+<!-- Form Grid Lines Decoration -->
+<div class="absolute top-0 right-0 p-stack-md opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 0;">database</span>
 </div>
-<div class="relative h-[240px] rounded-xl overflow-hidden border border-white/10 group">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A futuristic data center interior with rows of server racks illuminated by sharp blue and violet LED strips. The atmosphere is cold, precise, and high-tech, featuring a dark polished floor reflecting the glowing server lights. The image conveys high-performance digital infrastructure with a cinematic and minimal cyber-tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT2MTiJ5JnB9jcLBTwnKJq2GNeNE9Fa4ccyora4mGaJsGEnLynslRVxFPsWbehhfnukGdvef3M1h259disO9mRo7k7cr7rT03ESFG4AUDECqLg_LG5VbhJsBTrKAIITDXtRTzKvAJtz1KY1iV0wiXivDtBVsR0pWKgCL3VBkxzi49PWQs8a8iyrUMgP46gLcOBKviLqyCv6hzLrs2Nn36nylqDS89JXNsRTvMbnKDr0Uy-FGpSYFFy1iPKtJRQV4T8t9jm8TguRuw">
-<div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex flex-col justify-end p-md">
-<span class="font-label-caps text-[10px] text-primary bg-primary/10 px-xs py-[2px] w-fit mb-xs">LIVE ENVIRONMENT</span>
-<p class="font-body-sm font-semibold">DC-Node: Frankfurt-01</p>
+<div class="flex flex-col md:flex-row min-h-[600px]">
+<!-- Left Sidebar (Contextual Info) -->
+<div class="md:w-1/3 bg-surface-container-low text-white p-stack-lg flex flex-col justify-between border-r border-glass">
+<div>
+<span class="font-label-caps text-label-caps text-tertiary block mb-stack-md">PROTOCOL_INSTRUCTIONS</span>
+<p class="font-body-md text-on-surface-variant mb-stack-lg leading-relaxed">
+                            Complete the initial identity verification block. This data forms the cryptographic root for your Egyptian export dashboard and global trade logistics routing.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-xs font-label-caps text-on-surface">Identity Validation</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-xs font-label-caps text-on-surface">Domain Verification</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-xs font-label-caps text-on-surface">Contact Secure Protocol</span>
+</li>
+</ul>
+</div>
+<div class="pt-stack-lg">
+<div class="p-4 border border-glass bg-surface-dim rounded">
+<span class="font-label-caps text-[10px] text-on-surface-variant block mb-2 uppercase">System_Status</span>
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<span class="text-xs font-label-caps text-white">Registry Ready</span>
 </div>
 </div>
 </div>
-<!-- Intake Form Canvas -->
-<div class="lg:col-span-8">
-<div class="glass-card p-xl rounded-xl">
-
-<form id="architecture-intake-form" class="space-y-xl main-form" method="POST" action="<?php echo esc_url( admin_url('admin-ajax.php') ); ?>">
-<input type="hidden" name="action" value="save_architecture_intake">
-<!-- Infrastructure Section -->
-<section class="space-y-md">
-<div class="flex items-center gap-xs">
-<span class="font-code-snippet text-secondary">01</span>
-<h2 class="font-headline-md text-headline-md">Contact Inforamtaion</h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
-<div class="space-y-xs">
-<label class="font-label-caps text-label-caps text-on-surface-variant uppercase required-field">Name</label>
-<input name="billing_first_name" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-md font-body-md glow-input text-on-surface" placeholder="Name" type="text">
+<!-- Right Form Content -->
+<div class="md:w-2/3 p-stack-lg md:p-12">
+<div class="mb-stack-lg">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant mb-2">PRIMARY_DATA_VERIFICATION</h2>
+<p class="font-body-md text-surface-container-highest">Provide your core business data to begin the global trade verification process.</p>
 </div>
-<div class="space-y-xs">
-<label class="font-label-caps text-label-caps text-on-surface-variant uppercase required-field">Company</label>
-<input name="billing_company" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-md font-body-md glow-input text-on-surface" placeholder="Company" type="text">
-</div>
-<div class="space-y-xs">
-<label class="font-label-caps text-label-caps text-on-surface-variant uppercase required-field">Phone</label>
-<input name="billing_phone" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-md font-body-md glow-input text-on-surface" placeholder="Phone" type="text">
-</div>
-<div class="space-y-xs">
-<label class="font-label-caps text-label-caps text-on-surface-variant uppercase required-field">Email</label>
-<input name="billing_mail" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-md font-body-md glow-input text-on-surface" placeholder="John-doe@email.com" type="text">
-</div>
-<div class="space-y-xs">
-<label class="font-label-caps text-label-caps text-on-surface-variant uppercase required-field">Current Website Host</label>
-<select name="current_provider" id="current_provider" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-md font-body-md glow-input text-on-surface appearance-none">
-<option value="no">I don't have a website</option>
-<option>Google Cloud Platform</option>
-<option>Microsoft Azure</option>
-<option>Hostgator</option>
-<option>Hostinger</option>
-<option>GoDaddy</option>
-<option>Egyptian Provider</option>
-<option value="no">I don't know</option>
-</select>
-</div>
-
-
-<div id="website-wrapper" class="hidden">
-    <label class="font-label-caps text-label-caps text-on-surface-variant uppercase required-field">
-        Website URL
-    </label>
-
-    <input
-        type="url"
-        name="website_url"
-        id="website_url"
-        class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-md font-body-md glow-input text-on-surface"
-    >
-</div>
-
-<div class="space-y-xs">
-<label class="font-label-caps text-label-caps text-on-surface-variant uppercase required-field">Do you have a CRM system?</label>
-<select name="crm_status" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-md font-body-md glow-input text-on-surface appearance-none">
-<option>No</option>
-<option>Yes</option>
-<option>I don't know</option>
-</select>
-</div>
-
-
-
-</div>
-</section>
-<!-- Pain Points / Technical Requirements -->
-<section class="space-y-md">
-<div class="flex items-center gap-xs">
-<span class="font-code-snippet text-secondary">02</span>
-<h2 class="font-headline-md text-headline-md">Key Requirements</h2>
-</div>
-<div class="space-y-md">
-<label class="font-label-caps text-label-caps text-on-surface-variant uppercase block">What do you want to achieve with VitalDC?</label>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-sm">
-<label class="flex items-center gap-sm p-md border border-outline-variant rounded hover:border-secondary/50 cursor-pointer transition-colors bg-surface-container/50">
-<input name="pain_points[]" value="company-website" class="rounded border-outline-variant text-primary focus:ring-primary bg-background" type="checkbox">
-<span class="font-body-sm">Company Website</span>
+<form class="space-y-6">
+<!-- Full Name -->
+<div class="group">
+<label class="block font-label-caps text-xs text-on-surface-variant mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="full_name">
+                                Full Name <span class="text-export-orange">*</span>
 </label>
-<label class="flex items-center gap-sm p-md border border-outline-variant rounded hover:border-secondary/50 cursor-pointer transition-colors bg-surface-container/50">
-<input name="pain_points[]" value="business emails" class="rounded border-outline-variant text-primary focus:ring-primary bg-background" type="checkbox" >
-<span class="font-body-sm">Business Emails</span>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="full_name" name="full_name" placeholder="E.G. AHMED MANSOUR" required="" type="text"/>
+</div>
+<!-- Company Name -->
+<div class="group">
+<label class="block font-label-caps text-xs text-on-surface-variant mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="company_name">
+                                Company Name <span class="text-export-orange">*</span>
 </label>
-<label class="flex items-center gap-sm p-md border border-outline-variant rounded hover:border-secondary/50 cursor-pointer transition-colors bg-surface-container/50">
-<input name="pain_points[]" value="leads" class="rounded border-outline-variant text-primary focus:ring-primary bg-background" type="checkbox">
-<span class="font-body-sm">New Export Leads</span>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="company_name" name="company_name" placeholder="VITAL LOGISTICS EGYPT" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Corporate Email -->
+<div class="group">
+<label class="block font-label-caps text-xs text-on-surface-variant mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="email">
+                                    Corporate Email <span class="text-export-orange">*</span>
 </label>
-<label class="flex items-center gap-sm p-md border border-outline-variant rounded hover:border-secondary/50 cursor-pointer transition-colors bg-surface-container/50">
-<input name="pain_points[]" value="crm" class="rounded border-outline-variant text-primary focus:ring-primary bg-background" type="checkbox">
-<span class="font-body-sm">Internal CRM</span>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="email" name="email" placeholder="ADMIN@COMPANY.COM" required="" type="email"/>
+</div>
+<!-- Phone Number -->
+<div class="group">
+<label class="block font-label-caps text-xs text-on-surface-variant mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="phone">
+                                    Phone (Country Code) <span class="text-export-orange">*</span>
 </label>
-<label class="flex items-center gap-sm p-md border border-outline-variant rounded hover:border-secondary/50 cursor-pointer transition-colors bg-surface-container/50">
-<input name="pain_points[]" value="erp" class="rounded border-outline-variant text-primary focus:ring-primary bg-background" type="checkbox">
-<span class="font-body-sm">ERP System</span>
-</label>
-<label class="flex items-center gap-sm p-md border border-outline-variant rounded hover:border-secondary/50 cursor-pointer transition-colors bg-surface-container/50">
-<input name="pain_points[]" value="ai-integration" class="rounded border-outline-variant text-primary focus:ring-primary bg-background" type="checkbox">
-<span class="font-body-sm">AI Integrations</span>
-</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="phone" name="phone" placeholder="+20 1XX XXX XXXX" required="" type="tel"/>
 </div>
 </div>
-</section>
-<!-- Additional Context -->
-<section class="space-y-md">
-<div class="flex items-center gap-xs">
-<span class="font-code-snippet text-secondary">03</span>
-<h2 class="font-headline-md text-headline-md">Contextual Data</h2>
+<!-- Website URL -->
+<div class="group">
+<label class="block font-label-caps text-xs text-on-surface-variant mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="website">
+                                Current Website URL <span class="text-on-surface-variant/50">(OPTIONAL)</span>
+</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="website" name="website" placeholder="HTTPS://WWW.COMPANY.COM" type="url"/>
 </div>
-<div class="space-y-xs">
-<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Current Overview</label>
-<textarea name="additional_info" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-md font-body-md glow-input text-on-surface resize-none" placeholder="Tell us more about your current situation..." rows="4"></textarea>
-</div>
-</section>
-<div class="pt-xl flex flex-col md:flex-row justify-between items-center gap-md">
-<button class="text-on-surface-variant hover:text-on-surface transition-colors font-label-caps text-label-caps px-md py-xs flex items-center gap-xs" type="button">
-<span class="material-symbols-outlined text-[18px]">chevron_left</span>
-                                Back to Dashboard
+<!-- Action Buttons -->
+<div class="pt-stack-lg flex flex-col-reverse md:flex-row gap-4 items-center justify-between">
+<button class="text-on-surface-variant font-label-caps text-xs hover:text-surface-deep transition-colors uppercase tracking-widest flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-sm">close</span> Cancel Session
                             </button>
-<button type="submit" class="w-full md:w-auto bg-secondary text-on-secondary-fixed font-label-caps text-label-caps px-xl py-md rounded-lg flex items-center justify-center gap-sm hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-secondary/10" type="submit">
-                                Enhance My Export Potential
-                                <span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
+<button class="w-full md:w-auto bg-export-orange text-white font-label-caps text-sm font-bold px-12 py-4 rounded-sm hover:brightness-110 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-3" type="submit">
+                                Continue to Step 02 <span class="material-symbols-outlined text-base">arrow_forward</span>
 </button>
 </div>
 </form>
-
-
-</div>
-<!-- Micro-Interactions Footer -->
-<div class="mt-md flex justify-between items-center px-sm">
-<div class="flex items-center gap-sm text-[11px] font-code-snippet text-on-surface-variant/40">
-<span>SYSTEM STATUS: <span class="text-secondary">READY</span></span>
-<span class="w-[1px] h-3 bg-outline-variant"></span>
-<span>LATENCY: 12ms</span>
-</div>
-<div class="flex items-center gap-xs">
-<div class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></div>
-<span class="text-[11px] font-code-snippet text-on-surface-variant/40 uppercase">AI-Consultant Online</span>
 </div>
 </div>
+</section>
+<!-- Technical Metadata Footer -->
+<div class="w-full max-w-4xl mt-stack-md flex justify-between items-center px-4">
+<div class="flex gap-6 opacity-30">
+<span class="font-label-caps text-[10px]">AUTH_MODE: SECURE</span>
+<span class="font-label-caps text-[10px]">ENCRYPTION: AES-256</span>
+<span class="font-label-caps text-[10px]">SERVER: CAIRO_NORTH_01</span>
 </div>
+<div class="font-label-caps text-[10px] text-tertiary">
+                VITALDC INFRASTRUCTURE V.2.4.0
+            </div>
 </div>
 </main>
-<!-- Footer -->
-<footer class="w-full py-xl border-t border-white/5 bg-surface-container-lowest">
-<div class="flex flex-col md:flex-row justify-between items-center w-full px-xl max-w-container-max mx-auto gap-md">
-<span class="font-headline-md text-headline-md font-bold text-on-surface">VitalDC</span>
-<div class="flex gap-md">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Terms of Service</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Security</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">System Status</a>
-</div>
-<p class="font-body-sm text-body-sm text-secondary opacity-80 hover:opacity-100 transition-opacity">
-                © 2026 VitalDC Digital Infrastructure. Engineered for the Digital Age.
-            </p>
-</div>
-</footer>
 <script>
-
-document.addEventListener('DOMContentLoaded', function () {
-
-    console.log('Architecture form loaded');
-
-    const form = document.getElementById('architecture-intake-form');
-
-    if (!form) {
-        console.error('Form not found');
-        return;
-    }
-
-    const providerSelect = document.getElementById('current_provider');
-    const websiteWrapper = document.getElementById('website-wrapper');
-    const websiteInput = document.getElementById('website_url');
-
-    function toggleWebsiteField() {
-
-        if (!providerSelect) return;
-
-        if (providerSelect.value !== 'no') {
-
-            if (websiteWrapper) {
-                websiteWrapper.classList.remove('hidden');
-            }
-
-            if (websiteInput) {
-                websiteInput.required = true;
-            }
-
-        } else {
-
-            if (websiteWrapper) {
-                websiteWrapper.classList.add('hidden');
-            }
-
-            if (websiteInput) {
-                websiteInput.required = false;
-                websiteInput.value = '';
-            }
-        }
-    }
-
-    if (providerSelect) {
-        providerSelect.addEventListener('change', toggleWebsiteField);
-        toggleWebsiteField();
-    }
-
-    form.addEventListener('submit', function (e) {
-
-        e.preventDefault();
-
-        console.log('Submit clicked');
-
-        let firstInvalid = null;
-
-        const requiredFields = [
-            'billing_first_name',
-            'billing_company',
-            'billing_phone',
-            'billing_mail',
-            'current_provider',
-            'crm_status'
-        ];
-
-        requiredFields.forEach(function (fieldName) {
-
-            const field = form.querySelector(`[name="${fieldName}"]`);
-
-            if (!field) {
-                console.warn('Missing field:', fieldName);
-                return;
-            }
-
-            field.classList.remove(
-                'border-red-500',
-                'ring-2',
-                'ring-red-300'
-            );
-
-            if (!field.value.trim()) {
-
-                field.classList.add(
-                    'border-red-500',
-                    'ring-2',
-                    'ring-red-300'
-                );
-
-                if (!firstInvalid) {
-                    firstInvalid = field;
-                }
-            }
+        // Simple micro-interaction for the form fields
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                // Potential for adding audio cues or specific UI highlights
+                console.log('Focus on field: ' + input.id);
+            });
         });
 
-        const checkedPainPoints = form.querySelectorAll(
-    '[name="pain_points[]"]:checked'
-);
-
-if (checkedPainPoints.length === 0) {
-
-    const firstPainPoint = form.querySelector(
-        '[name="pain_points[]"]'
-    );
-
-    firstInvalid = firstInvalid || firstPainPoint;
-}
-        if (
-            websiteInput &&
-            websiteInput.required &&
-            !websiteInput.value.trim()
-        ) {
-
-            firstInvalid = firstInvalid || websiteInput;
-        }
-
-        if (firstInvalid) {
-
-            firstInvalid.focus();
-
-            alert('Please complete all required fields.');
-
-            return;
-        }
-
-        const formData = new FormData(form);
-
-        formData.set(
-            'action',
-            'create_draft_architecture_order'
-        );
-
-        console.log('Sending AJAX');
-
-        fetch('/wp-admin/admin-ajax.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(text => {
-
-            console.log('AJAX response:', text);
-
-            let data;
-
-            try {
-                data = JSON.parse(text);
-            } catch (e) {
-                alert('Invalid JSON response');
-                return;
-            }
-
-            if (
-                data.success &&
-                data.data &&
-                data.data.order_id
-            ) {
-
-                window.location.href =
-                    '/start/arch/?order_id=' +
-                    data.data.order_id;
-
-            } else {
-
-                alert(
-                    data.data?.message ||
-                    'Order creation failed'
-                );
-            }
-
-        })
-        .catch(error => {
-
-            console.error(error);
-
-            alert('AJAX request failed');
+        // Form submission prevent default for demo
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Step 01 validated. Initializing protocol Step 02...');
         });
-
-    });
-
-});
-</script>
-
-
+    </script>
 </body></html>
