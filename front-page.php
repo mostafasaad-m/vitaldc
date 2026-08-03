@@ -28,7 +28,7 @@
         </div>
         <div class="flex flex-wrap gap-4">
             <a class="bg-export-orange text-white px-8 py-4 font-label-caps text-label-caps font-bold transition-all hover:scale-[1.02] shadow-[0_0_20px_rgba(251,133,0,0.3)]" href="/start">Go Digital Now</a>
-            <a class="border border-export-yellow text-export-yellow px-8 py-4 font-label-caps text-label-caps font-bold transition-all hover:bg-export-yellow/10" href="#">Explore Our Path</a>
+            <a class="border border-export-yellow text-export-yellow px-8 py-4 font-label-caps text-label-caps font-bold transition-all hover:bg-export-yellow/10" href="#methodology-section">Explore Our Path</a>
         </div>
     </div>
 </section>

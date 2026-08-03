@@ -160,7 +160,7 @@
         </div>
     </div>
     <div class="flex items-center gap-4">
-        <span class="hidden md:inline font-label-caps text-label-caps text-on-surface-variant cursor-pointer">EN/AR</span>
+        <span id="language-switcher" class="hidden md:inline font-label-caps text-label-caps text-on-surface-variant cursor-pointer">EN/AR</span>
         <a class="bg-export-orange text-white px-6 py-2 font-label-caps text-label-caps font-bold transition-all hover:brightness-110 active:opacity-80" href="#">Start Project</a>
     </div>
 </nav>
