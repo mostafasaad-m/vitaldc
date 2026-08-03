@@ -33,27 +33,10 @@
 </head>
 <body class="min-h-screen flex flex-col antialiased overflow-x-hidden ">
 <!-- Progress Navigation (Dark Context) -->
-<nav class="relative z-10 w-full bg-surface-deep border-b border-border-glass px-margin-desktop py-6">
-<div class="max-w-container-max mx-auto flex items-center justify-between">
-<div class="flex items-center gap-4">
-<span class="font-label-caps text-label-caps text-export-orange mono">PROTOCOL v2.4</span>
-<div class="h-4 w-px bg-border-glass"></div>
-<h1 class="font-headline-md text-headline-md geist tracking-tighter">VitalDC Configuration</h1>
-</div>
-<div class="flex flex-col items-end gap-2">
-<div class="flex gap-2">
-<div class="h-1.5 w-12 bg-export-orange rounded-full"></div>
-<div class="h-1.5 w-12 bg-export-orange rounded-full"></div>
-<div class="h-1.5 w-12 bg-surface-variant rounded-full"></div>
-<div class="h-1.5 w-12 bg-surface-variant rounded-full"></div>
-</div>
-<span class="font-label-caps text-label-sm text-on-surface-variant mono">STEP 02 OF 04 : PACKAGE_REGISTRY</span>
-</div>
-</div>
-</nav>
+
 <main class="items-center flex-grow flex flex-col bg-surface">
 <!-- Content Canvas (Light/Technical Transition) -->
-<section class="relative bg-white text-surface-deep flex-grow py-section-gap px-margin-mobile md:px-margin-desktop grid-pattern">
+<section class="relative bg-white text-surface-deep flex-grow px-margin-mobile pt-10 grid-pattern">
 <div class="max-w-container-max mx-auto relative z-10">
 <header class="mb-stack-lg border-l-4 border-export-orange pl-6">
 <span class="font-label-caps text-label-caps text-on-surface-variant mono mb-2 block">REGISTRY_ALLOCATION</span>
