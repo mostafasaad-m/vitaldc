@@ -138,7 +138,7 @@
     </div>
 </section>
 
-<section class="methodology-section py-section-gap bg-surface-deep relative grid-mesh overflow-hidden">
+<section id="methodology-section" class="py-section-gap bg-surface-deep relative grid-mesh overflow-hidden">
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="mb-stack-lg border-l-4 border-export-yellow pl-8">
             <span class="font-label-caps text-export-yellow text-label-caps tracking-[0.2em] uppercase mb-2 block">Methodology</span>
