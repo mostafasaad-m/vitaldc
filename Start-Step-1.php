@@ -6,6 +6,11 @@
 
 get_header('start');?>
 
+<style>
+
+input{color:#fff;}
+
+</style>
 
 
 <div class="flex flex-col md:flex-row min-h-[600px]">
@@ -50,14 +55,14 @@ get_header('start');?>
 <form class="space-y-6">
 <!-- Full Name -->
 <div class="group">
-<label class="block font-label-caps text-xs text-on-surface-variant mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="full_name">
+<label class="surface block font-label-caps text-xs  mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="full_name">
                                 Full Name <span class="text-export-orange">*</span>
 </label>
 <input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="full_name" name="full_name" placeholder="E.G. AHMED MANSOUR" required="" type="text"/>
 </div>
 <!-- Company Name -->
 <div class="group">
-<label class="block font-label-caps text-xs text-on-surface-variant mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="company_name">
+<label class="block font-label-caps text-xs surface mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="company_name">
                                 Company Name <span class="text-export-orange">*</span>
 </label>
 <input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="company_name" name="company_name" placeholder="VITAL LOGISTICS EGYPT" required="" type="text"/>
@@ -65,14 +70,14 @@ get_header('start');?>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- Corporate Email -->
 <div class="group">
-<label class="block font-label-caps text-xs text-on-surface-variant mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="email">
+<label class="block font-label-caps text-xs surface mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="email">
                                     Corporate Email <span class="text-export-orange">*</span>
 </label>
 <input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="email" name="email" placeholder="ADMIN@COMPANY.COM" required="" type="email"/>
 </div>
 <!-- Phone Number -->
 <div class="group">
-<label class="block font-label-caps text-xs text-on-surface-variant mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="phone">
+<label class="block font-label-caps text-xs surface mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="phone">
                                     Phone (Country Code) <span class="text-export-orange">*</span>
 </label>
 <input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="phone" name="phone" placeholder="+20 1XX XXX XXXX" required="" type="tel"/>
@@ -80,8 +85,8 @@ get_header('start');?>
 </div>
 <!-- Website URL -->
 <div class="group">
-<label class="block font-label-caps text-xs text-on-surface-variant mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="website">
-                                Current Website URL <span class="text-on-surface-variant/50">(OPTIONAL)</span>
+<label class="block font-label-caps text-xs surface mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="website">
+                                Current Website URL <span class="surface/50">(OPTIONAL)</span>
 </label>
 <input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="website" name="website" placeholder="HTTPS://WWW.COMPANY.COM" type="url"/>
 </div>
