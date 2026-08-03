@@ -1,7 +1,7 @@
 <?php
 
 function vitaldc_enforce_onboarding_flow() {
-    if ( ! is_user_logged_in() && ! isset( $_SESSION['vitaldc_onboarding_order_id'] ) ) {
+    if ( ! isset( $_SESSION['vitaldc_onboarding_order_id'] ) ) {
         return;
     }
 
@@ -23,31 +23,33 @@ function vitaldc_enforce_onboarding_flow() {
     }
 
     $current_step = $_SESSION['vitaldc_onboarding_current_step'] ?? '';
-    $allowed = array(
-        'step-1' => array( '/start' ),
-        'step-2' => array( '/start', '/start/tiers' ),
-        'step-3' => array( '/start', '/start/tiers', '/start/package-addons' ),
-        'step-4' => array( '/start', '/start/tiers', '/start/package-addons', '/start/review' ),
-    );
+    $current_index = array_search( $current_step, array( 'step-1', 'step-2', 'step-3', 'step-4' ), true );
+    $target_index = array_search( $target_step, array( 'step-1', 'step-2', 'step-3', 'step-4' ), true );
 
-    if ( ! empty( $current_step ) && ! in_array( $request_path, $allowed[ $current_step ] ?? array(), true ) ) {
-        $redirect_path = '/start';
-        if ( 'step-2' === $current_step ) {
-            $redirect_path = '/start/tiers';
-        } elseif ( 'step-3' === $current_step ) {
-            $redirect_path = '/start/package-addons';
-        } elseif ( 'step-4' === $current_step ) {
-            $redirect_path = '/start/review';
-        }
-
-        wp_redirect( $redirect_path );
-        exit;
+    if ( false === $current_index || false === $target_index ) {
+        return;
     }
 
-    if ( 'step-1' !== $target_step && empty( $current_step ) ) {
-        wp_redirect( '/start' );
-        exit;
+    $allowed_next = $current_index + 1;
+    if ( $target_index === $current_index ) {
+        return;
     }
+
+    if ( $target_index === $allowed_next ) {
+        return;
+    }
+
+    $redirect_path = '/start';
+    if ( 'step-2' === $current_step ) {
+        $redirect_path = '/start/tiers';
+    } elseif ( 'step-3' === $current_step ) {
+        $redirect_path = '/start/package-addons';
+    } elseif ( 'step-4' === $current_step ) {
+        $redirect_path = '/start/review';
+    }
+
+    wp_safe_redirect( $redirect_path );
+    exit;
 }
 add_action( 'template_redirect', 'vitaldc_enforce_onboarding_flow' );
 
