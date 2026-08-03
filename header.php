@@ -52,6 +52,17 @@
     .animate-pulse-slow {
         animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
+    .language-switching [data-i18n] {
+        opacity: 0.25;
+        transform: translateY(-6px);
+    }
+    [data-i18n] {
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .rtl {
+        direction: rtl;
+        text-align: right;
+    }
 </style>
 <script id="tailwind-config">
     tailwind.config = {
@@ -147,21 +158,66 @@
 </head>
 <body <?php body_class('bg-background text-on-surface selection:bg-export-orange/30'); ?>>
 <?php wp_body_open(); ?>
-<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-glass flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-full">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-glass flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-full transition-all duration-300">
     <div class="flex items-center gap-stack-lg">
         <a class="font-display-lg text-headline-md font-bold tracking-tighter text-on-surface flex items-center" style="font-size:50px;" href="<?php echo esc_url(home_url('/')); ?>">
-            <span class="text-export-orange">Vital</span>DC
+            <span class="text-export-orange" data-i18n="1" data-en="VitalDC" data-ar="فيتال دي سي">VitalDC</span>
         </a>
         <div class="hidden md:flex gap-6 items-center">
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/">Digital Foundation</a>
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/marketing">Modern Marketing</a>
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/automation">AI Automation</a>
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/careers">Careers</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/" data-i18n="2" data-en="Digital Foundation" data-ar="الأساس الرقمي">Digital Foundation</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/marketing" data-i18n="3" data-en="Modern Marketing" data-ar="التسويق الحديث">Modern Marketing</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/automation" data-i18n="4" data-en="AI Automation" data-ar="أتمتة الذكاء الاصطناعي">AI Automation</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/careers" data-i18n="5" data-en="Careers" data-ar="الوظائف">Careers</a>
         </div>
     </div>
     <div class="flex items-center gap-4">
-        <span id="language-switcher" class="hidden md:inline font-label-caps text-label-caps text-on-surface-variant cursor-pointer">EN/AR</span>
-        <a class="bg-export-orange text-white px-6 py-2 font-label-caps text-label-caps font-bold transition-all hover:brightness-110 active:opacity-80" href="/start">Start Project</a>
+        <span id="language-switcher" class="hidden md:inline font-label-caps text-label-caps text-on-surface-variant cursor-pointer transition-colors duration-300 hover:text-export-yellow" role="button" tabindex="0" aria-live="polite" data-i18n="7" data-en="EN" data-ar="AR">EN</span>
+        <a class="bg-export-orange text-white px-6 py-2 font-label-caps text-label-caps font-bold transition-all hover:brightness-110 active:opacity-80" href="/start" data-i18n="6" data-en="Start Project" data-ar="ابدأ مشروع">Start Project</a>
     </div>
 </nav>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const switcher = document.getElementById('language-switcher');
+        const translatable = Array.from(document.querySelectorAll('[data-i18n]'));
+        const duration = 220;
+
+        function setLanguage(lang) {
+            translatable.forEach(function(node) {
+                const localized = node.dataset[lang];
+                if (localized != null) {
+                    node.textContent = localized;
+                }
+            });
+            document.documentElement.lang = lang === 'ar' ? 'ar' : 'en';
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.body.classList.toggle('rtl', lang === 'ar');
+            if (switcher) {
+                switcher.dataset.language = lang;
+                switcher.textContent = switcher.dataset[lang] || (lang === 'ar' ? 'AR' : 'EN');
+            }
+        }
+
+        function toggleLanguage() {
+            const current = switcher && switcher.dataset.language === 'ar' ? 'ar' : 'en';
+            const next = current === 'ar' ? 'en' : 'ar';
+            document.documentElement.classList.add('language-switching');
+            setTimeout(function() {
+                setLanguage(next);
+                document.documentElement.classList.remove('language-switching');
+            }, duration);
+        }
+
+        if (switcher) {
+            switcher.addEventListener('click', toggleLanguage);
+            switcher.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleLanguage();
+                }
+            });
+        }
+
+        setLanguage('en');
+    });
+</script>
 <main class="relative">
