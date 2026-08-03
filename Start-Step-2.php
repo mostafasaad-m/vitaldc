@@ -208,8 +208,7 @@
 <div class="h-full w-px bg-surface-deep absolute right-margin-desktop"></div>
 <div class="w-full h-px bg-surface-deep absolute top-1/2"></div>
 </div>
-</section>
-</main>
+
 <!-- Global Action Bar (Dark Context) -->
 
 <script>
@@ -240,6 +239,8 @@
             });
         });
     </script>
-	
-</body></html>
+	</section>
+</main>
+
 <?php get_footer('start'); ?>
+</body></html>
