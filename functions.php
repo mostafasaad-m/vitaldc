@@ -309,6 +309,9 @@ function display_architecture_intake_fields_in_admin( $order ) {
     $website    = $order->get_meta('_website_url');
     $pain_points = $order->get_meta('_pain_points');
 	$additional_info = $order->get_meta('_additional_info');
+    $package = $order->get_meta('_onboarding_package');
+    $addons = $order->get_meta('_onboarding_addons');
+    $agreements = $order->get_meta('_onboarding_agreements');
 
     echo '<div style="margin-top:15px;">';
     echo '<h4>Architecture Intake</h4>';
@@ -352,6 +355,30 @@ function display_architecture_intake_fields_in_admin( $order ) {
             echo '<p><strong>Pain Points:</strong> ' .
                  esc_html( $pain_points ) .
                  '</p>';
+        }
+    }
+
+    if ( $package ) {
+        echo '<p><strong>Selected Package:</strong> ' . esc_html( $package ) . '</p>';
+    }
+
+    if ( ! empty( $addons ) ) {
+        if ( is_array( $addons ) ) {
+            echo '<p><strong>Selected Add-ons:</strong><br>';
+            echo esc_html( implode( ', ', array_map( 'strval', $addons ) ) );
+            echo '</p>';
+        } else {
+            echo '<p><strong>Selected Add-ons:</strong> ' . esc_html( $addons ) . '</p>';
+        }
+    }
+
+    if ( ! empty( $agreements ) ) {
+        if ( is_array( $agreements ) ) {
+            echo '<p><strong>Accepted Agreements:</strong><br>';
+            echo esc_html( implode( ', ', array_map( 'strval', $agreements ) ) );
+            echo '</p>';
+        } else {
+            echo '<p><strong>Accepted Agreements:</strong> ' . esc_html( $agreements ) . '</p>';
         }
     }
 
