@@ -31,7 +31,6 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased overflow-x-hidden ">
 <!-- Progress Navigation (Dark Context) -->
 
 <main class="items-center flex-grow flex flex-col bg-surface">
@@ -252,6 +251,7 @@
                 VITALDC INFRASTRUCTURE V.2.4.0
             </div>
 </div>
+
 </main>
 
 
