@@ -209,8 +209,9 @@
 <div class="w-full h-px bg-surface-deep absolute top-1/2"></div>
 </div>
 </section>
-<?php get_footer('start'); ?>
 </main>
+<?php get_footer('start'); ?>
+</body></html>
 <!-- Global Action Bar (Dark Context) -->
 
 <script>
