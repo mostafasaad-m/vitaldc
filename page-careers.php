@@ -293,6 +293,7 @@
             observer.observe(section);
         });
     </script>
+<?php get_footer(); ?>
 
 
 </body></html>
