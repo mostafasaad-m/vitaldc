@@ -237,6 +237,7 @@
 <div class="w-full h-px bg-surface-deep absolute top-1/2"></div>
 </div>
 
+</div>
 
 <?php get_footer("start"); ?>
 
