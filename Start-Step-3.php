@@ -2,16 +2,8 @@
 /**
  * Template Name: Vital-Start-Step-3
  */
- get_header();?>
+ get_header('start');?>
 
-<!DOCTYPE html><html class="dark" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>VitalDC Onboarding - Step 3: Infrastructure Add-ons</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -23,104 +15,7 @@
         }
     </style>
 <!-- Tailwind Config Injection -->
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "inverse-primary": "#3e627b",
-                    "outline-variant": "#42474d",
-                    "on-background": "#bde9ff",
-                    "secondary-fixed": "#b2ebff",
-                    "on-primary-fixed-variant": "#254a63",
-                    "surface-variant": "#003a4c",
-                    "surface-container-lowest": "#001018",
-                    "tertiary-container": "#3d2900",
-                    "surface-bright": "#003e52",
-                    "secondary": "#69d4f4",
-                    "background": "#00161f",
-                    "tertiary-fixed": "#ffdea9",
-                    "primary-container": "#023047",
-                    "surface-container": "#00232f",
-                    "on-surface-variant": "#c2c7cd",
-                    "tertiary-fixed-dim": "#ffba27",
-                    "on-tertiary-fixed-variant": "#5e4100",
-                    "export-orange": "#FB8500",
-                    "inverse-on-surface": "#003546",
-                    "surface-deep": "#011B29",
-                    "inverse-surface": "#bde9ff",
-                    "error-container": "#93000a",
-                    "border-glass": "rgba(142, 202, 230, 0.15)",
-                    "surface-dim": "#00161f",
-                    "on-error-container": "#ffdad6",
-                    "surface-container-low": "#001f2a",
-                    "on-primary-fixed": "#001e2f",
-                    "error": "#ffb4ab",
-                    "tertiary": "#ffba27",
-                    "surface-container-high": "#002e3d",
-                    "outline": "#8c9197",
-                    "secondary-fixed-dim": "#69d4f4",
-                    "on-error": "#690005",
-                    "primary-fixed": "#c8e6ff",
-                    "on-primary-container": "#7498b4",
-                    "on-tertiary-fixed": "#271900",
-                    "on-surface": "#bde9ff",
-                    "primary": "#a6cbe8",
-                    "on-tertiary-container": "#c18a00",
-                    "primary-fixed-dim": "#a6cbe8",
-                    "on-tertiary": "#422c00",
-                    "surface-tint": "#a6cbe8",
-                    "on-secondary": "#003642",
-                    "on-secondary-fixed": "#001f27",
-                    "on-secondary-container": "#002e39",
-                    "secondary-container": "#209dbb",
-                    "on-secondary-fixed-variant": "#004e5f",
-                    "surface-container-highest": "#003a4c",
-                    "surface": "#00161f",
-                    "on-primary": "#07344b"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "gutter": "24px",
-                    "stack-sm": "8px",
-                    "margin-mobile": "16px",
-                    "section-gap": "120px",
-                    "container-max": "1280px",
-                    "margin-desktop": "64px",
-                    "stack-md": "24px",
-                    "stack-lg": "48px"
-            },
-            "fontFamily": {
-                    "headline-lg-mobile": ["Geist"],
-                    "headline-lg": ["Geist"],
-                    "label-caps": ["JetBrains Mono"],
-                    "body-md": ["Inter"],
-                    "body-lg": ["Inter"],
-                    "label-sm": ["Inter"],
-                    "headline-md": ["Geist"],
-                    "display-lg": ["Geist"]
-            },
-            "fontSize": {
-                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                    "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
-                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}]
-            }
-          },
-        },
-      }
-    </script>
-</head>
+
 <body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden">
 <!-- Top Header Navigation Shell (Shared Component: TopNavBar) -->
 <header class="fixed top-0 w-full z-50 bg-surface-deep/80 backdrop-blur-xl border-b border-glass h-20 md:h-24">

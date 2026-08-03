@@ -2,7 +2,7 @@
 /**
  * Template Name: Vital-Start-Step-4
  */
- get_header();?>
+ get_header('start');?>
 
 
 <!DOCTYPE html><html class="dark" lang="en" style=""><head>
