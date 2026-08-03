@@ -178,6 +178,7 @@
 
 </main>
 <?php get_footer('start'); ?>  
+</body>
 
 
 
