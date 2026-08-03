@@ -62,7 +62,7 @@
 
 <!-- Progress Navigation (Dark Context) -->
 
-<main class="items-center flex-grow flex flex-col bg-surface">
+<div class="items-center flex-grow flex flex-col bg-surface">
 <!-- Content Canvas (Light/Technical Transition) -->
 <section class="relative bg-white text-surface-deep flex-grow px-margin-mobile pt-10 grid-pattern">
 <div class="max-w-container-max mx-auto relative z-10">
@@ -237,11 +237,11 @@
 <div class="w-full h-px bg-surface-deep absolute top-1/2"></div>
 </div>
 
-<!-- Global Action Bar (Dark Context) -->
+
 
 	</section>
 
-	<!-- Technical Metadata Footer -->
+	
 <div class="w-full max-w-4xl mt-stack-md flex justify-between items-center px-4">
 	<div class="flex gap-6 opacity-30">
 <span class="font-label-caps text-[10px]">AUTH_MODE: SECURE</span>
@@ -254,7 +254,7 @@
 </div>
 </div>
 
-</main>
+</div>
 
 
 
