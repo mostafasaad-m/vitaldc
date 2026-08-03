@@ -98,18 +98,7 @@ input{color:#fff!important;}
 </div>
 </div>
 </section>
-<!-- Technical Metadata Footer -->
-<div class="w-full max-w-4xl mt-stack-md flex justify-between items-center px-4">
-<div class="flex gap-6 opacity-30">
-<span class="font-label-caps text-[10px]">AUTH_MODE: SECURE</span>
-<span class="font-label-caps text-[10px]">ENCRYPTION: AES-256</span>
-<span class="font-label-caps text-[10px]">SERVER: CAIRO_NORTH_01</span>
-</div>
-<div class="font-label-caps text-[10px] text-tertiary">
-                VITALDC INFRASTRUCTURE V.2.4.0
-            </div>
-</div>
-</main>
+
 <script>
         // Simple micro-interaction for the form fields
         const inputs = document.querySelectorAll('input');
@@ -127,6 +116,19 @@ input{color:#fff!important;}
         });
     </script>
 
-    	<?php get_footer('start'); ?>
+<!-- Technical Metadata Footer -->
+<div class="w-full max-w-4xl mt-stack-md flex justify-between items-center px-4">
+<div class="flex gap-6 opacity-30">
+<span class="font-label-caps text-[10px]">AUTH_MODE: SECURE</span>
+<span class="font-label-caps text-[10px]">ENCRYPTION: AES-256</span>
+<span class="font-label-caps text-[10px]">SERVER: CAIRO_NORTH_01</span>
+</div>
+<div class="font-label-caps text-[10px] text-tertiary">
+                VITALDC INFRASTRUCTURE V.2.4.0
+            </div>
+</div>
+</main>
 
-</body></html>
+<?php get_footer('start'); ?>
+
+</html>
