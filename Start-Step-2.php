@@ -255,6 +255,6 @@
 </main>
 
 
-<?php get_footer('start'); ?>
+
 
 </html>
