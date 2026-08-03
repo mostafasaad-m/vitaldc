@@ -251,5 +251,6 @@
             });
         });
     </script>
-	<?php get_footer('start'); ?>
+	
 </body></html>
+<?php get_footer('start'); ?>
