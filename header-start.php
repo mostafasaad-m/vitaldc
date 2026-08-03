@@ -2,6 +2,46 @@
 /**
  * Header Start template for the VitalDC theme.
  */
+
+$current_path = rtrim( parse_url( $_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH ), '/' );
+if ( '' === $current_path ) {
+    $current_path = '/';
+}
+$current_path = '/start' === $current_path ? '/start' : $current_path;
+
+$step_progress = array(
+    '/start' => array(
+        'step_code' => 'STEP_01',
+        'title' => 'Initialize Your Digital Infrastructure',
+        'label' => 'Step 01: Core Identity',
+        'path' => 'Infrastructure Path: 25%',
+        'active_index' => 1,
+    ),
+    '/start/tiers' => array(
+        'step_code' => 'STEP_02',
+        'title' => 'Select Your Infrastructure Tier',
+        'label' => 'Step 02: Tier Selection',
+        'path' => 'Infrastructure Path: 50%',
+        'active_index' => 2,
+    ),
+    '/start/package-addons' => array(
+        'step_code' => 'STEP_03',
+        'title' => 'Enhance Your Infrastructure',
+        'label' => 'Step 03: Add-ons',
+        'path' => 'Infrastructure Path: 75%',
+        'active_index' => 3,
+    ),
+    '/start/review' => array(
+        'step_code' => 'STEP_04',
+        'title' => 'Review Protocol Deployment',
+        'label' => 'Step 04: Review & Confirm',
+        'path' => 'Infrastructure Path: 100%',
+        'active_index' => 4,
+    ),
+);
+
+$active_progress = $step_progress[ $current_path ] ?? $step_progress['/start'];
+$progress_steps = array(1, 2, 3, 4);
 ?>
 
 <!DOCTYPE html>
@@ -135,9 +175,9 @@
 <div class="w-full max-w-4xl mb-stack-lg">
 <div class="flex flex-col md:flex-row justify-between items-baseline mb-stack-md gap-4">
 <div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-secondary mb-1">ONBOARDING_PROTOCOL // STEP_01</span>
+<span class="font-label-caps text-label-caps text-secondary mb-1">ONBOARDING_PROTOCOL // <?php echo esc_html( $active_progress['step_code'] ); ?></span>
 <h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white tracking-tight">
-                        Initialize Your Digital Infrastructure
+                        <?php echo esc_html( $active_progress['title'] ); ?>
                     </h1>
 </div>
 <div class="flex items-center gap-2">
@@ -147,14 +187,13 @@
 </div>
 <!-- Progress Bar Tracker -->
 <div class="w-full grid grid-cols-4 gap-2 h-1 mb-2">
-<div class="bg-export-orange rounded-full"></div>
-<div class="bg-surface-container-highest rounded-full"></div>
-<div class="bg-surface-container-highest rounded-full"></div>
-<div class="bg-surface-container-highest rounded-full"></div>
+<?php foreach ( $progress_steps as $index ) : ?>
+<div class="rounded-full <?php echo $index <= $active_progress['active_index'] ? 'bg-export-orange' : 'bg-surface-container-highest'; ?>"></div>
+<?php endforeach; ?>
 </div>
 <div class="flex justify-between items-center">
-<span class="font-label-caps text-xs text-export-orange font-bold uppercase">Step 01: Core Identity</span>
-<span class="font-label-caps text-xs text-on-surface-variant uppercase">Infrastructure Path: 25%</span>
+<span class="font-label-caps text-xs text-export-orange font-bold uppercase"><?php echo esc_html( $active_progress['label'] ); ?></span>
+<span class="font-label-caps text-xs text-on-surface-variant uppercase"><?php echo esc_html( $active_progress['path'] ); ?></span>
 </div>
 </div>
 <!-- Main Form Section -->
