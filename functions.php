@@ -30,12 +30,11 @@ function vitaldc_enforce_onboarding_flow() {
         return;
     }
 
-    $allowed_next = $current_index + 1;
     if ( $target_index === $current_index ) {
         return;
     }
 
-    if ( $target_index === $allowed_next ) {
+    if ( $target_index === $current_index + 1 || $target_index === $current_index - 1 ) {
         return;
     }
 

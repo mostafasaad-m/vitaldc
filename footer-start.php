@@ -207,7 +207,9 @@ $active_step = $step_config[ $current_path ] ?? $step_config['/start'];
             }
 
             if (currentStep.step === 'step-4') {
-                window.location.href = '/start/review';
+                const orderIdForThankYou = localStorage.getItem('vitaldc_onboarding_order_id');
+                const thankYouUrl = orderIdForThankYou ? '/thank-you/?order_id=' + encodeURIComponent(orderIdForThankYou) : '/thank-you/';
+                window.location.href = thankYouUrl;
                 return;
             }
 
