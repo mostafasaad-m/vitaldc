@@ -211,18 +211,7 @@
 </section>
 </main>
 <!-- Global Action Bar (Dark Context) -->
-<footer class="bg-surface-deep border-t border-border-glass px-margin-desktop py-8">
-<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-<button class="group flex items-center gap-3 text-on-surface-variant hover:text-white transition-colors">
-<span class="material-symbols-outlined">arrow_back</span>
-<span class="font-label-caps text-label-caps mono">PREVIOUS: IDENTITY_VERIFICATION</span>
-</button>
-<button class="bg-export-orange text-black px-12 py-5 font-label-caps text-label-caps font-bold flex items-center gap-4 transition-transform hover:scale-[1.02] active:scale-95" onclick="window.location.reload()">
-                CONTINUE TO STEP 03
-                <span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-</footer>
+
 <script>
         // Micro-interaction for package selection
         const cards = document.querySelectorAll('.package-card');
@@ -251,5 +240,6 @@
             });
         });
     </script>
-	<?php get_footer('start'); ?>
+	
 </body></html>
+<?php get_footer('start'); ?>
