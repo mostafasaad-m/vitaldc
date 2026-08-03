@@ -37,7 +37,7 @@
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
         <div>
             <span class="font-label-caps text-export-orange text-label-caps tracking-[0.2em] uppercase mb-4 block">The Reality Check</span>
-            <h2 class="font-display-lg text-headline-lg mb-stack-md leading-tight">
+            <h2 class="text-on-surface font-display-lg text-headline-lg mb-stack-md leading-tight">
                 MOST EXPORT COMPANIES ARE <span class="text-export-orange">INVISIBLE</span> ONLINE.
             </h2>
             <p class="font-body-lg text-on-surface-variant mb-stack-lg max-w-md">
