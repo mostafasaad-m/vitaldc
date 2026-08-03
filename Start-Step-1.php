@@ -52,7 +52,7 @@ input{color:#fff!important;}
 <h2 class="font-label-caps text-label-caps text-on-surface-variant mb-2">PRIMARY_DATA_VERIFICATION</h2>
 <p class="font-body-md text-surface-container-highest">Provide your core business data to begin the global trade verification process.</p>
 </div>
-<form class="space-y-6">
+<form id="step-1-form" class="space-y-6">
 <!-- Full Name -->
 <div class="group">
 <label class="surface block font-label-caps text-xs  mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="full_name">

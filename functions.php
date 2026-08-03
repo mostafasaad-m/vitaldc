@@ -1,5 +1,56 @@
 <?php
 
+function vitaldc_enforce_onboarding_flow() {
+    if ( ! is_user_logged_in() && ! isset( $_SESSION['vitaldc_onboarding_order_id'] ) ) {
+        return;
+    }
+
+    $request_path = rtrim( parse_url( $_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH ), '/' );
+    if ( '' === $request_path ) {
+        $request_path = '/';
+    }
+
+    $flow_map = array(
+        '/start' => 'step-1',
+        '/start/tiers' => 'step-2',
+        '/start/package-addons' => 'step-3',
+        '/start/review' => 'step-4',
+    );
+
+    $target_step = $flow_map[ $request_path ] ?? null;
+    if ( ! $target_step ) {
+        return;
+    }
+
+    $current_step = $_SESSION['vitaldc_onboarding_current_step'] ?? '';
+    $allowed = array(
+        'step-1' => array( '/start' ),
+        'step-2' => array( '/start', '/start/tiers' ),
+        'step-3' => array( '/start', '/start/tiers', '/start/package-addons' ),
+        'step-4' => array( '/start', '/start/tiers', '/start/package-addons', '/start/review' ),
+    );
+
+    if ( ! empty( $current_step ) && ! in_array( $request_path, $allowed[ $current_step ] ?? array(), true ) ) {
+        $redirect_path = '/start';
+        if ( 'step-2' === $current_step ) {
+            $redirect_path = '/start/tiers';
+        } elseif ( 'step-3' === $current_step ) {
+            $redirect_path = '/start/package-addons';
+        } elseif ( 'step-4' === $current_step ) {
+            $redirect_path = '/start/review';
+        }
+
+        wp_redirect( $redirect_path );
+        exit;
+    }
+
+    if ( 'step-1' !== $target_step && empty( $current_step ) ) {
+        wp_redirect( '/start' );
+        exit;
+    }
+}
+add_action( 'template_redirect', 'vitaldc_enforce_onboarding_flow' );
+
 add_action('woocommerce_admin_order_data_after_billing_address', function($order) {
 
     if (!$order instanceof WC_Order) {
@@ -79,6 +130,13 @@ function woodmart_child_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'woodmart_child_enqueue_styles', 10010 );
 
 
+add_action( 'init', 'vitaldc_start_onboarding_session' );
+function vitaldc_start_onboarding_session() {
+    if ( ! session_id() ) {
+        session_start();
+    }
+}
+
 add_action(
     'wp_ajax_create_draft_architecture_order',
     'create_draft_architecture_order'
@@ -87,6 +145,16 @@ add_action(
 add_action(
     'wp_ajax_nopriv_create_draft_architecture_order',
     'create_draft_architecture_order'
+);
+
+add_action(
+    'wp_ajax_save_onboarding_step_data',
+    'save_onboarding_step_data'
+);
+
+add_action(
+    'wp_ajax_nopriv_save_onboarding_step_data',
+    'save_onboarding_step_data'
 );
 
 function create_draft_architecture_order() {
@@ -103,76 +171,50 @@ function create_draft_architecture_order() {
     try {
 
         $order = wc_create_order();
+        $payload = isset( $_POST['payload'] ) ? json_decode( wp_unslash( $_POST['payload'] ), true ) : array();
 
-        $order->set_billing_first_name(
-            sanitize_text_field(
-                $_POST['billing_first_name'] ?? ''
-            )
-        );
-
-        $order->set_billing_company(
-            sanitize_text_field(
-                $_POST['billing_company'] ?? ''
-            )
-        );
-
-        $order->set_billing_phone(
-            sanitize_text_field(
-                $_POST['billing_phone'] ?? ''
-            )
-        );
-
-        $order->set_billing_email(
-            sanitize_email(
-                $_POST['billing_mail'] ?? ''
-            )
-        );
-
-        $order->update_meta_data(
-            '_current_provider',
-            sanitize_text_field(
-                $_POST['current_provider'] ?? ''
-            )
-        );
-
-        $order->update_meta_data(
-            '_crm_status',
-            sanitize_text_field(
-                $_POST['crm_status'] ?? ''
-            )
-        );
-
-        $order->update_meta_data(
-            '_website_url',
-            esc_url_raw(
-                $_POST['website_url'] ?? ''
-            )
-        );
-  $order->update_meta_data(
-            '_additional_info',
-            sanitize_text_field(
-                $_POST['additional_info'] ?? ''
-            )
-        );
-
-        if ( ! empty( $_POST['pain_points'] ) ) {
-
-            $order->update_meta_data(
-                '_pain_points',
-                array_map(
-                    'sanitize_text_field',
-                    (array) $_POST['pain_points']
-                )
-            );
+        if ( ! is_array( $payload ) ) {
+            $payload = array();
         }
 
-        $order->set_status( 'pending' );
+        $full_name = sanitize_text_field( $payload['full_name'] ?? $_POST['full_name'] ?? '' );
+        $company_name = sanitize_text_field( $payload['company_name'] ?? $_POST['company_name'] ?? '' );
+        $phone = sanitize_text_field( $payload['phone'] ?? $_POST['phone'] ?? '' );
+        $email = sanitize_email( $payload['email'] ?? $_POST['email'] ?? '' );
+        $website = esc_url_raw( $payload['website'] ?? $_POST['website'] ?? '' );
 
+        $order->set_billing_first_name( $full_name );
+        $order->set_billing_company( $company_name );
+        $order->set_billing_phone( $phone );
+        $order->set_billing_email( $email );
+
+        $order->update_meta_data( '_onboarding_step_1_data', array(
+            'full_name' => $full_name,
+            'company_name' => $company_name,
+            'phone' => $phone,
+            'email' => $email,
+            'website' => $website,
+        ) );
+
+        $order->update_meta_data( '_onboarding_current_step', 'step-1' );
+        $order->update_meta_data( '_onboarding_flow', array( 'step-1' => array(
+            'full_name' => $full_name,
+            'company_name' => $company_name,
+            'phone' => $phone,
+            'email' => $email,
+            'website' => $website,
+        ) ) );
+
+        $order->set_status( 'pending' );
         $order->save();
+
+        $_SESSION['vitaldc_onboarding_order_id'] = $order->get_id();
+        $_SESSION['vitaldc_onboarding_current_step'] = 'step-1';
 
         wp_send_json_success(
             array(
-                'order_id' => $order->get_id()
+                'order_id' => $order->get_id(),
+                'redirect' => '/start/tiers/'
             )
         );
 
@@ -184,6 +226,72 @@ function create_draft_architecture_order() {
             )
         );
     }
+}
+
+function save_onboarding_step_data() {
+
+    if ( ! function_exists( 'wc_get_order' ) ) {
+        wp_send_json_error( array( 'message' => 'WooCommerce not loaded' ) );
+    }
+
+    if ( ! session_id() ) {
+        session_start();
+    }
+
+    $order_id = absint( $_POST['order_id'] ?? $_SESSION['vitaldc_onboarding_order_id'] ?? 0 );
+
+    if ( ! $order_id ) {
+        wp_send_json_error( array( 'message' => 'No onboarding order found' ) );
+    }
+
+    $order = wc_get_order( $order_id );
+
+    if ( ! $order ) {
+        wp_send_json_error( array( 'message' => 'Order not found' ) );
+    }
+
+    $step = sanitize_key( $_POST['step'] ?? 'step-2' );
+    $payload = isset( $_POST['payload'] ) ? json_decode( wp_unslash( $_POST['payload'] ), true ) : array();
+
+    if ( ! is_array( $payload ) ) {
+        $payload = array();
+    }
+
+    $flow = $order->get_meta( '_onboarding_flow', true );
+
+    if ( ! is_array( $flow ) ) {
+        $flow = array();
+    }
+
+    $flow[ $step ] = $payload;
+    $order->update_meta_data( '_onboarding_flow', $flow );
+    $order->update_meta_data( '_onboarding_current_step', $step );
+
+    switch ( $step ) {
+        case 'step-2':
+            $order->update_meta_data( '_onboarding_package', sanitize_text_field( $payload['package'] ?? '' ) );
+            break;
+        case 'step-3':
+            $addons = array_map( 'sanitize_text_field', (array) ( $payload['addons'] ?? array() ) );
+            $order->update_meta_data( '_onboarding_addons', $addons );
+            break;
+        case 'step-4':
+            $agreements = array_map( 'sanitize_text_field', (array) ( $payload['agreed_terms'] ?? array() ) );
+            $order->update_meta_data( '_onboarding_agreements', $agreements );
+            break;
+    }
+
+    $order->save();
+
+    $_SESSION['vitaldc_onboarding_order_id'] = $order_id;
+    $_SESSION['vitaldc_onboarding_current_step'] = $step;
+
+    wp_send_json_success(
+        array(
+            'order_id' => $order_id,
+            'step' => $step
+        )
+    );
 }
 
 add_action(
