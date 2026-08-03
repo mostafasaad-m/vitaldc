@@ -15,6 +15,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
         .grid-pattern {
             background-image: linear-gradient(to right, rgba(142, 202, 230, 0.05) 1px, transparent 1px),
                               linear-gradient(to bottom, rgba(142, 202, 230, 0.05) 1px, transparent 1px);

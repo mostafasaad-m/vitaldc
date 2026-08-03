@@ -1,6 +1,6 @@
 <!-- Bottom Action Bar (Shared Component: BottomNavBar Logic) -->
-<footer class="fixed bottom-0 w-full z-50 bg-surface-deep shadow-2xl">
-<div class="max-w-container-max mx-auto h-20 px-gutter flex justify-between items-center">
+<footer class="fixed inset-x-0 bottom-0 z-50 w-full bg-surface-deep shadow-2xl">
+<div class="w-full max-w-container-max mx-auto h-20 px-gutter flex justify-between items-center">
 <button class="flex items-center gap-3 group">
 <div class="w-10 h-10 border border-outline-variant flex items-center justify-center group-hover:border-primary transition-colors">
 <span class="material-symbols-outlined text-outline-variant group-hover:text-primary">arrow_back</span>

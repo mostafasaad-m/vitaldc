@@ -238,10 +238,9 @@
 </div>
 
 </div>
-</body>
 
 <?php get_footer("start"); ?>
 
-
+</body>
 
 </html>
