@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: start arch
+ * Template Name: Vital-Start-Step-2
  */
 
  ?>

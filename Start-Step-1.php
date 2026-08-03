@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Custom Start
+ * Template Name: Vital-Start-Step-1
  */
 
 

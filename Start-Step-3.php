@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: additional start
+ * Template Name: Vital-Start-Step-3
  */
  get_header();?>
 
