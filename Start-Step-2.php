@@ -210,8 +210,6 @@
 </div>
 </section>
 </main>
-<?php get_footer('start'); ?>
-</body></html>
 <!-- Global Action Bar (Dark Context) -->
 
 <script>
@@ -242,4 +240,6 @@
             });
         });
     </script>
-
+	
+</body></html>
+<?php get_footer('start'); ?>
