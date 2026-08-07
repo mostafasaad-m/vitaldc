@@ -196,4 +196,3 @@
     </script>
 
 <?php get_footer('start'); ?>
-</body></html>

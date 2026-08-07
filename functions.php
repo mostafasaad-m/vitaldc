@@ -1,5 +1,26 @@
 <?php
 
+function vitaldc_theme_setup() {
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support(
+		'html5',
+		array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' )
+	);
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'vitaldc_theme_setup' );
+
+function vitaldc_enqueue_styles() {
+	wp_enqueue_style(
+		'vitaldc-style',
+		get_stylesheet_uri(),
+		array(),
+		filemtime( get_stylesheet_directory() . '/style.css' )
+	);
+}
+add_action( 'wp_enqueue_scripts', 'vitaldc_enqueue_styles' );
+
 function vitaldc_enforce_onboarding_flow() {
     if ( ! isset( $_SESSION['vitaldc_onboarding_order_id'] ) ) {
         return;
@@ -131,17 +152,6 @@ add_action('woocommerce_admin_order_data_after_billing_address', function($order
     }
 
 }, 10, 1);
-
-function woodmart_child_enqueue_styles() {
-	wp_enqueue_style(
-		'woodmart-child-style',
-		get_stylesheet_uri(),
-		array( 'woodmart-style' ),
-		filemtime( get_stylesheet_directory() . '/style.css' )
-	);
-}
-add_action( 'wp_enqueue_scripts', 'woodmart_child_enqueue_styles', 10010 );
-
 
 add_action( 'init', 'vitaldc_start_onboarding_session' );
 function vitaldc_start_onboarding_session() {
@@ -423,37 +433,37 @@ add_action('woocommerce_admin_order_data_after_order_details', function ($order)
 /**
  * Register page templates located inside custom subdirectories.
  */
-add_filter('theme_page_templates', 'register_custom_directory_page_templates', 10, 4);
-function register_custom_directory_page_templates($post_templates, $theme, $post, $post_type) {
-    // List of directories relative to the stylesheet directory
-    $dirs = array('jana-form', 'main-pages');
+add_filter( 'theme_page_templates', 'vitaldc_register_page_templates', 10, 4 );
+function vitaldc_register_page_templates( $post_templates, $theme, $post, $post_type ) {
+	$dirs = array( '.', 'jana-form', 'main-pages', 'template-parts' );
 
-    foreach ($dirs as $dir) {
-        $absolute_path = get_stylesheet_directory() . '/' . $dir;
+	foreach ( $dirs as $dir ) {
+		$absolute_path = get_stylesheet_directory() . ( '.' === $dir ? '' : '/' . $dir );
 
-        // Check if the directory exists
-        if (!is_dir($absolute_path)) {
-            continue;
-        }
+		if ( ! is_dir( $absolute_path ) ) {
+			continue;
+		}
 
-        // Scan directory for .php files
-        $files = scandir($absolute_path);
+		$files = scandir( $absolute_path );
 
-        foreach ($files as $file) {
-            // Skip non-PHP files and parent pointers
-            if ($file === '.' || $file === '..' || pathinfo($file, PATHINFO_EXTENSION) !== 'php') {
-                continue;
-            }
+		foreach ( $files as $file ) {
+			if ( $file === '.' || $file === '..' || pathinfo( $file, PATHINFO_EXTENSION ) !== 'php' ) {
+				continue;
+			}
 
-            // Extract the "Template Name" header
-            $headers = get_file_data($absolute_path . '/' . $file, array('Name' => 'Template Name'));
+			$headers = get_file_data(
+				$absolute_path . '/' . $file,
+				array( 'Name' => 'Template Name' )
+			);
 
-            // Register template path relative to theme root
-            if (!empty($headers['Name'])) {
-                $post_templates[$dir . '/' . $file] = $headers['Name'];
-            }
-        }
-    }
+			if ( empty( $headers['Name'] ) ) {
+				continue;
+			}
 
-    return $post_templates;
+			$relative_path = ( '.' === $dir ) ? $file : $dir . '/' . $file;
+			$post_templates[ $relative_path ] = $headers['Name'];
+		}
+	}
+
+	return $post_templates;
 }

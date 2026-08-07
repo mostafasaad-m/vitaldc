@@ -240,7 +240,3 @@
 </div>
 
 <?php get_footer("start"); ?>
-
-</body>
-
-</html>

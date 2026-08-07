@@ -177,12 +177,6 @@
 </div>
 
 </main>
-<?php get_footer('start'); ?>  
-</body>
-
-
-
-<!-- Interactive Layer: Hover states and selection logic -->
 <script>
         document.querySelectorAll('.group').forEach(card => {
             card.addEventListener('click', () => {
@@ -204,4 +198,4 @@
             });
         });
     </script>
-
+<?php get_footer('start'); ?>

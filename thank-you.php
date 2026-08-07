@@ -61,5 +61,3 @@ if ( $order ) {
 </main>
 
 <?php get_footer('start'); ?>
-</body>
-</html>

@@ -1,4 +1,4 @@
-name: Deploy VitalDC Child Theme
+name: Deploy VitalDC Theme
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
           script: |
             set -e
 
-            cd /var/www/vitaldc/wp-content/themes/woodmart-child
+            cd /var/www/vitaldc/wp-content/themes/vitaldc
 
             git fetch origin
 

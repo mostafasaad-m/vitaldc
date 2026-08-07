@@ -25,9 +25,6 @@
             border: 1px solid rgba(142, 202, 230, 0.15);
         }
     </style>
-</head>
-<body class="font-body-md selection:bg-tertiary selection:text-on-tertiary">
-<main class="relative">
 <!-- Grid Background -->
 <div class="fixed inset-0 grid-mask pointer-events-none z-0"></div>
 <!-- 1. Hero Section (Dark) -->
@@ -261,7 +258,6 @@
 </div>
 </div>
 </section>
-</main>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         // Subtle entrance animations could be added here
@@ -269,5 +265,3 @@
 </script>
 
 <?php get_footer(); ?>
-
-</body></html>

@@ -130,5 +130,3 @@ input{color:#fff!important;}
 </main>
 
 <?php get_footer('start'); ?>
-
-</html>

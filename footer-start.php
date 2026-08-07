@@ -234,3 +234,6 @@ $active_step = $step_config[ $current_path ] ?? $step_config['/start'];
     }
 })();
 </script>
+<?php wp_footer(); ?>
+</body>
+</html>

@@ -45,11 +45,12 @@ $progress_steps = array(1, 2, 3, 4);
 ?>
 
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>VitalDC | Initialize Infrastructure</title>
+<html <?php language_attributes(); ?> class="dark">
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title><?php bloginfo( 'name' ); ?> | Initialize Infrastructure</title>
+<?php wp_head(); ?>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -166,7 +167,8 @@ $progress_steps = array(1, 2, 3, 4);
         }
     </script>
 </head>
-<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-export-orange selection:text-white">
+<body <?php body_class( 'bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-export-orange selection:text-white' ); ?>>
+<?php wp_body_open(); ?>
 <!-- Background Layer -->
 <div class="fixed inset-0 grid-pattern pointer-events-none opacity-40"></div>
 <div class="fixed top-0 left-0 w-full h-full bg-gradient-to-br from-surface-deep via-surface to-surface-dim -z-10"></div>
