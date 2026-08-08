@@ -34,18 +34,21 @@
 <div class="flex flex-col gap-stack-md max-w-4xl">
 <div class="flex items-center gap-4 animate-pulse">
 <span class="w-2 h-2 bg-tertiary rounded-full"></span>
-<span class="font-label-caps text-label-caps text-tertiary tracking-widest">PROTOCOL_ENTRY_001 // RECRUITMENT_PHASE</span>
+<span class="font-label-caps text-label-caps text-tertiary tracking-widest" data-i18n="car-1" data-en="PROTOCOL_ENTRY_001 // RECRUITMENT_PHASE" data-ar="مدخل البروتوكول 001 // مرحلة التوظيف">PROTOCOL_ENTRY_001 // RECRUITMENT_PHASE</span>
 </div>
-<h1 class="font-display-lg text-display-lg text-on-surface leading-none"><h1 class="font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1] cursor-text" spellcheck="false" data-stitch-added-classes="cursor-text" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; font-size: 48px; font-weight: inherit; letter-spacing: normal; background-color: rgb(0, 22, 31); outline: none !important; box-shadow: none !important;">LAUNCH YOUR GLOBAL <span class="text-export-orange cursor-text" spellcheck="false" data-stitch-added-classes="cursor-text" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; --tw-text-opacity: 1; color: rgb(251, 133, 0);">DIGITAL PRESENCE.</span></h1></h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">
+<h1 class="text-on-surface font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1]">
+    <span data-i18n="car-2" data-en="LAUNCH YOUR GLOBAL " data-ar="أطلق حضورك ">LAUNCH YOUR GLOBAL </span>
+    <span class="text-export-orange" data-i18n="car-3" data-en="DIGITAL PRESENCE." data-ar="الرقمي العالمي.">DIGITAL PRESENCE.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4" data-i18n="car-4" data-en="Join a team engineering authority for Egyptian exporters. We are not just building software; we are deploying the critical infrastructure that connects regional manufacturers to the global digital economy." data-ar="انضم إلى فريق يبتكر المصداقية للمصدرين المصريين. نحن لا نبني برمجيات فحسب؛ بل ننشر البنية التحتية الحيوية التي تربط المصنعين الإقليميين بالاقتصاد الرقمي العالمي.">
                     Join a team engineering authority for Egyptian exporters. We are not just building software; we are deploying the critical infrastructure that connects regional manufacturers to the global digital economy.
                 </p>
 <div class="flex flex-wrap gap-gutter mt-stack-lg">
 <a class="bg-tertiary text-on-tertiary-fixed font-label-caps text-label-caps py-4 px-8 hover:bg-export-orange transition-all duration-300 flex items-center gap-2 group" href="#registry">
-                        VIEW ACTIVE REGISTRY
+                        <span data-i18n="car-5" data-en="VIEW ACTIVE REGISTRY" data-ar="عرض السجل النشط">VIEW ACTIVE REGISTRY</span>
                         <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
-<button class="border border-secondary text-secondary font-label-caps text-label-caps py-4 px-8 hover:bg-secondary/10 transition-all duration-300">
+<button class="border border-secondary text-secondary font-label-caps text-label-caps py-4 px-8 hover:bg-secondary/10 transition-all duration-300" data-i18n="car-6" data-en="OUR STACK" data-ar="نظامنا التقني">
                         OUR STACK
                     </button>
 </div>
@@ -74,9 +77,9 @@
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
 <div class="lg:col-span-5 flex flex-col justify-center">
-<span class="font-label-caps text-label-caps text-export-orange mb-stack-sm">IDENTITY &amp; MISSION</span>
-<h2 class="font-headline-lg text-headline-lg text-surface-deep mb-stack-md">More Than Just Code.</h2>
-<p class="text-surface-variant font-body-lg mb-stack-lg">
+<span class="font-label-caps text-label-caps text-export-orange mb-stack-sm" data-i18n="car-7" data-en="IDENTITY & MISSION" data-ar="الهوية والمهام">IDENTITY &amp; MISSION</span>
+<h2 class="font-headline-lg text-headline-lg text-surface-deep mb-stack-md" data-i18n="car-8" data-en="More Than Just Code." data-ar="أكثر من مجرد كود.">More Than Just Code.</h2>
+<p class="text-surface-variant font-body-lg mb-stack-lg" data-i18n="car-9" data-en="At VitalDC, we solve the 'Friction Gap' for manufacturers. While others build interfaces, we build the bridges between heavy industry and global market liquidity." data-ar="في فيتال دي سي، نحل 'فجوة الاحتكاك' للمصنعين. بينما يبني الآخرون واجهات، نبني نحن الجسور بين الصناعة الثقيلة والسيولة في السوق العالمية.">
                         At VitalDC, we solve the 'Friction Gap' for manufacturers. While others build interfaces, we build the bridges between heavy industry and global market liquidity. 
                     </p>
 <div class="space-y-gutter">
@@ -85,8 +88,8 @@
 <span class="material-symbols-outlined">hub</span>
 </div>
 <div>
-<h4 class="font-headline-md text-headline-md text-surface-deep text-lg">Systemic Impact</h4>
-<p class="text-on-surface-variant text-sm mt-1">Every line of code directly influences the export capacity of thousands of Egyptian small-to-medium enterprises.</p>
+<h4 class="font-headline-md text-headline-md text-surface-deep text-lg" data-i18n="car-10" data-en="Systemic Impact" data-ar="تأثير منظومي">Systemic Impact</h4>
+<p class="text-on-surface-variant text-sm mt-1" data-i18n="car-11" data-en="Every line of code directly influences the export capacity of thousands of Egyptian small-to-medium enterprises." data-ar="كل سطر من الكود يؤثر بشكل مباشر على القدرة التصديرية لآلاف الشركات المصرية الصغيرة والمتوسطة.">Every line of code directly influences the export capacity of thousands of Egyptian small-to-medium enterprises.</p>
 </div>
 </div>
 <div class="flex gap-stack-md">
@@ -94,8 +97,8 @@
 <span class="material-symbols-outlined">security</span>
 </div>
 <div>
-<h4 class="font-headline-md text-headline-md text-surface-deep text-lg">Authority First</h4>
-<p class="text-on-surface-variant text-sm mt-1">We engineer trust. Our systems are the 'Gold Standard' for trade verification in the MENA region.</p>
+<h4 class="font-headline-md text-headline-md text-surface-deep text-lg" data-i18n="car-12" data-en="Authority First" data-ar="المصداقية أولاً">Authority First</h4>
+<p class="text-on-surface-variant text-sm mt-1" data-i18n="car-13" data-en="We engineer trust. Our systems are the 'Gold Standard' for trade verification in the MENA region." data-ar="نحن نبتكر الثقة. أنظمتنا هي 'المعيار الذهبي' للتحقق التجاري في منطقة الشرق الأوسط وشمال أفريقيا.">We engineer trust. Our systems are the 'Gold Standard' for trade verification in the MENA region.</p>
 </div>
 </div>
 </div>
@@ -123,8 +126,8 @@
 <section class="bg-surface-deep py-section-gap relative transition-all duration-1000 opacity-100">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="text-center max-w-3xl mx-auto mb-20">
-<span class="font-label-caps text-label-caps text-secondary mb-stack-sm block">ENGINEERING ETHOS</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Infrastructure Over Templates.</h2>
+<span class="font-label-caps text-label-caps text-secondary mb-stack-sm block" data-i18n="car-14" data-en="ENGINEERING ETHOS" data-ar="فلسفة الهندسة">ENGINEERING ETHOS</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface" data-i18n="car-15" data-en="Infrastructure Over Templates." data-ar="البنية التحتية فوق القوالب.">Infrastructure Over Templates.</h2>
 <div class="h-px w-24 bg-tertiary mx-auto mt-stack-md"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
@@ -132,8 +135,8 @@
 <div class="border border-glass bg-surface-container/50 p-8 hover:bg-surface-container transition-colors group">
 <div class="font-label-caps text-secondary mb-6 text-sm">TECH_NODE_01</div>
 <span class="material-symbols-outlined text-tertiary text-4xl mb-4 group-hover:scale-110 transition-transform">layers</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Custom Middleware</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4" data-i18n="car-16" data-en="Custom Middleware" data-ar="برمجيات وسيطة مخصصة">Custom Middleware</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed" data-i18n="car-17" data-en="We don't rely on off-the-shelf solutions for critical bottlenecks. We engineer proprietary middleware that bridges legacy industrial ERPs with modern cloud protocols." data-ar="نحن لا نعتمد على الحلول الجاهزة للعقبات الحيوية. نحن نبتكر برمجيات وسيطة مخصصة تربط أنظمة ERP الصناعية القديمة ببروتوكولات السحابة الحديثة.">
                         We don't rely on off-the-shelf solutions for critical bottlenecks. We engineer proprietary middleware that bridges legacy industrial ERPs with modern cloud protocols.
                     </p>
 </div>
@@ -141,8 +144,8 @@
 <div class="border border-glass bg-surface-container/50 p-8 hover:bg-surface-container transition-colors group">
 <div class="font-label-caps text-secondary mb-6 text-sm">TECH_NODE_02</div>
 <span class="material-symbols-outlined text-tertiary text-4xl mb-4 group-hover:scale-110 transition-transform">memory</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Predictive AI</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4" data-i18n="car-18" data-en="Predictive AI" data-ar="الذكاء الاصطناعي التنبؤي">Predictive AI</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed" data-i18n="car-19" data-en="Developing proprietary models for Export Intelligence. We predict market demand shifts and supply chain disruptions before they ripple through the system." data-ar="تطوير نماذج مخصصة لذكاء التصدير. نتنبأ بتحولات الطلب في السوق واضطرابات سلسلة التوريد قبل انتشارها في النظام.">
                         Developing proprietary models for Export Intelligence. We predict market demand shifts and supply chain disruptions before they ripple through the system.
                     </p>
 </div>
@@ -150,8 +153,8 @@
 <div class="border border-glass bg-surface-container/50 p-8 hover:bg-surface-container transition-colors group">
 <div class="font-label-caps text-secondary mb-6 text-sm">TECH_NODE_03</div>
 <span class="material-symbols-outlined text-tertiary text-4xl mb-4 group-hover:scale-110 transition-transform">speed</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Performance</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4" data-i18n="car-20" data-en="Performance" data-ar="الأداء">Performance</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed" data-i18n="car-21" data-en="Architecture optimized for sub-100ms global latency. When trade moves at the speed of light, our infrastructure leads the way." data-ar="هندسة محسنة للتأخير العالمي الأقل من 100 ميلي ثانية. عندما تتحرك التجارة بسرعة الضوء، تقود بنيتنا التحتية الطريق.">
                         Architecture optimized for sub-100ms global latency. When trade moves at the speed of light, our infrastructure leads the way.
                     </p>
 </div>
@@ -183,8 +186,8 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="flex flex-col md:flex-row justify-between items-end gap-stack-md mb-20">
 <div>
-<span class="font-label-caps text-label-caps text-export-orange mb-stack-sm block">RECRUITMENT_REGISTRY</span>
-<h2 class="font-headline-lg text-headline-lg text-surface-deep">Active Registry Entries</h2>
+<span class="font-label-caps text-label-caps text-export-orange mb-stack-sm block" data-i18n="car-22" data-en="RECRUITMENT_REGISTRY" data-ar="سجل التوظيف">RECRUITMENT_REGISTRY</span>
+<h2 class="font-headline-lg text-headline-lg text-surface-deep" data-i18n="car-23" data-en="Active Registry Entries" data-ar="إدخالات السجل النشطة">Active Registry Entries</h2>
 </div>
 <div class="flex items-center gap-2 border border-surface-deep/10 px-4 py-2">
 <span class="font-label-caps text-label-sm text-surface-deep/60">FILTER: ALL_DISCIPLINES</span>
@@ -198,14 +201,14 @@
 <div class="flex gap-stack-md items-start">
 <span class="font-label-caps text-xs text-export-orange mt-1">#001</span>
 <div>
-<h3 class="font-headline-md text-headline-md text-surface-deep group-hover:text-export-orange transition-colors">Full-Stack Infrastructure Engineer</h3>
+<h3 class="font-headline-md text-headline-md text-surface-deep group-hover:text-export-orange transition-colors" data-i18n="car-24" data-en="Full-Stack Infrastructure Engineer" data-ar="مهندس بنية تحتية Full-Stack">Full-Stack Infrastructure Engineer</h3>
 <div class="flex gap-4 mt-2">
 <span class="font-label-caps text-[10px] px-2 py-1 bg-surface-deep text-white">CAIRO_NODE</span>
 <span class="font-label-caps text-[10px] px-2 py-1 border border-surface-deep text-surface-deep">REMOTE_HYBRID</span>
 </div>
 </div>
 </div>
-<button class="bg-surface-deep text-white font-label-caps text-label-sm px-6 py-3 self-start md:self-center hover:bg-export-orange transition-colors">INITIALIZE</button>
+<button class="bg-surface-deep text-white font-label-caps text-label-sm px-6 py-3 self-start md:self-center hover:bg-export-orange transition-colors" data-i18n="car-25" data-en="INITIALIZE" data-ar="بدء التقديم">INITIALIZE</button>
 </div>
 </div>
 <!-- Role 2 -->
@@ -214,14 +217,14 @@
 <div class="flex gap-stack-md items-start">
 <span class="font-label-caps text-xs text-export-orange mt-1">#002</span>
 <div>
-<h3 class="font-headline-md text-headline-md text-surface-deep group-hover:text-export-orange transition-colors">AI/ML Specialist (Export Intelligence)</h3>
+<h3 class="font-headline-md text-headline-md text-surface-deep group-hover:text-export-orange transition-colors" data-i18n="car-26" data-en="AI/ML Specialist (Export Intelligence)" data-ar="أخصائي ذكاء اصطناعي (ذكاء التصدير)">AI/ML Specialist (Export Intelligence)</h3>
 <div class="flex gap-4 mt-2">
 <span class="font-label-caps text-[10px] px-2 py-1 bg-surface-deep text-white">CAIRO_NODE</span>
 <span class="font-label-caps text-[10px] px-2 py-1 border border-surface-deep text-surface-deep">ONSITE</span>
 </div>
 </div>
 </div>
-<button class="bg-surface-deep text-white font-label-caps text-label-sm px-6 py-3 self-start md:self-center hover:bg-export-orange transition-colors">INITIALIZE</button>
+<button class="bg-surface-deep text-white font-label-caps text-label-sm px-6 py-3 self-start md:self-center hover:bg-export-orange transition-colors" data-i18n="car-27" data-en="INITIALIZE" data-ar="بدء التقديم">INITIALIZE</button>
 </div>
 </div>
 <!-- Role 3 -->
@@ -230,14 +233,14 @@
 <div class="flex gap-stack-md items-start">
 <span class="font-label-caps text-xs text-export-orange mt-1">#003</span>
 <div>
-<h3 class="font-headline-md text-headline-md text-surface-deep group-hover:text-export-orange transition-colors">Digital Strategy Lead</h3>
+<h3 class="font-headline-md text-headline-md text-surface-deep group-hover:text-export-orange transition-colors" data-i18n="car-28" data-en="Digital Strategy Lead" data-ar="قائد الاستراتيجية الرقمية">Digital Strategy Lead</h3>
 <div class="flex gap-4 mt-2">
 <span class="font-label-caps text-[10px] px-2 py-1 bg-surface-deep text-white">GLOBAL_NODE</span>
 <span class="font-label-caps text-[10px] px-2 py-1 border border-surface-deep text-surface-deep">REMOTE</span>
 </div>
 </div>
 </div>
-<button class="bg-surface-deep text-white font-label-caps text-label-sm px-6 py-3 self-start md:self-center hover:bg-export-orange transition-colors">INITIALIZE</button>
+<button class="bg-surface-deep text-white font-label-caps text-label-sm px-6 py-3 self-start md:self-center hover:bg-export-orange transition-colors" data-i18n="car-29" data-en="INITIALIZE" data-ar="بدء التقديم">INITIALIZE</button>
 </div>
 </div>
 </div>
@@ -252,13 +255,13 @@
 
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
 <div class="max-w-2xl mx-auto border border-glass p-margin-mobile md:p-margin-desktop backdrop-blur-xl bg-surface-deep/60">
-<span class="font-label-caps text-label-caps text-tertiary mb-stack-sm block">FINAL_PROTOCOL_STEP</span>
-<h2 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface mb-stack-lg">Initiate Your Application.</h2>
-<p class="text-on-surface-variant font-body-lg mb-stack-lg">
+<span class="font-label-caps text-label-caps text-tertiary mb-stack-sm block" data-i18n="car-30" data-en="FINAL_PROTOCOL_STEP" data-ar="خطوة البروتوكول النهائية">FINAL_PROTOCOL_STEP</span>
+<h2 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface mb-stack-lg" data-i18n="car-31" data-en="Initiate Your Application." data-ar="ابدأ طلب التقديم الخاص بك.">Initiate Your Application.</h2>
+<p class="text-on-surface-variant font-body-lg mb-stack-lg" data-i18n="car-32" data-en="Ready to engineer the authority of the future? Submit your credentials to the VitalDC protocol today." data-ar="هل أنت مستعد لابتكار سلطة المستقبل؟ قدم أوراق اعتمادك لبروتوكول فيتال دي سي اليوم.">
                     Ready to engineer the authority of the future? Submit your credentials to the VitalDC protocol today.
                 </p>
 <div class="flex flex-col items-center gap-4">
-<button class="w-full md:w-auto bg-tertiary text-on-tertiary-fixed font-label-caps text-label-caps py-5 px-12 hover:bg-export-orange transition-all scale-100 hover:scale-105 duration-300">
+<button class="w-full md:w-auto bg-tertiary text-on-tertiary-fixed font-label-caps text-label-caps py-5 px-12 hover:bg-export-orange transition-all scale-100 hover:scale-105 duration-300" data-i18n="car-33" data-en="ACCESS APPLICATION PORTAL" data-ar="الدخول إلى بوابة التقديم">
                         ACCESS APPLICATION PORTAL
                     </button>
 <span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Encryption Active: AES-256 Verified</span>
