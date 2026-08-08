@@ -153,12 +153,87 @@ add_action('woocommerce_admin_order_data_after_billing_address', function($order
 
 }, 10, 1);
 
-add_action( 'init', 'vitaldc_start_onboarding_session' );
-function vitaldc_start_onboarding_session() {
+add_action( 'init', 'vitaldc_init_session_and_language', 1 );
+function vitaldc_init_session_and_language() {
     if ( ! session_id() ) {
         session_start();
     }
+
+    $lang = null;
+
+    if ( isset( $_GET['lang'] ) ) {
+        $raw_lang = strtolower( trim( sanitize_text_field( wp_unslash( $_GET['lang'] ) ) ) );
+        if ( in_array( $raw_lang, array( 'ar', 'arabic', 'عربي' ), true ) ) {
+            $lang = 'ar';
+        } elseif ( in_array( $raw_lang, array( 'en', 'english' ), true ) ) {
+            $lang = 'en';
+        }
+    } elseif ( isset( $_GET['l'] ) ) {
+        $raw_lang = strtolower( trim( sanitize_text_field( wp_unslash( $_GET['l'] ) ) ) );
+        if ( in_array( $raw_lang, array( 'ar', 'arabic', 'عربي' ), true ) ) {
+            $lang = 'ar';
+        } elseif ( in_array( $raw_lang, array( 'en', 'english' ), true ) ) {
+            $lang = 'en';
+        }
+    } elseif ( isset( $_GET['ar'] ) ) {
+        $lang = 'ar';
+    } elseif ( isset( $_GET['en'] ) ) {
+        $lang = 'en';
+    }
+
+    if ( $lang ) {
+        $_SESSION['vitaldc_lang'] = $lang;
+        setcookie( 'vitaldc_lang', $lang, time() + ( 86400 * 30 ), '/' );
+    } elseif ( empty( $_SESSION['vitaldc_lang'] ) && ! empty( $_COOKIE['vitaldc_lang'] ) ) {
+        $cookie_lang = strtolower( trim( $_COOKIE['vitaldc_lang'] ) );
+        if ( in_array( $cookie_lang, array( 'ar', 'en' ), true ) ) {
+            $_SESSION['vitaldc_lang'] = $cookie_lang;
+        }
+    }
 }
+
+function vitaldc_start_onboarding_session() {
+    vitaldc_init_session_and_language();
+}
+
+function vitaldc_get_current_language() {
+    if ( ! session_id() ) {
+        session_start();
+    }
+
+    if ( ! empty( $_SESSION['vitaldc_lang'] ) ) {
+        $session_lang = strtolower( trim( $_SESSION['vitaldc_lang'] ) );
+        if ( in_array( $session_lang, array( 'ar', 'en' ), true ) ) {
+            return $session_lang;
+        }
+    }
+
+    if ( ! empty( $_COOKIE['vitaldc_lang'] ) ) {
+        $cookie_lang = strtolower( trim( $_COOKIE['vitaldc_lang'] ) );
+        if ( in_array( $cookie_lang, array( 'ar', 'en' ), true ) ) {
+            $_SESSION['vitaldc_lang'] = $cookie_lang;
+            return $cookie_lang;
+        }
+    }
+
+    return 'en';
+}
+
+add_action( 'wp_ajax_vitaldc_set_language', 'vitaldc_set_language_ajax' );
+add_action( 'wp_ajax_nopriv_vitaldc_set_language', 'vitaldc_set_language_ajax' );
+function vitaldc_set_language_ajax() {
+    if ( ! session_id() ) {
+        session_start();
+    }
+    $lang = isset( $_REQUEST['lang'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['lang'] ) ) : '';
+    if ( in_array( $lang, array( 'ar', 'en' ), true ) ) {
+        $_SESSION['vitaldc_lang'] = $lang;
+        setcookie( 'vitaldc_lang', $lang, time() + ( 86400 * 30 ), '/' );
+        wp_send_json_success( array( 'lang' => $lang ) );
+    }
+    wp_send_json_error( array( 'message' => 'Invalid language' ) );
+}
+
 
 add_action(
     'wp_ajax_create_draft_architecture_order',

@@ -42,10 +42,11 @@ $step_progress = array(
 
 $active_progress = $step_progress[ $current_path ] ?? $step_progress['/start'];
 $progress_steps = array(1, 2, 3, 4);
+$current_lang = vitaldc_get_current_language();
 ?>
 
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="dark">
+<html <?php language_attributes(); ?> class="dark" lang="<?php echo esc_attr( $current_lang ); ?>" dir="<?php echo 'ar' === $current_lang ? 'rtl' : 'ltr'; ?>">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -167,7 +168,7 @@ $progress_steps = array(1, 2, 3, 4);
         }
     </script>
 </head>
-<body <?php body_class( 'bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-export-orange selection:text-white' ); ?>>
+<body <?php body_class( 'bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-export-orange selection:text-white' . ( 'ar' === $current_lang ? ' rtl' : '' ) ); ?>>
 <?php wp_body_open(); ?>
 <!-- Background Layer -->
 <div class="fixed inset-0 grid-pattern pointer-events-none opacity-40"></div>

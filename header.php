@@ -1,9 +1,10 @@
-﻿<?php
+<?php
 /**
  * Header template for the VitalDC theme.
  */
+$current_lang = vitaldc_get_current_language();
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="dark">
+<html <?php language_attributes(); ?> class="dark" lang="<?php echo esc_attr( $current_lang ); ?>" dir="<?php echo 'ar' === $current_lang ? 'rtl' : 'ltr'; ?>">
 <head>
 <meta charset="<?php bloginfo('charset'); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -156,7 +157,7 @@
     };
 </script>
 </head>
-<body <?php body_class('bg-background text-on-surface selection:bg-export-orange/30'); ?>>
+<body <?php body_class('bg-background text-on-surface selection:bg-export-orange/30' . ('ar' === $current_lang ? ' rtl' : '')); ?>>
 <?php wp_body_open(); ?>
 <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-glass flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-full transition-all duration-300">
     <div class="flex items-center gap-stack-lg">
@@ -180,6 +181,8 @@
         const switcher = document.getElementById('language-switcher');
         const translatable = Array.from(document.querySelectorAll('[data-i18n]'));
         const duration = 220;
+        const currentLang = <?php echo json_encode( $current_lang ); ?>;
+        const ajaxUrl = <?php echo json_encode( admin_url( 'admin-ajax.php' ) ); ?>;
 
         function setLanguage(lang) {
             translatable.forEach(function(node) {
@@ -197,12 +200,26 @@
             }
         }
 
+        function persistLanguage(lang) {
+            document.cookie = "vitaldc_lang=" + lang + ";path=/;max-age=2592000;SameSite=Lax";
+            const formData = new FormData();
+            formData.append('action', 'vitaldc_set_language');
+            formData.append('lang', lang);
+            fetch(ajaxUrl, {
+                method: 'POST',
+                body: formData
+            }).catch(function(err) {
+                console.error('Language session sync error:', err);
+            });
+        }
+
         function toggleLanguage() {
             const current = switcher && switcher.dataset.language === 'ar' ? 'ar' : 'en';
             const next = current === 'ar' ? 'en' : 'ar';
             document.documentElement.classList.add('language-switching');
             setTimeout(function() {
                 setLanguage(next);
+                persistLanguage(next);
                 document.documentElement.classList.remove('language-switching');
             }, duration);
         }
@@ -217,7 +234,7 @@
             });
         }
 
-        setLanguage('en');
+        setLanguage(currentLang);
     });
 </script>
 <main class="relative">
