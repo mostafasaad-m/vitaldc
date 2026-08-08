@@ -183,8 +183,8 @@ function vitaldc_init_session_and_language() {
 
     if ( $lang ) {
         $_SESSION['vitaldc_lang'] = $lang;
-        setcookie( 'vitaldc_lang', $lang, time() + ( 86400 * 30 ), '/' );
-    } elseif ( empty( $_SESSION['vitaldc_lang'] ) && ! empty( $_COOKIE['vitaldc_lang'] ) ) {
+        setcookie( 'vitaldc_lang', $lang, time() + ( 86400 * 365 ), '/' );
+    } elseif ( ! empty( $_COOKIE['vitaldc_lang'] ) ) {
         $cookie_lang = strtolower( trim( $_COOKIE['vitaldc_lang'] ) );
         if ( in_array( $cookie_lang, array( 'ar', 'en' ), true ) ) {
             $_SESSION['vitaldc_lang'] = $cookie_lang;
@@ -201,11 +201,24 @@ function vitaldc_get_current_language() {
         session_start();
     }
 
-    if ( ! empty( $_SESSION['vitaldc_lang'] ) ) {
-        $session_lang = strtolower( trim( $_SESSION['vitaldc_lang'] ) );
-        if ( in_array( $session_lang, array( 'ar', 'en' ), true ) ) {
-            return $session_lang;
+    if ( isset( $_GET['lang'] ) ) {
+        $raw_lang = strtolower( trim( sanitize_text_field( wp_unslash( $_GET['lang'] ) ) ) );
+        if ( in_array( $raw_lang, array( 'ar', 'arabic', 'عربي' ), true ) ) {
+            return 'ar';
+        } elseif ( in_array( $raw_lang, array( 'en', 'english' ), true ) ) {
+            return 'en';
         }
+    } elseif ( isset( $_GET['l'] ) ) {
+        $raw_lang = strtolower( trim( sanitize_text_field( wp_unslash( $_GET['l'] ) ) ) );
+        if ( in_array( $raw_lang, array( 'ar', 'arabic', 'عربي' ), true ) ) {
+            return 'ar';
+        } elseif ( in_array( $raw_lang, array( 'en', 'english' ), true ) ) {
+            return 'en';
+        }
+    } elseif ( isset( $_GET['ar'] ) ) {
+        return 'ar';
+    } elseif ( isset( $_GET['en'] ) ) {
+        return 'en';
     }
 
     if ( ! empty( $_COOKIE['vitaldc_lang'] ) ) {
@@ -213,6 +226,13 @@ function vitaldc_get_current_language() {
         if ( in_array( $cookie_lang, array( 'ar', 'en' ), true ) ) {
             $_SESSION['vitaldc_lang'] = $cookie_lang;
             return $cookie_lang;
+        }
+    }
+
+    if ( ! empty( $_SESSION['vitaldc_lang'] ) ) {
+        $session_lang = strtolower( trim( $_SESSION['vitaldc_lang'] ) );
+        if ( in_array( $session_lang, array( 'ar', 'en' ), true ) ) {
+            return $session_lang;
         }
     }
 
@@ -228,7 +248,7 @@ function vitaldc_set_language_ajax() {
     $lang = isset( $_REQUEST['lang'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['lang'] ) ) : '';
     if ( in_array( $lang, array( 'ar', 'en' ), true ) ) {
         $_SESSION['vitaldc_lang'] = $lang;
-        setcookie( 'vitaldc_lang', $lang, time() + ( 86400 * 30 ), '/' );
+        setcookie( 'vitaldc_lang', $lang, time() + ( 86400 * 365 ), '/' );
         wp_send_json_success( array( 'lang' => $lang ) );
     }
     wp_send_json_error( array( 'message' => 'Invalid language' ) );

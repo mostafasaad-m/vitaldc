@@ -177,64 +177,99 @@ $current_lang = vitaldc_get_current_language();
     </div>
 </nav>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const switcher = document.getElementById('language-switcher');
-        const translatable = Array.from(document.querySelectorAll('[data-i18n]'));
-        const duration = 220;
-        const currentLang = <?php echo json_encode( $current_lang ); ?>;
+    (function() {
+        const serverLang = <?php echo json_encode( $current_lang ); ?>;
         const ajaxUrl = <?php echo json_encode( admin_url( 'admin-ajax.php' ) ); ?>;
+        const duration = 220;
 
-        function setLanguage(lang) {
-            translatable.forEach(function(node) {
-                const localized = node.dataset[lang];
-                if (localized != null) {
-                    node.textContent = localized;
-                }
-            });
-            document.documentElement.lang = lang === 'ar' ? 'ar' : 'en';
-            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-            document.body.classList.toggle('rtl', lang === 'ar');
-            if (switcher) {
-                switcher.dataset.language = lang;
-                switcher.textContent = switcher.dataset[lang] || (lang === 'ar' ? 'AR' : 'EN');
+        function getInitialLanguage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('lang')) {
+                const raw = urlParams.get('lang').toLowerCase();
+                if (raw === 'ar' || raw === 'arabic') return 'ar';
+                if (raw === 'en' || raw === 'english') return 'en';
             }
+            if (urlParams.has('ar')) return 'ar';
+            if (urlParams.has('en')) return 'en';
+
+            try {
+                const stored = localStorage.getItem('vitaldc_lang');
+                if (stored === 'ar' || stored === 'en') return stored;
+            } catch (e) {}
+
+            return serverLang || 'en';
         }
 
-        function persistLanguage(lang) {
-            document.cookie = "vitaldc_lang=" + lang + ";path=/;max-age=2592000;SameSite=Lax";
-            const formData = new FormData();
-            formData.append('action', 'vitaldc_set_language');
-            formData.append('lang', lang);
-            fetch(ajaxUrl, {
-                method: 'POST',
-                body: formData
-            }).catch(function(err) {
-                console.error('Language session sync error:', err);
-            });
-        }
+        const activeLang = getInitialLanguage();
 
-        function toggleLanguage() {
-            const current = switcher && switcher.dataset.language === 'ar' ? 'ar' : 'en';
-            const next = current === 'ar' ? 'en' : 'ar';
-            document.documentElement.classList.add('language-switching');
-            setTimeout(function() {
-                setLanguage(next);
-                persistLanguage(next);
-                document.documentElement.classList.remove('language-switching');
-            }, duration);
-        }
+        try {
+            localStorage.setItem('vitaldc_lang', activeLang);
+        } catch (e) {}
+        document.cookie = "vitaldc_lang=" + activeLang + ";path=/;max-age=31536000;SameSite=Lax";
 
-        if (switcher) {
-            switcher.addEventListener('click', toggleLanguage);
-            switcher.addEventListener('keydown', function(event) {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    toggleLanguage();
+        document.addEventListener('DOMContentLoaded', function() {
+            const switcher = document.getElementById('language-switcher');
+            const translatable = Array.from(document.querySelectorAll('[data-i18n]'));
+
+            function setLanguage(lang) {
+                translatable.forEach(function(node) {
+                    const localized = node.dataset[lang];
+                    if (localized != null) {
+                        node.textContent = localized;
+                    }
+                });
+                document.documentElement.lang = lang === 'ar' ? 'ar' : 'en';
+                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+                document.body.classList.toggle('rtl', lang === 'ar');
+                if (switcher) {
+                    switcher.dataset.language = lang;
+                    switcher.textContent = switcher.dataset[lang] || (lang === 'ar' ? 'AR' : 'EN');
                 }
-            });
-        }
+            }
 
-        setLanguage(currentLang);
-    });
+            function persistLanguage(lang) {
+                try {
+                    localStorage.setItem('vitaldc_lang', lang);
+                } catch (e) {}
+                document.cookie = "vitaldc_lang=" + lang + ";path=/;max-age=31536000;SameSite=Lax";
+                
+                const formData = new FormData();
+                formData.append('action', 'vitaldc_set_language');
+                formData.append('lang', lang);
+                fetch(ajaxUrl, {
+                    method: 'POST',
+                    body: formData
+                }).catch(function(err) {
+                    console.error('Language session sync error:', err);
+                });
+            }
+
+            function toggleLanguage() {
+                const current = switcher && switcher.dataset.language === 'ar' ? 'ar' : 'en';
+                const next = current === 'ar' ? 'en' : 'ar';
+                
+                // Synchronously save cookie & localStorage IMMEDIATELY on click
+                persistLanguage(next);
+
+                document.documentElement.classList.add('language-switching');
+                setTimeout(function() {
+                    setLanguage(next);
+                    document.documentElement.classList.remove('language-switching');
+                }, duration);
+            }
+
+            if (switcher) {
+                switcher.addEventListener('click', toggleLanguage);
+                switcher.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        toggleLanguage();
+                    }
+                });
+            }
+
+            setLanguage(activeLang);
+        });
+    })();
 </script>
 <main class="relative">
