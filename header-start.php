@@ -120,6 +120,7 @@ $current_lang = vitaldc_get_current_language();
                       "outline": "#8c9197",
                       "surface": "#00161f",
                       "on-secondary-container": "#002e39",
+                      "export-yellow": "#FFB703",
                       "export-orange": "#FB8500",
                       "surface-bright": "#003e52",
                       "secondary-fixed": "#b2ebff",
@@ -140,29 +141,20 @@ $current_lang = vitaldc_get_current_language();
                       "gutter": "24px",
                       "container-max": "1280px",
                       "stack-sm": "8px",
-              colors: {
-                "surface": "#00161F",
-                "surface-deep": "#000E14",
-                "surface-dim": "#001B26",
-                "surface-container-highest": "#0B2B38",
-                "surface-deep-overlay": "rgba(0, 14, 20, 0.8)",
-                "on-surface": "#E6F4F8",
-                "on-surface-variant": "#8ECAE6",
-                "secondary": "#219EBC",
-                "tertiary": "#00B4D8",
-                "export-yellow": "#FFB703",
-                "export-orange": "#FB8500",
-                "glass-border": "rgba(142, 202, 230, 0.15)",
-                "glass-card": "rgba(11, 43, 56, 0.6)"
+                      "stack-lg": "48px",
+                      "section-gap": "120px"
               },
-              fontFamily: {
+              "fontFamily": {
+                      "headline-md": ["Geist"],
+                      "label-sm": ["Inter"],
+                      "body-md": ["Inter"],
                       "label-caps": ["JetBrains Mono"],
                       "body-lg": ["Inter"],
                       "headline-lg": ["Geist"],
                       "headline-lg-mobile": ["Geist"],
                       "display-lg": ["Geist"]
               },
-              fontSize: {
+              "fontSize": {
                       "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
                       "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
                       "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
@@ -172,8 +164,8 @@ $current_lang = vitaldc_get_current_language();
                       "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
                       "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}]
               }
-            },
-          },
+            }
+          }
         }
     </script>
 </head>
