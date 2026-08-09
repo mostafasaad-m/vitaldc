@@ -11,9 +11,9 @@
 
 
 <div class="flex items-center gap-md">
-<button class="px-md py-xs bg-secondary text-on-secondary font-label-caps text-label-caps rounded-lg hover:scale-105 active:scale-95 transition-all duration-200 uppercase tracking-widest">
+<a href="/start" class="px-md py-xs bg-secondary text-on-secondary font-label-caps text-label-caps rounded-lg hover:scale-105 active:scale-95 transition-all duration-200 uppercase tracking-widest inline-block">
                     Execute Protocol
-                </button>
+                </a>
 <div class="w-8 h-8 rounded-full overflow-hidden border border-outline">
 <img alt="Operational Command Profile" class="w-full h-full object-cover" data-alt="A professional close-up portrait of a tech executive in a high-tech environment. The lighting is low-key with a sharp blue key light from a monitor highlighting their features. The background is a blurred server room with blinking LED indicators. The overall mood is serious, authoritative, and sophisticated, matching a deep navy and electric blue digital aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv_nkwAYhiDZjbRpw4aP1iwPMWHOJQDC2lh8R8Mhwfi35FCQUQ1rC3fwLuHfjIXW4jeWkWcTd1Ze33bjinbQSdExKEJ8bz47Oke9Z5r9vO7ceK3hXSiO9XEAUU1n3BydLHnwzxLmzy261727bt27Xmo3C6vLBEM3r-7FPKVkPhxPA488hluwp3v3djd3KTh4F7LIjtQndgDfOh0KjFbMSOmJbaUdFcYoPjxYwxkDiciFooNK_fAFLzbii--wAlvSHXIaGYy_sNfYA"/>
 </div>
@@ -43,10 +43,10 @@
                         Precision-engineered growth protocols for elite exporters. We bridge the gap between local production and global market dominance through high-performance digital systems.
                     </p>
 <div class="flex flex-col sm:flex-row gap-md pt-md">
-<button class="px-lg py-md bg-secondary text-on-secondary font-headline-md text-headline-md rounded-xl hover:shadow-[0_0_20px_rgba(176,198,255,0.4)] transition-all flex items-center justify-center gap-sm">
+<a href="/start" class="px-lg py-md bg-secondary text-on-secondary font-headline-md text-headline-md rounded-xl hover:shadow-[0_0_20px_rgba(176,198,255,0.4)] transition-all flex items-center justify-center gap-sm">
                             Initialize Export Protocol
                             <span class="material-symbols-outlined">rocket_launch</span>
-</button>
+</a>
 <button class="px-lg py-md border border-outline hover:bg-white/5 text-on-surface font-headline-md text-headline-md rounded-xl transition-all flex items-center justify-center gap-sm">
                             Review Global Reach
                         </button>

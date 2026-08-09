@@ -40,10 +40,10 @@
     <?php echo vitaldc_t('Reach your target audience with simple, effective digital campaigns. We create targeted search ads, clear social media strategies, and engaging brand copy that turns interested visitors into paying customers—no marketing degree needed.', 'صل إلى جمهورك المستهدف بحملات رقمية سهلة وفعالة. نبتكر إعلانات بحث موجهة، واستراتيجيات تواصل اجتماعي واضحة، ومحتوى جذاب يحول الزوار إلى عملاء حقيقيين—دون الحاجة لخبرة تسويقية معقدة.'); ?>
 </p>
 <div class="flex flex-wrap gap-stack-md">
-<button class="bg-[#FFB703] text-black px-8 py-4 font-label-caps font-bold text-lg hover:bg-export-orange transition-all flex items-center gap-3 group">
+<a href="/start" class="bg-[#FFB703] text-black px-8 py-4 font-label-caps font-bold text-lg hover:bg-export-orange transition-all flex items-center gap-3 group">
     <span><?php echo vitaldc_t('Start My Campaign', 'ابدأ حملتي'); ?></span>
     <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</button>
+</a>
 <button class="border border-secondary text-secondary px-8 py-4 font-label-caps font-bold text-lg hover:bg-secondary/10 transition-all">
     <?php echo vitaldc_t('View Methodology', 'عرض المنهجية'); ?>
 </button>
@@ -251,9 +251,9 @@
     <?php echo vitaldc_t("Activate the Egyptian export sector's most advanced digital marketing infrastructure today.", 'قم بتفعيل البنية التحتية للتسويق الرقمي الأكثر تقدماً في قطاع التصدير المصري اليوم.'); ?>
 </p>
 <div class="flex flex-col sm:flex-row justify-center gap-stack-md">
-<button class="bg-[#FFB703] text-black px-12 py-5 font-label-caps font-extrabold text-xl hover:bg-export-orange transition-all shadow-xl hover:shadow-export-orange/20">
+<a href="/start" class="inline-block bg-[#FFB703] text-black px-12 py-5 font-label-caps font-extrabold text-xl hover:bg-export-orange transition-all shadow-xl hover:shadow-export-orange/20">
     <?php echo vitaldc_t('Initialize Growth Protocol', 'بدء بروتوكول النمو'); ?>
-</button>
+</a>
 <button class="border border-on-surface-variant text-on-surface-variant px-12 py-5 font-label-caps font-bold text-xl hover:bg-on-surface-variant hover:text-surface transition-all">
     <?php echo vitaldc_t('Request Audit', 'طلب تدقيق'); ?>
 </button>

@@ -57,10 +57,10 @@
     <?php echo vitaldc_t('Streamline your daily operations with simple IT tools and smart automation. Save hours of manual work by organizing inquiries, customer contacts, and lead follow-ups automatically—no technical experience required.', 'بسط عملياتك اليومية بأدوات تقنية وأتمتة أسهل. وفّر ساعات من العمل اليدوي في تنظيم الاستفسارات، وتتبع العملاء الجدد تلقائياً—دون الحاجة لأي خبرة تقنية سابقاً.'); ?>
 </p>
 <div class="flex flex-col md:flex-row gap-4">
-<button class="bg-tertiary hover:bg-export-orange text-surface-deep font-label-caps text-label-caps px-8 py-4 transition-all duration-300 rounded-lg flex items-center justify-center gap-2 group">
+<a href="/start" class="bg-tertiary hover:bg-export-orange text-surface-deep font-label-caps text-label-caps px-8 py-4 transition-all duration-300 rounded-lg flex items-center justify-center gap-2 group">
     <span><?php echo vitaldc_t('START SIMPLE AUTOMATION', 'ابدأ الأتمتة السهلة'); ?></span>
     <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">bolt</span>
-</button>
+</a>
 <button class="border border-border-glass hover:bg-surface-variant/20 text-white font-label-caps text-label-caps px-8 py-4 transition-all duration-300 rounded-lg">
     <?php echo vitaldc_t('VIEW CASE STUDIES', 'عرض دراسات الحالة'); ?>
 </button>
@@ -235,10 +235,10 @@
     <?php echo vitaldc_t('Start your digital transformation today. Our engineers are ready to audit your current stack and propose an automation roadmap.', 'ابدأ تحولك الرقمي اليوم. مهندسونا مستعدون لتدقيق نظامك الحالي واقتراح خريطة طريق للأتمتة.'); ?>
 </p>
 <div class="flex justify-center">
-<button class="bg-export-orange hover:bg-primary-container text-white font-label-caps text-label-caps px-12 py-5 transition-all duration-300 rounded-lg flex items-center gap-3 shadow-lg shadow-export-orange/20">
+<a href="/start" class="bg-export-orange hover:bg-primary-container text-white font-label-caps text-label-caps px-12 py-5 transition-all duration-300 rounded-lg flex items-center gap-3 shadow-lg shadow-export-orange/20">
     <span><?php echo vitaldc_t('INITIATE CONNECTION', 'بدء الاتصال'); ?></span>
     <span class="material-symbols-outlined" data-icon="sensors">sensors</span>
-</button>
+</a>
 </div>
 </div>
 </div>
