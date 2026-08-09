@@ -17,31 +17,31 @@ input{color:#fff!important;}
 <!-- Left Sidebar (Contextual Info) -->
 <div class="md:w-1/3 bg-surface-container-low text-white p-stack-lg flex flex-col justify-between border-r border-glass">
 <div>
-<span class="font-label-caps text-label-caps text-tertiary block mb-stack-md">PROTOCOL_INSTRUCTIONS</span>
+<span class="font-label-caps text-label-caps text-tertiary block mb-stack-md"><?php echo vitaldc_t('PROTOCOL_INSTRUCTIONS', 'تعليمات_البروتوكول'); ?></span>
 <p class="font-body-md text-on-surface-variant mb-stack-lg leading-relaxed">
-                            Complete the initial identity verification block. This data forms the cryptographic root for your Egyptian export dashboard and global trade logistics routing.
-                        </p>
+    <?php echo vitaldc_t('Complete the initial identity verification block. This data forms the cryptographic root for your Egyptian export dashboard and global trade logistics routing.', 'أكمل كتل التحقق الأولية من الهوية. تشكل هذه البيانات الجذر المشفر للوحة تحكم التصدير المصرية وتوجيه الخدمات اللوجستية للتجارة العالمية.'); ?>
+</p>
 <ul class="space-y-4">
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="text-xs font-label-caps text-on-surface">Identity Validation</span>
+<span class="text-xs font-label-caps text-on-surface"><?php echo vitaldc_t('Identity Validation', 'التحقق من الهوية'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="text-xs font-label-caps text-on-surface">Domain Verification</span>
+<span class="text-xs font-label-caps text-on-surface"><?php echo vitaldc_t('Domain Verification', 'التحقق من النطاق'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="text-xs font-label-caps text-on-surface">Contact Secure Protocol</span>
+<span class="text-xs font-label-caps text-on-surface"><?php echo vitaldc_t('Contact Secure Protocol', 'بروتوكول الاتصال الآمن'); ?></span>
 </li>
 </ul>
 </div>
 <div class="pt-stack-lg">
 <div class="p-4 border border-glass bg-surface-dim rounded">
-<span class="font-label-caps text-[10px] text-on-surface-variant block mb-2 uppercase">System_Status</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant block mb-2 uppercase"><?php echo vitaldc_t('System_Status', 'حالة_النظام'); ?></span>
 <div class="flex items-center gap-2">
 <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-<span class="text-xs font-label-caps text-white">Registry Ready</span>
+<span class="text-xs font-label-caps text-white"><?php echo vitaldc_t('Registry Ready', 'السجل جاهز'); ?></span>
 </div>
 </div>
 </div>
@@ -49,36 +49,36 @@ input{color:#fff!important;}
 <!-- Right Form Content -->
 <div class="md:w-2/3 p-stack-lg md:p-12">
 <div class="mb-stack-lg">
-<h2 class="font-label-caps text-label-caps text-on-surface-variant mb-2">PRIMARY_DATA_VERIFICATION</h2>
-<p class="font-body-md text-surface-container-highest">Provide your core business data to begin the global trade verification process.</p>
+<h2 class="font-label-caps text-label-caps text-on-surface-variant mb-2"><?php echo vitaldc_t('PRIMARY_DATA_VERIFICATION', 'التحقق_من_البيانات_الأساسية'); ?></h2>
+<p class="font-body-md text-surface-container-highest"><?php echo vitaldc_t('Provide your core business data to begin the global trade verification process.', 'قدم بيانات عملك الأساسية للبدء في عملية التحقق من التجارة العالمية.'); ?></p>
 </div>
 <form id="step-1-form" class="space-y-6">
 <!-- Full Name -->
 <div class="group">
 <label class="surface block font-label-caps text-xs  mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="full_name">
-                                Full Name <span class="text-export-orange">*</span>
+    <?php echo vitaldc_t('Full Name', 'الاسم الكامل'); ?> <span class="text-export-orange">*</span>
 </label>
-<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="full_name" name="full_name" placeholder="E.G. AHMED MANSOUR" required="" type="text"/>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="full_name" name="full_name" placeholder="<?php echo vitaldc_t('E.G. AHMED MANSOUR', 'مثال: أحمد منصور'); ?>" required="" type="text"/>
 </div>
 <!-- Company Name -->
 <div class="group">
 <label class="block font-label-caps text-xs surface mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="company_name">
-                                Company Name <span class="text-export-orange">*</span>
+    <?php echo vitaldc_t('Company Name', 'اسم الشركة'); ?> <span class="text-export-orange">*</span>
 </label>
-<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="company_name" name="company_name" placeholder="VITAL LOGISTICS EGYPT" required="" type="text"/>
+<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="company_name" name="company_name" placeholder="<?php echo vitaldc_t('VITAL LOGISTICS EGYPT', 'فيتال للخدمات اللوجستية مصر'); ?>" required="" type="text"/>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- Corporate Email -->
 <div class="group">
 <label class="block font-label-caps text-xs surface mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="email">
-                                    Corporate Email <span class="text-export-orange">*</span>
+    <?php echo vitaldc_t('Corporate Email', 'البريد الإلكتروني للشركة'); ?> <span class="text-export-orange">*</span>
 </label>
 <input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="email" name="email" placeholder="ADMIN@COMPANY.COM" required="" type="email"/>
 </div>
 <!-- Phone Number -->
 <div class="group">
 <label class="block font-label-caps text-xs surface mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="phone">
-                                    Phone (Country Code) <span class="text-export-orange">*</span>
+    <?php echo vitaldc_t('Phone (Country Code)', 'الهاتف (رمز الدولة)'); ?> <span class="text-export-orange">*</span>
 </label>
 <input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="phone" name="phone" placeholder="+20 1XX XXX XXXX" required="" type="tel"/>
 </div>
@@ -86,7 +86,7 @@ input{color:#fff!important;}
 <!-- Website URL -->
 <div class="group">
 <label class="block font-label-caps text-xs surface mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="website">
-                                Current Website URL <span class="surface/50">(OPTIONAL)</span>
+    <?php echo vitaldc_t('Current Website URL', 'رابط الموقع الحالي'); ?> <span class="surface/50"><?php echo vitaldc_t('(OPTIONAL)', '(اختياري)'); ?></span>
 </label>
 <input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="website" name="website" placeholder="HTTPS://WWW.COMPANY.COM" type="url"/>
 </div>

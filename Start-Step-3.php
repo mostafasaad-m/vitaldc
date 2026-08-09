@@ -27,12 +27,12 @@
 <div class="mb-stack-lg max-w-3xl">
 <div class="flex items-center gap-2 mb-2">
 <span class="w-8 h-[2px] bg-export-orange"></span>
-<span class="font-label-caps text-label-caps text-surface-deep uppercase font-bold">PROTOCOL_EXTENSIONS</span>
+<span class="font-label-caps text-label-caps text-surface-deep uppercase font-bold"><?php echo vitaldc_t('PROTOCOL_EXTENSIONS', 'امتدادات_البروتوكول'); ?></span>
 </div>
-<h2 class="font-headline-lg text-headline-lg text-surface-deep mb-4">ENHANCE YOUR INFRASTRUCTURE</h2>
+<h2 class="font-headline-lg text-headline-lg text-surface-deep mb-4"><?php echo vitaldc_t('ENHANCE YOUR INFRASTRUCTURE', 'عزز بنيتك التحتية'); ?></h2>
 <p class="font-body-lg text-body-lg text-surface-variant max-w-2xl">
-                    Select modular protocol extensions to optimize your global trade throughput. Add-ons are hot-swappable and billable per-node.
-                </p>
+    <?php echo vitaldc_t('Select modular protocol extensions to optimize your global trade throughput. Add-ons are hot-swappable and billable per-node.', 'اختر امتدادات البروتوكول المودولية لتحسين إنتاجية تجارتك العالمية. الإضافات قابلة للتعديل والتحسين بسهولة.'); ?>
+</p>
 </div>
 <!-- Bento-Style Grid of Add-on Cards -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
@@ -45,14 +45,14 @@
 </div>
 <span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5">TYPE: CRYPTO_VAULT</span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-3 font-bold">Security+ Protocol</h3>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Security+ Protocol', 'بروتوكول الأمان+'); ?></h3>
 <p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
-                            End-to-end hardware encryption, biometric hardware keys, and SOC2 compliance vault for sensitive trade data.
-                        </p>
+    <?php echo vitaldc_t('End-to-end hardware encryption, biometric hardware keys, and SOC2 compliance vault for sensitive trade data.', 'تشفير الأجهزة الشامل ومفاتيح الأجهزة البيومترية وخزينة الامتثال لبيانات التجارة الحساسة.'); ?>
+</p>
 </div>
 <div class="mt-8">
 <button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
-<span class="">Enable Module</span>
+<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الوحدة'); ?></span>
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
@@ -66,14 +66,14 @@
 </div>
 <span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5">TYPE: EDGE_NODE</span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-3 font-bold">Regional Accelerator</h3>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Regional Accelerator', 'المسرع الإقليمي'); ?></h3>
 <p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
-                            Localized CDN nodes in MENA &amp; GCC, sub-50ms latency routing, and guaranteed local data residency.
-                        </p>
+    <?php echo vitaldc_t('Localized CDN nodes in MENA & GCC, sub-50ms latency routing, and guaranteed local data residency.', 'عقد شبكة توزيع محتوى محلي بالشرق الأوسط والخليج، وتوجيه سريع وإقامة البيانات محلياً.'); ?>
+</p>
 </div>
 <div class="mt-8">
 <button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
-<span class="">Enable Module</span>
+<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الوحدة'); ?></span>
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
@@ -87,14 +87,14 @@
 </div>
 <span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5">TYPE: DATA_VIZ</span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-3 font-bold">Advanced Analytics</h3>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Advanced Analytics', 'التحليلات المتقدمة'); ?></h3>
 <p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
-                            Real-time trade flow visualization, predictive supply chain alerts, and custom SQL reporting tools.
-                        </p>
+    <?php echo vitaldc_t('Real-time trade flow visualization, predictive supply chain alerts, and custom SQL reporting tools.', 'مرئيات التدفق التجاري المباشرة وتنبيهات سلاسل التوريد التنبؤية وتقارير مخصصة.'); ?>
+</p>
 </div>
 <div class="mt-8">
 <button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
-<span class="">Enable Module</span>
+<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الوحدة'); ?></span>
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
@@ -108,14 +108,14 @@
 </div>
 <span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5">TYPE: MIDDLEWARE</span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-3 font-bold">API Bridge</h3>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('API Bridge', 'جسر API'); ?></h3>
 <p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
-                            Native ERP integrations, programmable webhook triggers, and custom endpoint provisioning for developers.
-                        </p>
+    <?php echo vitaldc_t('Native ERP integrations, programmable webhook triggers, and custom endpoint provisioning for developers.', 'تكاملات ERP الأصلية، ومفعلات Webhook القابلة للمبرمجة ومقاطعة مخصصة للمطورين.'); ?>
+</p>
 </div>
 <div class="mt-8">
 <button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
-<span class="">Enable Module</span>
+<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الوحدة'); ?></span>
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
@@ -133,7 +133,7 @@
 <div class="flex justify-between items-center mb-6">
 <div class="flex gap-2">
 <div class="w-3 h-3 bg-export-orange animate-pulse"></div>
-<span class="font-label-caps text-[10px] text-primary">LIVE_THROUGHPUT_MONITOR</span>
+<span class="font-label-caps text-[10px] text-primary"><?php echo vitaldc_t('LIVE_THROUGHPUT_MONITOR', 'مراقب_الإنتاجية_المباشر'); ?></span>
 </div>
 <span class="font-label-caps text-[10px] text-outline">UPTIME: 99.999%</span>
 </div>
@@ -153,22 +153,22 @@
 </div>
 </div>
 <div class="col-span-1 border-l-0 lg:border-l border-glass lg:pl-gutter">
-<h4 class="font-label-caps text-label-caps text-surface-deep mb-4 uppercase">System Metadata</h4>
+<h4 class="font-label-caps text-label-caps text-surface-deep mb-4 uppercase"><?php echo vitaldc_t('System Metadata', 'بيانات النظام الوصفية'); ?></h4>
 <ul class="space-y-4 font-label-caps text-[12px] text-surface-variant">
 <li class="flex justify-between border-b border-surface-container-low pb-2">
-<span class="">NETWORK_STATUS</span>
-<span class="text-green-600 font-bold">OPTIMAL</span>
+<span class=""><?php echo vitaldc_t('NETWORK_STATUS', 'حالة_الشبكة'); ?></span>
+<span class="text-green-600 font-bold"><?php echo vitaldc_t('OPTIMAL', 'ممتازة'); ?></span>
 </li>
 <li class="flex justify-between border-b border-surface-container-low pb-2">
-<span class="">ENCRYPTION</span>
+<span class=""><?php echo vitaldc_t('ENCRYPTION', 'التشفير'); ?></span>
 <span class="text-surface-deep">AES-256-GCM</span>
 </li>
 <li class="flex justify-between border-b border-surface-container-low pb-2">
-<span class="">PROTOCOL_VERSION</span>
+<span class=""><?php echo vitaldc_t('PROTOCOL_VERSION', 'إصدار_البروتوكول'); ?></span>
 <span class="text-surface-deep">v4.0.2-STABLE</span>
 </li>
 <li class="flex justify-between border-b border-surface-container-low pb-2">
-<span class="">GATEWAY_LATENCY</span>
+<span class=""><?php echo vitaldc_t('GATEWAY_LATENCY', 'تأخير_البوابة'); ?></span>
 <span class="text-surface-deep">12ms</span>
 </li>
 </ul>
@@ -178,22 +178,25 @@
 
 </main>
 <script>
+        const txtEnableModule = <?php echo json_encode( vitaldc_t( 'Enable Module', 'تفعيل الوحدة' ) ); ?>;
+        const txtModuleActive = <?php echo json_encode( vitaldc_t( 'Module Active', 'الوحدة مفعّلة' ) ); ?>;
+
         document.querySelectorAll('.group').forEach(card => {
             card.addEventListener('click', () => {
                 const button = card.querySelector('button');
-                const label = button.querySelector('span:first-child');
+                const label = button.querySelector('.btn-module-label');
                 const icon = button.querySelector('.material-symbols-outlined');
                 
                 if (card.getAttribute('data-selected') === 'true') {
                     card.setAttribute('data-selected', 'false');
                     card.classList.remove('ring-2', 'ring-export-orange', 'bg-export-orange/5');
-                    label.textContent = 'Enable Module';
-                    icon.textContent = 'add';
+                    if (label) label.textContent = txtEnableModule;
+                    if (icon) icon.textContent = 'add';
                 } else {
                     card.setAttribute('data-selected', 'true');
                     card.classList.add('ring-2', 'ring-export-orange', 'bg-export-orange/5');
-                    label.textContent = 'Module Active';
-                    icon.textContent = 'check';
+                    if (label) label.textContent = txtModuleActive;
+                    if (icon) icon.textContent = 'check';
                 }
             });
         });

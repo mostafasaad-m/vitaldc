@@ -8,6 +8,9 @@
  
 <script>
         // Micro-interaction for package selection
+        const txtSelectPackage = <?php echo json_encode( vitaldc_t( 'SELECT PACKAGE', 'اختر الباقة' ) ); ?>;
+        const txtPackageSelected = <?php echo json_encode( vitaldc_t( 'PACKAGE SELECTED', 'تم اختيار الباقة' ) ); ?>;
+
         const cards = document.querySelectorAll('.package-card');
         const selectButtons = document.querySelectorAll('.select-btn');
 
@@ -19,7 +22,7 @@
                     const btn = c.querySelector('.select-btn');
                     btn.classList.remove('bg-export-orange', 'text-black', 'font-bold');
                     btn.classList.add('border-2', 'border-export-orange', 'text-export-orange');
-                    btn.textContent = 'SELECT PACKAGE';
+                    btn.textContent = txtSelectPackage;
                 });
 
                 // Set active state
@@ -27,7 +30,7 @@
                 const activeBtn = card.querySelector('.select-btn');
                 activeBtn.classList.remove('border-2', 'border-export-orange', 'text-export-orange');
                 activeBtn.classList.add('bg-export-orange', 'text-black', 'font-bold');
-                activeBtn.textContent = 'PACKAGE SELECTED';
+                activeBtn.textContent = txtPackageSelected;
                 
                 // Audio feedback (optional/conceptual)
                 console.log(`Package ${['S', 'M', 'L'][index]} committed to memory.`);
@@ -67,10 +70,10 @@
 <section class="relative bg-white text-surface-deep flex-grow px-margin-mobile pt-10 grid-pattern">
 <div class="max-w-container-max mx-auto relative z-10">
 <header class="mb-stack-lg border-l-4 border-export-orange pl-6">
-<span class="font-label-caps text-label-caps text-on-surface-variant mono mb-2 block">REGISTRY_ALLOCATION</span>
-<h2 class="font-display-lg text-headline-lg geist text-surface-deep uppercase">Infrastructure Tiers</h2>
+<span class="font-label-caps text-label-caps text-on-surface-variant mono mb-2 block"><?php echo vitaldc_t('REGISTRY_ALLOCATION', 'تخصيص_السجل'); ?></span>
+<h2 class="font-display-lg text-headline-lg geist text-surface-deep uppercase"><?php echo vitaldc_t('Infrastructure Tiers', 'مستويات البنية التحتية'); ?></h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">
-                        Select the operational capacity for your global trade architecture. All nodes include automated compliance auditing and real-time ledger synchronization.
+                        <?php echo vitaldc_t('Select the operational capacity for your global trade architecture. All nodes include automated compliance auditing and real-time ledger synchronization.', 'اختر السعة التشغيلية لبنية التجارة العالمية الخاصة بك. تتضمن جميع العقد تدقيق الامتثال الآلي والمزامنة المباشرة للسجل.'); ?>
                     </p>
 </header>
 <!-- Bento Grid / Package Layout -->
@@ -80,7 +83,7 @@
 <div class="flex justify-between items-start mb-10">
 <div>
 <span class="font-label-caps text-label-sm mono text-on-surface-variant">NODE_TYPE: S</span>
-<h3 class="font-headline-md text-headline-md geist font-bold text-surface-deep mt-1">Core Infrastructure</h3>
+<h3 class="font-headline-md text-headline-md geist font-bold text-surface-deep mt-1"><?php echo vitaldc_t('Core Infrastructure', 'البنية التحتية الأساسية'); ?></h3>
 </div>
 <span class="material-symbols-outlined text-4xl text-slate-300 group-hover:text-export-orange transition-colors">database</span>
 </div>
@@ -88,15 +91,15 @@
 <ul class="space-y-4 mb-10">
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600">Digital Asset Registry</span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Digital Asset Registry', 'سجل الأصول الرقمية'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600">Basic Protocol Support</span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Basic Protocol Support', 'دعم البروتوكول الأساسي'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600">Unified Ledger View</span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Unified Ledger View', 'عرض السجل الموحد'); ?></span>
 </li>
 </ul>
 <div class="pt-6 border-t border-slate-100 mb-8">
@@ -114,18 +117,18 @@
 </div>
 </div>
 <button class="select-btn w-full py-4 border-2 border-export-orange text-export-orange font-label-caps text-label-caps transition-all duration-200">
-                            SELECT PACKAGE
+                            <?php echo vitaldc_t('SELECT PACKAGE', 'اختر الباقة'); ?>
                         </button>
 </div>
 <!-- Package M (Highlighted) -->
 <div class="package-card active-package flex flex-col bg-white border-2 border-export-orange p-8 transition-all duration-300 relative">
 <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-export-orange text-black px-4 py-1 font-label-caps text-[10px] tracking-widest font-bold">
-                            RECOMMENDED_STAGING
+                            <?php echo vitaldc_t('RECOMMENDED_STAGING', 'المستوى_الموصى_به'); ?>
                         </div>
 <div class="flex justify-between items-start mb-10">
 <div>
 <span class="font-label-caps text-label-sm mono text-export-orange">NODE_TYPE: M</span>
-<h3 class="font-headline-md text-headline-md geist font-bold text-surface-deep mt-1">Growth Infrastructure</h3>
+<h3 class="font-headline-md text-headline-md geist font-bold text-surface-deep mt-1"><?php echo vitaldc_t('Growth Infrastructure', 'بنية النمو التحتية'); ?></h3>
 </div>
 <span class="material-symbols-outlined text-4xl text-export-orange">rocket_launch</span>
 </div>
@@ -133,19 +136,19 @@
 <ul class="space-y-4 mb-10">
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-surface-deep font-semibold">Everything in Core</span>
+<span class="font-body-md text-body-md text-surface-deep font-semibold"><?php echo vitaldc_t('Everything in Core', 'كل ما في الأساسية'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600">Modern Marketing (LinkedIn/Google)</span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Modern Marketing (LinkedIn/Google)', 'التسويق الحديث (LinkedIn/Google)'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600">CRM Sync Bridge</span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('CRM Sync Bridge', 'جسر مزامنة CRM'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600">Multi-Market Expansion Kit</span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Multi-Market Expansion Kit', 'حزمة التوسع متعددة الأسواق'); ?></span>
 </li>
 </ul>
 <div class="pt-6 border-t border-slate-100 mb-8">
@@ -163,7 +166,7 @@
 </div>
 </div>
 <button class="select-btn w-full py-4 bg-export-orange text-black font-label-caps text-label-caps font-bold">
-                            PACKAGE SELECTED
+                            <?php echo vitaldc_t('PACKAGE SELECTED', 'تم اختيار الباقة'); ?>
                         </button>
 </div>
 <!-- Package L -->
@@ -171,7 +174,7 @@
 <div class="flex justify-between items-start mb-10">
 <div>
 <span class="font-label-caps text-label-sm mono text-on-surface-variant">NODE_TYPE: L</span>
-<h3 class="font-headline-md text-headline-md geist font-bold text-surface-deep mt-1">Enterprise Protocol</h3>
+<h3 class="font-headline-md text-headline-md geist font-bold text-surface-deep mt-1"><?php echo vitaldc_t('Enterprise Protocol', 'بروتوكول المؤسسات'); ?></h3>
 </div>
 <span class="material-symbols-outlined text-4xl text-slate-300 group-hover:text-export-orange transition-colors">hub</span>
 </div>
@@ -179,19 +182,19 @@
 <ul class="space-y-4 mb-10">
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-surface-deep font-semibold">Full Growth Suite</span>
+<span class="font-body-md text-body-md text-surface-deep font-semibold"><?php echo vitaldc_t('Full Growth Suite', 'مجموعة النمو الكاملة'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600">AI-Powered Automation</span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('AI-Powered Automation', 'أتمتة بالذكاء الاصطناعي'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600">Predictive Intelligence</span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Predictive Intelligence', 'الذكاء التنبؤي'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600">24/7 Dedicated Engineering</span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('24/7 Dedicated Engineering', 'هندسة مخصصة 24/7'); ?></span>
 </li>
 </ul>
 <div class="pt-6 border-t border-slate-100 mb-8">
@@ -203,13 +206,13 @@
 </div>
 <div>
 <p class="text-[10px] mono text-slate-400">API_LIMIT</p>
-<p class="font-label-caps text-label-sm text-surface-deep">UNLIMITED</p>
+<p class="font-label-caps text-label-sm text-surface-deep"><?php echo vitaldc_t('UNLIMITED', 'غير محدود'); ?></p>
 </div>
 </div>
 </div>
 </div>
 <button class="select-btn w-full py-4 border-2 border-export-orange text-export-orange font-label-caps text-label-caps transition-all duration-200">
-                            SELECT PACKAGE
+                            <?php echo vitaldc_t('SELECT PACKAGE', 'اختر الباقة'); ?>
                         </button>
 </div>
 </div>
@@ -218,7 +221,7 @@
 <div class="flex gap-8">
 <div class="flex items-center gap-2">
 <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-<span class="font-label-caps text-[10px] text-slate-400 mono">NETWORK_STATUS: OPTIMAL</span>
+<span class="font-label-caps text-[10px] text-slate-400 mono"><?php echo vitaldc_t('NETWORK_STATUS: OPTIMAL', 'حالة_الشبكة: ممتازة'); ?></span>
 </div>
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-sm text-slate-400">lock</span>
@@ -226,7 +229,7 @@
 </div>
 </div>
 <p class="font-label-caps text-label-sm text-slate-400 mono italic">
-                        SYSTEM_OUTPUT: Selection affects global throughput metrics.
+                        <?php echo vitaldc_t('SYSTEM_OUTPUT: Selection affects global throughput metrics.', 'مخرج_النظام: الاختيار يؤثر على مقاييس الإنتاجية العالمية.'); ?>
                     </p>
 </div>
 </div>
