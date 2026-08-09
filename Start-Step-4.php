@@ -90,16 +90,16 @@ if ( empty( $selected_package ) ) {
     <?php endforeach; ?>
 <?php else : ?>
 <div class="flex items-center gap-2 px-3 py-1.5 bg-primary-container text-primary rounded-sm border border-primary/20">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">security</span>
-<span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('Security & SSL Shield', 'حماية الأمان وشهادة SSL'); ?></span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">contacts</span>
+<span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('CRM & Lead Management', 'نظام إدارة العملاء CRM'); ?></span>
 </div>
 <div class="flex items-center gap-2 px-3 py-1.5 bg-primary-container text-primary rounded-sm border border-primary/20">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">analytics</span>
-<span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('Smart Sales Analytics', 'تحليلات المبيعات الذكية'); ?></span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+<span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('ERP & Operations Suite', 'نظام الموارد والعمليات ERP'); ?></span>
 </div>
 <div class="flex items-center gap-2 px-3 py-1.5 bg-primary-container text-primary rounded-sm border border-primary/20">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">language</span>
-<span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('High-Speed CDN', 'تسريع الأداء والوصول السريع'); ?></span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('Smart AI Support Bot', 'مساعد الذكاء الاصطناعي'); ?></span>
 </div>
 <?php endif; ?>
 </div>

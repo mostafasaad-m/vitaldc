@@ -36,18 +36,18 @@
 </div>
 <!-- Bento-Style Grid of Add-on Cards -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Card 1: Security+ Protocol -->
+<!-- Card 1: CRM System Integration -->
 <div class="group border border-surface-container text-surface-deep p-6 hover:border-export-orange transition-all duration-300 bg-surface-container-lowest/50 backdrop-blur-sm flex flex-col justify-between min-h-[320px]">
 <div>
 <div class="flex justify-between items-start mb-6">
 <div class="p-3 bg-surface-deep text-export-orange">
-<span class="material-symbols-outlined">security</span>
+<span class="material-symbols-outlined">contacts</span>
 </div>
-<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5"><?php echo vitaldc_t('SECURITY', 'الأمان'); ?></span>
+<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5"><?php echo vitaldc_t('CRM & LEADS', 'إدارة العملاء'); ?></span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Security & SSL Shield', 'حماية الأمان وشهادة SSL'); ?></h3>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('CRM & Lead Management', 'نظام إدارة العملاء CRM'); ?></h3>
 <p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
-    <?php echo vitaldc_t('Enterprise-grade SSL encryption, automated data backup, and advanced protection for all your customer interactions.', 'تشفير SSL المتقدم، والنسخ الاحتياطي التلقائي للبيانات، وحماية متكاملة لجميع تعاملات عملاء موقعك.'); ?>
+    <?php echo vitaldc_t('Centralized customer database, pipeline tracking, automated sales follow-ups, and deal stage notifications.', 'قاعدة بيانات مركزية للعملاء، وتتبع مراحل المبيعات، ومتابعات تلقائية مع التنبيهات المباشرة.'); ?>
 </p>
 </div>
 <div class="mt-8">
@@ -57,18 +57,18 @@
 </button>
 </div>
 </div>
-<!-- Card 2: Regional Accelerator -->
+<!-- Card 2: ERP & Operations Suite -->
 <div class="group border border-surface-container text-surface-deep p-6 hover:border-export-orange transition-all duration-300 bg-surface-container-lowest/50 backdrop-blur-sm flex flex-col justify-between min-h-[320px]">
 <div>
 <div class="flex justify-between items-start mb-6">
 <div class="p-3 bg-surface-deep text-export-orange">
-<span class="material-symbols-outlined">language</span>
+<span class="material-symbols-outlined">account_tree</span>
 </div>
-<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5"><?php echo vitaldc_t('PERFORMANCE', 'الأداء'); ?></span>
+<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5"><?php echo vitaldc_t('ERP & OPS', 'إدارة الموارد'); ?></span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('High-Speed CDN', 'تسريع الأداء والوصول السريع'); ?></h3>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('ERP & Operations Suite', 'نظام الموارد والعمليات ERP'); ?></h3>
 <p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
-    <?php echo vitaldc_t('Lightning-fast website loading speed across Egypt, the MENA region, and worldwide for a seamless customer experience.', 'سرعة فائقة في تحميل الموقع في مصر والشرق الأوسط والعالم لتوفير تجربة ممتازة للزوار.'); ?>
+    <?php echo vitaldc_t('Automated inventory tracking, purchase order workflows, supply chain logs, and multi-department operational sync.', 'تتبع تلقائي للمخزون، وإدارة أوامر الشراء، وسجلات سلسلة التوريد والمزامنة التشغيلية.'); ?>
 </p>
 </div>
 <div class="mt-8">
@@ -78,39 +78,39 @@
 </button>
 </div>
 </div>
-<!-- Card 3: Advanced Analytics -->
+<!-- Card 3: AI Assistant & Automation -->
 <div class="group border border-surface-container text-surface-deep p-6 hover:border-export-orange transition-all duration-300 bg-surface-container-lowest/50 backdrop-blur-sm flex flex-col justify-between min-h-[320px]">
 <div>
 <div class="flex justify-between items-start mb-6">
 <div class="p-3 bg-surface-deep text-export-orange">
-<span class="material-symbols-outlined">leaderboard</span>
+<span class="material-symbols-outlined">smart_toy</span>
+</div>
+<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5"><?php echo vitaldc_t('AI AUTOMATION', 'الذكاء الاصطناعي'); ?></span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Smart AI Support Bot', 'مساعد الذكاء الاصطناعي'); ?></h3>
+<p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
+    <?php echo vitaldc_t('24/7 AI chatbot for instant customer inquiry responses, lead qualification, and automated appointment scheduling.', 'ردود فورية على استفسارات العملاء على مدار الساعة، وتأهيل العملاء، وحجز المواعيد تلقائياً.'); ?>
+</p>
+</div>
+<div class="mt-8">
+<button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
+<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الميزة'); ?></span>
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Business Intelligence Hub -->
+<div class="group border border-surface-container text-surface-deep p-6 hover:border-export-orange transition-all duration-300 bg-surface-container-lowest/50 backdrop-blur-sm flex flex-col justify-between min-h-[320px]">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-surface-deep text-export-orange">
+<span class="material-symbols-outlined">insights</span>
 </div>
 <span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5"><?php echo vitaldc_t('ANALYTICS', 'التحليلات'); ?></span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Smart Sales Analytics', 'تحليلات المبيعات الذكية'); ?></h3>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Business Intelligence Hub', 'منصة ذكاء الأعمال والتقارير'); ?></h3>
 <p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
-    <?php echo vitaldc_t('Real-time visitor tracking, ad campaign performance reports, and clear growth insights for your business.', 'تتبع المباشر لحركة الزوار، وتقارير أداء الحملات الإعلانية، ورؤية واضحة لتطوير أعمالك.'); ?>
-</p>
-</div>
-<div class="mt-8">
-<button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
-<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الميزة'); ?></span>
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-<!-- Card 4: API Bridge -->
-<div class="group border border-surface-container text-surface-deep p-6 hover:border-export-orange transition-all duration-300 bg-surface-container-lowest/50 backdrop-blur-sm flex flex-col justify-between min-h-[320px]">
-<div>
-<div class="flex justify-between items-start mb-6">
-<div class="p-3 bg-surface-deep text-export-orange">
-<span class="material-symbols-outlined">integration_instructions</span>
-</div>
-<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5"><?php echo vitaldc_t('AUTOMATION', 'الأتمتة'); ?></span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Automated Lead Bot', 'المساعد الآلي للعملاء'); ?></h3>
-<p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
-    <?php echo vitaldc_t('Smart customer inquiry routing, fast automated responses, and instant synchronization with your CRM list.', 'توجيه استفسارات العملاء ذكياً، والرد التلقائي السريع، والمزامنة مع قائمة عملائك.'); ?>
+    <?php echo vitaldc_t('Real-time executive revenue dashboards, performance KPIs, and automated weekly growth reports.', 'لوحات تحكم تنفيذية لمتابعة الإيرادات ومؤشرات الأداء وتقارير النمو الأسبوعية.'); ?>
 </p>
 </div>
 <div class="mt-8">
