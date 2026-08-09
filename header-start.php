@@ -140,20 +140,29 @@ $current_lang = vitaldc_get_current_language();
                       "gutter": "24px",
                       "container-max": "1280px",
                       "stack-sm": "8px",
-                      "stack-lg": "48px",
-                      "section-gap": "120px"
+              colors: {
+                "surface": "#00161F",
+                "surface-deep": "#000E14",
+                "surface-dim": "#001B26",
+                "surface-container-highest": "#0B2B38",
+                "surface-deep-overlay": "rgba(0, 14, 20, 0.8)",
+                "on-surface": "#E6F4F8",
+                "on-surface-variant": "#8ECAE6",
+                "secondary": "#219EBC",
+                "tertiary": "#00B4D8",
+                "export-yellow": "#FFB703",
+                "export-orange": "#FB8500",
+                "glass-border": "rgba(142, 202, 230, 0.15)",
+                "glass-card": "rgba(11, 43, 56, 0.6)"
               },
-              "fontFamily": {
-                      "headline-md": ["Geist"],
-                      "label-sm": ["Inter"],
-                      "body-md": ["Inter"],
+              fontFamily: {
                       "label-caps": ["JetBrains Mono"],
                       "body-lg": ["Inter"],
                       "headline-lg": ["Geist"],
                       "headline-lg-mobile": ["Geist"],
                       "display-lg": ["Geist"]
               },
-              "fontSize": {
+              fontSize: {
                       "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
                       "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
                       "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
@@ -183,7 +192,8 @@ $current_lang = vitaldc_get_current_language();
                         <?php echo esc_html( $active_progress['title'] ); ?>
                     </h1>
 </div>
-<div class="flex items-center gap-2">
+<div class="flex items-center gap-4">
+<a href="<?php echo esc_url( $toggle_url ); ?>" class="font-label-caps text-label-caps text-on-surface-variant cursor-pointer transition-colors duration-300 hover:text-export-yellow"><?php echo $toggle_label; ?></a>
 <span class="font-label-caps text-label-sm text-on-surface-variant">VITALDC_SYSTEMS</span>
 <div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div>
 </div>

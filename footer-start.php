@@ -9,29 +9,29 @@ $step_config = array(
         'step' => 'step-1',
         'prev' => null,
         'next' => '/start/tiers/',
-        'prev_label' => 'Back to Start',
-        'next_label' => 'Continue to Step 02',
+        'prev_label' => vitaldc_t( 'Back to Start', 'العودة إلى البداية' ),
+        'next_label' => vitaldc_t( 'Continue to Step 02', 'المتابعة للخطوة 02' ),
     ),
     '/start/tiers' => array(
         'step' => 'step-2',
         'prev' => '/start',
         'next' => '/start/package-addons',
-        'prev_label' => 'Return to Step 01',
-        'next_label' => 'Continue to Step 03',
+        'prev_label' => vitaldc_t( 'Return to Step 01', 'العودة للخطوة 01' ),
+        'next_label' => vitaldc_t( 'Continue to Step 03', 'المتابعة للخطوة 03' ),
     ),
     '/start/package-addons' => array(
         'step' => 'step-3',
         'prev' => '/start/tiers/',
         'next' => '/start/review',
-        'prev_label' => 'Return to Step 02',
-        'next_label' => 'Continue to Step 04',
+        'prev_label' => vitaldc_t( 'Return to Step 02', 'العودة للخطوة 02' ),
+        'next_label' => vitaldc_t( 'Continue to Step 04', 'المتابعة للخطوة 04' ),
     ),
     '/start/review' => array(
         'step' => 'step-4',
         'prev' => '/start/package-addons',
         'next' => null,
-        'prev_label' => 'Return to Step 03',
-        'next_label' => 'Finalize Protocol',
+        'prev_label' => vitaldc_t( 'Return to Step 03', 'العودة للخطوة 03' ),
+        'next_label' => vitaldc_t( 'Finalize Protocol', 'إنهاء البروتوكول' ),
     ),
 );
 
@@ -46,13 +46,13 @@ $active_step = $step_config[ $current_path ] ?? $step_config['/start'];
 <span class="material-symbols-outlined text-outline-variant group-hover:text-primary">arrow_back</span>
 </div>
 <div class="flex flex-col items-start">
-<span class="font-label-caps text-[10px] text-outline uppercase">Previous Stage</span>
+<span class="font-label-caps text-[10px] text-outline uppercase"><?php echo vitaldc_t( 'Previous Stage', 'المرحلة السابقة' ); ?></span>
 <span class="font-label-caps text-label-caps text-white group-hover:text-primary transition-colors uppercase"><?php echo esc_html( $active_step['prev_label'] ); ?></span>
 </div>
 </button>
 <div class="hidden md:flex items-center gap-stack-lg border-x border-glass px-12 h-full">
 <div class="text-center">
-<span class="font-label-caps text-[10px] text-outline uppercase block mb-1">Protocol Timer</span>
+<span class="font-label-caps text-[10px] text-outline uppercase block mb-1"><?php echo vitaldc_t( 'Protocol Timer', 'مؤقت البروتوكول' ); ?></span>
 <span id="onboarding-stopwatch" class="font-label-caps text-label-caps text-white">00:00:00</span>
 </div>
 </div>
