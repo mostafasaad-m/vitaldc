@@ -168,7 +168,7 @@ $toggle_url = add_query_arg( 'lang', $next_lang, $current_url );
 <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-glass flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-full transition-all duration-300">
     <div class="flex items-center gap-stack-lg">
         <a class="font-display-lg text-headline-md font-bold tracking-tighter text-on-surface flex items-center" style="font-size:50px;" href="<?php echo esc_url(home_url('/')); ?>">
-            <span class="text-export-orange"><?php echo vitaldc_t('VitalDC', 'فيتال دي سي'); ?></span>
+            <span class="text-export-orange"><?php echo vitaldc_t('VitalDC', 'VitalDC'); ?></span>
         </a>
         <div class="hidden md:flex gap-6 items-center">
             <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/"><?php echo vitaldc_t('Digital Foundation', 'الأساس الرقمي'); ?></a>
