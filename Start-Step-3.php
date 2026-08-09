@@ -128,7 +128,7 @@
 <div class="h-full w-full" style="background-image: radial-gradient(circle at 2px 2px, #219EBC 1px, transparent 0); background-size: 24px 24px;"></div>
 </div>
 <!-- Mock Shipping Tracker / Data Viz -->
-<div class="absolute inset-0 flex items-center justify-center p-gutter">
+<!-- <div class="absolute inset-0 flex items-center justify-center p-gutter">
 <div class="w-full h-full border border-glass p-6 flex flex-col">
 <div class="flex justify-between items-center mb-6">
 <div class="flex gap-2">
@@ -151,7 +151,7 @@
 </div>
 </div>
 </div>
-</div>
+</div> -->
 <!-- <div class="col-span-1 border-l-0 lg:border-l border-glass lg:pl-gutter">
 <h4 class="font-label-caps text-label-caps text-surface-deep mb-4 uppercase"><?php echo vitaldc_t('System Metadata', 'بيانات النظام الوصفية'); ?></h4>
 <ul class="space-y-4 font-label-caps text-[12px] text-surface-variant">
