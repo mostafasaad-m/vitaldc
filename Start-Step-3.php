@@ -122,11 +122,11 @@
 </div>
 </div>
 <!-- Visual Asset Section (Technical Detail) -->
-<div class="mt-section-gap grid grid-cols-1 lg:grid-cols-3 gap-gutter items-center">
+<!-- <div class="mt-section-gap grid grid-cols-1 lg:grid-cols-3 gap-gutter items-center">
 <div class="col-span-1 lg:col-span-2 relative h-[300px] bg-surface-deep overflow-hidden">
 <div class="absolute inset-0 opacity-20">
 <div class="h-full w-full" style="background-image: radial-gradient(circle at 2px 2px, #219EBC 1px, transparent 0); background-size: 24px 24px;"></div>
-</div>
+</div> -->
 <!-- Mock Shipping Tracker / Data Viz -->
 <!-- <div class="absolute inset-0 flex items-center justify-center p-gutter">
 <div class="w-full h-full border border-glass p-6 flex flex-col">
