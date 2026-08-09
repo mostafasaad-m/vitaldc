@@ -44,6 +44,13 @@ $step_progress = array(
         'path' => vitaldc_t( 'Setup Progress: 100%', 'تقدم الإعداد: 100%' ),
         'active_index' => 4,
     ),
+    '/thank-you' => array(
+        'step_code' => 'COMPLETE',
+        'title' => vitaldc_t( 'Onboarding Request Confirmed', 'تم تأكيد طلب الانضمام' ),
+        'label' => vitaldc_t( 'Order Submitted Successfully', 'تم إرسال الطلب بنجاح' ),
+        'path' => vitaldc_t( 'Setup Progress: 100%', 'تقدم الإعداد: 100%' ),
+        'active_index' => 4,
+    ),
 );
 
 $active_progress = $step_progress[ $current_path ] ?? $step_progress['/start'];

@@ -101,15 +101,118 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch(e){}
     }
 
-    // Save field updates to local storage on input change
     const form = document.getElementById('step-1-form');
+
+    // Custom Step 1 Validation
+    window.validateStep1 = function() {
+        if (!form) return true;
+
+        let isValid = true;
+        let firstInvalidInput = null;
+
+        function setError(input, message) {
+            isValid = false;
+            if (!firstInvalidInput) firstInvalidInput = input;
+
+            input.classList.add('border-red-500', 'bg-red-50/50');
+            input.classList.remove('border-slate-300');
+
+            let errEl = input.parentElement.querySelector('.field-error-msg');
+            if (!errEl) {
+                errEl = document.createElement('p');
+                errEl.className = 'field-error-msg text-red-500 text-xs mt-1 font-body-md font-semibold';
+                input.parentElement.appendChild(errEl);
+            }
+            errEl.textContent = message;
+        }
+
+        function clearError(input) {
+            input.classList.remove('border-red-500', 'bg-red-50/50');
+            input.classList.add('border-slate-300');
+            const errEl = input.parentElement.querySelector('.field-error-msg');
+            if (errEl) errEl.remove();
+        }
+
+        form.querySelectorAll('input').forEach(clearError);
+
+        // 1. Full Name Validation
+        const fullName = document.getElementById('full_name');
+        if (fullName) {
+            const val = fullName.value.trim();
+            if (!val) {
+                setError(fullName, '<?php echo vitaldc_t("Full Name is required.", "الاسم الكامل مطلوب."); ?>');
+            } else if (val.length < 2) {
+                setError(fullName, '<?php echo vitaldc_t("Please enter a valid full name.", "يرجى إدخال اسم كامل صحيح."); ?>');
+            }
+        }
+
+        // 2. Company Name Validation
+        const companyName = document.getElementById('company_name');
+        if (companyName) {
+            const val = companyName.value.trim();
+            if (!val) {
+                setError(companyName, '<?php echo vitaldc_t("Company Name is required.", "اسم الشركة مطلوب."); ?>');
+            } else if (val.length < 2) {
+                setError(companyName, '<?php echo vitaldc_t("Please enter a valid company name.", "يرجى إدخال اسم شركة صحيح."); ?>');
+            }
+        }
+
+        // 3. Email Validation
+        const email = document.getElementById('email');
+        if (email) {
+            const val = email.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+            if (!val) {
+                setError(email, '<?php echo vitaldc_t("Corporate Email is required.", "البريد الإلكتروني مطلوب."); ?>');
+            } else if (!emailRegex.test(val)) {
+                setError(email, '<?php echo vitaldc_t("Please enter a valid email address (e.g. name@company.com).", "يرجى إدخال بريد إلكتروني صحيح (مثال: name@company.com)."); ?>');
+            }
+        }
+
+        // 4. Phone Validation
+        const phone = document.getElementById('phone');
+        if (phone) {
+            const val = phone.value.trim();
+            const phoneDigits = val.replace(/\D/g, '');
+            if (!val) {
+                setError(phone, '<?php echo vitaldc_t("Phone number is required.", "رقم الهاتف مطلوب."); ?>');
+            } else if (phoneDigits.length < 6) {
+                setError(phone, '<?php echo vitaldc_t("Please enter a valid phone number with country code.", "يرجى إدخال رقم هاتف صحيح مع رمز الدولة."); ?>');
+            }
+        }
+
+        // 5. Website URL formatting
+        const website = document.getElementById('website');
+        if (website && website.value.trim()) {
+            let val = website.value.trim();
+            if (!val.match(/^https?:\/\//i) && !val.match(/^www\./i)) {
+                val = 'https://' + val;
+                website.value = val;
+            }
+        }
+
+        if (!isValid && firstInvalidInput) {
+            firstInvalidInput.focus();
+        }
+
+        return isValid;
+    };
+
+    // Save field updates and clear errors on typing
     if (form) {
-        form.addEventListener('input', () => {
-            const payload = {};
-            form.querySelectorAll('input').forEach(input => {
-                if (input.name) payload[input.name] = input.value;
+        form.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', () => {
+                input.classList.remove('border-red-500', 'bg-red-50/50');
+                input.classList.add('border-slate-300');
+                const errEl = input.parentElement.querySelector('.field-error-msg');
+                if (errEl) errEl.remove();
+
+                const payload = {};
+                form.querySelectorAll('input').forEach(inp => {
+                    if (inp.name) payload[inp.name] = inp.value;
+                });
+                localStorage.setItem('vitaldc_step_1_payload', JSON.stringify(payload));
             });
-            localStorage.setItem('vitaldc_step_1_payload', JSON.stringify(payload));
         });
     }
 });

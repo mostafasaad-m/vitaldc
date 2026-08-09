@@ -33,6 +33,13 @@ $step_config = array(
         'prev_label' => vitaldc_t( 'Return to Step 03', 'العودة للخطوة 03' ),
         'next_label' => vitaldc_t( 'Finalize Protocol', 'إنهاء البروتوكول' ),
     ),
+    '/thank-you' => array(
+        'step' => 'thank-you',
+        'prev' => null,
+        'next' => '/',
+        'prev_label' => '',
+        'next_label' => vitaldc_t( 'Return to Homepage', 'العودة للصفحة الرئيسية' ),
+    ),
 );
 
 $active_step = $step_config[ $current_path ] ?? $step_config['/start'];
@@ -70,7 +77,8 @@ $active_step = $step_config[ $current_path ] ?? $step_config['/start'];
         '/start': { step: 'step-1', prev: null, next: '/start/tiers/' },
         '/start/tiers': { step: 'step-2', prev: '/start', next: '/start/package-addons' },
         '/start/package-addons': { step: 'step-3', prev: '/start/tiers/', next: '/start/review' },
-        '/start/review': { step: 'step-4', prev: '/start/package-addons', next: null }
+        '/start/review': { step: 'step-4', prev: '/start/package-addons', next: null },
+        '/thank-you': { step: 'thank-you', prev: null, next: '/' }
     };
     const currentStep = stepConfig[currentPath] || stepConfig['/start'];
 
@@ -230,9 +238,32 @@ $active_step = $step_config[ $current_path ] ?? $step_config['/start'];
         }
     };
 
+    const validateStep = function () {
+        if (currentStep.step === 'step-1') {
+            if (typeof window.validateStep1 === 'function') {
+                return window.validateStep1();
+            }
+            const form = document.getElementById('step-1-form') || document.querySelector('form');
+            if (form) {
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return false;
+                }
+            }
+        }
+        return true;
+    };
+
     if (nextBtn) {
         nextBtn.addEventListener('click', function (event) {
             event.preventDefault();
+            if (currentStep.step === 'thank-you' || currentPath.includes('thank-you')) {
+                window.location.href = '/';
+                return;
+            }
+            if (!validateStep()) {
+                return;
+            }
             saveStep();
         });
     }
