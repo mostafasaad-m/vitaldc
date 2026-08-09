@@ -6,13 +6,6 @@
 
 get_header('start');?>
 
-<style>
-
-input{color:#fff!important;}
-
-</style>
-
-
 <div class="flex flex-col md:flex-row min-h-[600px]">
 <!-- Left Sidebar (Contextual Info) -->
 <div class="md:w-1/3 bg-surface-container-low text-white p-stack-lg flex flex-col justify-between border-r border-glass">
@@ -49,72 +42,78 @@ input{color:#fff!important;}
 <!-- Right Form Content -->
 <div class="md:w-2/3 p-stack-lg md:p-12">
 <div class="mb-stack-lg">
-<h2 class="font-label-caps text-label-caps text-on-surface-variant mb-2"><?php echo vitaldc_t('BUSINESS INFORMATION', 'بيانات_الشركة_والمعلومات_الأساسية'); ?></h2>
-<p class="font-body-md text-surface-container-highest"><?php echo vitaldc_t('Fill in your core business details below to begin your digital setup.', 'أدخل بيانات عملك الأساسية أدناه للبدء في تجهيز انطلاقتك الرقمية.'); ?></p>
+<h2 class="font-label-caps text-label-caps text-slate-900 font-bold mb-2"><?php echo vitaldc_t('BUSINESS INFORMATION', 'بيانات_الشركة_والمعلومات_الأساسية'); ?></h2>
+<p class="font-body-md text-slate-600"><?php echo vitaldc_t('Fill in your core business details below to begin your digital setup.', 'أدخل بيانات عملك الأساسية أدناه للبدء في تجهيز انطلاقتك الرقمية.'); ?></p>
 </div>
 <form id="step-1-form" class="space-y-6">
 <!-- Full Name -->
 <div class="group">
-<label class="surface block font-label-caps text-xs  mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="full_name">
+<label class="block font-label-caps text-xs text-slate-700 font-semibold mb-2 uppercase tracking-widest group-focus-within:text-export-orange transition-colors" for="full_name">
     <?php echo vitaldc_t('Full Name', 'الاسم الكامل'); ?> <span class="text-export-orange">*</span>
 </label>
-<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="full_name" name="full_name" placeholder="<?php echo vitaldc_t('E.G. AHMED MANSOUR', 'مثال: أحمد منصور'); ?>" required="" type="text"/>
+<input class="w-full bg-slate-50 border-0 border-b-2 border-slate-300 focus:border-export-orange focus:bg-white focus:ring-0 text-slate-900 font-body-md px-3 py-3 transition-all placeholder:text-slate-400" id="full_name" name="full_name" placeholder="<?php echo vitaldc_t('E.G. AHMED MANSOUR', 'مثال: أحمد منصور'); ?>" required="" type="text"/>
 </div>
 <!-- Company Name -->
 <div class="group">
-<label class="block font-label-caps text-xs surface mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="company_name">
+<label class="block font-label-caps text-xs text-slate-700 font-semibold mb-2 uppercase tracking-widest group-focus-within:text-export-orange transition-colors" for="company_name">
     <?php echo vitaldc_t('Company Name', 'اسم الشركة'); ?> <span class="text-export-orange">*</span>
 </label>
-<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="company_name" name="company_name" placeholder="<?php echo vitaldc_t('VITAL LOGISTICS EGYPT', 'فيتال للخدمات اللوجستية مصر'); ?>" required="" type="text"/>
+<input class="w-full bg-slate-50 border-0 border-b-2 border-slate-300 focus:border-export-orange focus:bg-white focus:ring-0 text-slate-900 font-body-md px-3 py-3 transition-all placeholder:text-slate-400" id="company_name" name="company_name" placeholder="<?php echo vitaldc_t('VITAL LOGISTICS EGYPT', 'فيتال للخدمات اللوجستية مصر'); ?>" required="" type="text"/>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <!-- Corporate Email -->
 <div class="group">
-<label class="block font-label-caps text-xs surface mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="email">
+<label class="block font-label-caps text-xs text-slate-700 font-semibold mb-2 uppercase tracking-widest group-focus-within:text-export-orange transition-colors" for="email">
     <?php echo vitaldc_t('Corporate Email', 'البريد الإلكتروني للشركة'); ?> <span class="text-export-orange">*</span>
 </label>
-<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="email" name="email" placeholder="ADMIN@COMPANY.COM" required="" type="email"/>
+<input class="w-full bg-slate-50 border-0 border-b-2 border-slate-300 focus:border-export-orange focus:bg-white focus:ring-0 text-slate-900 font-body-md px-3 py-3 transition-all placeholder:text-slate-400" id="email" name="email" placeholder="ADMIN@COMPANY.COM" required="" type="email"/>
 </div>
 <!-- Phone Number -->
 <div class="group">
-<label class="block font-label-caps text-xs surface mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="phone">
+<label class="block font-label-caps text-xs text-slate-700 font-semibold mb-2 uppercase tracking-widest group-focus-within:text-export-orange transition-colors" for="phone">
     <?php echo vitaldc_t('Phone (Country Code)', 'الهاتف (رمز الدولة)'); ?> <span class="text-export-orange">*</span>
 </label>
-<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="phone" name="phone" placeholder="+20 1XX XXX XXXX" required="" type="tel"/>
+<input class="w-full bg-slate-50 border-0 border-b-2 border-slate-300 focus:border-export-orange focus:bg-white focus:ring-0 text-slate-900 font-body-md px-3 py-3 transition-all placeholder:text-slate-400" id="phone" name="phone" placeholder="+20 1XX XXX XXXX" required="" type="tel"/>
 </div>
 </div>
 <!-- Website URL -->
 <div class="group">
-<label class="block font-label-caps text-xs surface mb-2 uppercase tracking-widest group-focus-within:text-secondary transition-colors" for="website">
-    <?php echo vitaldc_t('Current Website URL', 'رابط الموقع الحالي'); ?> <span class="surface/50"><?php echo vitaldc_t('(OPTIONAL)', '(اختياري)'); ?></span>
+<label class="block font-label-caps text-xs text-slate-700 font-semibold mb-2 uppercase tracking-widest group-focus-within:text-export-orange transition-colors" for="website">
+    <?php echo vitaldc_t('Current Website URL', 'رابط الموقع الحالي'); ?> <span class="text-slate-400 text-[10px]"><?php echo vitaldc_t('(OPTIONAL)', '(اختياري)'); ?></span>
 </label>
-<input class="w-full bg-surface-container-lowest border-0 border-b-2 border-surface-container-highest focus:border-secondary focus:ring-0 text-surface-deep font-body-md py-3 transition-all placeholder:text-surface-container-highest/30" id="website" name="website" placeholder="HTTPS://WWW.COMPANY.COM" type="url"/>
-</div>
-<!-- Action Buttons -->
-<div class="pt-stack-lg flex flex-col-reverse md:flex-row gap-4 items-center justify-between">
-
+<input class="w-full bg-slate-50 border-0 border-b-2 border-slate-300 focus:border-export-orange focus:bg-white focus:ring-0 text-slate-900 font-body-md px-3 py-3 transition-all placeholder:text-slate-400" id="website" name="website" placeholder="HTTPS://WWW.COMPANY.COM" type="url"/>
 </div>
 </form>
 </div>
 </div>
-</section>
 
 <script>
-        // Simple micro-interaction for the form fields
-        const inputs = document.querySelectorAll('input');
-        inputs.forEach(input => {
-            input.addEventListener('focus', () => {
-                // Potential for adding audio cues or specific UI highlights
-                console.log('Focus on field: ' + input.id);
+document.addEventListener('DOMContentLoaded', () => {
+    // Restore pre-filled data if exists
+    const savedData = localStorage.getItem('vitaldc_step_1_payload');
+    if (savedData) {
+        try {
+            const data = JSON.parse(savedData);
+            Object.keys(data).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) el.value = data[key];
             });
-        });
+        } catch(e){}
+    }
 
-        // Form submission prevent default for demo
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Step 01 validated. Initializing protocol Step 02...');
+    // Save field updates to local storage on input change
+    const form = document.getElementById('step-1-form');
+    if (form) {
+        form.addEventListener('input', () => {
+            const payload = {};
+            form.querySelectorAll('input').forEach(input => {
+                if (input.name) payload[input.name] = input.value;
+            });
+            localStorage.setItem('vitaldc_step_1_payload', JSON.stringify(payload));
         });
-    </script>
+    }
+});
+</script>
 
 <!-- Technical Metadata Footer -->
 <div class="w-full max-w-4xl mt-stack-md flex justify-between items-center px-4">
@@ -124,9 +123,8 @@ input{color:#fff!important;}
 <span class="font-label-caps text-[10px]">SERVER: CAIRO_NORTH_01</span>
 </div>
 <div class="font-label-caps text-[10px] text-tertiary">
-                VITALDC INFRASTRUCTURE V.2.4.0
-            </div>
+    VITALDC INFRASTRUCTURE V.2.4.0
 </div>
-</main>
+</div>
 
 <?php get_footer('start'); ?>

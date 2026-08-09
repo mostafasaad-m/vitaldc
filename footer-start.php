@@ -146,6 +146,9 @@ $active_step = $step_config[ $current_path ] ?? $step_config['/start'];
         if (currentStep.step === 'step-2') {
             const activeCard = document.querySelector('.package-card.active-package');
             const packageName = activeCard ? (activeCard.querySelector('h3')?.textContent || '').trim() : '';
+            if (packageName) {
+                localStorage.setItem('vitaldc_selected_package', packageName);
+            }
             return { package: packageName };
         }
 
@@ -153,6 +156,7 @@ $active_step = $step_config[ $current_path ] ?? $step_config['/start'];
             const addons = Array.from(document.querySelectorAll('.group[data-selected="true"]')).map(function (card) {
                 return (card.querySelector('h3')?.textContent || '').trim();
             }).filter(Boolean);
+            localStorage.setItem('vitaldc_selected_addons', JSON.stringify(addons));
             return { addons: addons };
         }
 

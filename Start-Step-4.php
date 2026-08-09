@@ -53,19 +53,42 @@
 <span class="material-symbols-outlined text-export-orange">inventory_2</span>
 <h2 class="font-headline-md text-headline-md font-bold uppercase tracking-tight"><?php echo vitaldc_t('Selected Package & Features', 'ملخص الباقة والميزات'); ?></h2>
 </div>
+<?php
+$order_id = $_SESSION['vitaldc_onboarding_order_id'] ?? 0;
+$selected_package = '';
+$selected_addons = array();
+if ( $order_id && function_exists( 'wc_get_order' ) ) {
+    $order = wc_get_order( $order_id );
+    if ( $order ) {
+        $selected_package = $order->get_meta( '_onboarding_package', true );
+        $selected_addons = (array) $order->get_meta( '_onboarding_addons', true );
+    }
+}
+if ( empty( $selected_package ) ) {
+    $selected_package = vitaldc_t('Growth & Marketing Package', 'باقة النمو والتسويق');
+}
+?>
 <div class="space-y-4">
 <!-- Tier Selection -->
 <div class="p-6 border border-surface-container-low rounded bg-surface-container-lowest/50 flex justify-between items-center group hover:border-export-orange transition-colors">
 <div>
 <p class="font-label-caps text-xs text-outline-variant uppercase mb-1"><?php echo vitaldc_t('Selected Package', 'الباقة المختارة'); ?></p>
-<p class="font-headline-md text-headline-md font-bold"><?php echo vitaldc_t('Growth & Marketing Package', 'باقة النمو والتسويق'); ?></p>
+<p id="display-selected-package" class="font-headline-md text-headline-md font-bold"><?php echo esc_html( $selected_package ); ?></p>
 </div>
-<span class="material-symbols-outlined text-outline group-hover:text-export-orange transition-colors">edit</span>
+<a href="/start/tiers" class="material-symbols-outlined text-outline group-hover:text-export-orange transition-colors">edit</a>
 </div>
 <!-- Extensions -->
 <div class="p-6 border border-surface-container-low rounded bg-surface-container-lowest/50">
 <p class="font-label-caps text-xs text-outline-variant uppercase mb-4"><?php echo vitaldc_t('Selected Add-on Features', 'الميزات الإضافية المختارة'); ?></p>
-<div class="flex flex-wrap gap-3">
+<div id="display-selected-addons" class="flex flex-wrap gap-3">
+<?php if ( ! empty( $selected_addons ) ) : ?>
+    <?php foreach ( $selected_addons as $addon ) : ?>
+        <div class="flex items-center gap-2 px-3 py-1.5 bg-primary-container text-primary rounded-sm border border-primary/20">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            <span class="font-label-caps text-xs uppercase font-bold"><?php echo esc_html( $addon ); ?></span>
+        </div>
+    <?php endforeach; ?>
+<?php else : ?>
 <div class="flex items-center gap-2 px-3 py-1.5 bg-primary-container text-primary rounded-sm border border-primary/20">
 <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">security</span>
 <span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('Security & SSL Shield', 'حماية الأمان وشهادة SSL'); ?></span>
@@ -78,6 +101,7 @@
 <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">language</span>
 <span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('High-Speed CDN', 'تسريع الأداء والوصول السريع'); ?></span>
 </div>
+<?php endif; ?>
 </div>
 </div>
 </div>
@@ -192,6 +216,30 @@
                     parent.classList.remove('bg-export-orange/5', 'border-export-orange');
                 }
             });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedPkg = localStorage.getItem('vitaldc_selected_package');
+            const pkgDisplay = document.getElementById('display-selected-package');
+            if (savedPkg && pkgDisplay) {
+                pkgDisplay.textContent = savedPkg;
+            }
+
+            const savedAddons = localStorage.getItem('vitaldc_selected_addons');
+            const addonsContainer = document.getElementById('display-selected-addons');
+            if (savedAddons && addonsContainer) {
+                try {
+                    const list = JSON.parse(savedAddons);
+                    if (Array.isArray(list) && list.length > 0) {
+                        addonsContainer.innerHTML = list.map(item => `
+                            <div class="flex items-center gap-2 px-3 py-1.5 bg-primary-container text-primary rounded-sm border border-primary/20">
+                                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                <span class="font-label-caps text-xs uppercase font-bold">${item}</span>
+                            </div>
+                        `).join('');
+                    }
+                } catch(e){}
+            }
         });
     </script>
 

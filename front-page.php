@@ -120,7 +120,7 @@
                         <span class="font-label-caps text-light-on-surface-variant/20 text-headline-lg"><?php echo vitaldc_t('PHASE 03', 'المرحلة 03'); ?></span>
                     </div>
                     <h3 class="font-headline-md text-headline-md mb-4"><?php echo vitaldc_t('Automated Growth', 'نمو آلي'); ?></h3>
-                    <p class="font-body-md text-light-on-surface-variant"><?php echo vitaldc_t('Smart AI layers that handle incoming inquiries, lead qualification, and CRM updates, so you can focus on shipping products.', 'طبقات ذكاء اصطناعي تتولى الاستفسارات وتأهيل العملاء وتحديث CRM لتتفرغ لشحن منتجاتك.'); ?></p>
+                    <p class="font-body-md text-light-on-surface-variant"><?php echo vitaldc_t('Smart AI layers that handle incoming inquiries, lead qualification, and CRM updates, so you can focus on shipping products.', 'اضافات ذكاء اصطناعي تتولى الاستفسارات وتأهيل العملاء وتحديث CRM لتتفرغ لشحن منتجاتك.'); ?></p>
                 </div>
                 <div class="w-full md:w-80 h-48 bg-light-surface border border-light-border p-4 overflow-hidden relative">
                     <div class="font-label-caps text-[10px] text-export-orange mb-2"><?php echo vitaldc_t('LAUNCH_SEQUENCE_ACTIVE', 'تسلسل_الإطلاق_نشط'); ?></div>

@@ -6,37 +6,6 @@
  ?>
  <?php get_header('start'); ?>
  
-<script>
-        // Micro-interaction for package selection
-        const txtSelectPackage = <?php echo json_encode( vitaldc_t( 'SELECT PACKAGE', 'اختر الباقة' ) ); ?>;
-        const txtPackageSelected = <?php echo json_encode( vitaldc_t( 'PACKAGE SELECTED', 'تم اختيار الباقة' ) ); ?>;
-
-        const cards = document.querySelectorAll('.package-card');
-        const selectButtons = document.querySelectorAll('.select-btn');
-
-        cards.forEach((card, index) => {
-            card.addEventListener('click', () => {
-                // Clear all active states
-                cards.forEach(c => {
-                    c.classList.remove('active-package');
-                    const btn = c.querySelector('.select-btn');
-                    btn.classList.remove('bg-export-orange', 'text-black', 'font-bold');
-                    btn.classList.add('border-2', 'border-export-orange', 'text-export-orange');
-                    btn.textContent = txtSelectPackage;
-                });
-
-                // Set active state
-                card.classList.add('active-package');
-                const activeBtn = card.querySelector('.select-btn');
-                activeBtn.classList.remove('border-2', 'border-export-orange', 'text-export-orange');
-                activeBtn.classList.add('bg-export-orange', 'text-black', 'font-bold');
-                activeBtn.textContent = txtPackageSelected;
-                
-                // Audio feedback (optional/conceptual)
-                console.log(`Package ${['S', 'M', 'L'][index]} committed to memory.`);
-            });
-        });
-    </script>
 <style>
         body {
             background-color: #00161f;
@@ -242,5 +211,77 @@
 </div>
 
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const txtSelectPackage = <?php echo json_encode( vitaldc_t( 'SELECT PACKAGE', 'اختر الباقة' ) ); ?>;
+    const txtPackageSelected = <?php echo json_encode( vitaldc_t( 'PACKAGE SELECTED', 'تم اختيار الباقة' ) ); ?>;
+
+    const cards = document.querySelectorAll('.package-card');
+    if (!cards.length) return;
+
+    function selectPackage(selectedCard) {
+        cards.forEach((card) => {
+            card.classList.remove('active-package');
+            card.classList.remove('border-2', 'border-export-orange');
+            card.classList.add('border', 'border-slate-200');
+            const btn = card.querySelector('.select-btn');
+            if (btn) {
+                btn.classList.remove('bg-export-orange', 'text-black', 'font-bold');
+                btn.classList.add('border-2', 'border-export-orange', 'text-export-orange');
+                btn.textContent = txtSelectPackage;
+            }
+        });
+
+        selectedCard.classList.add('active-package');
+        selectedCard.classList.remove('border-slate-200');
+        selectedCard.classList.add('border-2', 'border-export-orange');
+        const activeBtn = selectedCard.querySelector('.select-btn');
+        if (activeBtn) {
+            activeBtn.classList.remove('border-2', 'border-export-orange', 'text-export-orange');
+            activeBtn.classList.add('bg-export-orange', 'text-black', 'font-bold');
+            activeBtn.textContent = txtPackageSelected;
+        }
+
+        const packageName = (selectedCard.querySelector('h3')?.textContent || '').trim();
+        if (packageName) {
+            localStorage.setItem('vitaldc_selected_package', packageName);
+        }
+    }
+
+    cards.forEach((card) => {
+        card.addEventListener('click', (e) => {
+            selectPackage(card);
+        });
+        const btn = card.querySelector('.select-btn');
+        if (btn) {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                selectPackage(card);
+            });
+        }
+    });
+
+    // Restore pre-selected package if saved
+    const savedPackage = localStorage.getItem('vitaldc_selected_package');
+    if (savedPackage) {
+        let found = false;
+        cards.forEach((card) => {
+            const name = (card.querySelector('h3')?.textContent || '').trim();
+            if (name === savedPackage) {
+                selectPackage(card);
+                found = true;
+            }
+        });
+        if (!found) {
+            const defaultActive = document.querySelector('.package-card.active-package') || cards[1] || cards[0];
+            if (defaultActive) selectPackage(defaultActive);
+        }
+    } else {
+        const defaultActive = document.querySelector('.package-card.active-package') || cards[1] || cards[0];
+        if (defaultActive) selectPackage(defaultActive);
+    }
+});
+</script>
 
 <?php get_footer("start"); ?>
