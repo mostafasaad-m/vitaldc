@@ -28,8 +28,8 @@
 <!-- Grid Background -->
 <div class="fixed inset-0 grid-mask pointer-events-none z-0"></div>
 <!-- 1. Hero Section (Dark) -->
-<section class="relative pt-32 pb-section-gap px-margin-desktop min-h-screen flex items-center overflow-hidden">
-<div class="max-w-container-max mx-auto w-full grid grid-cols-12 gap-gutter relative z-10">
+<section class="relative min-h-screen flex flex-col justify-center overflow-hidden">
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-32 w-full grid grid-cols-12 gap-gutter">
 <div class="col-span-12 lg:col-span-8">
 <span class="inline-block font-label-caps text-label-caps text-tertiary mb-4 tracking-widest border-l-2 border-tertiary pl-4"><?php echo vitaldc_t('EXPORT ACCELERATION PROTOCOL', 'بروتوكول تسريع التصدير'); ?></span>
 <h1 class="text-on-surface font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1]">
