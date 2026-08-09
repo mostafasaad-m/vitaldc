@@ -49,7 +49,7 @@
                 linear-gradient(to bottom, rgba(142, 202, 230, 0.05) 1px, transparent 1px);
             background-size: 40px 40px;
         }
-        .mono { font-family: 'JetBrains Mono', monospace; }
+        .mono { font-family: 'Poppins', monospace; }
         .geist { font-family: 'Geist', sans-serif; }
         
         .package-card:hover .select-btn {

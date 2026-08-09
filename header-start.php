@@ -58,7 +58,7 @@ $progress_steps = array(1, 2, 3, 4);
 <title><?php bloginfo( 'name' ); ?> | Initialize Infrastructure</title>
 <?php wp_head(); ?>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@400;500;700&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -153,7 +153,7 @@ $progress_steps = array(1, 2, 3, 4);
                       "headline-md": ["Geist"],
                       "label-sm": ["Inter"],
                       "body-md": ["Inter"],
-                      "label-caps": ["JetBrains Mono"],
+                      "label-caps": ["Poppins"],
                       "body-lg": ["Inter"],
                       "headline-lg": ["Geist"],
                       "headline-lg-mobile": ["Geist"],

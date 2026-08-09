@@ -11,7 +11,7 @@ $current_lang = vitaldc_get_current_language();
 <title><?php bloginfo('name'); ?><?php wp_title('|', true, 'left'); ?></title>
 <?php wp_head(); ?>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500&amp;family=Poppins:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
 <style>
     .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
@@ -147,7 +147,7 @@ $current_lang = vitaldc_get_current_language();
             "display-lg": ["Geist"],
             "headline-lg": ["Geist"],
             "headline-md": ["Geist"],
-            "label-caps": ["JetBrains Mono"],
+            "label-caps": ["Poppins"],
             "body-lg": ["Inter"],
             "body-md": ["Inter"],
             "label-sm": ["Inter"]
