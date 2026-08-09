@@ -9,40 +9,45 @@ if ( '' === $current_path ) {
 }
 $current_path = '/start' === $current_path ? '/start' : $current_path;
 
+$current_lang = vitaldc_get_current_language();
+$next_lang = 'ar' === $current_lang ? 'en' : 'ar';
+$toggle_label = 'ar' === $current_lang ? 'EN' : 'AR';
+$current_url = remove_query_arg( array( 'lang', 'l', 'ar', 'en' ) );
+$toggle_url = add_query_arg( 'lang', $next_lang, $current_url );
+
 $step_progress = array(
     '/start' => array(
         'step_code' => 'STEP_01',
-        'title' => 'Initialize Your Digital Infrastructure',
-        'label' => 'Step 01: Core Identity',
-        'path' => 'Infrastructure Path: 25%',
+        'title' => vitaldc_t( 'Initialize Your Digital Infrastructure', 'بدء تشغيل بنيتك التحتية الرقمية' ),
+        'label' => vitaldc_t( 'Step 01: Core Identity', 'الخطوة 01: الهوية الأساسية' ),
+        'path' => vitaldc_t( 'Infrastructure Path: 25%', 'مسار البنية التحتية: 25%' ),
         'active_index' => 1,
     ),
     '/start/tiers' => array(
         'step_code' => 'STEP_02',
-        'title' => 'Select Your Infrastructure Tier',
-        'label' => 'Step 02: Tier Selection',
-        'path' => 'Infrastructure Path: 50%',
+        'title' => vitaldc_t( 'Select Your Infrastructure Tier', 'اختر مستوى البنية التحتية الخاصة بك' ),
+        'label' => vitaldc_t( 'Step 02: Tier Selection', 'الخطوة 02: اختيار المستوى' ),
+        'path' => vitaldc_t( 'Infrastructure Path: 50%', 'مسار البنية التحتية: 50%' ),
         'active_index' => 2,
     ),
     '/start/package-addons' => array(
         'step_code' => 'STEP_03',
-        'title' => 'Enhance Your Infrastructure',
-        'label' => 'Step 03: Add-ons',
-        'path' => 'Infrastructure Path: 75%',
+        'title' => vitaldc_t( 'Enhance Your Infrastructure', 'تعزيز بنيتك التحتية' ),
+        'label' => vitaldc_t( 'Step 03: Add-ons', 'الخطوة 03: الإضافات' ),
+        'path' => vitaldc_t( 'Infrastructure Path: 75%', 'مسار البنية التحتية: 75%' ),
         'active_index' => 3,
     ),
     '/start/review' => array(
         'step_code' => 'STEP_04',
-        'title' => 'Review Protocol Deployment',
-        'label' => 'Step 04: Review & Confirm',
-        'path' => 'Infrastructure Path: 100%',
+        'title' => vitaldc_t( 'Review Protocol Deployment', 'مراجعة نشر البروتوكول' ),
+        'label' => vitaldc_t( 'Step 04: Review & Confirm', 'الخطوة 04: المراجعة والتأكيد' ),
+        'path' => vitaldc_t( 'Infrastructure Path: 100%', 'مسار البنية التحتية: 100%' ),
         'active_index' => 4,
     ),
 );
 
 $active_progress = $step_progress[ $current_path ] ?? $step_progress['/start'];
 $progress_steps = array(1, 2, 3, 4);
-$current_lang = vitaldc_get_current_language();
 ?>
 
 <!DOCTYPE html>

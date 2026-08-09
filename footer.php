@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Footer template for the VitalDC theme.
  */
@@ -10,7 +10,7 @@
             <span class="font-display-lg text-headline-md font-bold text-on-surface block mb-4 flex items-center">
                 <span class="text-export-orange">Vital</span>DC
             </span>
-            <p class="font-body-md text-on-surface-variant mb-6">Empowering Egyptian exporters with the digital foundations to lead in global markets.</p>
+            <p class="font-body-md text-on-surface-variant mb-6"><?php echo vitaldc_t('Empowering Egyptian exporters with the digital foundations to lead in global markets.', 'تمكين المصدرين المصريين بالأساسات الرقمية للريادة في الأسواق العالمية.'); ?></p>
             <div class="flex gap-4">
                 <a class="w-10 h-10 flex items-center justify-center border border-glass hover:text-export-orange transition-all" href="#"><span class="material-symbols-outlined text-sm" data-icon="language">language</span></a>
                 <a class="w-10 h-10 flex items-center justify-center border border-glass hover:text-export-orange transition-all" href="#"><span class="material-symbols-outlined text-sm" data-icon="share">share</span></a>
@@ -18,26 +18,26 @@
         </div>
         <div class="grid grid-cols-2 gap-stack-lg">
             <div class="space-y-4">
-                <h5 class="font-label-caps text-export-yellow text-label-caps">SOLUTIONS</h5>
+                <h5 class="font-label-caps text-export-yellow text-label-caps"><?php echo vitaldc_t('SOLUTIONS', 'الحلول'); ?></h5>
                 <ul class="space-y-2 font-body-md text-on-surface-variant">
-                    <li><a class="hover:text-export-orange transition-all" href="#">Professional Websites</a></li>
-                    <li><a class="hover:text-export-orange transition-all" href="#">Export Marketing</a></li>
-                    <li><a class="hover:text-export-orange transition-all" href="#">Growth Automation</a></li>
+                    <li><a class="hover:text-export-orange transition-all" href="#"><?php echo vitaldc_t('Professional Websites', 'مواقع احترافية'); ?></a></li>
+                    <li><a class="hover:text-export-orange transition-all" href="#"><?php echo vitaldc_t('Export Marketing', 'تسويق التصدير'); ?></a></li>
+                    <li><a class="hover:text-export-orange transition-all" href="#"><?php echo vitaldc_t('Growth Automation', 'أتمتة النمو'); ?></a></li>
                 </ul>
             </div>
             <div class="space-y-4">
                 <h5 class="font-label-caps text-export-yellow text-label-caps">VITALDC</h5>
                 <ul class="space-y-2 font-body-md text-on-surface-variant">
-                    <li><a class="hover:text-export-orange transition-all" href="#">Our Path</a></li>
-                    <li><a class="hover:text-export-orange transition-all" href="#">Privacy Policy</a></li>
-                    <li><a class="hover:text-export-orange transition-all" href="#">Contact Us</a></li>
+                    <li><a class="hover:text-export-orange transition-all" href="#methodology-section"><?php echo vitaldc_t('Our Path', 'مسارنا'); ?></a></li>
+                    <li><a class="hover:text-export-orange transition-all" href="#"><?php echo vitaldc_t('Privacy Policy', 'سياسة الخصوصية'); ?></a></li>
+                    <li><a class="hover:text-export-orange transition-all" href="/start"><?php echo vitaldc_t('Contact Us', 'اتصل بنا'); ?></a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-glass/30 text-on-surface-variant/50 font-label-caps text-[10px] flex justify-between">
-        <span>© 2024 VitalDC. DIGITAL FOUNDATIONS FOR EGYPTIAN EXPORTERS.</span>
-        <span class="hidden md:inline text-export-yellow/50">SYSTEM_STATUS: GLOBAL_READY</span>
+        <span><?php echo vitaldc_t('© 2024 VitalDC. DIGITAL FOUNDATIONS FOR EGYPTIAN EXPORTERS.', '© 2024 VitalDC. الأساسات الرقمية للمصدرين المصريين.'); ?></span>
+        <span class="hidden md:inline text-export-yellow/50"><?php echo vitaldc_t('SYSTEM_STATUS: GLOBAL_READY', 'حالة_النظام: جاهز_عالمياً'); ?></span>
     </div>
 </footer>
 <script>
