@@ -34,18 +34,18 @@
 <div class="flex flex-col gap-stack-md max-w-4xl">
 <div class="flex items-center gap-4 animate-pulse">
 <span class="w-2 h-2 bg-tertiary rounded-full"></span>
-<span class="font-label-caps text-label-caps text-tertiary tracking-widest"><?php echo vitaldc_t('PROTOCOL_ENTRY_001 // RECRUITMENT_PHASE', 'مدخل البروتوكول 001 // مرحلة التوظيف'); ?></span>
+<span class="font-label-caps text-label-caps text-tertiary tracking-widest"><?php echo vitaldc_t('JOIN OUR GROWING TEAM // CAREERS', 'انضم إلى فريقنا // الفرص الوظيفية'); ?></span>
 </div>
 <h1 class="text-on-surface font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1]">
-    <span><?php echo vitaldc_t('LAUNCH YOUR GLOBAL ', 'أطلق حضورك '); ?></span>
-    <span class="text-export-orange"><?php echo vitaldc_t('DIGITAL PRESENCE.', 'الرقمي العالمي.'); ?></span>
+    <span><?php echo vitaldc_t('BUILD THE FUTURE OF IT & ', 'ابنِ مستقبل التقنية والتسويق '); ?></span>
+    <span class="text-export-orange"><?php echo vitaldc_t('MARKETING WITH US.', 'مَعَنَا.'); ?></span>
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">
-    <?php echo vitaldc_t('Join a team engineering authority for Egyptian exporters. We are not just building software; we are deploying the critical infrastructure that connects regional manufacturers to the global digital economy.', 'انضم إلى فريق يبتكر المصداقية للمصدرين المصريين. نحن لا نبني برمجيات فحسب؛ بل ننشر البنية التحتية الحيوية التي تربط المصنعين الإقليميين بالاقتصاد الرقمي العالمي.'); ?>
+    <?php echo vitaldc_t('Join a passionate team dedicated to empowering beginner businesses and regional exporters. We combine creative digital marketing, accessible IT solutions, and high-impact design to help companies grow.', 'انضم إلى فريق شغوف ينشط لتمكين الشركات والشركات الناشئة والمصدرين الإقليميين. نجمع بين التسويق الرقمي الإبداعي والحلول التقنية الميسرة والتصميم المتميز لمساعدة الأعمال على التوسع.'); ?>
 </p>
 <div class="flex flex-wrap gap-gutter mt-stack-lg">
 <a class="bg-tertiary text-on-tertiary-fixed font-label-caps text-label-caps py-4 px-8 hover:bg-export-orange transition-all duration-300 flex items-center gap-2 group" href="#registry">
-    <span><?php echo vitaldc_t('VIEW ACTIVE REGISTRY', 'عرض السجل النشط'); ?></span>
+    <span><?php echo vitaldc_t('EXPLORE OPEN POSITIONS', 'استكشف الوظائف المتاحة'); ?></span>
     <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
 <button class="border border-secondary text-secondary font-label-caps text-label-caps py-4 px-8 hover:bg-secondary/10 transition-all duration-300">

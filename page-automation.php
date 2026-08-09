@@ -47,18 +47,18 @@
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
 <div class="max-w-3xl transition-all duration-700 opacity-100 translate-y-0">
 <div class="inline-block mb-stack-md bg-surface-variant/30 px-4 py-1 border border-border-glass">
-<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest"><?php echo vitaldc_t('Digital Infrastructure Protocol', 'بروتوكول البنية التحتية الرقمية'); ?></span>
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest"><?php echo vitaldc_t('SIMPLE IT & WORKFLOW SOLUTIONS', 'حلول تقنية وأتمتة مبسطة'); ?></span>
 </div>
 <h1 class="text-on-surface font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1]">
-    <span><?php echo vitaldc_t('LAUNCH YOUR GLOBAL ', 'أطلق حضورك '); ?></span>
-    <span class="text-export-orange"><?php echo vitaldc_t('DIGITAL PRESENCE.', 'الرقمي العالمي.'); ?></span>
+    <span><?php echo vitaldc_t('EASY IT SYSTEMS & AUTOMATION ', 'أنظمة تقنية وأتمتة سهلة '); ?></span>
+    <span class="text-export-orange"><?php echo vitaldc_t('FOR YOUR BUSINESS.', 'لِتَطْوِيرِ أَعْمَالِك.'); ?></span>
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl">
-    <?php echo vitaldc_t('From manual lead entry to predictive market intelligence. We deploy the AI layers that handle the friction, so you can focus on closing international deals.', 'من إدخال البيانات اليدوي إلى الذكاء التنبؤي بالسوق. نحن ننشر طبقات الذكاء الاصطناعي التي تتولى العقبات، لتتفرغ لإبرام الصفقة الدولية.'); ?>
+    <?php echo vitaldc_t('Streamline your daily operations with simple IT tools and smart automation. Save hours of manual work by organizing inquiries, customer contacts, and lead follow-ups automatically—no technical experience required.', 'بسط عملياتك اليومية بأدوات تقنية وأتمتة أسهل. وفّر ساعات من العمل اليدوي في تنظيم الاستفسارات، وتتبع العملاء الجدد تلقائياً—دون الحاجة لأي خبرة تقنية سابقاً.'); ?>
 </p>
 <div class="flex flex-col md:flex-row gap-4">
 <button class="bg-tertiary hover:bg-export-orange text-surface-deep font-label-caps text-label-caps px-8 py-4 transition-all duration-300 rounded-lg flex items-center justify-center gap-2 group">
-    <span><?php echo vitaldc_t('INITIALIZE AUTOMATION', 'بدء الأتمتة'); ?></span>
+    <span><?php echo vitaldc_t('START SIMPLE AUTOMATION', 'ابدأ الأتمتة السهلة'); ?></span>
     <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">bolt</span>
 </button>
 <button class="border border-border-glass hover:bg-surface-variant/20 text-white font-label-caps text-label-caps px-8 py-4 transition-all duration-300 rounded-lg">

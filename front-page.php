@@ -4,30 +4,30 @@
     <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-32">
         <div class="inline-flex items-center gap-2 mb-8 px-3 py-1 glass-card rounded-full">
             <span class="w-2 h-2 rounded-full bg-export-yellow animate-pulse"></span>
-            <span class="font-label-caps text-[10px] text-export-yellow tracking-widest uppercase"><?php echo vitaldc_t('Now Launching Egyptian Brands Globally', 'نُطلق العلامات المصرية عالمياً الآن'); ?></span>
+            <span class="font-label-caps text-[10px] text-export-yellow tracking-widest uppercase"><?php echo vitaldc_t('Empowering Businesses Digitally', 'نُمكّن الأعمال رقمياً بثقة'); ?></span>
         </div>
         <h1 class=" text-on-surface font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1]">
-            <span><?php echo vitaldc_t('LAUNCH YOUR GLOBAL ', 'أطلق حضورك '); ?></span><span class="text-export-orange"><?php echo vitaldc_t('DIGITAL PRESENCE.', 'الرقمي العالمي.'); ?></span>
+            <span><?php echo vitaldc_t('BUILD YOUR DIGITAL PRESENCE & ', 'ابنِ حضورك الرقمي '); ?></span><span class="text-export-orange"><?php echo vitaldc_t('GROW YOUR BRAND.', 'وَنَمِّ عُلاَمَتَكَ التِّجَارِيَّةَ.'); ?></span>
         </h1>
         <p class="font-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">
-            <?php echo vitaldc_t('Stop being invisible to international buyers. We build your first professional gateway to global markets, taking you from zero online presence to a world-class digital brand.', 'توقف عن الاختفاء أمام المشترين الدوليين. نبني بوابتك المهنية الأولى للأسواق العالمية، وننقلك من الصفر على الإنترنت إلى علامة رقمية عالمية المستوى.'); ?>
+            <?php echo vitaldc_t('Your step-by-step partner for IT and modern marketing. We take you from zero online presence to a trusted, professional brand with complete guidance for non-tech teams.', 'شريكك خطوة بخطوة في التقنية والتسويق الحديث. ننقلك من الصفر على الإنترنت إلى علامة تجارية موثوقة واحترافية مع تقديم الدعم الكامل للفرق غير التقنية.'); ?>
         </p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-3xl mb-stack-lg">
             <div class="p-6 glass-card border-t-2 border-t-export-yellow">
                 <div class="text-export-yellow font-display-lg text-headline-lg mb-1"><?php echo vitaldc_t('0 to 1', 'من 0 إلى 1'); ?></div>
-                <div class="font-label-caps text-label-caps text-on-surface-variant"><?php echo vitaldc_t('Digital Onboarding', 'الانطلاق الرقمي'); ?></div>
+                <div class="font-label-caps text-label-caps text-on-surface-variant"><?php echo vitaldc_t('Easy Onboarding', 'انطلاق سلس ومبسط'); ?></div>
             </div>
             <div class="p-6 glass-card border-t-2 border-t-export-orange">
                 <div class="text-export-orange font-display-lg text-headline-lg mb-1">100%</div>
-                <div class="font-label-caps text-label-caps text-on-surface-variant"><?php echo vitaldc_t('Data Ownership', 'ملكية البيانات'); ?></div>
+                <div class="font-label-caps text-label-caps text-on-surface-variant"><?php echo vitaldc_t('Full Support', 'دعم وإرشاد كامل'); ?></div>
             </div>
             <div class="p-6 glass-card border-t-2 border-t-export-yellow">
                 <div class="text-export-yellow font-display-lg text-headline-lg mb-1"><?php echo vitaldc_t('Global', 'عالمي'); ?></div>
-                <div class="font-label-caps text-label-caps text-on-surface-variant"><?php echo vitaldc_t('Buyer Network', 'شبكة المشترين'); ?></div>
+                <div class="font-label-caps text-label-caps text-on-surface-variant"><?php echo vitaldc_t('Market Reach', 'وصول للأسواق'); ?></div>
             </div>
         </div>
         <div class="flex flex-wrap gap-4">
-            <a class="bg-export-orange text-white px-8 py-4 font-label-caps text-label-caps font-bold transition-all hover:scale-[1.02] shadow-[0_0_20px_rgba(251,133,0,0.3)]" href="/start"><?php echo vitaldc_t('Go Digital Now', 'انطلق رقمياً الآن'); ?></a>
+            <a class="bg-export-orange text-white px-8 py-4 font-label-caps text-label-caps font-bold transition-all hover:scale-[1.02] shadow-[0_0_20px_rgba(251,133,0,0.3)]" href="/start"><?php echo vitaldc_t('Start Your Journey', 'ابدأ رحلتك الآن'); ?></a>
             <a class="border border-export-yellow text-export-yellow px-8 py-4 font-label-caps text-label-caps font-bold transition-all hover:bg-export-yellow/10" href="#methodology-section"><?php echo vitaldc_t('Explore Our Path', 'استكشف مسارنا'); ?></a>
         </div>
     </div>

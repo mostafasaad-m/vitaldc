@@ -31,13 +31,13 @@
 <section class="relative min-h-screen flex flex-col justify-center overflow-hidden">
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-32 w-full grid grid-cols-12 gap-gutter">
 <div class="col-span-12 lg:col-span-8">
-<span class="inline-block font-label-caps text-label-caps text-tertiary mb-4 tracking-widest border-l-2 border-tertiary pl-4"><?php echo vitaldc_t('EXPORT ACCELERATION PROTOCOL', 'بروتوكول تسريع التصدير'); ?></span>
+<span class="inline-block font-label-caps text-label-caps text-tertiary mb-4 tracking-widest border-l-2 border-tertiary pl-4"><?php echo vitaldc_t('BEGINNER-FRIENDLY MARKETING SOLUTIONS', 'حلول تسويق مبسطة للجميع'); ?></span>
 <h1 class="text-on-surface font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1]">
-    <span><?php echo vitaldc_t('LAUNCH YOUR GLOBAL ', 'أطلق حضورك '); ?></span>
-    <span class="text-export-orange"><?php echo vitaldc_t('DIGITAL PRESENCE.', 'الرقمي العالمي.'); ?></span>
+    <span><?php echo vitaldc_t('SMART DIGITAL MARKETING THAT ', 'تسويق رقمي ذكي '); ?></span>
+    <span class="text-export-orange"><?php echo vitaldc_t('ATTRACTS REAL BUYERS.', 'يجذب المشترين الحقيقيين.'); ?></span>
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-stack-lg leading-relaxed">
-    <?php echo vitaldc_t("Don't wait for buyers to find you. We build the digital infrastructure to put your brand in front of high-intent international importers, decision-makers, and distribution giants.", 'لا تنتظر حتى يجدك المشترون. نحن نبني البنية التحتية الرقمية لوضع علامتك التجارية أمام المستوردين الدوليين، وصناع القرار، وعمالقة التوزيع ذوي النية العالية.'); ?>
+    <?php echo vitaldc_t('Reach your target audience with simple, effective digital campaigns. We create targeted search ads, clear social media strategies, and engaging brand copy that turns interested visitors into paying customers—no marketing degree needed.', 'صل إلى جمهورك المستهدف بحملات رقمية سهلة وفعالة. نبتكر إعلانات بحث موجهة، واستراتيجيات تواصل اجتماعي واضحة، ومحتوى جذاب يحول الزوار إلى عملاء حقيقيين—دون الحاجة لخبرة تسويقية معقدة.'); ?>
 </p>
 <div class="flex flex-wrap gap-stack-md">
 <button class="bg-[#FFB703] text-black px-8 py-4 font-label-caps font-bold text-lg hover:bg-export-orange transition-all flex items-center gap-3 group">
