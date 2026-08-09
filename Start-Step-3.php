@@ -152,7 +152,7 @@
 </div>
 </div>
 </div>
-<div class="col-span-1 border-l-0 lg:border-l border-glass lg:pl-gutter">
+<!-- <div class="col-span-1 border-l-0 lg:border-l border-glass lg:pl-gutter">
 <h4 class="font-label-caps text-label-caps text-surface-deep mb-4 uppercase"><?php echo vitaldc_t('System Metadata', 'بيانات النظام الوصفية'); ?></h4>
 <ul class="space-y-4 font-label-caps text-[12px] text-surface-variant">
 <li class="flex justify-between border-b border-surface-container-low pb-2">
@@ -174,7 +174,7 @@
 </ul>
 </div>
 </div>
-</div>
+</div> -->
 
 </main>
 <script>
