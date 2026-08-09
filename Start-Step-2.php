@@ -70,10 +70,11 @@
 <section class="relative bg-white text-surface-deep flex-grow px-margin-mobile pt-10 grid-pattern">
 <div class="max-w-container-max mx-auto relative z-10">
 <header class="mb-stack-lg border-l-4 border-export-orange pl-6">
-<span class="font-label-caps text-label-caps text-on-surface-variant mono mb-2 block"><?php echo vitaldc_t('REGISTRY_ALLOCATION', 'تخصيص_السجل'); ?></span>
-<h2 class="font-display-lg text-headline-lg geist text-surface-deep uppercase"><?php echo vitaldc_t('Infrastructure Tiers', 'مستويات البنية التحتية'); ?></h2>
+<header class="mb-stack-lg border-l-4 border-export-orange pl-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant mono mb-2 block"><?php echo vitaldc_t('CHOOSE YOUR PLAN', 'اختر_باقتك'); ?></span>
+<h2 class="font-display-lg text-headline-lg geist text-surface-deep uppercase"><?php echo vitaldc_t('Service Packages', 'باقات الخدمات والنمو'); ?></h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">
-                        <?php echo vitaldc_t('Select the operational capacity for your global trade architecture. All nodes include automated compliance auditing and real-time ledger synchronization.', 'اختر السعة التشغيلية لبنية التجارة العالمية الخاصة بك. تتضمن جميع العقد تدقيق الامتثال الآلي والمزامنة المباشرة للسجل.'); ?>
+                        <?php echo vitaldc_t('Select the right package for your business size and growth goals. All packages include custom design, mobile optimization, and dedicated support.', 'اختر الباقة المناسبة لحجم أعمالك وأهداف نموك. تشمل جميع الباقات تصميماً مخصصاً، وملاءمة للهواتف، ودعماً كاملاً.'); ?>
                     </p>
 </header>
 <!-- Bento Grid / Package Layout -->
@@ -82,8 +83,8 @@
 <div class="package-card flex flex-col bg-white border border-slate-200 p-8 transition-all duration-300 hover:border-export-orange group">
 <div class="flex justify-between items-start mb-10">
 <div>
-<span class="font-label-caps text-label-sm mono text-on-surface-variant">NODE_TYPE: S</span>
-<h3 class="font-headline-md text-headline-md geist font-bold text-surface-deep mt-1"><?php echo vitaldc_t('Core Infrastructure', 'البنية التحتية الأساسية'); ?></h3>
+<span class="font-label-caps text-label-sm mono text-on-surface-variant"><?php echo vitaldc_t('STARTER PLAN', 'باقة البداية'); ?></span>
+<h3 class="font-headline-md text-headline-md geist font-bold text-surface-deep mt-1"><?php echo vitaldc_t('Starter Digital Package', 'باقة الانطلاق الرقمي'); ?></h3>
 </div>
 <span class="material-symbols-outlined text-4xl text-slate-300 group-hover:text-export-orange transition-colors">database</span>
 </div>
@@ -91,27 +92,27 @@
 <ul class="space-y-4 mb-10">
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Digital Asset Registry', 'سجل الأصول الرقمية'); ?></span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Custom Website & Domain Setup', 'موقع مخصص وإعداد النطاق'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Basic Protocol Support', 'دعم البروتوكول الأساسي'); ?></span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Mobile Responsive Design', 'تصميم محسّن للهواتف الذكية'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Unified Ledger View', 'عرض السجل الموحد'); ?></span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Basic Contact Form & Support', 'نموذج تواصل ودعم أساسي'); ?></span>
 </li>
 </ul>
 <div class="pt-6 border-t border-slate-100 mb-8">
-<span class="font-label-caps text-label-sm mono text-slate-400 block mb-3">TECH_SPECS</span>
+<span class="font-label-caps text-label-sm mono text-slate-400 block mb-3">KEY_SPECS</span>
 <div class="grid grid-cols-2 gap-4">
 <div>
-<p class="text-[10px] mono text-slate-400">UPTIME_SLA</p>
-<p class="font-label-caps text-label-sm text-surface-deep">99.9%</p>
+<p class="text-[10px] mono text-slate-400">SPEED_SCORE</p>
+<p class="font-label-caps text-label-sm text-surface-deep">99+</p>
 </div>
 <div>
-<p class="text-[10px] mono text-slate-400">API_LIMIT</p>
-<p class="font-label-caps text-label-sm text-surface-deep">10k/hr</p>
+<p class="text-[10px] mono text-slate-400">SUPPORT</p>
+<p class="font-label-caps text-label-sm text-surface-deep">Standard</p>
 </div>
 </div>
 </div>
@@ -123,12 +124,12 @@
 <!-- Package M (Highlighted) -->
 <div class="package-card active-package flex flex-col bg-white border-2 border-export-orange p-8 transition-all duration-300 relative">
 <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-export-orange text-black px-4 py-1 font-label-caps text-[10px] tracking-widest font-bold">
-                            <?php echo vitaldc_t('RECOMMENDED_STAGING', 'المستوى_الموصى_به'); ?>
+                            <?php echo vitaldc_t('MOST_POPULAR', 'الأكثر_طلباً'); ?>
                         </div>
 <div class="flex justify-between items-start mb-10">
 <div>
-<span class="font-label-caps text-label-sm mono text-export-orange">NODE_TYPE: M</span>
-<h3 class="font-headline-md text-headline-md geist font-bold text-surface-deep mt-1"><?php echo vitaldc_t('Growth Infrastructure', 'بنية النمو التحتية'); ?></h3>
+<span class="font-label-caps text-label-sm mono text-export-orange"><?php echo vitaldc_t('GROWTH PLAN', 'باقة النمو والتسويق'); ?></span>
+<h3 class="font-headline-md text-headline-md geist font-bold text-surface-deep mt-1"><?php echo vitaldc_t('Growth & Marketing Package', 'باقة النمو والتسويق'); ?></h3>
 </div>
 <span class="material-symbols-outlined text-4xl text-export-orange">rocket_launch</span>
 </div>
@@ -136,31 +137,31 @@
 <ul class="space-y-4 mb-10">
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-surface-deep font-semibold"><?php echo vitaldc_t('Everything in Core', 'كل ما في الأساسية'); ?></span>
+<span class="font-body-md text-body-md text-surface-deep font-semibold"><?php echo vitaldc_t('Everything in Starter Package', 'كل ما في باقة البداية'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Modern Marketing (LinkedIn/Google)', 'التسويق الحديث (LinkedIn/Google)'); ?></span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Google & Social Media Campaigns', 'إعلانات جوجل والتواصل الاجتماعي'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('CRM Sync Bridge', 'جسر مزامنة CRM'); ?></span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Automated Lead Capture & CRM', 'التقاط العملاء التلقائي وإدارة CRM'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Multi-Market Expansion Kit', 'حزمة التوسع متعددة الأسواق'); ?></span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('SEO & Global Visibility', 'تهيئة محركات البحث للظهور العالمي'); ?></span>
 </li>
 </ul>
 <div class="pt-6 border-t border-slate-100 mb-8">
-<span class="font-label-caps text-label-sm mono text-slate-400 block mb-3">TECH_SPECS</span>
+<span class="font-label-caps text-label-sm mono text-slate-400 block mb-3">KEY_SPECS</span>
 <div class="grid grid-cols-2 gap-4">
 <div>
-<p class="text-[10px] mono text-slate-400">UPTIME_SLA</p>
-<p class="font-label-caps text-label-sm text-surface-deep">99.95%</p>
+<p class="text-[10px] mono text-slate-400">SPEED_SCORE</p>
+<p class="font-label-caps text-label-sm text-surface-deep">99+</p>
 </div>
 <div>
-<p class="text-[10px] mono text-slate-400">API_LIMIT</p>
-<p class="font-label-caps text-label-sm text-surface-deep">50k/hr</p>
+<p class="text-[10px] mono text-slate-400">SUPPORT</p>
+<p class="font-label-caps text-label-sm text-surface-deep">Priority</p>
 </div>
 </div>
 </div>
@@ -173,8 +174,8 @@
 <div class="package-card flex flex-col bg-white border border-slate-200 p-8 transition-all duration-300 hover:border-export-orange group">
 <div class="flex justify-between items-start mb-10">
 <div>
-<span class="font-label-caps text-label-sm mono text-on-surface-variant">NODE_TYPE: L</span>
-<h3 class="font-headline-md text-headline-md geist font-bold text-surface-deep mt-1"><?php echo vitaldc_t('Enterprise Protocol', 'بروتوكول المؤسسات'); ?></h3>
+<span class="font-label-caps text-label-sm mono text-on-surface-variant"><?php echo vitaldc_t('COMPLETE SUITE', 'الباقة الشاملة'); ?></span>
+<h3 class="font-headline-md text-headline-md geist font-bold text-surface-deep mt-1"><?php echo vitaldc_t('Complete Digital & Automation Suite', 'الباقة الرقمية والأتمتة الشاملة'); ?></h3>
 </div>
 <span class="material-symbols-outlined text-4xl text-slate-300 group-hover:text-export-orange transition-colors">hub</span>
 </div>
@@ -182,19 +183,19 @@
 <ul class="space-y-4 mb-10">
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-surface-deep font-semibold"><?php echo vitaldc_t('Full Growth Suite', 'مجموعة النمو الكاملة'); ?></span>
+<span class="font-body-md text-body-md text-surface-deep font-semibold"><?php echo vitaldc_t('Complete Website & Marketing', 'الموقع الكامل والتسويق الشامل'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('AI-Powered Automation', 'أتمتة بالذكاء الاصطناعي'); ?></span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Smart AI Lead Assistant', 'المساعد الآلي الذكي للعملاء'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Predictive Intelligence', 'الذكاء التنبؤي'); ?></span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Advanced Sales Analytics', 'تحليلات مبيعات متقدمة'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-export-orange text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('24/7 Dedicated Engineering', 'هندسة مخصصة 24/7'); ?></span>
+<span class="font-body-md text-body-md text-slate-600"><?php echo vitaldc_t('Dedicated Priority Support', 'دعم فني واستشاري مخصص'); ?></span>
 </li>
 </ul>
 <div class="pt-6 border-t border-slate-100 mb-8">

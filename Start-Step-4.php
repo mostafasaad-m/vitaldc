@@ -30,12 +30,12 @@
 <div class="max-w-container-max mx-auto px-gutter">
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter">
 <div>
-<p class="font-label-caps text-label-caps text-export-orange mb-stack-sm tracking-widest"><?php echo vitaldc_t('STEP 04 OF 04 : FINAL_INITIALIZATION', 'الخطوة 04 من 04: تهيئة_نهائية'); ?></p>
-<h1 class="font-headline-lg text-headline-lg font-extrabold tracking-tight uppercase"><?php echo vitaldc_t('Review Protocol Deployment', 'مراجعة نشر البروتوكول'); ?></h1>
+<p class="font-label-caps text-label-caps text-export-orange mb-stack-sm tracking-widest"><?php echo vitaldc_t('STEP 04 OF 04 : FINAL REVIEW', 'الخطوة 04 من 04: المراجعة النهائية'); ?></p>
+<h1 class="font-headline-lg text-headline-lg font-extrabold tracking-tight uppercase"><?php echo vitaldc_t('Review Your Order & Confirm', 'مراجعة وتأكيد طلبك'); ?></h1>
 </div>
 <div class="font-label-caps text-label-sm text-outline-variant text-right border-l-2 border-export-orange pl-4">
-                        SYSTEM_ID: VDC-8821-X<br>
-                        REGION: EGY-CAI-NORTH
+                        ORDER_ID: VDC-8821<br>
+                        REGION: EGYPT & GLOBAL
                     </div>
 </div>
 </div>
@@ -51,32 +51,32 @@
 <section>
 <div class="flex items-center gap-3 mb-stack-md">
 <span class="material-symbols-outlined text-export-orange">inventory_2</span>
-<h2 class="font-headline-md text-headline-md font-bold uppercase tracking-tight"><?php echo vitaldc_t('Deployment Summary', 'ملخص النشر'); ?></h2>
+<h2 class="font-headline-md text-headline-md font-bold uppercase tracking-tight"><?php echo vitaldc_t('Selected Package & Features', 'ملخص الباقة والميزات'); ?></h2>
 </div>
 <div class="space-y-4">
 <!-- Tier Selection -->
 <div class="p-6 border border-surface-container-low rounded bg-surface-container-lowest/50 flex justify-between items-center group hover:border-export-orange transition-colors">
 <div>
-<p class="font-label-caps text-xs text-outline-variant uppercase mb-1"><?php echo vitaldc_t('Infrastructure Tier', 'مستوى البنية التحتية'); ?></p>
-<p class="font-headline-md text-headline-md font-bold"><?php echo vitaldc_t('Growth Infrastructure - Tier M', 'بنية النمو التحتية - المستوى M'); ?></p>
+<p class="font-label-caps text-xs text-outline-variant uppercase mb-1"><?php echo vitaldc_t('Selected Package', 'الباقة المختارة'); ?></p>
+<p class="font-headline-md text-headline-md font-bold"><?php echo vitaldc_t('Growth & Marketing Package', 'باقة النمو والتسويق'); ?></p>
 </div>
 <span class="material-symbols-outlined text-outline group-hover:text-export-orange transition-colors">edit</span>
 </div>
 <!-- Extensions -->
 <div class="p-6 border border-surface-container-low rounded bg-surface-container-lowest/50">
-<p class="font-label-caps text-xs text-outline-variant uppercase mb-4"><?php echo vitaldc_t('Active Protocol Extensions', 'امتدادات البروتوكول النشطة'); ?></p>
+<p class="font-label-caps text-xs text-outline-variant uppercase mb-4"><?php echo vitaldc_t('Selected Add-on Features', 'الميزات الإضافية المختارة'); ?></p>
 <div class="flex flex-wrap gap-3">
 <div class="flex items-center gap-2 px-3 py-1.5 bg-primary-container text-primary rounded-sm border border-primary/20">
 <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">security</span>
-<span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('Security+ Protocol', 'بروتوكول الأمان+'); ?></span>
+<span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('Security & SSL Shield', 'حماية الأمان وشهادة SSL'); ?></span>
 </div>
 <div class="flex items-center gap-2 px-3 py-1.5 bg-primary-container text-primary rounded-sm border border-primary/20">
 <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">analytics</span>
-<span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('Advanced Analytics', 'التحليلات المتقدمة'); ?></span>
+<span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('Smart Sales Analytics', 'تحليلات المبيعات الذكية'); ?></span>
 </div>
 <div class="flex items-center gap-2 px-3 py-1.5 bg-primary-container text-primary rounded-sm border border-primary/20">
 <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">language</span>
-<span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('Global CDN Node', 'عقدة CDN العالمية'); ?></span>
+<span class="font-label-caps text-xs uppercase font-bold"><?php echo vitaldc_t('High-Speed CDN', 'تسريع الأداء والوصول السريع'); ?></span>
 </div>
 </div>
 </div>
@@ -85,21 +85,21 @@
 <section>
 <div class="flex items-center gap-3 mb-stack-md">
 <span class="material-symbols-outlined text-export-orange">gavel</span>
-<h2 class="font-headline-md text-headline-md font-bold uppercase tracking-tight"><?php echo vitaldc_t('Terms & Compliance', 'الشروط والامتثال'); ?></h2>
+<h2 class="font-headline-md text-headline-md font-bold uppercase tracking-tight"><?php echo vitaldc_t('Terms & Service Agreement', 'الشروط واتفاقية الخدمة'); ?></h2>
 </div>
 <div class="space-y-4">
 <label class="flex items-start gap-4 p-4 border border-surface-container-low rounded cursor-pointer hover:bg-surface-container-lowest transition-colors">
 <input checked="" class="mt-1 w-5 h-5 rounded border-outline-variant text-export-orange focus:ring-export-orange" type="checkbox">
 <div>
-<p class="font-label-caps text-sm font-bold uppercase"><?php echo vitaldc_t('Data Sovereignty Clause', 'بند سيادة البيانات'); ?></p>
-<p class="text-sm text-outline-variant mt-1"><?php echo vitaldc_t("Confirm that all exported data assets remain within Egypt's regional infrastructure as per VDC Regulatory Compliance v2.0.", 'تأكيد بقاء جميع أصول البيانات المصدرة ضمن البنية التحتية الإقليمية لمصر وفق الامتثال التنظيمي.'); ?></p>
+<p class="font-label-caps text-sm font-bold uppercase"><?php echo vitaldc_t('Client Data & IP Guarantee', 'ضمان ملكية البيانات والملكية الفكرية'); ?></p>
+<p class="text-sm text-outline-variant mt-1"><?php echo vitaldc_t('Confirm that your company retains 100% full ownership of your domain, website assets, and customer lists.', 'تأكيد احتفاظ شركتك بملكية كاملة 100% لنطاقك وأصول موقعك وقوائم عملائك.'); ?></p>
 </div>
 </label>
 <label class="flex items-start gap-4 p-4 border border-surface-container-low rounded cursor-pointer hover:bg-surface-container-lowest transition-colors">
 <input class="mt-1 w-5 h-5 rounded border-outline-variant text-export-orange focus:ring-export-orange" type="checkbox">
 <div>
-<p class="font-label-caps text-sm font-bold uppercase"><?php echo vitaldc_t('Protocol Governance Agreement', 'اتفاقية حوكمة البروتوكول'); ?></p>
-<p class="text-sm text-outline-variant mt-1"><?php echo vitaldc_t('Accept the terms of automated scaling and resource allocation during peak export periods.', 'الموافقة على شروط التوسع الآلي وتخصيص الموارد خلال فترات التصدير الذروية.'); ?></p>
+<p class="font-label-caps text-sm font-bold uppercase"><?php echo vitaldc_t('Service Onboarding Agreement', 'اتفاقية الانطلاق والخدمات'); ?></p>
+<p class="text-sm text-outline-variant mt-1"><?php echo vitaldc_t('Accept terms of dedicated onboarding, continuous support, and campaign launch setup.', 'الموافقة على شروط المتابعة والدعم المستمر وتجهيز إطلاق الخدمات.'); ?></p>
 </div>
 </label>
 </div>
@@ -113,27 +113,27 @@
 <div class="absolute top-0 right-0 p-4 opacity-10">
 <span class="material-symbols-outlined text-8xl">memory</span>
 </div>
-<h3 class="font-label-caps text-label-caps text-secondary mb-6 border-b border-glass pb-2 uppercase tracking-widest"><?php echo vitaldc_t('Technical Specifications', 'المواصفات الفنية'); ?></h3>
+<h3 class="font-label-caps text-label-caps text-secondary mb-6 border-b border-glass pb-2 uppercase tracking-widest"><?php echo vitaldc_t('Package Guarantee', 'ضمانات الخدمة'); ?></h3>
 <div class="space-y-6">
 <div class="flex justify-between items-end">
-<span class="font-label-caps text-xs text-outline uppercase"><?php echo vitaldc_t('SLA Uptime', 'اتفاقية مستوى الخدمة'); ?></span>
-<span class="font-label-caps text-lg font-bold text-secondary">99.99%</span>
+<span class="font-label-caps text-xs text-outline uppercase"><?php echo vitaldc_t('Target Speed', 'درجة السرعة Target'); ?></span>
+<span class="font-label-caps text-lg font-bold text-secondary">99+ Lighthouse</span>
 </div>
 <div class="flex justify-between items-end">
-<span class="font-label-caps text-xs text-outline uppercase"><?php echo vitaldc_t('Encryption', 'التشفير'); ?></span>
-<span class="font-label-caps text-lg font-bold text-white">AES-256-GCM</span>
+<span class="font-label-caps text-xs text-outline uppercase"><?php echo vitaldc_t('Security Shield', 'مستوى الأمان'); ?></span>
+<span class="font-label-caps text-lg font-bold text-white">SSL Encrypted</span>
 </div>
 <div class="flex justify-between items-end">
-<span class="font-label-caps text-xs text-outline uppercase"><?php echo vitaldc_t('Provisioning Time', 'وقت الإعداد'); ?></span>
-<span class="font-label-caps text-lg font-bold text-export-orange">&lt; 15.0m</span>
+<span class="font-label-caps text-xs text-outline uppercase"><?php echo vitaldc_t('Onboarding Time', 'مدة الإعداد'); ?></span>
+<span class="font-label-caps text-lg font-bold text-export-orange">&lt; 24 Hours</span>
 </div>
 <div class="pt-6 mt-6 border-t border-glass">
 <div class="flex items-center gap-2 mb-2">
 <span class="w-2 h-2 bg-secondary rounded-full"></span>
-<span class="font-label-caps text-[10px] text-outline uppercase"><?php echo vitaldc_t('Infrastructure Health Check', 'فحص صحة البنية التحتية'); ?></span>
+<span class="font-label-caps text-[10px] text-outline uppercase"><?php echo vitaldc_t('System Readiness Check', 'فحص جاهزية النظام'); ?></span>
 </div>
 <div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
-<div class="bg-secondary h-full w-[88%] animate-pulse"></div>
+<div class="bg-secondary h-full w-[100%] animate-pulse"></div>
 </div>
 </div>
 </div>
@@ -144,11 +144,11 @@
 <div class="bg-export-orange text-surface-deep p-2 rounded">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
 </div>
-<h4 class="font-label-caps text-sm font-bold text-surface-deep uppercase"><?php echo vitaldc_t('Final Confirmation', 'التأكيد النهائي'); ?></h4>
+<h4 class="font-label-caps text-sm font-bold text-surface-deep uppercase"><?php echo vitaldc_t('Final Confirmation', 'التأكيد النهائي والبدء'); ?></h4>
 </div>
-<p class="text-sm text-outline-variant"><?php echo vitaldc_t('By initializing, you authorize VitalDC to provision the requested resources and activate the selected security protocols immediately.', 'عند البدء، تمنح التخويل لـ VitalDC لإعداد الموارد المطلوبة وتفعيل بروتوكولات الأمان المختارة فوراً.'); ?></p>
+<p class="text-sm text-outline-variant"><?php echo vitaldc_t('By submitting, you authorize VitalDC to process your request and begin setting up your custom package immediately.', 'تأكيد الطلب يتيح لـ VitalDC البدء فوراً في إعداد باقتك وتجهيز خدماتك.'); ?></p>
 <button class="w-full py-4 bg-export-orange text-surface-deep font-label-caps font-extrabold uppercase tracking-widest rounded shadow-lg hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-3">
-    <span><?php echo vitaldc_t('Initialize Deployment', 'بدء النشر'); ?></span>
+    <span><?php echo vitaldc_t('Submit & Launch Order', 'تأكيد وإرسال الطلب'); ?></span>
     <span class="material-symbols-outlined">chevron_right</span>
 </button>
 </div>
@@ -163,19 +163,19 @@
 <div class="max-w-container-max mx-auto px-gutter relative z-10">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg text-center md:text-left">
 <div class="space-y-4">
-<span class="font-label-caps text-secondary text-xs uppercase tracking-widest"><?php echo vitaldc_t('Global Reach', 'الوصول العالمي'); ?></span>
-<h4 class="font-headline-md text-white font-bold uppercase"><?php echo vitaldc_t('Multi-Region Redundancy', 'التكرار متعدد المناطق'); ?></h4>
-<p class="text-on-surface-variant text-sm"><?php echo vitaldc_t('Your infrastructure is mirrored across CAI-01 and AMS-04 nodes to ensure 24/7 export availability.', 'تمت مزامنة بنيتك التحتية عبر عقد CAI-01 و AMS-04 لضمان توفر التصدير على مدار الساعة.'); ?></p>
+<span class="font-label-caps text-secondary text-xs uppercase tracking-widest"><?php echo vitaldc_t('Global Visibility', 'ظهور عالمي'); ?></span>
+<h4 class="font-headline-md text-white font-bold uppercase"><?php echo vitaldc_t('Fast Global Access', 'وصول عالمي سريع'); ?></h4>
+<p class="text-on-surface-variant text-sm"><?php echo vitaldc_t('Your website is optimized for lightning-fast loading across all regional and international markets.', 'موقعك محسّن للتحميل الفائق عبر جميع الأسواق المحلية والعالمية.'); ?></p>
 </div>
 <div class="space-y-4">
-<span class="font-label-caps text-secondary text-xs uppercase tracking-widest"><?php echo vitaldc_t('Security First', 'الأمان أولاً'); ?></span>
-<h4 class="font-headline-md text-white font-bold uppercase"><?php echo vitaldc_t('Zero-Trust Architecture', 'هندسة الثقة الصفرية'); ?></h4>
-<p class="text-on-surface-variant text-sm"><?php echo vitaldc_t('Every data packet is validated against the selected Security+ Protocol before crossing gateway thresholds.', 'يتم التحقق من كل حزمة بيانات وفق بروتوكول الأمان+ المختار قبل عبور البوابة.'); ?></p>
+<span class="font-label-caps text-secondary text-xs uppercase tracking-widest"><?php echo vitaldc_t('Security & Trust', 'الأمان والثقة'); ?></span>
+<h4 class="font-headline-md text-white font-bold uppercase"><?php echo vitaldc_t('Protected Data & Forms', 'حماية البيانات والنماذج'); ?></h4>
+<p class="text-on-surface-variant text-sm"><?php echo vitaldc_t('All customer submissions and company records are encrypted and securely protected.', 'جميع بيانات العملاء وسجلات الشركة محمية ومشفّرة بأمان.'); ?></p>
 </div>
 <div class="space-y-4">
-<span class="font-label-caps text-secondary text-xs uppercase tracking-widest"><?php echo vitaldc_t('Speed Optimization', 'تحسين السرعة'); ?></span>
-<h4 class="font-headline-md text-white font-bold uppercase"><?php echo vitaldc_t('Light-Speed Routes', 'مسارات بسرعة الضوء'); ?></h4>
-<p class="text-on-surface-variant text-sm"><?php echo vitaldc_t('Direct peering with major European trade hubs reduces latency by an estimated 45ms.', 'الربط المباشر مع مراكز التجارة الأوروبية الرئيسية يقلل زمن التناقل بمقدار 45 ميلي ثانية.'); ?></p>
+<span class="font-label-caps text-secondary text-xs uppercase tracking-widest"><?php echo vitaldc_t('Ongoing Support', 'الدعم المستمر'); ?></span>
+<h4 class="font-headline-md text-white font-bold uppercase"><?php echo vitaldc_t('Expert Team Support', 'فريق دعم متخصص'); ?></h4>
+<p class="text-on-surface-variant text-sm"><?php echo vitaldc_t('Our dedicated team guides you through every step of your digital and marketing journey.', 'يقوم فريقنا المتخصص بمرافقتك في كل خطوة من رحلتك الرقمية والتسويقية.'); ?></p>
 </div>
 </div>
 </div>

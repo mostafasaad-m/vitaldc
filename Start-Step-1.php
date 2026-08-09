@@ -17,31 +17,31 @@ input{color:#fff!important;}
 <!-- Left Sidebar (Contextual Info) -->
 <div class="md:w-1/3 bg-surface-container-low text-white p-stack-lg flex flex-col justify-between border-r border-glass">
 <div>
-<span class="font-label-caps text-label-caps text-tertiary block mb-stack-md"><?php echo vitaldc_t('PROTOCOL_INSTRUCTIONS', 'تعليمات_البروتوكول'); ?></span>
+<span class="font-label-caps text-label-caps text-tertiary block mb-stack-md"><?php echo vitaldc_t('GET STARTED', 'ابدأ الخطوة الأولى'); ?></span>
 <p class="font-body-md text-on-surface-variant mb-stack-lg leading-relaxed">
-    <?php echo vitaldc_t('Complete the initial identity verification block. This data forms the cryptographic root for your Egyptian export dashboard and global trade logistics routing.', 'أكمل كتل التحقق الأولية من الهوية. تشكل هذه البيانات الجذر المشفر للوحة تحكم التصدير المصرية وتوجيه الخدمات اللوجستية للتجارة العالمية.'); ?>
+    <?php echo vitaldc_t('Provide your business contact details so our team can tailor your website build, IT automation, and marketing strategy.', 'أدخل بيانات التواصل الخاصة بشركتك لنتمكن من تخصيص بناء موقعك، وأتمتة خدماتك، وخطتك التسويقية.'); ?>
 </p>
 <ul class="space-y-4">
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="text-xs font-label-caps text-on-surface"><?php echo vitaldc_t('Identity Validation', 'التحقق من الهوية'); ?></span>
+<span class="text-xs font-label-caps text-on-surface"><?php echo vitaldc_t('Company Details', 'تفاصيل الشركة'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="text-xs font-label-caps text-on-surface"><?php echo vitaldc_t('Domain Verification', 'التحقق من النطاق'); ?></span>
+<span class="text-xs font-label-caps text-on-surface"><?php echo vitaldc_t('Website & Contact', 'الموقع والتواصل'); ?></span>
 </li>
 <li class="flex items-start gap-3">
 <span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="text-xs font-label-caps text-on-surface"><?php echo vitaldc_t('Contact Secure Protocol', 'بروتوكول الاتصال الآمن'); ?></span>
+<span class="text-xs font-label-caps text-on-surface"><?php echo vitaldc_t('Personalized Guidance', 'إرشاد مخصص لك'); ?></span>
 </li>
 </ul>
 </div>
 <div class="pt-stack-lg">
 <div class="p-4 border border-glass bg-surface-dim rounded">
-<span class="font-label-caps text-[10px] text-on-surface-variant block mb-2 uppercase"><?php echo vitaldc_t('System_Status', 'حالة_النظام'); ?></span>
+<span class="font-label-caps text-[10px] text-on-surface-variant block mb-2 uppercase"><?php echo vitaldc_t('Form Status', 'حالة_النموذج'); ?></span>
 <div class="flex items-center gap-2">
 <div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-<span class="text-xs font-label-caps text-white"><?php echo vitaldc_t('Registry Ready', 'السجل جاهز'); ?></span>
+<span class="text-xs font-label-caps text-white"><?php echo vitaldc_t('Form Ready', 'النموذج جاهز'); ?></span>
 </div>
 </div>
 </div>
@@ -49,8 +49,8 @@ input{color:#fff!important;}
 <!-- Right Form Content -->
 <div class="md:w-2/3 p-stack-lg md:p-12">
 <div class="mb-stack-lg">
-<h2 class="font-label-caps text-label-caps text-on-surface-variant mb-2"><?php echo vitaldc_t('PRIMARY_DATA_VERIFICATION', 'التحقق_من_البيانات_الأساسية'); ?></h2>
-<p class="font-body-md text-surface-container-highest"><?php echo vitaldc_t('Provide your core business data to begin the global trade verification process.', 'قدم بيانات عملك الأساسية للبدء في عملية التحقق من التجارة العالمية.'); ?></p>
+<h2 class="font-label-caps text-label-caps text-on-surface-variant mb-2"><?php echo vitaldc_t('BUSINESS INFORMATION', 'بيانات_الشركة_والمعلومات_الأساسية'); ?></h2>
+<p class="font-body-md text-surface-container-highest"><?php echo vitaldc_t('Fill in your core business details below to begin your digital setup.', 'أدخل بيانات عملك الأساسية أدناه للبدء في تجهيز انطلاقتك الرقمية.'); ?></p>
 </div>
 <form id="step-1-form" class="space-y-6">
 <!-- Full Name -->

@@ -27,11 +27,11 @@
 <div class="mb-stack-lg max-w-3xl">
 <div class="flex items-center gap-2 mb-2">
 <span class="w-8 h-[2px] bg-export-orange"></span>
-<span class="font-label-caps text-label-caps text-surface-deep uppercase font-bold"><?php echo vitaldc_t('PROTOCOL_EXTENSIONS', 'امتدادات_البروتوكول'); ?></span>
+<span class="font-label-caps text-label-caps text-surface-deep uppercase font-bold"><?php echo vitaldc_t('EXTRA_FEATURES', 'ميزات_إضافية'); ?></span>
 </div>
-<h2 class="font-headline-lg text-headline-lg text-surface-deep mb-4"><?php echo vitaldc_t('ENHANCE YOUR INFRASTRUCTURE', 'عزز بنيتك التحتية'); ?></h2>
+<h2 class="font-headline-lg text-headline-lg text-surface-deep mb-4"><?php echo vitaldc_t('ADD POWERFUL FEATURES', 'أضف ميزات إلى باقتك'); ?></h2>
 <p class="font-body-lg text-body-lg text-surface-variant max-w-2xl">
-    <?php echo vitaldc_t('Select modular protocol extensions to optimize your global trade throughput. Add-ons are hot-swappable and billable per-node.', 'اختر امتدادات البروتوكول المودولية لتحسين إنتاجية تجارتك العالمية. الإضافات قابلة للتعديل والتحسين بسهولة.'); ?>
+    <?php echo vitaldc_t('Select optional add-on features to boost your website speed, security, sales analytics, and automated lead management.', 'اختر ميزات إضافية اختيارية لتعزيز سرعة موقعك وأمانه، وتقارير مبيعاتك، وإدارة عملائك بشكل آلي.'); ?>
 </p>
 </div>
 <!-- Bento-Style Grid of Add-on Cards -->
@@ -43,16 +43,16 @@
 <div class="p-3 bg-surface-deep text-export-orange">
 <span class="material-symbols-outlined">security</span>
 </div>
-<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5">TYPE: CRYPTO_VAULT</span>
+<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5"><?php echo vitaldc_t('SECURITY', 'الأمان'); ?></span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Security+ Protocol', 'بروتوكول الأمان+'); ?></h3>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Security & SSL Shield', 'حماية الأمان وشهادة SSL'); ?></h3>
 <p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
-    <?php echo vitaldc_t('End-to-end hardware encryption, biometric hardware keys, and SOC2 compliance vault for sensitive trade data.', 'تشفير الأجهزة الشامل ومفاتيح الأجهزة البيومترية وخزينة الامتثال لبيانات التجارة الحساسة.'); ?>
+    <?php echo vitaldc_t('Enterprise-grade SSL encryption, automated data backup, and advanced protection for all your customer interactions.', 'تشفير SSL المتقدم، والنسخ الاحتياطي التلقائي للبيانات، وحماية متكاملة لجميع تعاملات عملاء موقعك.'); ?>
 </p>
 </div>
 <div class="mt-8">
 <button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
-<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الوحدة'); ?></span>
+<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الميزة'); ?></span>
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
@@ -64,16 +64,16 @@
 <div class="p-3 bg-surface-deep text-export-orange">
 <span class="material-symbols-outlined">language</span>
 </div>
-<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5">TYPE: EDGE_NODE</span>
+<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5"><?php echo vitaldc_t('PERFORMANCE', 'الأداء'); ?></span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Regional Accelerator', 'المسرع الإقليمي'); ?></h3>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('High-Speed CDN', 'تسريع الأداء والوصول السريع'); ?></h3>
 <p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
-    <?php echo vitaldc_t('Localized CDN nodes in MENA & GCC, sub-50ms latency routing, and guaranteed local data residency.', 'عقد شبكة توزيع محتوى محلي بالشرق الأوسط والخليج، وتوجيه سريع وإقامة البيانات محلياً.'); ?>
+    <?php echo vitaldc_t('Lightning-fast website loading speed across Egypt, the MENA region, and worldwide for a seamless customer experience.', 'سرعة فائقة في تحميل الموقع في مصر والشرق الأوسط والعالم لتوفير تجربة ممتازة للزوار.'); ?>
 </p>
 </div>
 <div class="mt-8">
 <button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
-<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الوحدة'); ?></span>
+<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الميزة'); ?></span>
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
@@ -85,16 +85,16 @@
 <div class="p-3 bg-surface-deep text-export-orange">
 <span class="material-symbols-outlined">leaderboard</span>
 </div>
-<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5">TYPE: DATA_VIZ</span>
+<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5"><?php echo vitaldc_t('ANALYTICS', 'التحليلات'); ?></span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Advanced Analytics', 'التحليلات المتقدمة'); ?></h3>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Smart Sales Analytics', 'تحليلات المبيعات الذكية'); ?></h3>
 <p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
-    <?php echo vitaldc_t('Real-time trade flow visualization, predictive supply chain alerts, and custom SQL reporting tools.', 'مرئيات التدفق التجاري المباشرة وتنبيهات سلاسل التوريد التنبؤية وتقارير مخصصة.'); ?>
+    <?php echo vitaldc_t('Real-time visitor tracking, ad campaign performance reports, and clear growth insights for your business.', 'تتبع المباشر لحركة الزوار، وتقارير أداء الحملات الإعلانية، ورؤية واضحة لتطوير أعمالك.'); ?>
 </p>
 </div>
 <div class="mt-8">
 <button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
-<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الوحدة'); ?></span>
+<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الميزة'); ?></span>
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>
@@ -106,16 +106,16 @@
 <div class="p-3 bg-surface-deep text-export-orange">
 <span class="material-symbols-outlined">integration_instructions</span>
 </div>
-<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5">TYPE: MIDDLEWARE</span>
+<span class="font-label-caps text-[10px] text-outline uppercase border border-outline px-2 py-0.5"><?php echo vitaldc_t('AUTOMATION', 'الأتمتة'); ?></span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('API Bridge', 'جسر API'); ?></h3>
+<h3 class="font-headline-md text-headline-md mb-3 font-bold"><?php echo vitaldc_t('Automated Lead Bot', 'المساعد الآلي للعملاء'); ?></h3>
 <p class="font-body-md text-label-sm text-surface-variant leading-relaxed">
-    <?php echo vitaldc_t('Native ERP integrations, programmable webhook triggers, and custom endpoint provisioning for developers.', 'تكاملات ERP الأصلية، ومفعلات Webhook القابلة للمبرمجة ومقاطعة مخصصة للمطورين.'); ?>
+    <?php echo vitaldc_t('Smart customer inquiry routing, fast automated responses, and instant synchronization with your CRM list.', 'توجيه استفسارات العملاء ذكياً، والرد التلقائي السريع، والمزامنة مع قائمة عملائك.'); ?>
 </p>
 </div>
 <div class="mt-8">
 <button class="w-full py-3 border border-surface-deep font-label-caps text-label-caps uppercase hover:bg-surface-deep hover:text-white transition-colors flex justify-between items-center px-4">
-<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الوحدة'); ?></span>
+<span class="btn-module-label"><?php echo vitaldc_t('Enable Module', 'تفعيل الميزة'); ?></span>
 <span class="material-symbols-outlined text-[18px]">add</span>
 </button>
 </div>

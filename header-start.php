@@ -18,30 +18,30 @@ $toggle_url = add_query_arg( 'lang', $next_lang, $current_url );
 $step_progress = array(
     '/start' => array(
         'step_code' => 'STEP_01',
-        'title' => vitaldc_t( 'Initialize Your Digital Infrastructure', 'بدء تشغيل بنيتك التحتية الرقمية' ),
-        'label' => vitaldc_t( 'Step 01: Core Identity', 'الخطوة 01: الهوية الأساسية' ),
-        'path' => vitaldc_t( 'Infrastructure Path: 25%', 'مسار البنية التحتية: 25%' ),
+        'title' => vitaldc_t( 'Setup Your Business Account', 'إعداد حساب عملك' ),
+        'label' => vitaldc_t( 'Step 01: Company Details', 'الخطوة 01: تفاصيل الشركة' ),
+        'path' => vitaldc_t( 'Setup Progress: 25%', 'تقدم الإعداد: 25%' ),
         'active_index' => 1,
     ),
     '/start/tiers' => array(
         'step_code' => 'STEP_02',
-        'title' => vitaldc_t( 'Select Your Infrastructure Tier', 'اختر مستوى البنية التحتية الخاصة بك' ),
-        'label' => vitaldc_t( 'Step 02: Tier Selection', 'الخطوة 02: اختيار المستوى' ),
-        'path' => vitaldc_t( 'Infrastructure Path: 50%', 'مسار البنية التحتية: 50%' ),
+        'title' => vitaldc_t( 'Choose Your Growth Package', 'اختر باقة النمو المناسبة' ),
+        'label' => vitaldc_t( 'Step 02: Service Package', 'الخطوة 02: باقة الخدمات' ),
+        'path' => vitaldc_t( 'Setup Progress: 50%', 'تقدم الإعداد: 50%' ),
         'active_index' => 2,
     ),
     '/start/package-addons' => array(
         'step_code' => 'STEP_03',
-        'title' => vitaldc_t( 'Enhance Your Infrastructure', 'تعزيز بنيتك التحتية' ),
-        'label' => vitaldc_t( 'Step 03: Add-ons', 'الخطوة 03: الإضافات' ),
-        'path' => vitaldc_t( 'Infrastructure Path: 75%', 'مسار البنية التحتية: 75%' ),
+        'title' => vitaldc_t( 'Select Optional Add-ons', 'اختر الميزات الإضافية' ),
+        'label' => vitaldc_t( 'Step 03: Feature Add-ons', 'الخطوة 03: الميزات الإضافية' ),
+        'path' => vitaldc_t( 'Setup Progress: 75%', 'تقدم الإعداد: 75%' ),
         'active_index' => 3,
     ),
     '/start/review' => array(
         'step_code' => 'STEP_04',
-        'title' => vitaldc_t( 'Review Protocol Deployment', 'مراجعة نشر البروتوكول' ),
-        'label' => vitaldc_t( 'Step 04: Review & Confirm', 'الخطوة 04: المراجعة والتأكيد' ),
-        'path' => vitaldc_t( 'Infrastructure Path: 100%', 'مسار البنية التحتية: 100%' ),
+        'title' => vitaldc_t( 'Review Your Order & Confirm', 'مراجعة وتأكيد الطلب' ),
+        'label' => vitaldc_t( 'Step 04: Review & Submit', 'الخطوة 04: المراجعة والتأكيد' ),
+        'path' => vitaldc_t( 'Setup Progress: 100%', 'تقدم الإعداد: 100%' ),
         'active_index' => 4,
     ),
 );
@@ -184,14 +184,14 @@ $progress_steps = array(1, 2, 3, 4);
 <div class="w-full max-w-4xl mb-stack-lg">
 <div class="flex flex-col md:flex-row justify-between items-baseline mb-stack-md gap-4">
 <div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-secondary mb-1">ONBOARDING_PROTOCOL // <?php echo esc_html( $active_progress['step_code'] ); ?></span>
+<span class="font-label-caps text-label-caps text-secondary mb-1"><?php echo vitaldc_t( 'DIGITAL ONBOARDING', 'الانطلاق الرقمي' ); ?> // <?php echo esc_html( $active_progress['step_code'] ); ?></span>
 <h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white tracking-tight">
                         <?php echo esc_html( $active_progress['title'] ); ?>
                     </h1>
 </div>
 <div class="flex items-center gap-4">
 <a href="<?php echo esc_url( $toggle_url ); ?>" class="font-label-caps text-label-caps text-on-surface-variant cursor-pointer transition-colors duration-300 hover:text-export-yellow"><?php echo $toggle_label; ?></a>
-<span class="font-label-caps text-label-sm text-on-surface-variant">VITALDC_SYSTEMS</span>
+<span class="font-label-caps text-label-sm text-on-surface-variant">VITALDC</span>
 <div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div>
 </div>
 </div>
