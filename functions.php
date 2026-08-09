@@ -566,3 +566,8 @@ function vitaldc_register_page_templates( $post_templates, $theme, $post, $post_
 
 	return $post_templates;
 }
+
+/**
+ * Require Projects Started Admin Page Module
+ */
+require_once get_stylesheet_directory() . '/inc/admin-projects-started.php';
