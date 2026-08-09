@@ -163,24 +163,6 @@ if ( empty( $selected_package ) ) {
 </div>
 </div>
 <!-- Final Call to Action -->
-<div class="p-8 border-2 border-export-orange rounded-lg bg-export-orange/5 space-y-6">
-<div class="flex items-center gap-4">
-<div class="bg-export-orange text-surface-deep p-2 rounded">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
-</div>
-<h4 class="font-label-caps text-sm font-bold text-surface-deep uppercase"><?php echo vitaldc_t('Final Confirmation', 'التأكيد النهائي والبدء'); ?></h4>
-</div>
-<p class="text-sm text-outline-variant"><?php echo vitaldc_t('By submitting, you authorize VitalDC to process your request and begin setting up your custom package immediately.', 'تأكيد الطلب يتيح لـ VitalDC البدء فوراً في إعداد باقتك وتجهيز خدماتك.'); ?></p>
-<button class="w-full py-4 bg-export-orange text-surface-deep font-label-caps font-extrabold uppercase tracking-widest rounded shadow-lg hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-3">
-    <span><?php echo vitaldc_t('Submit & Launch Order', 'تأكيد وإرسال الطلب'); ?></span>
-    <span class="material-symbols-outlined">chevron_right</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <!-- Visualization Section (Technical Metaphor) -->
 <section class="bg-surface-container-low py-section-gap overflow-hidden relative border-t border-glass">
 
