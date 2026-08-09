@@ -63,4 +63,3 @@ if ( $order ) {
     </div>
 </main>
 
-<?php get_footer('start'); ?>
