@@ -159,117 +159,27 @@ $current_lang = vitaldc_get_current_language();
 </head>
 <body <?php body_class('bg-background text-on-surface selection:bg-export-orange/30' . ('ar' === $current_lang ? ' rtl' : '')); ?>>
 <?php wp_body_open(); ?>
+<?php
+$next_lang = 'ar' === $current_lang ? 'en' : 'ar';
+$toggle_label = 'ar' === $current_lang ? 'EN' : 'AR';
+$current_url = remove_query_arg( array( 'lang', 'l', 'ar', 'en' ) );
+$toggle_url = add_query_arg( 'lang', $next_lang, $current_url );
+?>
 <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-glass flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-full transition-all duration-300">
     <div class="flex items-center gap-stack-lg">
         <a class="font-display-lg text-headline-md font-bold tracking-tighter text-on-surface flex items-center" style="font-size:50px;" href="<?php echo esc_url(home_url('/')); ?>">
-            <span class="text-export-orange" data-i18n="1" data-en="VitalDC" data-ar="فيتال دي سي">VitalDC</span>
+            <span class="text-export-orange"><?php echo vitaldc_t('VitalDC', 'فيتال دي سي'); ?></span>
         </a>
         <div class="hidden md:flex gap-6 items-center">
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/" data-i18n="2" data-en="Digital Foundation" data-ar="الأساس الرقمي">Digital Foundation</a>
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/marketing" data-i18n="3" data-en="Modern Marketing" data-ar="التسويق الحديث">Modern Marketing</a>
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/automation" data-i18n="4" data-en="AI Automation" data-ar="أتمتة الذكاء الاصطناعي">AI Automation</a>
-            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/careers" data-i18n="5" data-en="Careers" data-ar="الوظائف">Careers</a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/"><?php echo vitaldc_t('Digital Foundation', 'الأساس الرقمي'); ?></a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/marketing"><?php echo vitaldc_t('Modern Marketing', 'التسويق الحديث'); ?></a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/automation"><?php echo vitaldc_t('AI Automation', 'أتمتة الذكاء الاصطناعي'); ?></a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300" href="/careers"><?php echo vitaldc_t('Careers', 'الوظائف'); ?></a>
         </div>
     </div>
     <div class="flex items-center gap-4">
-        <span id="language-switcher" class="hidden md:inline font-label-caps text-label-caps text-on-surface-variant cursor-pointer transition-colors duration-300 hover:text-export-yellow" role="button" tabindex="0" aria-live="polite" data-i18n="7" data-en="EN" data-ar="AR">EN</span>
-        <a class="bg-export-orange text-white px-6 py-2 font-label-caps text-label-caps font-bold transition-all hover:brightness-110 active:opacity-80" href="/start" data-i18n="6" data-en="Start Project" data-ar="ابدأ مشروع">Start Project</a>
+        <a id="language-switcher" href="<?php echo esc_url( $toggle_url ); ?>" class="hidden md:inline font-label-caps text-label-caps text-on-surface-variant cursor-pointer transition-colors duration-300 hover:text-export-yellow" role="button"><?php echo $toggle_label; ?></a>
+        <a class="bg-export-orange text-white px-6 py-2 font-label-caps text-label-caps font-bold transition-all hover:brightness-110 active:opacity-80" href="/start"><?php echo vitaldc_t('Start Project', 'ابدأ مشروع'); ?></a>
     </div>
 </nav>
-<script>
-    (function() {
-        const serverLang = <?php echo json_encode( $current_lang ); ?>;
-        const ajaxUrl = <?php echo json_encode( admin_url( 'admin-ajax.php' ) ); ?>;
-        const duration = 220;
-
-        function getInitialLanguage() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.has('lang')) {
-                const raw = urlParams.get('lang').toLowerCase();
-                if (raw === 'ar' || raw === 'arabic') return 'ar';
-                if (raw === 'en' || raw === 'english') return 'en';
-            }
-            if (urlParams.has('ar')) return 'ar';
-            if (urlParams.has('en')) return 'en';
-
-            try {
-                const stored = localStorage.getItem('vitaldc_lang');
-                if (stored === 'ar' || stored === 'en') return stored;
-            } catch (e) {}
-
-            return serverLang || 'en';
-        }
-
-        const activeLang = getInitialLanguage();
-
-        try {
-            localStorage.setItem('vitaldc_lang', activeLang);
-        } catch (e) {}
-        document.cookie = "vitaldc_lang=" + activeLang + ";path=/;max-age=31536000;SameSite=Lax";
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const switcher = document.getElementById('language-switcher');
-            const translatable = Array.from(document.querySelectorAll('[data-i18n]'));
-
-            function setLanguage(lang) {
-                translatable.forEach(function(node) {
-                    const localized = node.dataset[lang];
-                    if (localized != null) {
-                        node.textContent = localized;
-                    }
-                });
-                document.documentElement.lang = lang === 'ar' ? 'ar' : 'en';
-                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-                document.body.classList.toggle('rtl', lang === 'ar');
-                if (switcher) {
-                    switcher.dataset.language = lang;
-                    switcher.textContent = switcher.dataset[lang] || (lang === 'ar' ? 'AR' : 'EN');
-                }
-            }
-
-            function persistLanguage(lang) {
-                try {
-                    localStorage.setItem('vitaldc_lang', lang);
-                } catch (e) {}
-                document.cookie = "vitaldc_lang=" + lang + ";path=/;max-age=31536000;SameSite=Lax";
-                
-                const formData = new FormData();
-                formData.append('action', 'vitaldc_set_language');
-                formData.append('lang', lang);
-                fetch(ajaxUrl, {
-                    method: 'POST',
-                    body: formData
-                }).catch(function(err) {
-                    console.error('Language session sync error:', err);
-                });
-            }
-
-            function toggleLanguage() {
-                const current = switcher && switcher.dataset.language === 'ar' ? 'ar' : 'en';
-                const next = current === 'ar' ? 'en' : 'ar';
-                
-                // Synchronously save cookie & localStorage IMMEDIATELY on click
-                persistLanguage(next);
-
-                document.documentElement.classList.add('language-switching');
-                setTimeout(function() {
-                    setLanguage(next);
-                    document.documentElement.classList.remove('language-switching');
-                }, duration);
-            }
-
-            if (switcher) {
-                switcher.addEventListener('click', toggleLanguage);
-                switcher.addEventListener('keydown', function(event) {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                        event.preventDefault();
-                        toggleLanguage();
-                    }
-                });
-            }
-
-            setLanguage(activeLang);
-        });
-    })();
-</script>
 <main class="relative">

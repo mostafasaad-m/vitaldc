@@ -239,6 +239,10 @@ function vitaldc_get_current_language() {
     return 'en';
 }
 
+function vitaldc_t( $en, $ar ) {
+    return 'ar' === vitaldc_get_current_language() ? $ar : $en;
+}
+
 add_action( 'wp_ajax_vitaldc_set_language', 'vitaldc_set_language_ajax' );
 add_action( 'wp_ajax_nopriv_vitaldc_set_language', 'vitaldc_set_language_ajax' );
 function vitaldc_set_language_ajax() {
