@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Header template for the VitalDC theme.
  */
@@ -180,6 +180,87 @@ $toggle_url = add_query_arg( 'lang', $next_lang, $current_url );
     <div class="flex items-center gap-4">
         <a id="language-switcher" href="<?php echo esc_url( $toggle_url ); ?>" class="hidden md:inline font-label-caps text-label-caps text-on-surface-variant cursor-pointer transition-colors duration-300 hover:text-export-yellow" role="button"><?php echo $toggle_label; ?></a>
         <a class="bg-export-orange text-white px-6 py-2 font-label-caps text-label-caps font-bold transition-all hover:brightness-110 active:opacity-80" href="/start"><?php echo vitaldc_t('Start Project', 'ابدأ مشروع'); ?></a>
+        <button id="mobile-menu-toggle" type="button" class="md:hidden flex items-center justify-center p-2 rounded-lg text-on-surface hover:text-export-yellow hover:bg-surface-container/50 focus:outline-none transition-colors duration-200" aria-label="<?php echo esc_attr(vitaldc_t('Toggle navigation menu', 'تبديل قائمة التنقل')); ?>" aria-expanded="false" aria-controls="mobile-menu">
+            <span id="mobile-menu-icon" class="material-symbols-outlined text-2xl select-none">menu</span>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-surface/95 backdrop-blur-2xl border-b border-glass p-6 md:hidden shadow-2xl transition-all duration-300 flex-col gap-5">
+        <div class="flex flex-col gap-3">
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300 py-2.5 border-b border-glass/40 flex items-center justify-between" href="/">
+                <span><?php echo vitaldc_t('Digital Foundation', 'الأساس الرقمي'); ?></span>
+            </a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300 py-2.5 border-b border-glass/40 flex items-center justify-between" href="/marketing">
+                <span><?php echo vitaldc_t('Modern Marketing', 'التسويق الحديث'); ?></span>
+            </a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300 py-2.5 border-b border-glass/40 flex items-center justify-between" href="/automation">
+                <span><?php echo vitaldc_t('AI Automation', 'أتمتة الذكاء الاصطناعي'); ?></span>
+            </a>
+            <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300 py-2.5 border-b border-glass/40 flex items-center justify-between" href="/careers">
+                <span><?php echo vitaldc_t('Careers', 'الوظائف'); ?></span>
+            </a>
+        </div>
+        <div class="pt-3 flex items-center justify-between gap-4 border-t border-glass">
+            <a id="mobile-language-switcher" href="<?php echo esc_url( $toggle_url ); ?>" class="font-label-caps text-label-caps text-on-surface-variant hover:text-export-yellow transition-colors duration-300 flex items-center gap-2 py-2" role="button">
+                <span class="material-symbols-outlined text-lg">language</span>
+                <span><?php echo 'ar' === $current_lang ? 'English (EN)' : 'العربية (AR)'; ?></span>
+            </a>
+            <a class="bg-export-orange text-white px-5 py-2 font-label-caps text-label-caps font-bold transition-all hover:brightness-110 active:opacity-80 text-center" href="/start">
+                <?php echo vitaldc_t('Start Project', 'ابدأ مشروع'); ?>
+            </a>
+        </div>
     </div>
 </nav>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('mobile-menu-icon');
+
+    if (toggleBtn && mobileMenu && menuIcon) {
+        function toggleMenu() {
+            const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+            toggleBtn.setAttribute('aria-expanded', !isExpanded);
+            if (isExpanded) {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                menuIcon.textContent = 'menu';
+            } else {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                menuIcon.textContent = 'close';
+            }
+        }
+
+        toggleBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!mobileMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                if (toggleBtn.getAttribute('aria-expanded') === 'true') {
+                    toggleMenu();
+                }
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && toggleBtn.getAttribute('aria-expanded') === 'true') {
+                toggleMenu();
+            }
+        });
+
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (toggleBtn.getAttribute('aria-expanded') === 'true') {
+                    toggleMenu();
+                }
+            });
+        });
+    }
+});
+</script>
 <main class="relative">
