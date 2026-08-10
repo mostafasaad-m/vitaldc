@@ -11,7 +11,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Careers | VitalDC Protocol</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Geist:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@500&amp;family=Geist:wght@600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
@@ -34,20 +34,23 @@
 <div class="flex flex-col gap-stack-md max-w-4xl">
 <div class="flex items-center gap-4 animate-pulse">
 <span class="w-2 h-2 bg-tertiary rounded-full"></span>
-<span class="font-label-caps text-label-caps text-tertiary tracking-widest">PROTOCOL_ENTRY_001 // RECRUITMENT_PHASE</span>
+<span class="font-label-caps text-label-caps text-tertiary tracking-widest"><?php echo vitaldc_t('JOIN OUR GROWING TEAM // CAREERS', 'انضم إلى فريقنا // الفرص الوظيفية'); ?></span>
 </div>
-<h1 class="font-display-lg text-display-lg text-on-surface leading-none"><h1 class="font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1] cursor-text" spellcheck="false" data-stitch-added-classes="cursor-text" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; font-size: 48px; font-weight: inherit; letter-spacing: normal; background-color: rgb(0, 22, 31); outline: none !important; box-shadow: none !important;">LAUNCH YOUR GLOBAL <span class="text-export-orange cursor-text" spellcheck="false" data-stitch-added-classes="cursor-text" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; --tw-text-opacity: 1; color: rgb(251, 133, 0);">DIGITAL PRESENCE.</span></h1></h1>
+<h1 class="text-on-surface font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1]">
+    <span><?php echo vitaldc_t('BUILD THE FUTURE OF IT & ', 'ابنِ مستقبل التقنية والتسويق '); ?></span>
+    <span class="text-export-orange"><?php echo vitaldc_t('MARKETING WITH US.', 'مَعَنَا.'); ?></span>
+</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">
-                    Join a team engineering authority for Egyptian exporters. We are not just building software; we are deploying the critical infrastructure that connects regional manufacturers to the global digital economy.
-                </p>
+    <?php echo vitaldc_t('Join a passionate team dedicated to empowering beginner businesses and regional exporters. We combine creative digital marketing, accessible IT solutions, and high-impact design to help companies grow.', 'انضم إلى فريق شغوف ينشط لتمكين الشركات والشركات الناشئة والمصدرين الإقليميين. نجمع بين التسويق الرقمي الإبداعي والحلول التقنية الميسرة والتصميم المتميز لمساعدة الأعمال على التوسع.'); ?>
+</p>
 <div class="flex flex-wrap gap-gutter mt-stack-lg">
 <a class="bg-tertiary text-on-tertiary-fixed font-label-caps text-label-caps py-4 px-8 hover:bg-export-orange transition-all duration-300 flex items-center gap-2 group" href="#registry">
-                        VIEW ACTIVE REGISTRY
-                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+    <span><?php echo vitaldc_t('EXPLORE OPEN POSITIONS', 'استكشف الوظائف المتاحة'); ?></span>
+    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
 <button class="border border-secondary text-secondary font-label-caps text-label-caps py-4 px-8 hover:bg-secondary/10 transition-all duration-300">
-                        OUR STACK
-                    </button>
+    <?php echo vitaldc_t('OUR STACK', 'نظامنا التقني'); ?>
+</button>
 </div>
 </div>
 </div>
@@ -74,19 +77,19 @@
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
 <div class="lg:col-span-5 flex flex-col justify-center">
-<span class="font-label-caps text-label-caps text-export-orange mb-stack-sm">IDENTITY &amp; MISSION</span>
-<h2 class="font-headline-lg text-headline-lg text-surface-deep mb-stack-md">More Than Just Code.</h2>
+<span class="font-label-caps text-label-caps text-export-orange mb-stack-sm"><?php echo vitaldc_t('IDENTITY & MISSION', 'الهوية والمهام'); ?></span>
+<h2 class="font-headline-lg text-headline-lg text-surface-deep mb-stack-md"><?php echo vitaldc_t('More Than Just Code.', 'أكثر من مجرد كود.'); ?></h2>
 <p class="text-surface-variant font-body-lg mb-stack-lg">
-                        At VitalDC, we solve the 'Friction Gap' for manufacturers. While others build interfaces, we build the bridges between heavy industry and global market liquidity. 
-                    </p>
+    <?php echo vitaldc_t("At VitalDC, we solve the 'Friction Gap' for manufacturers. While others build interfaces, we build the bridges between heavy industry and global market liquidity.", "في فيتال دي سي، نحل 'فجوة الاحتكاك' للمصنعين. بينما يبني الآخرون واجهات، نبني نحن الجسور بين الصناعة الثقيلة والسيولة في السوق العالمية."); ?>
+</p>
 <div class="space-y-gutter">
 <div class="flex gap-stack-md">
 <div class="w-12 h-12 flex-shrink-0 bg-surface-deep text-tertiary flex items-center justify-center">
 <span class="material-symbols-outlined">hub</span>
 </div>
 <div>
-<h4 class="font-headline-md text-headline-md text-surface-deep text-lg">Systemic Impact</h4>
-<p class="text-on-surface-variant text-sm mt-1">Every line of code directly influences the export capacity of thousands of Egyptian small-to-medium enterprises.</p>
+<h4 class="font-headline-md text-headline-md text-surface-deep text-lg"><?php echo vitaldc_t('Systemic Impact', 'تأثير منظومي'); ?></h4>
+<p class="text-on-surface-variant text-sm mt-1"><?php echo vitaldc_t('Every line of code directly influences the export capacity of thousands of Egyptian small-to-medium enterprises.', 'كل سطر من الكود يؤثر بشكل مباشر على القدرة التصديرية لآلاف الشركات المصرية الصغيرة والمتوسطة.'); ?></p>
 </div>
 </div>
 <div class="flex gap-stack-md">
@@ -94,8 +97,8 @@
 <span class="material-symbols-outlined">security</span>
 </div>
 <div>
-<h4 class="font-headline-md text-headline-md text-surface-deep text-lg">Authority First</h4>
-<p class="text-on-surface-variant text-sm mt-1">We engineer trust. Our systems are the 'Gold Standard' for trade verification in the MENA region.</p>
+<h4 class="font-headline-md text-headline-md text-surface-deep text-lg"><?php echo vitaldc_t('Authority First', 'المصداقية أولاً'); ?></h4>
+<p class="text-on-surface-variant text-sm mt-1"><?php echo vitaldc_t("We engineer trust. Our systems are the 'Gold Standard' for trade verification in the MENA region.", "نحن نبتكر الثقة. أنظمتنا هي 'المعيار الذهبي' للتحقق التجاري في منطقة الشرق الأوسط وشمال أفريقيا."); ?></p>
 </div>
 </div>
 </div>
@@ -123,8 +126,8 @@
 <section class="bg-surface-deep py-section-gap relative transition-all duration-1000 opacity-100">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="text-center max-w-3xl mx-auto mb-20">
-<span class="font-label-caps text-label-caps text-secondary mb-stack-sm block">ENGINEERING ETHOS</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Infrastructure Over Templates.</h2>
+<span class="font-label-caps text-label-caps text-secondary mb-stack-sm block"><?php echo vitaldc_t('ENGINEERING ETHOS', 'فلسفة الهندسة'); ?></span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface"><?php echo vitaldc_t('Infrastructure Over Templates.', 'البنية التحتية فوق القوالب.'); ?></h2>
 <div class="h-px w-24 bg-tertiary mx-auto mt-stack-md"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
@@ -132,28 +135,28 @@
 <div class="border border-glass bg-surface-container/50 p-8 hover:bg-surface-container transition-colors group">
 <div class="font-label-caps text-secondary mb-6 text-sm">TECH_NODE_01</div>
 <span class="material-symbols-outlined text-tertiary text-4xl mb-4 group-hover:scale-110 transition-transform">layers</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Custom Middleware</h3>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4"><?php echo vitaldc_t('Custom Middleware', 'برمجيات وسيطة مخصصة'); ?></h3>
 <p class="text-on-surface-variant text-sm leading-relaxed">
-                        We don't rely on off-the-shelf solutions for critical bottlenecks. We engineer proprietary middleware that bridges legacy industrial ERPs with modern cloud protocols.
-                    </p>
+    <?php echo vitaldc_t("We don't rely on off-the-shelf solutions for critical bottlenecks. We engineer proprietary middleware that bridges legacy industrial ERPs with modern cloud protocols.", 'نحن لا نعتمد على الحلول الجاهزة للعقبات الحيوية. نحن نبتكر برمجيات وسيطة مخصصة تربط أنظمة ERP الصناعية القديمة ببروتوكولات السحابة الحديثة.'); ?>
+</p>
 </div>
 <!-- Card 2 -->
 <div class="border border-glass bg-surface-container/50 p-8 hover:bg-surface-container transition-colors group">
 <div class="font-label-caps text-secondary mb-6 text-sm">TECH_NODE_02</div>
 <span class="material-symbols-outlined text-tertiary text-4xl mb-4 group-hover:scale-110 transition-transform">memory</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Predictive AI</h3>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4"><?php echo vitaldc_t('Predictive AI', 'الذكاء الاصطناعي التنبؤي'); ?></h3>
 <p class="text-on-surface-variant text-sm leading-relaxed">
-                        Developing proprietary models for Export Intelligence. We predict market demand shifts and supply chain disruptions before they ripple through the system.
-                    </p>
+    <?php echo vitaldc_t('Developing proprietary models for Export Intelligence. We predict market demand shifts and supply chain disruptions before they ripple through the system.', 'تطوير نماذج مخصصة لذكاء التصدير. نتنبأ بتحولات الطلب في السوق واضطرابات سلسلة التوريد قبل انتشارها في النظام.'); ?>
+</p>
 </div>
 <!-- Card 3 -->
 <div class="border border-glass bg-surface-container/50 p-8 hover:bg-surface-container transition-colors group">
 <div class="font-label-caps text-secondary mb-6 text-sm">TECH_NODE_03</div>
 <span class="material-symbols-outlined text-tertiary text-4xl mb-4 group-hover:scale-110 transition-transform">speed</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Performance</h3>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4"><?php echo vitaldc_t('Performance', 'الأداء'); ?></h3>
 <p class="text-on-surface-variant text-sm leading-relaxed">
-                        Architecture optimized for sub-100ms global latency. When trade moves at the speed of light, our infrastructure leads the way.
-                    </p>
+    <?php echo vitaldc_t('Architecture optimized for sub-100ms global latency. When trade moves at the speed of light, our infrastructure leads the way.', 'هندسة محسنة للتأخير العالمي الأقل من 100 ميلي ثانية. عندما تتحرك التجارة بسرعة الضوء، تقود بنيتنا التحتية الطريق.'); ?>
+</p>
 </div>
 </div>
 <div class="mt-20 border-t border-glass pt-stack-lg">
@@ -183,8 +186,8 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="flex flex-col md:flex-row justify-between items-end gap-stack-md mb-20">
 <div>
-<span class="font-label-caps text-label-caps text-export-orange mb-stack-sm block">RECRUITMENT_REGISTRY</span>
-<h2 class="font-headline-lg text-headline-lg text-surface-deep">Active Registry Entries</h2>
+<span class="font-label-caps text-label-caps text-export-orange mb-stack-sm block"><?php echo vitaldc_t('RECRUITMENT_REGISTRY', 'سجل التوظيف'); ?></span>
+<h2 class="font-headline-lg text-headline-lg text-surface-deep"><?php echo vitaldc_t('Active Registry Entries', 'إدخالات السجل النشطة'); ?></h2>
 </div>
 <div class="flex items-center gap-2 border border-surface-deep/10 px-4 py-2">
 <span class="font-label-caps text-label-sm text-surface-deep/60">FILTER: ALL_DISCIPLINES</span>
@@ -198,14 +201,14 @@
 <div class="flex gap-stack-md items-start">
 <span class="font-label-caps text-xs text-export-orange mt-1">#001</span>
 <div>
-<h3 class="font-headline-md text-headline-md text-surface-deep group-hover:text-export-orange transition-colors">Full-Stack Infrastructure Engineer</h3>
+<h3 class="font-headline-md text-headline-md text-surface-deep group-hover:text-export-orange transition-colors"><?php echo vitaldc_t('Full-Stack Infrastructure Engineer', 'مهندس بنية تحتية Full-Stack'); ?></h3>
 <div class="flex gap-4 mt-2">
 <span class="font-label-caps text-[10px] px-2 py-1 bg-surface-deep text-white">CAIRO_NODE</span>
 <span class="font-label-caps text-[10px] px-2 py-1 border border-surface-deep text-surface-deep">REMOTE_HYBRID</span>
 </div>
 </div>
 </div>
-<button class="bg-surface-deep text-white font-label-caps text-label-sm px-6 py-3 self-start md:self-center hover:bg-export-orange transition-colors">INITIALIZE</button>
+<button class="bg-surface-deep text-white font-label-caps text-label-sm px-6 py-3 self-start md:self-center hover:bg-export-orange transition-colors"><?php echo vitaldc_t('INITIALIZE', 'بدء التقديم'); ?></button>
 </div>
 </div>
 <!-- Role 2 -->
@@ -214,14 +217,14 @@
 <div class="flex gap-stack-md items-start">
 <span class="font-label-caps text-xs text-export-orange mt-1">#002</span>
 <div>
-<h3 class="font-headline-md text-headline-md text-surface-deep group-hover:text-export-orange transition-colors">AI/ML Specialist (Export Intelligence)</h3>
+<h3 class="font-headline-md text-headline-md text-surface-deep group-hover:text-export-orange transition-colors"><?php echo vitaldc_t('AI/ML Specialist (Export Intelligence)', 'أخصائي ذكاء اصطناعي (ذكاء التصدير)'); ?></h3>
 <div class="flex gap-4 mt-2">
 <span class="font-label-caps text-[10px] px-2 py-1 bg-surface-deep text-white">CAIRO_NODE</span>
 <span class="font-label-caps text-[10px] px-2 py-1 border border-surface-deep text-surface-deep">ONSITE</span>
 </div>
 </div>
 </div>
-<button class="bg-surface-deep text-white font-label-caps text-label-sm px-6 py-3 self-start md:self-center hover:bg-export-orange transition-colors">INITIALIZE</button>
+<button class="bg-surface-deep text-white font-label-caps text-label-sm px-6 py-3 self-start md:self-center hover:bg-export-orange transition-colors"><?php echo vitaldc_t('INITIALIZE', 'بدء التقديم'); ?></button>
 </div>
 </div>
 <!-- Role 3 -->
@@ -230,14 +233,14 @@
 <div class="flex gap-stack-md items-start">
 <span class="font-label-caps text-xs text-export-orange mt-1">#003</span>
 <div>
-<h3 class="font-headline-md text-headline-md text-surface-deep group-hover:text-export-orange transition-colors">Digital Strategy Lead</h3>
+<h3 class="font-headline-md text-headline-md text-surface-deep group-hover:text-export-orange transition-colors"><?php echo vitaldc_t('Digital Strategy Lead', 'قائد الاستراتيجية الرقمية'); ?></h3>
 <div class="flex gap-4 mt-2">
 <span class="font-label-caps text-[10px] px-2 py-1 bg-surface-deep text-white">GLOBAL_NODE</span>
 <span class="font-label-caps text-[10px] px-2 py-1 border border-surface-deep text-surface-deep">REMOTE</span>
 </div>
 </div>
 </div>
-<button class="bg-surface-deep text-white font-label-caps text-label-sm px-6 py-3 self-start md:self-center hover:bg-export-orange transition-colors">INITIALIZE</button>
+<button class="bg-surface-deep text-white font-label-caps text-label-sm px-6 py-3 self-start md:self-center hover:bg-export-orange transition-colors"><?php echo vitaldc_t('INITIALIZE', 'بدء التقديم'); ?></button>
 </div>
 </div>
 </div>
@@ -252,15 +255,15 @@
 
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
 <div class="max-w-2xl mx-auto border border-glass p-margin-mobile md:p-margin-desktop backdrop-blur-xl bg-surface-deep/60">
-<span class="font-label-caps text-label-caps text-tertiary mb-stack-sm block">FINAL_PROTOCOL_STEP</span>
-<h2 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface mb-stack-lg">Initiate Your Application.</h2>
+<span class="font-label-caps text-label-caps text-tertiary mb-stack-sm block"><?php echo vitaldc_t('FINAL_PROTOCOL_STEP', 'خطوة البروتوكول النهائية'); ?></span>
+<h2 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface mb-stack-lg"><?php echo vitaldc_t('Initiate Your Application.', 'ابدأ طلب التقديم الخاص بك.'); ?></h2>
 <p class="text-on-surface-variant font-body-lg mb-stack-lg">
-                    Ready to engineer the authority of the future? Submit your credentials to the VitalDC protocol today.
-                </p>
+    <?php echo vitaldc_t('Ready to engineer the authority of the future? Submit your credentials to the VitalDC protocol today.', 'هل أنت مستعد لابتكار سلطة المستقبل؟ قدم أوراق اعتمادك لبروتوكول فيتال دي سي اليوم.'); ?>
+</p>
 <div class="flex flex-col items-center gap-4">
 <button class="w-full md:w-auto bg-tertiary text-on-tertiary-fixed font-label-caps text-label-caps py-5 px-12 hover:bg-export-orange transition-all scale-100 hover:scale-105 duration-300">
-                        ACCESS APPLICATION PORTAL
-                    </button>
+    <?php echo vitaldc_t('ACCESS APPLICATION PORTAL', 'الدخول إلى بوابة التقديم'); ?>
+</button>
 <span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Encryption Active: AES-256 Verified</span>
 </div>
 </div>

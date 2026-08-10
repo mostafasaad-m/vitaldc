@@ -9,33 +9,46 @@ if ( '' === $current_path ) {
 }
 $current_path = '/start' === $current_path ? '/start' : $current_path;
 
+$current_lang = vitaldc_get_current_language();
+$next_lang = 'ar' === $current_lang ? 'en' : 'ar';
+$toggle_label = 'ar' === $current_lang ? 'EN' : 'AR';
+$current_url = remove_query_arg( array( 'lang', 'l', 'ar', 'en' ) );
+$toggle_url = add_query_arg( 'lang', $next_lang, $current_url );
+
 $step_progress = array(
     '/start' => array(
         'step_code' => 'STEP_01',
-        'title' => 'Initialize Your Digital Infrastructure',
-        'label' => 'Step 01: Core Identity',
-        'path' => 'Infrastructure Path: 25%',
+        'title' => vitaldc_t( 'Setup Your Business Account', 'إعداد حساب عملك' ),
+        'label' => vitaldc_t( 'Step 01: Company Details', 'الخطوة 01: تفاصيل الشركة' ),
+        'path' => vitaldc_t( 'Setup Progress: 25%', 'تقدم الإعداد: 25%' ),
         'active_index' => 1,
     ),
     '/start/tiers' => array(
         'step_code' => 'STEP_02',
-        'title' => 'Select Your Infrastructure Tier',
-        'label' => 'Step 02: Tier Selection',
-        'path' => 'Infrastructure Path: 50%',
+        'title' => vitaldc_t( 'Choose Your Growth Package', 'اختر باقة النمو المناسبة' ),
+        'label' => vitaldc_t( 'Step 02: Service Package', 'الخطوة 02: باقة الخدمات' ),
+        'path' => vitaldc_t( 'Setup Progress: 50%', 'تقدم الإعداد: 50%' ),
         'active_index' => 2,
     ),
     '/start/package-addons' => array(
         'step_code' => 'STEP_03',
-        'title' => 'Enhance Your Infrastructure',
-        'label' => 'Step 03: Add-ons',
-        'path' => 'Infrastructure Path: 75%',
+        'title' => vitaldc_t( 'Select Optional Add-ons', 'اختر الميزات الإضافية' ),
+        'label' => vitaldc_t( 'Step 03: Feature Add-ons', 'الخطوة 03: الميزات الإضافية' ),
+        'path' => vitaldc_t( 'Setup Progress: 75%', 'تقدم الإعداد: 75%' ),
         'active_index' => 3,
     ),
     '/start/review' => array(
         'step_code' => 'STEP_04',
-        'title' => 'Review Protocol Deployment',
-        'label' => 'Step 04: Review & Confirm',
-        'path' => 'Infrastructure Path: 100%',
+        'title' => vitaldc_t( 'Review Your Order & Confirm', 'مراجعة وتأكيد الطلب' ),
+        'label' => vitaldc_t( 'Step 04: Review & Submit', 'الخطوة 04: المراجعة والتأكيد' ),
+        'path' => vitaldc_t( 'Setup Progress: 100%', 'تقدم الإعداد: 100%' ),
+        'active_index' => 4,
+    ),
+    '/thank-you' => array(
+        'step_code' => 'COMPLETE',
+        'title' => vitaldc_t( 'Onboarding Request Confirmed', 'تم تأكيد طلب الانضمام' ),
+        'label' => vitaldc_t( 'Order Submitted Successfully', 'تم إرسال الطلب بنجاح' ),
+        'path' => vitaldc_t( 'Setup Progress: 100%', 'تقدم الإعداد: 100%' ),
         'active_index' => 4,
     ),
 );
@@ -45,14 +58,14 @@ $progress_steps = array(1, 2, 3, 4);
 ?>
 
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="dark">
+<html <?php language_attributes(); ?> class="dark" lang="<?php echo esc_attr( $current_lang ); ?>" dir="<?php echo 'ar' === $current_lang ? 'rtl' : 'ltr'; ?>">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title><?php bloginfo( 'name' ); ?> | Initialize Infrastructure</title>
 <?php wp_head(); ?>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@400;500;700&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -119,6 +132,7 @@ $progress_steps = array(1, 2, 3, 4);
                       "outline": "#8c9197",
                       "surface": "#00161f",
                       "on-secondary-container": "#002e39",
+                      "export-yellow": "#FFB703",
                       "export-orange": "#FB8500",
                       "surface-bright": "#003e52",
                       "secondary-fixed": "#b2ebff",
@@ -146,7 +160,7 @@ $progress_steps = array(1, 2, 3, 4);
                       "headline-md": ["Geist"],
                       "label-sm": ["Inter"],
                       "body-md": ["Inter"],
-                      "label-caps": ["JetBrains Mono"],
+                      "label-caps": ["Poppins"],
                       "body-lg": ["Inter"],
                       "headline-lg": ["Geist"],
                       "headline-lg-mobile": ["Geist"],
@@ -162,12 +176,12 @@ $progress_steps = array(1, 2, 3, 4);
                       "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
                       "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}]
               }
-            },
-          },
+            }
+          }
         }
     </script>
 </head>
-<body <?php body_class( 'bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-export-orange selection:text-white' ); ?>>
+<body <?php body_class( 'bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-export-orange selection:text-white' . ( 'ar' === $current_lang ? ' rtl' : '' ) ); ?>>
 <?php wp_body_open(); ?>
 <!-- Background Layer -->
 <div class="fixed inset-0 grid-pattern pointer-events-none opacity-40"></div>
@@ -177,13 +191,14 @@ $progress_steps = array(1, 2, 3, 4);
 <div class="w-full max-w-4xl mb-stack-lg">
 <div class="flex flex-col md:flex-row justify-between items-baseline mb-stack-md gap-4">
 <div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-secondary mb-1">ONBOARDING_PROTOCOL // <?php echo esc_html( $active_progress['step_code'] ); ?></span>
+<span class="font-label-caps text-label-caps text-secondary mb-1"><?php echo vitaldc_t( 'DIGITAL ONBOARDING', 'الانطلاق الرقمي' ); ?> // <?php echo esc_html( $active_progress['step_code'] ); ?></span>
 <h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white tracking-tight">
                         <?php echo esc_html( $active_progress['title'] ); ?>
                     </h1>
 </div>
-<div class="flex items-center gap-2">
-<span class="font-label-caps text-label-sm text-on-surface-variant">VITALDC_SYSTEMS</span>
+<div class="flex items-center gap-4">
+<a href="<?php echo esc_url( $toggle_url ); ?>" class="font-label-caps text-label-caps text-on-surface-variant cursor-pointer transition-colors duration-300 hover:text-export-yellow"><?php echo $toggle_label; ?></a>
+<span class="font-label-caps text-label-sm text-on-surface-variant">VITALDC</span>
 <div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div>
 </div>
 </div>

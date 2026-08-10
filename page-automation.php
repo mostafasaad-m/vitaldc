@@ -47,20 +47,23 @@
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
 <div class="max-w-3xl transition-all duration-700 opacity-100 translate-y-0">
 <div class="inline-block mb-stack-md bg-surface-variant/30 px-4 py-1 border border-border-glass">
-<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Digital Infrastructure Protocol</span>
+<span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest"><?php echo vitaldc_t('SIMPLE IT & WORKFLOW SOLUTIONS', 'حلول تقنية وأتمتة مبسطة'); ?></span>
 </div>
-<h1 class="font-display-lg text-[48px] md:text-display-lg text-white mb-stack-md leading-none"><h1 class="text-on-surface font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1] cursor-text" spellcheck="false" data-stitch-added-classes="cursor-text" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; font-size: 48px; font-weight: inherit; color: rgb(189, 233, 255); letter-spacing: normal;  outline: none !important; box-shadow: none !important;">LAUNCH YOUR GLOBAL <span class="text-export-orange cursor-text" spellcheck="false" data-stitch-added-classes="cursor-text" style="--tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; --tw-text-opacity: 1; color: rgb(251, 133, 0);">DIGITAL PRESENCE.</span></h1></h1>
+<h1 class="text-on-surface font-display-lg text-[48px] md:text-display-lg max-w-4xl mb-stack-md leading-[1.1]">
+    <span><?php echo vitaldc_t('EASY IT SYSTEMS & AUTOMATION ', 'أنظمة تقنية وأتمتة سهلة '); ?></span>
+    <span class="text-export-orange"><?php echo vitaldc_t('FOR YOUR BUSINESS.', 'لِتَطْوِيرِ أَعْمَالِك.'); ?></span>
+</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl">
-                    From manual lead entry to predictive market intelligence. We deploy the AI layers that handle the friction, so you can focus on closing international deals.
-                </p>
+    <?php echo vitaldc_t('Streamline your daily operations with simple IT tools and smart automation. Save hours of manual work by organizing inquiries, customer contacts, and lead follow-ups automatically—no technical experience required.', 'بسط عملياتك اليومية بأدوات تقنية وأتمتة أسهل. وفّر ساعات من العمل اليدوي في تنظيم الاستفسارات، وتتبع العملاء الجدد تلقائياً—دون الحاجة لأي خبرة تقنية سابقاً.'); ?>
+</p>
 <div class="flex flex-col md:flex-row gap-4">
-<button class="bg-tertiary hover:bg-export-orange text-surface-deep font-label-caps text-label-caps px-8 py-4 transition-all duration-300 rounded-lg flex items-center justify-center gap-2 group">
-                        INITIALIZE AUTOMATION
-                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">bolt</span>
-</button>
+<a href="/start" class="bg-tertiary hover:bg-export-orange text-surface-deep font-label-caps text-label-caps px-8 py-4 transition-all duration-300 rounded-lg flex items-center justify-center gap-2 group">
+    <span><?php echo vitaldc_t('START SIMPLE AUTOMATION', 'ابدأ الأتمتة السهلة'); ?></span>
+    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">bolt</span>
+</a>
 <button class="border border-border-glass hover:bg-surface-variant/20 text-white font-label-caps text-label-caps px-8 py-4 transition-all duration-300 rounded-lg">
-                        VIEW CASE STUDIES
-                    </button>
+    <?php echo vitaldc_t('VIEW CASE STUDIES', 'عرض دراسات الحالة'); ?>
+</button>
 </div>
 </div>
 </div>
@@ -74,26 +77,29 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="flex flex-col md:flex-row gap-stack-lg items-start transition-all duration-700 opacity-100 translate-y-0">
 <div class="md:w-1/2">
-<h2 class="font-display-lg text-headline-lg text-primary-container mb-stack-md">Manual Processes Are <br> Scaling Killers</h2>
+<h2 class="font-display-lg text-headline-lg text-primary-container mb-stack-md">
+    <span><?php echo vitaldc_t('Manual Processes Are ', 'العمليات اليدوية هي '); ?></span><br>
+    <span><?php echo vitaldc_t('Scaling Killers', 'قاتل التوسع'); ?></span>
+</h2>
 <p class="font-body-lg text-body-lg text-primary-container/70 mb-stack-md">
-                        In the competitive landscape of Egyptian exports, speed is the only sustainable moat. Static systems create "The Friction Gap"—a hidden tax on your growth that compounds with every new market entry.
-                    </p>
+    <?php echo vitaldc_t("In the competitive landscape of Egyptian exports, speed is the only sustainable moat. Static systems create 'The Friction Gap'—a hidden tax on your growth that compounds with every new market entry.", 'في مشهد التصدير المصري التنافسي، السرعة هي الحصن الوحيد المستدام. الأنظمة الثابتة تخلق "فجوة الاحتكاك"—ضريبة خفية على نموك تتضاعف مع كل دخول لسوق جديدة.'); ?>
+</p>
 </div>
 <div class="md:w-1/2 grid gap-stack-sm w-full">
 <div class="bg-neutral-50 p-6 border-l-4 border-export-orange blueprint-border transition-all duration-700 opacity-100 translate-y-0">
 <span class="material-symbols-outlined text-export-orange mb-2" data-icon="auto_awesome">auto_awesome</span>
-<h4 class="font-headline-md text-headline-md text-primary-container mb-1">Zero-Touch Data Entry</h4>
-<p class="font-body-md text-body-md text-primary-container/60">Legacy spreadsheet dependency ends here. Intelligent extraction captures leads from any source automatically.</p>
+<h4 class="font-headline-md text-headline-md text-primary-container mb-1"><?php echo vitaldc_t('Zero-Touch Data Entry', 'إدخال بيانات آلي بدون لمس'); ?></h4>
+<p class="font-body-md text-body-md text-primary-container/60"><?php echo vitaldc_t('Legacy spreadsheet dependency ends here. Intelligent extraction captures leads from any source automatically.', 'ينتهي الاعتماد على الجداول القديمة هنا. الاستخراج الذكي يلتقط العملاء من أي مصدر تلقائياً.'); ?></p>
 </div>
 <div class="bg-neutral-50 p-6 border-l-4 border-secondary-container blueprint-border transition-all duration-700 opacity-100 translate-y-0">
 <span class="material-symbols-outlined text-secondary-container mb-2" data-icon="query_stats">query_stats</span>
-<h4 class="font-headline-md text-headline-md text-primary-container mb-1">AI Lead Scoring</h4>
-<p class="font-body-md text-body-md text-primary-container/60">Rank global opportunities by market readiness and credit risk before your team even picks up the phone.</p>
+<h4 class="font-headline-md text-headline-md text-primary-container mb-1"><?php echo vitaldc_t('AI Lead Scoring', 'تقييم العملاء بالذكاء الاصطناعي'); ?></h4>
+<p class="font-body-md text-body-md text-primary-container/60"><?php echo vitaldc_t('Rank global opportunities by market readiness and credit risk before your team even picks up the phone.', 'صنف الفرص العالمية حسب جاهزية السوق والمخاطر الائتمانية قبل أن يرفع فريقك الهاتف.'); ?></p>
 </div>
 <div class="bg-neutral-50 p-6 border-l-4 border-primary-container blueprint-border transition-all duration-700 opacity-100 translate-y-0">
 <span class="material-symbols-outlined text-primary-container mb-2" data-icon="sync">sync</span>
-<h4 class="font-headline-md text-headline-md text-primary-container mb-1">Automated CRM Sync</h4>
-<p class="font-body-md text-body-md text-primary-container/60">A unified source of truth that updates in real-time, eliminating data silos between logistics and sales.</p>
+<h4 class="font-headline-md text-headline-md text-primary-container mb-1"><?php echo vitaldc_t('Automated CRM Sync', 'مزامنة آليّة لـ CRM'); ?></h4>
+<p class="font-body-md text-body-md text-primary-container/60"><?php echo vitaldc_t('A unified source of truth that updates in real-time, eliminating data silos between logistics and sales.', 'مصدر موحد للحقيقة يتحدث في الوقت الفعلي، ملغياً فجوات البيانات بين اللوجستيات والمبيعات.'); ?></p>
 </div>
 </div>
 </div>
@@ -103,8 +109,8 @@
 <section class="bg-surface-deep py-section-gap relative overflow-hidden">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
 <div class="text-center mb-section-gap transition-all duration-700 opacity-100 translate-y-0">
-<span class="font-label-caps text-label-caps text-secondary mb-4 block tracking-widest">SYSTEM ARCHITECTURE</span>
-<h2 class="font-display-lg text-headline-lg text-white">Core Intelligence Modules</h2>
+<span class="font-label-caps text-label-caps text-secondary mb-4 block tracking-widest"><?php echo vitaldc_t('SYSTEM ARCHITECTURE', 'هندسة النظام'); ?></span>
+<h2 class="font-display-lg text-headline-lg text-white"><?php echo vitaldc_t('Core Intelligence Modules', 'وحدات الذكاء الأساسية'); ?></h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-700 opacity-100 translate-y-0">
 <!-- Card 1 -->
@@ -113,11 +119,11 @@
 <div class="w-16 h-16 bg-surface-variant flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-secondary text-3xl" data-icon="neurology">neurology</span>
 </div>
-<h3 class="font-headline-md text-headline-md text-white mb-4">AI Lead Scoring</h3>
-<p class="font-body-md text-on-surface-variant mb-6">Proprietary neural networks analyze customs data and import patterns to identify high-probability buyers in target territories.</p>
+<h3 class="font-headline-md text-headline-md text-white mb-4"><?php echo vitaldc_t('AI Lead Scoring', 'تقييم العملاء بالذكاء الاصطناعي'); ?></h3>
+<p class="font-body-md text-on-surface-variant mb-6"><?php echo vitaldc_t('Proprietary neural networks analyze customs data and import patterns to identify high-probability buyers in target territories.', 'شبكات عصبية مخصصة تحلل بيانات الجمارك وأنماط الاستيراد لتحديد المشترين عالي الاحتمالية في المناطق المستهدفة.'); ?></p>
 <ul class="space-y-3 font-label-caps text-label-sm text-on-surface/60">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> 98% Predictive Accuracy</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Multi-source Data Ingestion</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> <span><?php echo vitaldc_t('98% Predictive Accuracy', 'دقة تنبؤية 98%'); ?></span></li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> <span><?php echo vitaldc_t('Multi-source Data Ingestion', 'استيعاب بيانات متعدد المصادر'); ?></span></li>
 </ul>
 </div>
 <!-- Card 2 -->
@@ -126,11 +132,11 @@
 <div class="w-16 h-16 bg-surface-variant flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-tertiary text-3xl" data-icon="hub">hub</span>
 </div>
-<h3 class="font-headline-md text-headline-md text-white mb-4">CRM Automation</h3>
-<p class="font-body-md text-on-surface-variant mb-6">Autonomous workflows that handle outreach, follow-ups, and documentation routing without human intervention.</p>
+<h3 class="font-headline-md text-headline-md text-white mb-4"><?php echo vitaldc_t('CRM Automation', 'أتمتة CRM'); ?></h3>
+<p class="font-body-md text-on-surface-variant mb-6"><?php echo vitaldc_t('Autonomous workflows that handle outreach, follow-ups, and documentation routing without human intervention.', 'مسارات عمل ذاتية تتولى التواصل، المتابعات، وتوجيه المستندات بدون تدخل بشري.'); ?></p>
 <ul class="space-y-3 font-label-caps text-label-sm text-on-surface/60">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> 40+ Integrated Platforms</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> Zero-Latency Syncing</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> <span><?php echo vitaldc_t('40+ Integrated Platforms', 'أكثر من 40 منصة متكاملة'); ?></span></li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-tertiary"></span> <span><?php echo vitaldc_t('Zero-Latency Syncing', 'مزامنة بدون تأخير'); ?></span></li>
 </ul>
 </div>
 <!-- Card 3 -->
@@ -139,11 +145,11 @@
 <div class="w-16 h-16 bg-surface-variant flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-export-orange text-3xl" data-icon="monitoring">monitoring</span>
 </div>
-<h3 class="font-headline-md text-headline-md text-white mb-4">Predictive Analytics</h3>
-<p class="font-body-md text-on-surface-variant mb-6">Forecasting demand spikes and supply chain bottlenecks before they occur using macro-economic digital signals.</p>
+<h3 class="font-headline-md text-headline-md text-white mb-4"><?php echo vitaldc_t('Predictive Analytics', 'التحليلات التنبؤية'); ?></h3>
+<p class="font-body-md text-on-surface-variant mb-6"><?php echo vitaldc_t('Forecasting demand spikes and supply chain bottlenecks before they occur using macro-economic digital signals.', 'التنبؤ بزيادات الطلب واختناقات سلسلة التوريد قبل حدوثها باستخدام الإشارات الرقمية الاقتصادية.'); ?></p>
 <ul class="space-y-3 font-label-caps text-label-sm text-on-surface/60">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-export-orange"></span> Real-time Market Signals</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-export-orange"></span> Risk Mitigation Alerts</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-export-orange"></span> <span><?php echo vitaldc_t('Real-time Market Signals', 'إشارات السوق الفورية'); ?></span></li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-export-orange"></span> <span><?php echo vitaldc_t('Risk Mitigation Alerts', 'تنبيهات التخفيف من المخاطر'); ?></span></li>
 </ul>
 </div>
 </div>
@@ -153,33 +159,33 @@
 <section class="bg-white py-section-gap border-b border-neutral-100">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="mb-section-gap max-w-2xl transition-all duration-700 opacity-100 translate-y-0">
-<h2 class="font-display-lg text-headline-lg text-primary-container mb-stack-sm">The Automation Protocol</h2>
-<p class="font-body-lg text-body-lg text-primary-container/60">Our systematic approach to replacing legacy bottlenecks with digital infrastructure.</p>
+<h2 class="font-display-lg text-headline-lg text-primary-container mb-stack-sm"><?php echo vitaldc_t('The Automation Protocol', 'بروتوكول الأتمتة'); ?></h2>
+<p class="font-body-lg text-body-lg text-primary-container/60"><?php echo vitaldc_t('Our systematic approach to replacing legacy bottlenecks with digital infrastructure.', 'نهجنا المنهجي لاستبدال العقبات القديمة بالبنية التحتية الرقمية.'); ?></p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative transition-all duration-700 opacity-100 translate-y-0">
 <!-- Step 1 -->
 <div class="relative z-10 protocol-line transition-all duration-700 opacity-100 translate-y-0">
 <div class="w-12 h-12 bg-primary-container text-white rounded-full flex items-center justify-center font-label-caps mb-6 relative z-10">01</div>
-<h4 class="font-headline-md text-headline-md text-primary-container mb-2">Audit</h4>
-<p class="font-body-md text-primary-container/60">We map your current manual touchpoints and quantify the friction cost in real dollars.</p>
+<h4 class="font-headline-md text-headline-md text-primary-container mb-2"><?php echo vitaldc_t('Audit', 'التدقيق'); ?></h4>
+<p class="font-body-md text-primary-container/60"><?php echo vitaldc_t('We map your current manual touchpoints and quantify the friction cost in real dollars.', 'نحدد نقاط التفاعل اليدوي الحالية ونقيس تكلفة الاحتكاك بالدولار الحقيقي.'); ?></p>
 </div>
 <!-- Step 2 -->
 <div class="relative z-10 protocol-line transition-all duration-700 opacity-100 translate-y-0">
 <div class="w-12 h-12 bg-primary-container text-white rounded-full flex items-center justify-center font-label-caps mb-6 relative z-10">02</div>
-<h4 class="font-headline-md text-headline-md text-primary-container mb-2">Integration</h4>
-<p class="font-body-md text-primary-container/60">Deployment of our proprietary AI middleware to connect your disconnected data silos.</p>
+<h4 class="font-headline-md text-headline-md text-primary-container mb-2"><?php echo vitaldc_t('Integration', 'الدمج'); ?></h4>
+<p class="font-body-md text-primary-container/60"><?php echo vitaldc_t('Deployment of our proprietary AI middleware to connect your disconnected data silos.', 'نشر برمجيات الذكاء الاصطناعي الوسيطة لتوصيل فجوات البيانات المنفصلة.'); ?></p>
 </div>
 <!-- Step 3 -->
 <div class="relative z-10 protocol-line transition-all duration-700 opacity-100 translate-y-0">
 <div class="w-12 h-12 bg-primary-container text-white rounded-full flex items-center justify-center font-label-caps mb-6 relative z-10">03</div>
-<h4 class="font-headline-md text-headline-md text-primary-container mb-2">Training</h4>
-<p class="font-body-md text-primary-container/60">Custom model tuning on your historical trade data to ensure industry-specific accuracy.</p>
+<h4 class="font-headline-md text-headline-md text-primary-container mb-2"><?php echo vitaldc_t('Training', 'التدريب'); ?></h4>
+<p class="font-body-md text-primary-container/60"><?php echo vitaldc_t('Custom model tuning on your historical trade data to ensure industry-specific accuracy.', 'ضبط نموذج مخصص بناءً على بيانات تجارتك السابقة لضمان دقة متخصصة.'); ?></p>
 </div>
 <!-- Step 4 -->
 <div class="relative z-10 transition-all duration-700 opacity-100 translate-y-0">
 <div class="w-12 h-12 bg-primary-container text-white rounded-full flex items-center justify-center font-label-caps mb-6 relative z-10">04</div>
-<h4 class="font-headline-md text-headline-md text-primary-container mb-2">Optimization</h4>
-<p class="font-body-md text-primary-container/60">Continuous feedback loops that refine AI performance as your export volume scales.</p>
+<h4 class="font-headline-md text-headline-md text-primary-container mb-2"><?php echo vitaldc_t('Optimization', 'التحسين'); ?></h4>
+<p class="font-body-md text-primary-container/60"><?php echo vitaldc_t('Continuous feedback loops that refine AI performance as your export volume scales.', 'حلقات تغذية راجعة مستمرة تطور أداء الذكاء الاصطناعي مع توسع حجم تصديرك.'); ?></p>
 </div>
 </div>
 </div>
@@ -189,10 +195,10 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center transition-all duration-700 opacity-100 translate-y-0">
 <div class="transition-all duration-700 opacity-100 translate-y-0">
-<h2 class="font-display-lg text-headline-lg text-white mb-stack-md">Measured Efficiency Gains</h2>
+<h2 class="font-display-lg text-headline-lg text-white mb-stack-md"><?php echo vitaldc_t('Measured Efficiency Gains', 'مكاسب الكفاءة المقاسة'); ?></h2>
 <p class="font-body-lg text-on-surface-variant mb-stack-md">
-                        We don't just deploy technology; we deliver tangible infrastructure improvements. Our benchmarks represent the average performance across our exporter network.
-                    </p>
+    <?php echo vitaldc_t("We don't just deploy technology; we deliver tangible infrastructure improvements. Our benchmarks represent the average performance across our exporter network.", 'نحن لا ننشر التكنولوجيا فحسب؛ بل نقدم تحسينات ملموسة في البنية التحتية. تمثل معاييرنا متوسط الأداء عبر شبكة المصدرين لدينا.'); ?>
+</p>
 <div class="flex items-center gap-4 py-4 border-t border-border-glass">
 <span class="font-label-caps text-label-caps text-tertiary">UPTIME: 99.9%</span>
 <div class="h-4 w-px bg-border-glass"></div>
@@ -202,19 +208,19 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 transition-all duration-700 opacity-100 translate-y-0">
 <div class="bg-surface-deep/50 p-8 border border-border-glass transition-all duration-700 opacity-100 translate-y-0">
 <div class="text-[48px] font-display-lg text-secondary mb-2">85%</div>
-<div class="font-label-caps text-label-sm text-on-surface/70 uppercase">Reduction in Manual Entry</div>
+<div class="font-label-caps text-label-sm text-on-surface/70 uppercase"><?php echo vitaldc_t('Reduction in Manual Entry', 'انخفاض في الإدخال اليدوي'); ?></div>
 </div>
 <div class="bg-surface-deep/50 p-8 border border-border-glass transition-all duration-700 opacity-100 translate-y-0">
 <div class="text-[48px] font-display-lg text-tertiary mb-2">24/7</div>
-<div class="font-label-caps text-label-sm text-on-surface/70 uppercase">Lead Qualification</div>
+<div class="font-label-caps text-label-sm text-on-surface/70 uppercase"><?php echo vitaldc_t('Lead Qualification', 'تأهيل العملاء على مدار 24/7'); ?></div>
 </div>
 <div class="bg-surface-deep/50 p-8 border border-border-glass transition-all duration-700 opacity-100 translate-y-0">
 <div class="text-[48px] font-display-lg text-export-orange mb-2">3.2x</div>
-<div class="font-label-caps text-label-sm text-on-surface/70 uppercase">Sales Team Capacity</div>
+<div class="font-label-caps text-label-sm text-on-surface/70 uppercase"><?php echo vitaldc_t('Sales Team Capacity', 'قدرة فريق المبيعات'); ?></div>
 </div>
 <div class="bg-surface-deep/50 p-8 border border-border-glass transition-all duration-700 opacity-100 translate-y-0">
 <div class="text-[48px] font-display-lg text-white mb-2">0%</div>
-<div class="font-label-caps text-label-sm text-on-surface/70 uppercase">Documentation Errors</div>
+<div class="font-label-caps text-label-sm text-on-surface/70 uppercase"><?php echo vitaldc_t('Documentation Errors', 'أخطاء التوثيق'); ?></div>
 </div>
 </div>
 </div>
@@ -224,15 +230,15 @@
 <section class="bg-white py-section-gap relative overflow-hidden">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
 <div class="bg-neutral-50 border border-neutral-200 p-8 md:p-16 text-center max-w-4xl mx-auto rounded-lg transition-all duration-700 opacity-100 translate-y-0">
-<h2 class="font-display-lg text-headline-lg text-primary-container mb-stack-md">Ready to Optimize Your Core?</h2>
+<h2 class="font-display-lg text-headline-lg text-primary-container mb-stack-md"><?php echo vitaldc_t('Ready to Optimize Your Core?', 'هل أنت مستعد لتحسين النواة الخاصة بك؟'); ?></h2>
 <p class="font-body-lg text-body-lg text-primary-container/60 mb-stack-lg max-w-xl mx-auto">
-                    Start your digital transformation today. Our engineers are ready to audit your current stack and propose an automation roadmap.
-                </p>
+    <?php echo vitaldc_t('Start your digital transformation today. Our engineers are ready to audit your current stack and propose an automation roadmap.', 'ابدأ تحولك الرقمي اليوم. مهندسونا مستعدون لتدقيق نظامك الحالي واقتراح خريطة طريق للأتمتة.'); ?>
+</p>
 <div class="flex justify-center">
-<button class="bg-export-orange hover:bg-primary-container text-white font-label-caps text-label-caps px-12 py-5 transition-all duration-300 rounded-lg flex items-center gap-3 shadow-lg shadow-export-orange/20">
-                        INITIATE CONNECTION
-                        <span class="material-symbols-outlined" data-icon="sensors">sensors</span>
-</button>
+<a href="/start" class="bg-export-orange hover:bg-primary-container text-white font-label-caps text-label-caps px-12 py-5 transition-all duration-300 rounded-lg flex items-center gap-3 shadow-lg shadow-export-orange/20">
+    <span><?php echo vitaldc_t('INITIATE CONNECTION', 'بدء الاتصال'); ?></span>
+    <span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+</a>
 </div>
 </div>
 </div>

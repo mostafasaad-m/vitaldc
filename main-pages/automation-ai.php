@@ -26,9 +26,9 @@
                     For Egyptian exporters, disconnected systems are the silent killer of scale. Stop managing $1M shipments via WhatsApp and Excel. Build a high-performance export engine.
                 </p>
 <div class="flex flex-col sm:flex-row gap-md">
-<button class="px-xl py-md bg-primary text-on-primary font-title-sm text-title-sm rounded-lg hover:shadow-[0_0_20px_rgba(193,197,220,0.3)] transition-all">
+<a href="/start" class="px-xl py-md bg-primary text-on-primary font-title-sm text-title-sm rounded-lg hover:shadow-[0_0_20px_rgba(193,197,220,0.3)] transition-all inline-block text-center">
                         Build Your Export Engine
-                    </button>
+                    </a>
 <button class="px-xl py-md border border-outline-variant text-on-surface font-title-sm text-title-sm rounded-lg hover:bg-white/5 transition-all">
                         View Technical Docs
                     </button>
@@ -287,9 +287,9 @@
 <div class="font-title-sm text-title-sm">Higher Conversion</div>
 <p class="font-body-sm text-body-sm text-on-surface-variant">Predictive follow-ups ensure you close distributors before competitors.</p>
 </div>
-<button class="w-full py-md bg-white text-surface font-title-sm text-title-sm rounded-lg font-bold hover:bg-primary transition-all active:scale-95">
+<a href="/start" class="w-full py-md bg-white text-surface font-title-sm text-title-sm rounded-lg font-bold hover:bg-primary transition-all active:scale-95 inline-block text-center">
                                 Request System Audit
-                            </button>
+                            </a>
 </div>
 </div>
 </div>
